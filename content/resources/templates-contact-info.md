@@ -1,6 +1,7 @@
 ---
 title: "Templates & Contact Information"
 date: 2025-12-20
+author: "Ross Research Team"
 description: "Downloadable templates for public comment and contact information for elected officials"
 slug: "templates-contact-info"
 ---
@@ -294,4 +295,4 @@ Website: [www.rrc.texas.gov](https://www.rrc.texas.gov)
 
 *All contact information verified as of December 2025. If you find outdated information, please [let us know](mailto:contact@wacodatacenter.com).*
 
-**Last Updated:** December 20, 2025
+**Last Updated:** December 20, 2025 by Sean Terrell
