@@ -1,7 +1,7 @@
 baseURL = 'https://wacodatacenter.com/'
 languageCode = 'en-us'
 title = 'Waco Data Center Community Information'
-theme = 'agency'
+# theme = 'agency'
 
 [params]
   description = "Community resources and information about the proposed data center development in rural Texas"
