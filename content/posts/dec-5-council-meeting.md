@@ -1,6 +1,6 @@
 ---
 title: "December 5th City Council Meeting Recap: What You Need to Know"
-date: 2024-12-06
+date: 2025-12-06
 author: "Community Action Team"
 description: "Summary of key points from the city council meeting regarding the data center proposal"
 slug: "dec-5-city-council-meeting-recap"

@@ -1,6 +1,6 @@
 ---
 title: "Environmental Impact Studies"
-date: 2024-12-20
+date: 2025-12-20
 description: "Collection of peer-reviewed research and reports on data center environmental impacts"
 slug: "environmental-studies"
 ---
@@ -129,4 +129,4 @@ We are actively researching and filing open records requests. New resources are 
 
 *All citations link to source materials. If you have additional research or documents to contribute, please [contact us](mailto:contact@wacodatacenter.com).*
 
-**Last Updated:** December 20, 2024
+**Last Updated:** December 20, 2025
