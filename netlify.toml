@@ -23,20 +23,22 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# SHORT CACHE - FOR ACTIVE DEVELOPMENT
+# Change these back to max-age=31536000 once site is stable
 [[headers]]
   for = "/*.css"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600"  # 1 hour
 
 [[headers]]
   for = "/*.js"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600"  # 1 hour
 
 [[headers]]
   for = "/img/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=86400"  # 24 hours (images change less)
 
 [[redirects]]
   from = "/netlify.toml"
