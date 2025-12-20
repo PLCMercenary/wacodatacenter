@@ -1,0 +1,45 @@
+{{ define "main" }}
+<article class="blog-post py-5">
+    <div class="container" style="padding-top: 80px;">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="display-4 mb-3">{{ .Title }}</h1>
+                <p class="blog-post-meta text-muted">
+                    <i class="far fa-calendar"></i> {{ .Date.Format "January 2, 2006" }}
+                    {{ if .Params.author }}
+                    <span class="mx-2">|</span>
+                    <i class="far fa-user"></i> {{ .Params.author }}
+                    {{ end }}
+                </p>
+                
+                {{ if .Params.image }}
+                <img src="{{ .Params.image }}" class="img-fluid rounded mb-4" alt="{{ .Title }}">
+                {{ end }}
+                
+                <div class="content">
+                    {{ .Content }}
+                </div>
+                
+                <hr class="my-5">
+                
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="/posts/" class="btn btn-outline-primary">
+                            <i class="fas fa-arrow-left me-2"></i>Back to Blog
+                        </a>
+                    </div>
+                    <div>
+                        <strong>Share:</strong>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="btn btn-sm btn-outline-primary ms-2">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank" class="btn btn-sm btn-outline-primary">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+{{ end }}

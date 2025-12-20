@@ -1,0 +1,27 @@
+# Hugo
+/public/
+/resources/_gen/
+hugo_stats.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+
+# Node (if you add npm later)
+node_modules/
+package-lock.json
+
+# Environment
+.env
+.env.local

@@ -1,0 +1,53 @@
+baseURL = 'https://wacodatacenter.com/'
+languageCode = 'en-us'
+title = 'Waco Data Center Community Information'
+theme = 'agency'
+
+[params]
+  description = "Community resources and information about the proposed data center development in rural Texas"
+  author = "Waco Data Center Community Action Group"
+  
+  # Social links
+  facebook = "your-facebook-page"
+  instagram = "your-instagram"
+  
+  # Contact info
+  email = "contact@wacodatacenter.com"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  
+  [[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+    
+  [[menu.main]]
+    name = "Resources"
+    url = "/resources/"
+    weight = 3
+    
+  [[menu.main]]
+    name = "Fast Facts"
+    url = "/#facts"
+    weight = 4
+    
+  [[menu.main]]
+    name = "Events"
+    url = "/#events"
+    weight = 5
+    
+  [[menu.main]]
+    name = "Take Action"
+    url = "/#action"
+    weight = 6
+
+[outputs]
+  home = ["HTML", "RSS"]
+  
+[permalinks]
+  posts = "/posts/:slug/"
+  resources = "/resources/:slug/"

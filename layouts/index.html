@@ -1,0 +1,220 @@
+{{ define "main" }}
+
+<!-- Hero Section -->
+<header class="masthead">
+    <div class="container">
+        <div class="masthead-heading text-uppercase">Protecting Our Rural Community</div>
+        <div class="masthead-subheading">Fact-Based Information About the Proposed 520-Acre Data Center</div>
+        <a class="btn btn-primary btn-xl text-uppercase" href="#facts">Learn More</a>
+    </div>
+</header>
+
+<!-- Fast Facts Section -->
+<section class="page-section bg-light" id="facts">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Fast Facts About Data Centers</h2>
+            <h3 class="section-subheading text-muted">Understanding the impact on rural communities</h3>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-tint fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">Water Usage</h4>
+                <p class="text-muted">Large data centers can consume millions of gallons of water daily for cooling systems, straining local water resources.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-bolt fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">Power Consumption</h4>
+                <p class="text-muted">Data centers require massive amounts of electricity, equivalent to thousands of homes, impacting grid stability.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-users fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="my-3">Limited Jobs</h4>
+                <p class="text-muted">Despite large footprints, data centers create relatively few permanent local jobs compared to other industries.</p>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a class="btn btn-primary btn-lg" href="/resources/">View Detailed Resources</a>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Blog Posts -->
+<section class="page-section" id="blog">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Latest Updates</h2>
+            <h3 class="section-subheading text-muted">News, analysis, and community information</h3>
+        </div>
+        <div class="row">
+            {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    {{ if .Params.image }}
+                    <img class="card-img-top" src="{{ .Params.image }}" alt="{{ .Title }}">
+                    {{ end }}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ .Title }}</h5>
+                        <p class="card-text text-muted small">{{ .Date.Format "January 2, 2006" }}</p>
+                        <p class="card-text">{{ .Summary }}</p>
+                        <a href="{{ .Permalink }}" class="btn btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        <div class="text-center mt-4">
+            <a class="btn btn-primary btn-lg" href="/posts/">View All Posts</a>
+        </div>
+    </div>
+</section>
+
+<!-- Events Calendar Section -->
+<section class="page-section bg-light" id="events">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Upcoming Events</h2>
+            <h3 class="section-subheading text-muted">Stay informed about meetings and community gatherings</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image">
+                            <i class="fas fa-gavel fa-2x"></i>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>December 28, 2024</h4>
+                                <h4 class="subheading">City Council Meeting</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Public comment period on zoning variance request. Location: City Hall, 6:00 PM</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <i class="fas fa-users fa-2x"></i>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>January 5, 2025</h4>
+                                <h4 class="subheading">Community Meeting</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Community action group planning session. Location: Community Center, 7:00 PM</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <i class="fas fa-landmark fa-2x"></i>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>January 15, 2025</h4>
+                                <h4 class="subheading">County Commissioners Court</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Discussion of infrastructure impact. Location: County Courthouse, 9:00 AM</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="text-center text-muted mt-4"><em>Events are updated regularly. Check back often or sign up for email updates below.</em></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Take Action Section -->
+<section class="page-section" id="action">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Take Action</h2>
+            <h3 class="section-subheading text-muted">Join us in protecting our community</h3>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-hand-holding-heart fa-4x text-primary mb-3"></i>
+                        <h4 class="card-title">Support Our Efforts</h4>
+                        <p class="card-text">Your donation helps fund research, legal support, and community organizing.</p>
+                        <a href="#" class="btn btn-primary mt-auto">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-signature fa-4x text-primary mb-3"></i>
+                        <h4 class="card-title">Sign the Petition</h4>
+                        <p class="card-text">Add your voice to thousands calling for responsible development review.</p>
+                        <a href="#" class="btn btn-primary mt-auto">Sign on Change.org</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-envelope fa-4x text-primary mb-3"></i>
+                        <h4 class="card-title">Stay Updated</h4>
+                        <p class="card-text">Get the latest news, meeting alerts, and action items delivered to your inbox.</p>
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#emailSignupModal">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h4>Connect With Us</h4>
+                <p class="text-muted mb-4">Follow our Facebook page and Instagram for daily updates, share our posts, and help spread awareness.</p>
+                <a href="#" class="btn btn-outline-primary btn-lg mx-2 mb-2"><i class="fab fa-facebook-f me-2"></i>Follow on Facebook</a>
+                <a href="#" class="btn btn-outline-primary btn-lg mx-2 mb-2"><i class="fab fa-instagram me-2"></i>Follow on Instagram</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Email Signup Modal -->
+<div class="modal fade" id="emailSignupModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Stay Informed</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form name="email-signup" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="email-signup">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="zip" class="form-label">ZIP Code (optional)</label>
+                        <input type="text" class="form-control" id="zip" name="zip">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ end }}
