@@ -1,0 +1,172 @@
+TEXAS PUBLIC INFORMATION ACT REQUEST TEMPLATE
+
+[YOUR NAME]
+[YOUR STREET ADDRESS]
+[CITY, STATE ZIP CODE]
+[YOUR EMAIL]
+[YOUR PHONE]
+
+[DATE]
+
+[RECIPIENT - Choose appropriate office:]
+City Secretary's Office
+City of Waco
+P.O. Box 2570
+Waco, TX 76702
+
+OR
+
+McLennan County Clerk
+501 Washington Avenue
+Waco, TX 76701
+
+RE: Public Information Act Request
+
+Dear [City/County] Secretary:
+
+Pursuant to the Texas Public Information Act (Government Code Chapter 552), I am requesting access to and copies of the following public records:
+
+[BE SPECIFIC - Example requests below:]
+
+EXAMPLE 1 - Meeting Minutes:
+All meeting minutes from Waco City Council meetings held between [START DATE] and [END DATE], including:
+- Regular session minutes
+- Work session minutes  
+- Any executive session minutes that are subject to public disclosure
+- Audio or video recordings if minutes are not yet approved
+
+EXAMPLE 2 - Development Application:
+All documents related to the application for [SPECIFIC PROJECT NAME] including:
+- Initial application and all amendments
+- Site plans and engineering drawings
+- Environmental impact assessments
+- Traffic impact studies
+- Water usage projections and agreements
+- Tax abatement proposals or agreements
+- Correspondence between the developer and city staff
+- Staff recommendations and analysis
+
+EXAMPLE 3 - Communications:
+All emails, letters, and written communications between [CITY DEPARTMENT] and [COMPANY/DEVELOPER NAME] from [START DATE] to [END DATE] regarding [SPECIFIC TOPIC].
+
+EXAMPLE 4 - Financial Records:
+All invoices, contracts, and payment records related to [SPECIFIC PROJECT/VENDOR] for fiscal year [YEAR].
+
+===================================================================
+
+FORMAT PREFERENCE:
+I would prefer to receive these records in [CHOOSE ONE]:
+□ Electronic format (PDF via email to [YOUR EMAIL])
+□ Paper copies (mailed to address above)
+□ Inspect records in person (please contact me to schedule)
+
+COST ACKNOWLEDGMENT:
+I understand that I may be charged for copies at the rate established by the city/county. If the estimated cost will exceed $[AMOUNT - typically $40-50], please contact me for approval before processing this request.
+
+If any portion of this request is denied, please provide:
+1. A written explanation citing the specific exception in Government Code Chapter 552
+2. The name and contact information of the person who can be contacted regarding the denial
+
+TIME REQUIREMENTS:
+Under Texas law, you must respond to this request within 10 business days, either by:
+1. Providing the requested information
+2. Requesting an Attorney General opinion if you believe the information is exempt
+3. Providing a cost estimate if charges will exceed $40
+
+FOLLOW-UP:
+If you have any questions about this request, please contact me at [YOUR PHONE] or [YOUR EMAIL].
+
+Thank you for your prompt attention to this matter.
+
+Sincerely,
+
+[YOUR SIGNATURE]
+[YOUR TYPED NAME]
+
+===================================================================
+
+IMPORTANT NOTES ABOUT PIA REQUESTS:
+
+WHAT YOU CAN REQUEST:
+✓ Meeting minutes and agendas
+✓ Approved budgets and financial reports
+✓ Development applications and permits
+✓ Contracts and agreements
+✓ Email correspondence (with limitations)
+✓ Inspection reports
+✓ Traffic studies, environmental assessments
+✓ Salary information for government employees
+
+WHAT IS TYPICALLY EXEMPT:
+✗ Information related to pending litigation
+✗ Certain attorney-client communications
+✗ Some personnel records
+✗ Information that could compromise security
+✗ Trade secrets or proprietary information
+✗ Ongoing criminal investigations
+
+TIMELINE:
+- Day 1: Submit request
+- Day 10: Government must respond (provide records, request AG opinion, or give cost estimate)
+- Day 11-20: If requesting AG opinion, you'll be notified
+- 45+ days: If issue goes to Attorney General for determination
+
+COSTS:
+- Standard charges:
+  * Paper copies: $0.10 per page
+  * Certified copies: $1.00 for first page, $0.50 each additional
+  * Electronic copies: Usually minimal or free
+  * Staff time: May be charged for extensive requests (labor cost per hour)
+  * Specialty formats (maps, plans): Actual reproduction cost
+
+TIPS FOR SUCCESSFUL REQUESTS:
+
+1. BE SPECIFIC: Vague requests like "all documents about data centers" will likely be denied as overly broad
+
+2. INCLUDE DATE RANGES: "All documents from January 1, 2024 to December 31, 2024"
+
+3. IDENTIFY DEPARTMENT/OFFICE: "From the Planning Department" or "From the City Manager's office"
+
+4. USE PROPER NAMES: "Correspondence between City Manager Bradley Ford and [Company Name]"
+
+5. REASONABLE SCOPE: Don't request 10 years of emails - start with 6 months
+
+6. FOLLOW UP: If no response in 10 days, send a polite follow-up email
+
+7. KNOW YOUR RIGHTS: If denied, you can:
+   - Request specific legal exemption cited
+   - File complaint with Attorney General
+   - Challenge denial in court (with attorney)
+
+SAMPLE FOLLOW-UP EMAIL (after 10 business days):
+
+Subject: Follow-up on PIA Request dated [DATE]
+
+Dear [City/County] Secretary,
+
+I submitted a Public Information Act request on [DATE] and have not yet received a response. Texas Government Code 552.221 requires a response within 10 business days.
+
+Please confirm receipt of my request and provide an estimated date when I can expect the requested records or a response regarding their status.
+
+Request details: [BRIEFLY RESTATE YOUR REQUEST]
+
+Thank you,
+[YOUR NAME]
+[YOUR PHONE]
+
+===================================================================
+
+RESOURCES:
+
+Texas Attorney General Open Government Guide:
+https://www.texasattorneygeneral.gov/open-government
+
+Texas Government Code Chapter 552 (PIA):
+https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm
+
+File a complaint about PIA denial:
+https://www.texasattorneygeneral.gov/open-government/complaints
+
+For assistance:
+contact@wacodatacenter.com
+www.wacodatacenter.com
