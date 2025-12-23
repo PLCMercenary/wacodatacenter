@@ -8,11 +8,11 @@ title = 'Waco Data Center Community Information'
   author = "Waco Data Center Community Action Group"
   
   # Social links
-  facebook = "your-facebook-page"
+  facebook = "https://www.facebook.com/share/g/17cFKqY3q8/?mibextid=wwXIfr"
   instagram = "your-instagram"
   
   # Contact info
-  email = "contact@wacodatacenter.com"
+  email = "plcmercenary@tuta.io"
 
 [menu]
   [[menu.main]]

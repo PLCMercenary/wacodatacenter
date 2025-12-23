@@ -230,3 +230,37 @@ Or contact: [contact@wacodatacenter.com](mailto:contact@wacodatacenter.com)
 
 Content is © 2024 Waco Data Center Community Action Group
 Site template and code: MIT License
+## License
+
+### Code & Templates
+The website code, templates, and technical infrastructure are released under the MIT License. See [LICENSE](LICENSE) file.
+
+**This means other communities can:**
+- Copy and modify this entire website
+- Use our templates and resources
+- Adapt it for their own causes
+- No permission needed (just attribution appreciated)
+
+### Content
+Original research articles and community-specific content are © 2024 Waco Data Center Community Action Group.
+
+**You may:**
+- Share and link to our articles
+- Quote with attribution
+- Adapt for similar community efforts
+
+**Commercial use or media:** Contact contact@wacodatacenter.com
+
+## Privacy & Data
+
+We respect your privacy. See our [Privacy Policy](/privacy/) for details.
+
+## Replicating This Site
+
+Other communities fighting data centers (or similar development):
+1. Fork this repository
+2. Update content in `content/` folder
+3. Customize contact info in `hugo.toml`
+4. Deploy to Netlify (free)
+
+Full instructions in [QUICKSTART.md](QUICKSTART.md)

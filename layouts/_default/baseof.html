@@ -57,9 +57,11 @@
     <footer class="footer py-4 bg-dark text-white">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-start">
-                    Copyright &copy; {{ now.Year }} Waco Data Center Community Action
-                </div>
+               <div class="col-lg-4 text-lg-start">
+                Copyright &copy; {{ now.Year }} Waco Data Center Community Action<br>
+                <small><a href="/privacy/" class="link-light">Privacy Policy</a> | 
+                <a href="https://github.com/PLCMercenary/wacodatacenter" class="link-light">Open Source (MIT)</a></small>
+            </div> 
                 <div class="col-lg-4 my-3 my-lg-0 text-center">
                     {{ if .Site.Params.facebook }}
                     <a class="btn btn-social mx-2" href="https://facebook.com/{{ .Site.Params.facebook }}" target="_blank">
