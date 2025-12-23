@@ -64,7 +64,7 @@ We may update this policy and will note the date at the top. Continued use of ou
 ## Contact Us
 
 Questions about privacy?  
-Email: contact@wacodatacenter.com
+Email: plcmercenary@tuta.io
 
 ---
 
