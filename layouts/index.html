@@ -196,10 +196,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <form name="email-signup" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you/">
+                <form name="email-signup" method="POST" data-netlify="true" action="/thank-you/">
+                    <input type="hidden" name="form-name" value="email-signup">
+                    <form name="email-signup" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you/">
                     <input type="hidden" name="form-name" value="email-signup">
                     <p style="display:none;">
-                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    <label>Don't fill this out: <input name="bot-field" /></label>
                     </p>
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
@@ -212,12 +214,6 @@
                     <div class="mb-3">
                         <label for="zip" class="form-label">ZIP Code (optional)</label>
                         <input type="text" class="form-control" id="zip" name="zip">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="consent" name="consent" required>
-                        <label class="form-check-label" for="consent" style="font-size: 14px;">
-                            I agree to receive email updates and understand I can unsubscribe at any time. See our <a href="/privacy/" target="_blank">Privacy Policy</a>.
-                        </label>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Subscribe</button>
                 </form>
