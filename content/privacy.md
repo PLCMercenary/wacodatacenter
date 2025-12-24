@@ -43,7 +43,7 @@ We may use basic analytics to understand how visitors use our site. This may inc
 
 You have the right to:
 - **Unsubscribe** at any time (link in every email)
-- **Request deletion** of your data by emailing contact@wacodatacenter.com
+- **Request deletion** of your data by emailing plcmercenary@tuta.io 
 - **Request a copy** of your data
 
 ## Third-Party Services

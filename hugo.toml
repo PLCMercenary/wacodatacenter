@@ -44,6 +44,11 @@ title = 'Waco Data Center Community Information'
     name = "Take Action"
     url = "/#action"
     weight = 6
+    
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 7
 
 [outputs]
   home = ["HTML", "RSS"]

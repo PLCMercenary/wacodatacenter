@@ -23,7 +23,7 @@ Download these templates to communicate effectively with elected officials and p
 
 ### Elected Official Letter Templates
 
-- **[City Council Letter Template (PDF)](/templates/city-council-letter.pdf)**  
+- **[City Council Letter Template (PDF)](/templates/city-council-letter-template.pdf)**  
   Template for writing to Waco City Council members
 
 - **[City Council Letter Template (Word)](/templates/city-council-letter.docx)**  
@@ -293,6 +293,6 @@ Website: [www.rrc.texas.gov](https://www.rrc.texas.gov)
 
 ---
 
-*All contact information verified as of December 2025. If you find outdated information, please [let us know](mailto:contact@wacodatacenter.com).*
+*All contact information verified as of December 2025. If you find outdated information, please [let us know](mailto:plcmercenary@tuta.io).*
 
 **Last Updated:** December 20, 2025 by Sean Terrell
