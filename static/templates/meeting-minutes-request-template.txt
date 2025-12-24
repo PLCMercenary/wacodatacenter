@@ -1,0 +1,222 @@
+MEETING MINUTES REQUEST
+Texas Public Information Act Request Template
+Specific Example for City Council or County Meeting Minutes
+
+===================================================================
+
+[YOUR NAME]
+[YOUR STREET ADDRESS]
+[CITY, STATE ZIP CODE]
+[YOUR EMAIL]
+[YOUR PHONE]
+
+[DATE]
+
+[RECIPIENT - CHOOSE ONE:]
+
+City Secretary
+City of Waco
+P.O. Box 2570
+Waco, TX 76702
+Email: [GET FROM CITY WEBSITE]
+
+OR
+
+City Secretary
+City of Lacy Lakeview
+501 E. Craven Ave.
+Lacy Lakeview, TX 76705
+Email: [GET FROM CITY WEBSITE]
+
+OR
+
+McLennan County Clerk
+215 N 5th Street
+Waco, TX 76701
+Email: [GET FROM COUNTY WEBSITE]
+
+===================================================================
+
+SUBJECT: Texas Public Information Act Request - Meeting Minutes
+
+Dear [City Secretary / County Clerk]:
+
+This is a request under the Texas Public Information Act (Texas Government Code, Chapter 552) for copies of public records.
+
+REQUESTED RECORDS:
+
+I am requesting copies of the following meeting minutes:
+
+[OPTION 1 - SPECIFIC MEETING:]
+Official minutes from the [Waco City Council / Lacy Lakeview City Council / McLennan County Commissioners Court] meeting held on [SPECIFIC DATE].
+
+[OPTION 2 - DATE RANGE:]
+All official meeting minutes from [START DATE] through [END DATE], including:
+- Regular meeting minutes
+- Special meeting minutes
+- Work session minutes
+- Executive session summaries (public portions only)
+
+[OPTION 3 - SPECIFIC TOPIC:]
+All meeting minutes from [YEAR] that include discussion of [SPECIFIC TOPIC - e.g., "data center development," "zoning variance requests," "water usage permits"].
+
+REQUESTED FORMAT:
+
+Please provide the records in the following format:
+[[X]] PDF via email (preferred)
+[  ] Paper copies (will pay reasonable copying fees)
+[  ] Electronic files on CD/USB
+
+My email address for electronic delivery is: [YOUR EMAIL]
+
+STATUTORY REQUIREMENTS:
+
+Under Texas Government Code ? 552.221, I understand that:
+- The City/County has 10 business days to respond to this request
+- You must either provide the records or seek an opinion from the Attorney General if claiming an exemption
+- You must provide a cost estimate if charges will exceed $40
+
+If you claim any exemption to disclosure, please:
+1. Cite the specific statutory exemption
+2. Explain how it applies to each withheld record
+3. Provide a redacted copy if only portions are exempt
+
+CONTACT INFORMATION:
+
+Please contact me at [YOUR PHONE] or [YOUR EMAIL] with any questions or to provide the cost estimate.
+
+I agree to pay reasonable copying and labor fees as allowed by law. Please notify me in advance if fees will exceed $[YOUR LIMIT - e.g., $40, $100].
+
+Thank you for your assistance with this request.
+
+Respectfully,
+
+[YOUR SIGNATURE]
+[YOUR TYPED NAME]
+
+===================================================================
+
+COMMON FOLLOW-UP SCENARIOS:
+
+IF YOU RECEIVE A COST ESTIMATE:
+- Review it for reasonableness (typically $0.10 per page)
+- Respond within time frame given
+- Can ask for records to be emailed (lower cost)
+- Can narrow request to reduce fees
+
+IF YOU RECEIVE PARTIAL DENIAL:
+- Review the cited exemption
+- Request a copy of the AG opinion request
+- File a complaint with AG if denial seems improper
+- Consider narrowing request to get non-exempt portions
+
+IF YOU RECEIVE NO RESPONSE IN 10 DAYS:
+- Send follow-up email/letter
+- File complaint with Attorney General
+- Contact local media if pattern of non-compliance
+
+===================================================================
+
+IMPORTANT TEXAS PIA INFORMATION:
+
+TIMELINE:
+- 10 business days for initial response
+- Extensions possible for voluminous requests
+- Must provide records "promptly" after payment
+
+FEES:
+- Copying: typically $0.10 per page
+- Labor: $15/hour for locating records (if over 50 pages)
+- No charge if under one hour of labor
+- No charge for first 50 pages
+- Elected officials can charge less or waive fees
+
+EXEMPTIONS THAT MAY APPLY:
+- Executive session discussions (limited)
+- Pending litigation
+- Attorney-client communications
+- Personnel matters
+- Competitive bidding (temporarily)
+
+CANNOT BE DENIED FOR:
+- Being "too burdensome" (must provide cost estimate)
+- Not having "valid reason" (no need to explain why)
+- Being from out of state or "outsider"
+
+===================================================================
+
+TIPS FOR SUCCESSFUL REQUESTS:
+
+* Be specific about date ranges and topics
+* Start narrow - you can always expand
+* Request email delivery (faster and cheaper)
+* Keep copy of your request
+* Document all communications
+* Follow up if no response in 10 days
+* Be polite but persistent
+* Know your rights under the PIA
+
+- Don't request "all records about..." (too broad)
+- Don't make demands or threaten
+- Don't pay without seeing cost estimate first
+- Don't accept "we don't have that" without verification
+
+===================================================================
+
+WHAT MINUTES SHOULD CONTAIN:
+
+Texas law requires meeting minutes to include:
+* Date, time, and location of meeting
+* Members present and absent
+* Approval of previous minutes
+* Summary of subjects discussed
+* Record of votes taken (who voted how)
+* Action items and decisions
+* Executive session notation (topic only, not discussion)
+
+Minutes do NOT include:
+- Verbatim transcript (unless body chooses to)
+- Names of all public speakers (unless specifically noted)
+- Full discussion details (summary only)
+
+===================================================================
+
+CITY/COUNTY CONTACT INFORMATION:
+
+Waco City Secretary:
+Phone: (254) 750-5640
+Website: www.waco-texas.com/Departments/City-Secretarys-Office
+
+Lacy Lakeview City Secretary:
+Phone: (254) 799-2458
+Address: 501 E. Craven Ave., Lacy Lakeview, TX 76705
+
+McLennan County Clerk:
+Phone: (254) 757-5078
+Website: www.mclennan.gov/166/County-Clerk
+
+===================================================================
+
+ADDITIONAL RESOURCES:
+
+Texas Attorney General Open Records Division:
+Phone: (512) 478-OPEN (6736)
+Website: texasattorneygeneral.gov/open-government
+
+File PIA complaint:
+https://www.texasattorneygeneral.gov/open-government/complaints
+
+Texas Public Information Act (full text):
+https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm
+
+===================================================================
+
+For assistance with this request:
+www.wacodatacenter.com/resources/
+Email: contact@wacodatacenter.com
+
+We can help you:
+- Review responses for completeness
+- Challenge improper denials
+- Navigate the PIA process
+- Understand exemption claims

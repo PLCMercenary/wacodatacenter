@@ -1,53 +1,113 @@
 ---
 title: "Templates & Contact Information"
-date: 2025-12-20
-author: "Ross Research Team"
+date: 2024-12-24
+author: "Community Action Team"
 description: "Downloadable templates for public comment and contact information for elected officials"
 slug: "templates-contact-info"
 ---
 
 ## Letter & Testimony Templates
 
-Download these templates to communicate effectively with elected officials and participate in public meetings.
+Download these templates to communicate effectively with elected officials and participate in public meetings. Each template is available in both PDF (view-only) and Word (editable) formats.
+
+---
 
 ### Public Comment Templates
 
-- **[Public Testimony Template (PDF)](/templates/public-testimony-template.pdf)**  
-  2-minute template for city council and commissioners court meetings. Includes tips for effective testimony.
+#### Public Testimony Template
+*2-minute template for city council and commissioners court meetings. Includes tips for effective testimony.*
 
-- **[Public Testimony Template (Word)](/templates/public-testimony-template.docx)**  
-  Editable version for customization
+| Format | Download |
+|--------|----------|
+| **PDF** (View & Print) | [Download PDF](/templates/public-testimony-template.pdf) |
+| **Word** (Edit & Customize) | [Download DOCX](/templates/public-testimony-template.docx) |
 
-- **[Written Comment Template (PDF)](/templates/written-comment-template.pdf)**  
-  For submitting written comments when you can't attend in person
+#### Written Comment Template
+*For submitting written comments when you can't attend in person*
+
+| Format | Download |
+|--------|----------|
+| **PDF** (View & Print) | [Download PDF](/templates/public-comment-template.pdf) |
+| **Word** (Edit & Customize) | [Download DOCX](/templates/public-comment-template.docx) |
+
+---
 
 ### Elected Official Letter Templates
 
-- **[City Council Letter Template (PDF)](/templates/city-council-letter-template.pdf)**  
-  Template for writing to Waco City Council members
+#### City Council Letter Template
+*Template for writing to Waco City Council members*
 
-- **[City Council Letter Template (Word)](/templates/city-council-letter.docx)**  
-  Editable version
+| Format | Download |
+|--------|----------|
+| **PDF** (View & Print) | [Download PDF](/templates/city-council-letter-template.pdf) |
+| **Word** (Edit & Customize) | [Download DOCX](/templates/city-council-letter-template.docx) |
 
-- **[County Commissioners Letter Template (PDF)](/templates/county-commissioners-letter.pdf)**  
-  Template for McLennan County Commissioners Court
+#### County Commissioners Letter Template
+*Template for McLennan County Commissioners Court*
 
-- **[State Representative Letter Template (PDF)](/templates/state-rep-letter.pdf)**  
-  Template for Texas State Representatives
+| Format | Download |
+|--------|----------|
+| **PDF** (View & Print) | [Download PDF](/templates/county-commissioners-letter-template.pdf) |
+| **Word** (Edit & Customize) | [Download DOCX](/templates/county-commissioners-letter-template.docx) |
 
-- **[State Senator Letter Template (PDF)](/templates/state-senator-letter.pdf)**  
-  Template for Texas State Senators
+#### State Representative Letter Template
+*Template for Texas State Representatives*
+
+| Format | Download |
+|--------|----------|
+| **PDF** (View & Print) | [Download PDF](/templates/state-rep-letter-template.pdf) |
+| **Word** (Edit & Customize) | [Download DOCX](/templates/state-rep-letter-template.docx) |
+
+#### State Senator Letter Template
+*Template for Texas State Senators*
+
+| Format | Download |
+|--------|----------|
+| **PDF** (View & Print) | [Download PDF](/templates/state-senator-letter-template.pdf) |
+| **Word** (Edit & Customize) | [Download DOCX](/templates/state-senator-letter-template.docx) |
+
+---
 
 ### Open Records Request Templates
 
-- **[Texas Public Information Act Request Template (PDF)](/templates/pia-request-template.pdf)**  
-  Standard template for requesting public records
+#### Texas Public Information Act Request Template
+*Standard template for requesting public records*
 
-- **[Sample Meeting Minutes Request (Word)](/templates/meeting-minutes-request.docx)**  
-  Pre-filled example for requesting city council meeting minutes
+| Format | Download |
+|--------|----------|
+| **PDF** (View & Print) | [Download PDF](/templates/pia-request-template.pdf) |
+| **Word** (Edit & Customize) | [Download DOCX](/templates/pia-request-template.docx) |
 
-**How to file an open records request:**
-1. Download the template
+#### Meeting Minutes Request Template
+*Pre-filled example for requesting city council meeting minutes*
+
+| Format | Download |
+|--------|----------|
+| **PDF** (View & Print) | [Download PDF](/templates/meeting-minutes-request-template.pdf) |
+| **Word** (Edit & Customize) | [Download DOCX](/templates/meeting-minutes-request-template.docx) |
+
+---
+
+### How to Use These Templates
+
+**Step 1:** Download the template you need
+- Choose **PDF** to view and print
+- Choose **Word (DOCX)** to edit and customize
+
+**Step 2:** Fill in your information
+- Replace bracketed placeholders like [YOUR NAME]
+- Add specific details about your issue
+- Include relevant facts and sources
+
+**Step 3:** Submit your letter or testimony
+- Follow the submission instructions in each template
+- Keep a copy for your records
+
+---
+
+### How to File an Open Records Request
+
+1. Download the PIA Request Template (above)
 2. Fill in specific information you're requesting
 3. Email or mail to the City Secretary's office
 4. Response required within 10 business days under Texas law
@@ -69,20 +129,11 @@ Address: P.O. Box 2570, Waco, TX 76702
 Website: [www.waco-texas.com](https://www.waco-texas.com/Government/City-Council)
 
 **City Council Members:**
-- **District I - Andrea Barefield**  
-  Phone: (254) 750-5640
-
-- **District II - Isabel Lozano**  
-  Phone: (254) 750-5640
-
-- **District III - Josh Borderud**  
-  Phone: (254) 750-5640
-
-- **District IV - Darius Ewing**  
-  Phone: (254) 750-5640
-
-- **District V - George Chase**  
-  Phone: (254) 750-5640
+- **District I - Andrea Barefield** | Phone: (254) 750-5640
+- **District II - Isabel Lozano** | Phone: (254) 750-5640
+- **District III - Josh Borderud** | Phone: (254) 750-5640
+- **District IV - Darius Ewing** | Phone: (254) 750-5640
+- **District V - George Chase** | Phone: (254) 750-5640
 
 **City Manager - Bradley Ford**  
 Phone: (254) 750-5640
@@ -93,8 +144,7 @@ Website: [City Secretary](https://www.waco-texas.com/Departments/City-Secretarys
 
 **City Council Meetings:**  
 1st and 3rd Tuesdays of each month  
-Work Session: 3:00 PM  
-Business Session: 6:00 PM  
+Work Session: 3:00 PM | Business Session: 6:00 PM  
 Location: Waco Convention Center - Bosque Theater, 100 Washington Ave
 
 ---
@@ -110,10 +160,10 @@ Address: 501 E. Craven Ave., Lacy Lakeview, TX 76705
 Phone: (254) 799-2458
 
 **Council Members:**
-- **Henry Bush** - (254) 799-2458
-- **Richard Lednicky** - (254) 799-2458
-- **Ronnie Hurst** - (254) 799-2458
-- **Victoria Lee** - (254) 799-2458
+- **Henry Bush** | (254) 799-2458
+- **Richard Lednicky** | (254) 799-2458
+- **Ronnie Hurst** | (254) 799-2458
+- **Victoria Lee** | (254) 799-2458
 
 **City Secretary** (for public records requests)  
 Phone: (254) 799-2458  
@@ -134,22 +184,10 @@ Address: 501 Washington Ave., Waco, TX 76701
 Website: [McLennan County](https://www.mclennan.gov)
 
 **County Commissioners:**
-
-- **Precinct 1**  
-  Phone: (254) 757-5061  
-  Address: 215 N 5th Street, Suite 125, Waco, TX 76701
-
-- **Precinct 2**  
-  Phone: (254) 757-5062  
-  Address: 215 N 5th Street, Waco, TX 76701
-
-- **Precinct 3**  
-  Phone: (254) 757-5063  
-  Address: 215 N 5th Street, Suite 125, Waco, TX 76701
-
-- **Precinct 4**  
-  Phone: (254) 757-5064  
-  Address: 215 N 5th Street, Suite 125, Waco, TX 76701
+- **Precinct 1** | Phone: (254) 757-5061 | 215 N 5th Street, Suite 125, Waco, TX 76701
+- **Precinct 2** | Phone: (254) 757-5062 | 215 N 5th Street, Waco, TX 76701
+- **Precinct 3** | Phone: (254) 757-5063 | 215 N 5th Street, Suite 125, Waco, TX 76701
+- **Precinct 4** | Phone: (254) 757-5064 | 215 N 5th Street, Suite 125, Waco, TX 76701
 
 **County Clerk** (for public records requests)  
 Website: [County Clerk Records](https://www.mclennan.gov/166/County-Clerk)
@@ -171,11 +209,10 @@ Phone: (512) 463-0122
 
 **Waco District Office:**  
 Address: 900 Austin Avenue, Suite 500, Waco, TX 76701  
-Phone: (254) 772-6225  
-Fax: (254) 776-2843  
+Phone: (254) 772-6225 | Fax: (254) 776-2843  
 District Manager: Robyn Morrison
 
-**State Representative - Pat Curry (District 56)**  
+**State Representative - Pat Curry (District 56)**
 
 **Capitol Office:**  
 Address: Room 1N.8, P.O. Box 2910, Austin, TX 78768  
@@ -190,7 +227,7 @@ Email: pat@patcurry.com
 
 ### U.S. Congress
 
-**U.S. Representative - Pete Sessions (District 17)**  
+**U.S. Representative - Pete Sessions (District 17)**
 
 **Washington Office:**  
 Address: 2204 Rayburn HOB, Washington, DC 20515  
@@ -199,18 +236,16 @@ Website: [sessions.house.gov](https://sessions.house.gov)
 
 **Waco Office:**  
 Address: 400 Austin Avenue, Suite 302, Waco, TX 76701  
-Phone: (254) 633-4500  
-Fax: (254) 300-5736
+Phone: (254) 633-4500 | Fax: (254) 300-5736
 
-**U.S. Senator - John Cornyn**  
+**U.S. Senator - John Cornyn**
 
 **Austin Office:**  
 Address: Chase Tower, 221 West Sixth Street, Suite 1530, Austin, TX 78701  
-Phone: (512) 469-6034  
-Fax: (512) 469-6020  
+Phone: (512) 469-6034 | Fax: (512) 469-6020  
 Website: [cornyn.senate.gov](https://www.cornyn.senate.gov)
 
-**U.S. Senator - Ted Cruz**  
+**U.S. Senator - Ted Cruz**
 
 **Austin Office:**  
 Phone: (512) 916-5834  
@@ -230,8 +265,7 @@ Phone: (512) 463-7847
 Website: [www.twdb.texas.gov](https://www.twdb.texas.gov)
 
 **Public Utility Commission of Texas**  
-Phone: (512) 936-7000  
-Consumer Complaints: (888) 782-8477  
+Phone: (512) 936-7000 | Consumer Complaints: (888) 782-8477  
 Website: [www.puc.texas.gov](https://www.puc.texas.gov)
 
 **Railroad Commission of Texas** (Energy regulation)  
@@ -287,12 +321,12 @@ Website: [www.rrc.texas.gov](https://www.rrc.texas.gov)
 - McLennan County Commissioners: Check online agenda
 
 **Sign up for email alerts:**
-- [Subscribe to our updates](#) for meeting reminders
+- [Subscribe to our updates](/#action) for meeting reminders
 - [Waco City Council agendas](https://www.waco-texas.com/Government/City-Council/City-Council-Meetings-Information)
 - [McLennan County agendas](https://www.mclennan.gov/AgendaCenter/Commissioners-Court-2)
 
 ---
 
-*All contact information verified as of December 2025. If you find outdated information, please [let us know](mailto:plcmercenary@tuta.io).*
+*All contact information verified as of December 2024. If you find outdated information, please [let us know](mailto:plcmercenary@tuta.io).*
 
-**Last Updated:** December 20, 2025 by Sean Terrell
+**Last Updated:** December 24, 2024
