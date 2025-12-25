@@ -1,6 +1,6 @@
 ---
 title: "Templates & Contact Information"
-date: 2024-12-24
+date: 2025-12-24
 author: "Community Action Team"
 description: "Downloadable templates for public comment and contact information for elected officials"
 slug: "templates-contact-info"
@@ -327,6 +327,6 @@ Website: [www.rrc.texas.gov](https://www.rrc.texas.gov)
 
 ---
 
-*All contact information verified as of December 2024. If you find outdated information, please [let us know](mailto:plcmercenary@tuta.io).*
+*All contact information verified as of December 2025. If you find outdated information, please [let us know](mailto:plcmercenary@tuta.io).*
 
-**Last Updated:** December 24, 2024
+**Last Updated:** December 24, 2025
