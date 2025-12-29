@@ -119,7 +119,7 @@ Every one of them needs to hear from you. In writing. With documentation. With s
 
 This fight isn't over. It's just getting started.
 
-And when future generations ask what we did when our community was being sold out, when our rural home was being industrialized without our consent, when our voices were silenced by procedural tricks—we'll point to people like Sarah Lenart who refused to sit quietly.
+And when future generations ask what we did when our community was being sold out, when our rural home was being industrialized without our consent, when our voices were silenced by procedural tricks—we'll point to people like Sara Mynarcik who refused to sit quietly.
 
 We'll show them the written record of opposition. The documentation of every meeting, every vote, every public comment ignored.
 
