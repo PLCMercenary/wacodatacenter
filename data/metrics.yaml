@@ -3,12 +3,12 @@ petition:
   comments: 50
   local_supporters: 72
   media_mentions: 3
-  updated: "2025-12-29"
   
 facebook:
   members: 927
-  updated: "2025-12-29"
   
 email:
   subscribers: 6
-  updated: "2025-12-29"
+
+# Single update date for all metrics
+updated: "2025-12-29"
