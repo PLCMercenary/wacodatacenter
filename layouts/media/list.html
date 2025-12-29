@@ -8,76 +8,101 @@
             <p class="text-muted"><strong>{{ len (where .Site.RegularPages "Section" "media") }} Articles</strong> | Last Updated: {{ now.Format "January 2, 2006" }}</p>
         </div>
 
-        <!-- Featured Article (if any) -->
+        <!-- Featured Article (Waco Bridge Original) -->
         {{ range first 1 (where (where .Site.RegularPages "Section" "media") "Params.featured" true) }}
         <div class="row mb-5">
             <div class="col-lg-10 mx-auto">
-                <div class="card border-primary shadow-lg">
+                <div class="card border-warning shadow-lg" style="overflow: hidden;">
+                    <!-- Featured Badge -->
+                    <div class="position-absolute top-0 start-0 m-3" style="z-index: 10;">
+                        <span class="badge bg-warning text-dark fs-6">⭐ ORIGINAL INVESTIGATION</span>
+                    </div>
+                    
+                    <!-- Hero Image -->
+                    {{ if .Params.image }}
+                    <img src="{{ .Params.image }}" class="card-img-top" alt="{{ .Title }}" style="max-height: 400px; object-fit: cover;">
+                    {{ end }}
+                    
                     <div class="card-body p-4">
+                        <!-- Outlet & Date -->
                         <div class="d-flex align-items-center mb-3">
-                            <span class="badge bg-primary me-2">FEATURED</span>
-                            <span class="badge bg-warning text-dark">Original Investigation</span>
+                            <strong class="text-primary">{{ .Params.outlet }}</strong>
+                            <span class="text-muted ms-2">• {{ .Date.Format "January 2, 2006" }}</span>
                         </div>
-                        <h2 class="card-title h3">{{ .Title }}</h2>
-                        <p class="text-muted mb-3">
-                            <strong>{{ .Params.outlet }}</strong> | {{ .Date.Format "January 2, 2006" }}
-                        </p>
-                        <p class="card-text lead">{{ .Params.description }}</p>
+                        
+                        <!-- Title -->
+                        <h2 class="card-title h3 mb-3">{{ .Title }}</h2>
+                        
+                        <!-- Description -->
+                        <p class="card-text lead mb-4">{{ .Params.description }}</p>
+                        
+                        <!-- Link -->
                         <a href="{{ .Params.external_url }}" target="_blank" class="btn btn-primary btn-lg">
-                            Read Original Article <i class="fas fa-external-link-alt ms-2"></i>
+                            Read Original Article at wacobridge.org <i class="fas fa-external-link-alt ms-2"></i>
                         </a>
-                        {{ .Content }}
+                        
+                        <!-- Editor Note -->
+                        <div class="alert alert-info mt-4 mb-0">
+                            <strong>Editor's Note:</strong> This groundbreaking investigative piece by The Waco Bridge was the first to publicly report on the proposed data center project. All subsequent coverage originated from their excellent journalism.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         {{ end }}
 
-        <h2 class="text-center mb-4">All Coverage</h2>
+        <h2 class="text-center mb-4">Recent Coverage</h2>
 
-        <!-- Media Coverage Cards -->
+        <!-- Media Coverage Cards (Link Preview Style) -->
         <div class="row">
             {{ range where (where .Site.RegularPages "Section" "media") "Params.featured" "!=" true }}
             <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body d-flex flex-column">
-                        <!-- Outlet Badge -->
-                        <div class="mb-3">
-                            {{ if in .Params.tags "tv" }}
-                                <span class="badge bg-info"><i class="fas fa-tv me-1"></i> TV</span>
-                            {{ else if in .Params.tags "print" }}
-                                <span class="badge bg-secondary"><i class="fas fa-newspaper me-1"></i> Print</span>
-                            {{ else if in .Params.tags "statewide" }}
-                                <span class="badge bg-success"><i class="fas fa-star me-1"></i> Statewide</span>
-                            {{ else }}
-                                <span class="badge bg-primary"><i class="fas fa-globe me-1"></i> Online</span>
-                            {{ end }}
+                <a href="{{ .Params.external_url }}" target="_blank" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm link-preview-card">
+                        <!-- Hero Image -->
+                        {{ if .Params.image }}
+                        <div class="card-img-top" style="height: 200px; overflow: hidden; background-color: #f8f9fa;">
+                            <img src="{{ .Params.image }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-
-                        <!-- Headline -->
-                        <h5 class="card-title">
-                            <a href="{{ .Params.external_url }}" target="_blank" class="text-decoration-none text-dark">
-                                {{ .Title }}
-                            </a>
-                        </h5>
-
-                        <!-- Outlet and Date -->
-                        <p class="text-muted small mb-2">
-                            <strong>{{ .Params.outlet }}</strong>
-                        </p>
-                        <p class="text-muted small mb-3">
-                            <i class="fas fa-calendar-alt me-1"></i>{{ .Date.Format "January 2, 2006" }}
-                        </p>
-
-                        <!-- Description -->
-                        <p class="card-text flex-grow-1">{{ .Params.description }}</p>
-
-                        <!-- Read Button -->
-                        <a href="{{ .Params.external_url }}" target="_blank" class="btn btn-outline-primary btn-sm mt-auto">
-                            Read Article <i class="fas fa-external-link-alt ms-1"></i>
-                        </a>
+                        {{ else }}
+                        <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <i class="fas fa-newspaper fa-4x text-muted"></i>
+                        </div>
+                        {{ end }}
+                        
+                        <div class="card-body">
+                            <!-- Header: Outlet + Badge -->
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <small class="text-muted fw-bold">{{ .Params.outlet }}</small>
+                                {{ if in .Params.tags "tv" }}
+                                    <span class="badge bg-info">TV</span>
+                                {{ else if in .Params.tags "print" }}
+                                    <span class="badge bg-secondary">Print</span>
+                                {{ else if in .Params.tags "statewide" }}
+                                    <span class="badge bg-success">Statewide</span>
+                                {{ else }}
+                                    <span class="badge bg-primary">Online</span>
+                                {{ end }}
+                            </div>
+                            
+                            <!-- Date -->
+                            <div class="text-muted small mb-2">
+                                <i class="fas fa-calendar-alt me-1"></i>{{ .Date.Format "January 2, 2006" }}
+                            </div>
+                            
+                            <!-- Title -->
+                            <h5 class="card-title text-dark mb-2">{{ .Title }}</h5>
+                            
+                            <!-- Description -->
+                            <p class="card-text text-muted small">{{ .Params.description }}</p>
+                            
+                            <!-- Link indicator -->
+                            <div class="text-primary small mt-3">
+                                Read article <i class="fas fa-external-link-alt ms-1"></i>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             {{ end }}
         </div>
@@ -95,7 +120,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="h2 text-primary">{{ len (where (where .Site.RegularPages "Section" "media") "Params.tags" "intersect" (slice "tv")) }}</div>
-                                <div class="small text-muted">TV Stations</div>
+                                <div class="small text-muted">TV Coverage</div>
                             </div>
                             <div class="col-md-4">
                                 <div class="h2 text-primary">{{ len (where (where .Site.RegularPages "Section" "media") "Params.tags" "intersect" (slice "statewide")) }}</div>
@@ -119,5 +144,34 @@
         </div>
     </div>
 </section>
+
+<style>
+/* Link Preview Card Styles */
+.link-preview-card {
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.link-preview-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1) !important;
+    border-color: #007bff;
+}
+
+.link-preview-card .card-body {
+    padding: 1rem;
+}
+
+.link-preview-card .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Make entire card clickable */
+a:hover .link-preview-card .card-title {
+    color: #007bff !important;
+}
+</style>
 
 {{ end }}
