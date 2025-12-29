@@ -23,7 +23,7 @@
                             <strong>{{ .Params.outlet }}</strong> | {{ .Date.Format "January 2, 2006" }}
                         </p>
                         <p class="card-text lead">{{ .Params.description }}</p>
-                        <a href="{{ .Params.url }}" target="_blank" class="btn btn-primary btn-lg">
+                        <a href="{{ .Params.external_url }}" target="_blank" class="btn btn-primary btn-lg">
                             Read Original Article <i class="fas fa-external-link-alt ms-2"></i>
                         </a>
                         {{ .Content }}
@@ -56,7 +56,7 @@
 
                         <!-- Headline -->
                         <h5 class="card-title">
-                            <a href="{{ .Params.url }}" target="_blank" class="text-decoration-none text-dark">
+                            <a href="{{ .Params.external_url }}" target="_blank" class="text-decoration-none text-dark">
                                 {{ .Title }}
                             </a>
                         </h5>
@@ -73,7 +73,7 @@
                         <p class="card-text flex-grow-1">{{ .Params.description }}</p>
 
                         <!-- Read Button -->
-                        <a href="{{ .Params.url }}" target="_blank" class="btn btn-outline-primary btn-sm mt-auto">
+                        <a href="{{ .Params.external_url }}" target="_blank" class="btn btn-outline-primary btn-sm mt-auto">
                             Read Article <i class="fas fa-external-link-alt ms-1"></i>
                         </a>
                     </div>
