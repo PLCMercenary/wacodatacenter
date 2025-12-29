@@ -1,0 +1,123 @@
+{{ define "main" }}
+
+<section class="page-section" style="padding-top: 120px;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="display-4">Media Coverage</h1>
+            <p class="lead text-muted">Our community's concerns have received widespread media attention from local TV stations, newspapers, and statewide outlets.</p>
+            <p class="text-muted"><strong>{{ len (where .Site.RegularPages "Section" "media") }} Articles</strong> | Last Updated: {{ now.Format "January 2, 2006" }}</p>
+        </div>
+
+        <!-- Featured Article (if any) -->
+        {{ range first 1 (where (where .Site.RegularPages "Section" "media") "Params.featured" true) }}
+        <div class="row mb-5">
+            <div class="col-lg-10 mx-auto">
+                <div class="card border-primary shadow-lg">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-primary me-2">FEATURED</span>
+                            <span class="badge bg-warning text-dark">Original Investigation</span>
+                        </div>
+                        <h2 class="card-title h3">{{ .Title }}</h2>
+                        <p class="text-muted mb-3">
+                            <strong>{{ .Params.outlet }}</strong> | {{ .Date.Format "January 2, 2006" }}
+                        </p>
+                        <p class="card-text lead">{{ .Params.description }}</p>
+                        <a href="{{ .Params.url }}" target="_blank" class="btn btn-primary btn-lg">
+                            Read Original Article <i class="fas fa-external-link-alt ms-2"></i>
+                        </a>
+                        {{ .Content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+
+        <h2 class="text-center mb-4">All Coverage</h2>
+
+        <!-- Media Coverage Cards -->
+        <div class="row">
+            {{ range where (where .Site.RegularPages "Section" "media") "Params.featured" "!=" true }}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <!-- Outlet Badge -->
+                        <div class="mb-3">
+                            {{ if in .Params.tags "tv" }}
+                                <span class="badge bg-info"><i class="fas fa-tv me-1"></i> TV</span>
+                            {{ else if in .Params.tags "print" }}
+                                <span class="badge bg-secondary"><i class="fas fa-newspaper me-1"></i> Print</span>
+                            {{ else if in .Params.tags "statewide" }}
+                                <span class="badge bg-success"><i class="fas fa-star me-1"></i> Statewide</span>
+                            {{ else }}
+                                <span class="badge bg-primary"><i class="fas fa-globe me-1"></i> Online</span>
+                            {{ end }}
+                        </div>
+
+                        <!-- Headline -->
+                        <h5 class="card-title">
+                            <a href="{{ .Params.url }}" target="_blank" class="text-decoration-none text-dark">
+                                {{ .Title }}
+                            </a>
+                        </h5>
+
+                        <!-- Outlet and Date -->
+                        <p class="text-muted small mb-2">
+                            <strong>{{ .Params.outlet }}</strong>
+                        </p>
+                        <p class="text-muted small mb-3">
+                            <i class="fas fa-calendar-alt me-1"></i>{{ .Date.Format "January 2, 2006" }}
+                        </p>
+
+                        <!-- Description -->
+                        <p class="card-text flex-grow-1">{{ .Params.description }}</p>
+
+                        <!-- Read Button -->
+                        <a href="{{ .Params.url }}" target="_blank" class="btn btn-outline-primary btn-sm mt-auto">
+                            Read Article <i class="fas fa-external-link-alt ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+        <!-- Coverage Stats -->
+        <div class="row mt-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <h4 class="mb-3">Coverage Summary</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="h2 text-primary">{{ len (where .Site.RegularPages "Section" "media") }}</div>
+                                <div class="small text-muted">Total Articles</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="h2 text-primary">{{ len (where (where .Site.RegularPages "Section" "media") "Params.tags" "intersect" (slice "tv")) }}</div>
+                                <div class="small text-muted">TV Stations</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="h2 text-primary">{{ len (where (where .Site.RegularPages "Section" "media") "Params.tags" "intersect" (slice "statewide")) }}</div>
+                                <div class="small text-muted">Statewide Outlets</div>
+                            </div>
+                        </div>
+                        <p class="text-muted mt-3 mb-0 small">
+                            Our community's concerns have reached audiences across Central Texas and statewide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-5">
+            <h4>Join the Conversation</h4>
+            <p class="text-muted mb-4">Add your voice to the thousands already speaking up</p>
+            <a href="https://www.change.org/p/stop-infrakey-data-center-from-building-in-lacy-lakeview" class="btn btn-primary btn-lg me-2 mb-2">Sign the Petition</a>
+            <a href="/contact/" class="btn btn-outline-primary btn-lg mb-2">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+{{ end }}
