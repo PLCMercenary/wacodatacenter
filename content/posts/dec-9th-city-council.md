@@ -107,7 +107,7 @@ Every one of them needs to hear from you. In writing. With documentation. With s
 
 ## What You Can Do
 
-1. **Submit written testimony** to Lacy Lakeview City Council for their next meeting. Use our [templates](/resources/templates-contact-info.md) if you need a starting point.
+1. **Submit written testimony** to Lacy Lakeview City Council for their next meeting. Use our [templates](/resources/templates-contact-info) if you need a starting point.
 
 2. **Contact county commissioners** about the annexation of non-contiguous land in unincorporated county territory. Our template library includes county-specific letters.
 
