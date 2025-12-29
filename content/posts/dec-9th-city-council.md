@@ -2,7 +2,7 @@
 title: "December 9th Council Meeting: Why Your Voice Must Be Heard"
 date: 2025-12-29
 author: "Sean Terrell (PLC Mercenary)"
-draft: true
+draft: false
 tags: ["lacy-lakeview", "public-comment", "city-council", "advocacy"]
 slug: "why-your-voice-matters"
 ---
@@ -77,19 +77,19 @@ When you submit a public comment citing Texas Local Government Code §43.052 abo
 
 When you show up to public comment with printed copies of your written testimony, with citations, with data—you're not just another concerned citizen. You're someone who did their homework.
 
-## Sarah Lenart: The Response This Situation Demands
+## Sara Mynarcik: The Response This Situation Demands
 
-While the council conducted its carefully choreographed performance—vote first, pretend to listen later—Sarah Lenart refused to play along.
+While the council conducted its carefully choreographed performance—vote first, pretend to listen later—Sara Mynarcik refused to play along.
 
 She interrupted Mayor Wilson's closing speech about "the inevitability of change" and the "nature of economic growth." Lacy Lakeview police officers escorted her from the meeting.
 
 The optics tell the story: Police removing a citizen for objecting too loudly to her community being sold out—after the council voted before letting anyone speak.
 
-Sarah did what the situation called for. Not disruption for its own sake. Not incivility for attention. But the direct, uncompromising opposition that a corrupt process demands.
+Sara did what the situation called for. Not disruption for its own sake. Not incivility for attention. But the direct, uncompromising opposition that a corrupt process demands.
 
 When a city council votes before hearing from the people they plan to steamroll, when they're hellbent on annexing non-contiguous land to capture $10 billion in tax revenue without any obligation to the people affected, when they make it clear that no amount of public testimony will change their minds—polite comments for the record aren't enough.
 
-Sarah's removal should radicalize every person who believes in democratic governance. Not toward violence. Not toward chaos. But toward the recognition that this fight requires everything we can bring to it.
+Sara's removal should radicalize every person who believes in democratic governance. Not toward violence. Not toward chaos. But toward the recognition that this fight requires everything we can bring to it.
 
 ## The Path Forward
 
