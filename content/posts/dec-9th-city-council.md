@@ -2,7 +2,7 @@
 title: "December 9th Council Meeting: Why Your Voice Must Be Heard"
 date: 2025-12-29
 author: "Sean Terrell (PLC Mercenary)"
-draft: false
+draft: true
 tags: ["lacy-lakeview", "public-comment", "city-council", "advocacy"]
 slug: "why-your-voice-matters"
 ---
