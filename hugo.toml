@@ -54,7 +54,6 @@ title = 'Waco Data Center Community Information'
     name = "Contact"
     url = "/contact/"
     weight = 8
-    weight = 7
 
 [outputs]
   home = ["HTML", "RSS"]
