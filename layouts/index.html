@@ -9,49 +9,6 @@
     </div>
 </header>
 
-<!-- Community Impact Metrics -->
-<section class="page-section bg-primary text-white" id="metrics">
-    <div class="container">
-        <div class="text-center mb-4">
-            <h2 class="section-heading text-uppercase text-white">Community Impact</h2>
-            <h3 class="section-subheading text-white-50">Our neighbors are speaking up</h3>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-3 mb-4">
-                <div class="metric-card">
-                    <div class="metric-number display-4 fw-bold">{{ .Site.Data.metrics.petition.signatures }}</div>
-                    <div class="metric-label text-uppercase mt-2">Petition Signatures</div>
-                    <div class="metric-detail text-white-50 small mt-1">{{ .Site.Data.metrics.petition.local_supporters }}% from local zip codes</div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="metric-card">
-                    <div class="metric-number display-4 fw-bold">{{ .Site.Data.metrics.facebook.members }}</div>
-                    <div class="metric-label text-uppercase mt-2">Facebook Members</div>
-                    <div class="metric-detail text-white-50 small mt-1">Growing daily</div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="metric-card">
-                    <div class="metric-number display-4 fw-bold">{{ .Site.Data.metrics.petition.comments }}</div>
-                    <div class="metric-label text-uppercase mt-2">Supporter Stories</div>
-                    <div class="metric-detail text-white-50 small mt-1">Personal testimonies</div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="metric-card">
-                    <div class="metric-number display-4 fw-bold">{{ .Site.Data.metrics.petition.media_mentions }}</div>
-                    <div class="metric-label text-uppercase mt-2">Media Mentions</div>
-                    <div class="metric-detail text-white-50 small mt-1">Local & regional coverage</div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-4">
-            <p class="text-white-50 small mb-0">Updated {{ .Site.Data.metrics.updated }} | <a href="/contact/" class="text-white">Join the movement</a></p>
-        </div>
-    </div>
-</section>
-
 <!-- Fast Facts Section -->
 <section class="page-section bg-light" id="facts">
     <div class="container">
@@ -208,6 +165,49 @@
                 </ul>
                 <p class="text-center text-muted mt-4"><em>Events are updated regularly. Check back often or sign up for email updates below.</em></p>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- Community Impact Metrics -->
+<section class="page-section bg-primary text-white" id="metrics">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="section-heading text-uppercase text-white">Community Impact</h2>
+            <h3 class="section-subheading text-white-50">Our neighbors are speaking up</h3>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <div class="metric-card">
+                    <div class="metric-number display-4 fw-bold">{{ .Site.Data.metrics.petition.signatures }}</div>
+                    <div class="metric-label text-uppercase mt-2">Petition Signatures</div>
+                    <div class="metric-detail text-white-50 small mt-1">{{ .Site.Data.metrics.petition.local_supporters }}% from local zip codes</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="metric-card">
+                    <div class="metric-number display-4 fw-bold">{{ .Site.Data.metrics.facebook.members }}</div>
+                    <div class="metric-label text-uppercase mt-2">Facebook Members</div>
+                    <div class="metric-detail text-white-50 small mt-1">Growing daily</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="metric-card">
+                    <div class="metric-number display-4 fw-bold">{{ .Site.Data.metrics.petition.comments }}</div>
+                    <div class="metric-label text-uppercase mt-2">Supporter Stories</div>
+                    <div class="metric-detail text-white-50 small mt-1">Personal testimonies</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="metric-card">
+                    <div class="metric-number display-4 fw-bold">{{ .Site.Data.metrics.petition.media_mentions }}</div>
+                    <div class="metric-label text-uppercase mt-2">Media Mentions</div>
+                    <div class="metric-detail text-white-50 small mt-1">Local & regional coverage</div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p class="text-white-50 small mb-0">Updated {{ .Site.Data.metrics.updated }} | <a href="/contact/" class="text-white">Join the movement</a></p>
         </div>
     </div>
 </section>
