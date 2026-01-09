@@ -49,7 +49,7 @@ People moved out here for the peace, the open sky, the chance to raise kids and 
 
 Y'all remember that December 9, 2025 meeting? Over 60 of us packed the room, spilling into the halls, ready to speak up. Scenes like this, folks standing up and making their voices heard.
 
-{{< figure src="/images/251209-JH-Lacy-Data-Center-06.webp" alt="Community members protesting the Infrakey data center" caption="Community members against Infrakey's proposed data center overflow into the parking lot during Tuesday's City Council meeting in Lacy Lakeview on Dec. 9, 2025. More than 100 people attended the city council meeting, exceeding the room's 53-person capacity. Credit: Justin Hamel / The Waco Bridge / CatchLight Local / Report for America" class="post-image" >}}
+{{< figure src="/images/251209-JH-Lacy-Data-Center-06.webp" alt="Community members protesting the Infrakey data center" caption="Photo Credit: Justin Hamel / The Waco Bridge / CatchLight Local / Report for America" class="post-image" >}}
 
 But the council went ahead and voted 6-1 to approve that non-binding MOU with Infrakey before letting a single one of us talk. You voted before hearing us. When we finally got our turn, 12 folks stood up and laid out real worries about water, air, noise, the rushed process, all of it. Mayor Wilson talked about needing money for sewer lines, streets, a new fire engine. I get it, the city's hurting for cash, but deciding $50 million a year is worth selling out your neighbors who get none of the benefits and all the pain? That ain't right.
 
