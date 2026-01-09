@@ -19,12 +19,12 @@ I'm Sean Terrell, a guy who's called the dome house on Tours Rd in Elm Mott home
 
 Here are a few shots of the kind of land we're talking about, the open fields and homesteads that make this part of Texas special:
 
-{{< figure src="/images/land1.jpeg" alt="Rural farmland in McLennan County" class="post-image" >}}
+<!-- {{< figure src="/images/land1.jpeg" alt="Rural farmland in McLennan County" class="post-image" >}} -->
 {{< figure src="/images/land2.webp" alt="Open countryside near the proposed data center site" class="post-image" >}}
 
 And then there's what Infrakey wants to build. Massive industrial complexes like this one, with rows of servers, cooling towers humming nonstop, and a huge power plant right on site.
 
-{{< figure src="/images/ai1.webp" alt="Example of a large-scale data center facility" class="post-image" >}}
+<!-- {{< figure src="/images/ai1.webp" alt="Example of a large-scale data center facility" class="post-image" >}} -->
 {{< figure src="/images/ai2.png" alt="Data center infrastructure showing scale of industrial development" class="post-image" >}}
 
 ## How SB 2038 is Being Twisted
