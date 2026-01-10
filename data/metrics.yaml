@@ -1,14 +1,14 @@
 petition:
-  signatures: 2358
+  signatures: 2445
   comments: 55
   local_supporters: 72
   media_mentions: 3
   
 facebook:
-  members: 1190
+  members: 1290
   
 email:
   subscribers: 6
 
 # Single update date for all metrics
-updated: "2026-1-9"
+updated: "2026-1-10"
