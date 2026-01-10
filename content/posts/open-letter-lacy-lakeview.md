@@ -13,7 +13,7 @@ featured_image: "/images/251209-JH-Lacy-Data-Center-06.webp"
 
 To the Lacy Lakeview City Council,
 
-I'm Sean Terrell, a guy who's called the dome house on Tours Rd in Elm Mott home since August 2015. My place sits right in McLennan County's unincorporated ETJ, close to that 520 acres of farmland Infrakey bought up for this massive $10 billion data center deal. That includes up to six data centers and a 1.2-gigawatt onsite gas-fired power plant that's bigger than anything we've got around here. I get my water from Ross, mail from Elm Mott, and not one single thing from y'all in Lacy Lakeview. Can't vote in your elections, got no say on your council, but your choices are fixin' to change my whole quality of life, tank my property value, and turn our quiet rural spot into something none of us signed up for.
+I'm Sean Terrell, a guys who's called Elm Mott home since August 2015. I live in the Dome house on Tours Rd. My place sits right in McLennan County's unincorporated ETJ, close to that 520 acres of farmland Infrakey bought up for this massive $10 billion data center deal. That includes up to six data centers and a 1.2-gigawatt onsite gas-fired power plant that's bigger than anything we've got around here. I get my water from Ross, mail from Elm Mott, and not one single thing from y'all in Lacy Lakeview. Can't vote in your elections, got no say on your council, but your choices are fixin' to change my whole quality of life, tank my property value, and turn our quiet rural spot into something none of us signed up for.
 
 ## This Peaceful Countryside is What We Love Out Here
 
