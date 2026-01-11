@@ -1,0 +1,6 @@
+<a href="{{ .Destination | safeURL }}"
+   {{- with .Title }} title="{{ . }}"{{ end -}}
+   {{- $dest := .Destination -}}
+   {{- if or (strings.HasPrefix $dest "http") (strings.HasSuffix $dest ".pdf") (strings.HasSuffix $dest ".docx") }} target="_blank" rel="noopener"{{ end -}}>
+   {{- .Text | safeHTML -}}
+</a>
