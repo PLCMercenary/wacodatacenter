@@ -1,0 +1,74 @@
+{{ define "main" }}
+
+<div class="container py-5" style="padding-top: 120px !important;">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+            <i class="fas fa-check-circle fa-5x text-success mb-4"></i>
+            <h1 class="display-4 mb-3">Thank You!</h1>
+            
+            <!-- Dynamic message based on form type (detected via URL parameter) -->
+            <div id="thankYouMessage">
+                <p class="lead">We've received your submission and will get back to you soon.</p>
+            </div>
+            
+            <script>
+                // Detect which form was submitted based on URL referrer or form name
+                const urlParams = new URLSearchParams(window.location.search);
+                const formName = urlParams.get('form') || document.referrer;
+                const messageDiv = document.getElementById('thankYouMessage');
+                
+                if (formName.includes('yard-signs') || formName.includes('yard-sign')) {
+                    messageDiv.innerHTML = '<p class="lead mb-3">Your yard sign and/or flyer request has been received!</p><p class="text-muted">Someone will contact you within 24-48 hours to confirm your order and coordinate delivery or pickup.</p>';
+                } else if (formName.includes('email-signup')) {
+                    messageDiv.innerHTML = '<p class="lead mb-3">You\'ve been added to our email list!</p><p class="text-muted">You\'ll receive updates on new research, upcoming meetings, and action items. You can unsubscribe at any time.</p>';
+                } else if (formName.includes('contact')) {
+                    messageDiv.innerHTML = '<p class="lead mb-3">We\'ve received your message!</p><p class="text-muted">We\'ll get back to you within 24-48 hours.</p>';
+                } else {
+                    messageDiv.innerHTML = '<p class="lead mb-3">Your submission has been received!</p><p class="text-muted">We\'ll be in touch soon.</p>';
+                }
+            </script>
+            
+            <hr class="my-5">
+            
+            <h3 class="mb-4">What's Next?</h3>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <i class="fas fa-newspaper fa-3x text-primary mb-3"></i>
+                            <h5>Read Our Research</h5>
+                            <p class="text-muted small">Explore our latest articles and analysis</p>
+                            <a href="/posts/" class="btn btn-outline-primary btn-sm">View Articles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <i class="fas fa-signature fa-3x text-primary mb-3"></i>
+                            <h5>Sign the Petition</h5>
+                            <p class="text-muted small">Add your voice to the movement</p>
+                            <a href="https://www.change.org/p/stop-infrakey-data-center-from-building-in-lacy-lakeview" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">Sign Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <i class="fas fa-share-alt fa-3x text-primary mb-3"></i>
+                            <h5>Follow Us</h5>
+                            <p class="text-muted small">Stay updated on social media</p>
+                            <a href="https://www.facebook.com/share/g/17cFKqY3q8/?mibextid=wwXIfr" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5">
+                <a href="/" class="btn btn-primary btn-lg">Return to Homepage</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ end }}
