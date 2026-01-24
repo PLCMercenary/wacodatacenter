@@ -1,11 +1,12 @@
 petition:
-  signatures: 2849
+  signatures: 2859
   comments: 64
   local_supporters: 72
   media_mentions: 3
   
 facebook:
-  members: 1981
+  members: 2026
+  milestone: "2K members reached!"
   
 email:
   subscribers: 12

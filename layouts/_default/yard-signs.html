@@ -1,0 +1,125 @@
+{{ define "main" }}
+
+<div class="container py-5" style="padding-top: 120px !important;">
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-4 mb-3">Order Yard Signs & Flyers</h1>
+            <p class="lead text-muted">Support the movement with yard signs and informational flyers</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="alert alert-info mb-4">
+                <h5><i class="fas fa-info-circle me-2"></i>Pricing & Support</h5>
+                <p class="mb-2"><strong>Yard Signs:</strong> $5.00 per sign</p>
+                <p class="mb-2"><strong>Flyers:</strong> Pricing varies based on quantity</p>
+                <p class="mb-0"><strong>All proceeds</strong> go directly to committee funding for legal counsel and advocacy efforts to stop the data center.</p>
+            </div>
+
+            <div class="card border-0 shadow">
+                <div class="card-body p-5">
+                    <h2 class="mb-4">Order Form</h2>
+                    
+                    <form name="yard-signs" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you/">
+                        <input type="hidden" name="form-name" value="yard-signs">
+                        <p style="display:none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+
+                        <!-- Request Type -->
+                        <div class="mb-4">
+                            <label for="request-type" class="form-label fw-bold">What would you like to order? <span class="text-danger">*</span></label>
+                            <select class="form-select" id="request-type" name="request-type" required>
+                                <option value="">Select...</option>
+                                <option value="Yard Signs Only">Yard Signs Only</option>
+                                <option value="Flyers Only">Flyers Only</option>
+                                <option value="Both">Both Yard Signs and Flyers</option>
+                            </select>
+                        </div>
+
+                        <!-- Yard Signs Quantity -->
+                        <div class="mb-4">
+                            <label for="signs-quantity" class="form-label fw-bold">Number of Yard Signs</label>
+                            <select class="form-select" id="signs-quantity" name="signs-quantity">
+                                <option value="">Not ordering signs</option>
+                                <option value="1-5">1-5 signs</option>
+                                <option value="5-10">5-10 signs</option>
+                                <option value="10+">10+ signs</option>
+                            </select>
+                            <div class="form-text">Signs are $5.00 each. Consider donating extra to support legal and advocacy costs!</div>
+                        </div>
+
+                        <!-- Flyers Quantity -->
+                        <div class="mb-4">
+                            <label for="flyers-quantity" class="form-label fw-bold">Number of Flyers</label>
+                            <select class="form-select" id="flyers-quantity" name="flyers-quantity">
+                                <option value="">Not ordering flyers</option>
+                                <option value="20">20 flyers</option>
+                                <option value="50">50 flyers</option>
+                                <option value="100">100 flyers</option>
+                            </select>
+                            <div class="form-text">Pricing depends on quantity and will be confirmed via email/phone</div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <!-- Contact Information -->
+                        <h4 class="mb-3">Your Information</h4>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number (optional)</label>
+                            <input type="tel" class="form-control" id="phone" name="phone">
+                            <div class="form-text">Helpful for coordinating delivery or pickup</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="address" class="form-label">Delivery Address (optional)</label>
+                            <textarea class="form-control" id="address" name="address" rows="3" placeholder="Street address, city, state, zip"></textarea>
+                            <div class="form-text">Leave blank if you prefer pickup</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="notes" class="form-label">Additional Notes (optional)</label>
+                            <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Delivery preferences, questions, etc."></textarea>
+                        </div>
+
+                        <!-- Consent Checkboxes -->
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="contact-consent" name="contact-consent" required>
+                            <label class="form-check-label" for="contact-consent">
+                                I agree to be contacted by phone or text to coordinate delivery or pickup <span class="text-danger">*</span>
+                            </label>
+                        </div>
+
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="privacy-consent" name="privacy-consent" required>
+                            <label class="form-check-label" for="privacy-consent">
+                                I have read and agree to the <a href="/privacy/" target="_blank">Privacy Policy</a> <span class="text-danger">*</span>
+                            </label>
+                        </div>
+
+                        <div class="alert alert-success">
+                            <p class="mb-0"><strong>Thank you for supporting our efforts!</strong> Someone will contact you within 24-48 hours to confirm your order and coordinate delivery or pickup.</p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Submit Order Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ end }}
