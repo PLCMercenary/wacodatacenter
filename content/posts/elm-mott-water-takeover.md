@@ -71,9 +71,11 @@ This was the line that hit me like a punch. Wilson says if they're bringing in i
 
 Not just the data center. Not just one site. A whole corridor.
 
-And then, in the same breath, he acknowledges what people actually want. He says folks built out here because they didn't want to be in a city, they don't want to be annexed.
+And then Ray Bartosh, the water board VP, acknowledges what people actually want. He says folks built out here because they didn't want to be in a city, they don't want to be annexed.
 
-So he knows. He knows people don't want it. And he's talking about it anyway.
+Wilson's response? He knows. He says people don't want it. And he's talking about it anyway.
+
+So he knows. He knows people don't want it. And he's mapping out the takeover regardless.
 
 ## So what is this, really
 
