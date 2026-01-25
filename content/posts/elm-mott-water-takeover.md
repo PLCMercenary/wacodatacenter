@@ -37,7 +37,7 @@ Wilson points at **Katy Parkway**, calls it the old railroad right-of-way, says 
 
 So let's say it plain. They're looking at a corridor that cuts right through this area and thinking "that's our path." That's not partnership, that's route planning.
 
-### 2) They need effluent, and they need it from Elm Mott**
+### 2) They need effluent, and they need it from Elm Mott
 
 This is where it gets ugly, because they start talking about the cooling system and gray water demand.
 
@@ -51,7 +51,7 @@ They talk about package plants and "purple pipe" to capture and push that reclai
 
 But it's extraction. They need what Elm Mott has because their own system is failing, and they found a customer - the data center - that'll pay for the takeover.
 
-### 3) Lacy Lakeview's sewer crisis became Elm Mott's leverage point**
+### 3) Lacy Lakeview's sewer crisis became Elm Mott's leverage point
 
 The minutes reveal Lacy Lakeview has a serious problem: a $15 million sewer need, and their pipes are full. Wilson admits in a rain event, it overflows.
 
