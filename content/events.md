@@ -8,7 +8,7 @@ events:
     title: "Lacy Lakeview City Council Meeting"
     location: "Lacy Lakeview City Hall"
     category: "City Council"
-    highlight: true
+    highlight: false
     agenda_url: ""
     notes: "High relevance for Infrakey DC Parks discussions; public comment (includes water items)"
     completed: true
@@ -19,7 +19,8 @@ events:
     title: "McLennan County Commissioners Court Meeting"
     location: "McLennan County Courthouse"
     category: "County"
-    highlight: true
+    highlight: false 
+    completed: true
     agenda_url: ""
     notes: "Public comment on land/infrastructure (oversees unincorporated areas like Elm Mott/Ross)"
 
@@ -45,6 +46,7 @@ events:
     location: "Waco"
     category: "Water Board"
     highlight: false
+    agenda_url: "https://brazos.org/Portals/0/BOD/Agendas/2026-01-26-BOD-Agenda.pdf"
     notes: "Public water/utility meeting"
 
   - date: 2026-01-27
@@ -68,7 +70,7 @@ events:
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: true
+    highlight: false
     notes: "Internal planning"
 
   # February 2026
@@ -93,7 +95,7 @@ events:
     title: "Elm Mott Water Supply Corporation Board Meeting"
     location: "314 W. Elm Mott Drive"
     category: "Water Board"
-    highlight: false
+    highlight: true 
     notes: "Monthly water board; public comment possible"
 
   - date: 2026-02-03
@@ -174,7 +176,7 @@ events:
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: true
+    highlight: false
     notes: "Internal planning"
 
   - date: 2026-02-16
@@ -218,7 +220,7 @@ events:
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: true
+    highlight: false
 
   # March 2026
   - date: 2026-03-02
@@ -296,7 +298,7 @@ events:
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: true
+    highlight: false
 
   - date: 2026-03-16
     time: "7:00 PM"
@@ -338,7 +340,7 @@ events:
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: true
+    highlight: false
 
   - date: 2026-03-30
     time: "10:00 AM"
@@ -402,7 +404,7 @@ events:
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: true
+    highlight: false
 
   - date: 2026-04-11
     time: "TBD"
@@ -473,7 +475,7 @@ events:
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: true
+    highlight: false
 ---
 
 Stay informed about upcoming city council meetings, water board meetings, and community events related to the proposed data center development.

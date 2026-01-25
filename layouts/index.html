@@ -123,63 +123,78 @@
     </div>
 </section>
 
-<!-- Events Calendar Section -->
-<section class="page-section bg-light" id="events">
+<!-- Project Timeline Section -->
+<section class="page-section bg-light" id="timeline">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Upcoming Events</h2>
-            <h3 class="section-subheading text-muted">Stay informed about meetings and community gatherings</h3>
+            <h2 class="section-heading text-uppercase">Project Timeline</h2>
+            <h3 class="section-subheading text-muted">Key events in the data center development</h3>
         </div>
         <div class="row">
             <div class="col-lg-10 mx-auto">
+                <style>
+                    /* Compact timeline styling */
+                    #timeline .timeline > li > .timeline-panel {
+                        padding: 10px 20px;
+                    }
+                    #timeline .timeline > li > .timeline-image {
+                        width: 60px;
+                        height: 60px;
+                        margin-left: -30px;
+                    }
+                    #timeline .timeline > li.timeline-inverted > .timeline-image {
+                        margin-left: 0;
+                        margin-right: -30px;
+                    }
+                    #timeline .timeline > li > .timeline-image i {
+                        font-size: 1.5rem;
+                        line-height: 60px;
+                    }
+                    #timeline .timeline-heading h4 {
+                        font-size: 1rem;
+                        margin-bottom: 0.25rem;
+                    }
+                    #timeline .timeline-heading h4.subheading {
+                        font-size: 0.95rem;
+                        margin-bottom: 0.5rem;
+                    }
+                    #timeline .timeline-body p {
+                        font-size: 0.875rem;
+                        margin-bottom: 0;
+                    }
+                </style>
                 <ul class="timeline">
-                    <li>
-                        <div class="timeline-image bg-warning">
-                            <i class="fas fa-users fa-lg text-white"></i>
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <span class="badge bg-warning text-dark mb-2">NEXT</span>
-                                <h4>February 1, 2026</h4>
-                                <h4 class="subheading">Community Update Meeting</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">6:00 PM - Ross Volunteer Fire Department</p>
-                            </div>
-                        </div>
-                    </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image bg-primary">
-                            <i class="fas fa-gavel fa-lg text-white"></i>
+                            <i class="fas fa-bullhorn text-white"></i>
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>January 13, 2026</h4>
-                                <h4 class="subheading">City Council Meetings</h4>
+                                <h4>January 16-20, 2026</h4>
+                                <h4 class="subheading">L2D2 Partnership Announced</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted mb-2"><strong>Lacy Lakeview:</strong> City Council approved Measure 2026-01 - No planned annexations, city borders and ETJ remain the same. Landowner annexations can be approved if requested.</p>
-                                <p class="text-muted mb-0"><strong>Ross:</strong> City Council tabled discussion about Data Center. City Lawyer recommends NOT pursuing any changes to laws or annexation due to the DC.</p>
+                                <p class="text-muted">Infrakey and Lacy Lakeview formally announce the Lacy Lakeview Data District (L2D2) during PTC 2026 conference in Honolulu. Plans call for 925 MW data center district (up to 1.2 GW) with Phase I targeting 300 MW. Investment expected to exceed $2 billion at full build-out.</p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-image bg-primary">
-                            <i class="fas fa-users fa-lg text-white"></i>
+                            <i class="fas fa-gavel text-white"></i>
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>December 9, 2024</h4>
-                                <h4 class="subheading">Lacy Lakeview City Council Vote</h4>
+                                <h4>December 9, 2025</h4>
+                                <h4 class="subheading">City Council Approval</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">City Council voted to proceed with data center agreement despite overwhelming public opposition and numerous procedural concerns.</p>
+                                <p class="text-muted">Lacy Lakeview City Council approves (6-1 vote) non-binding MOU with Infrakey regarding prospective annexation and provision of water/sewer services. Meeting marked by significant resident opposition. Community members packed the chamber, many expressing "We don't want this."</p>
                             </div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image bg-primary">
-                            <i class="fas fa-handshake fa-lg text-white"></i>
+                            <i class="fas fa-users text-white"></i>
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -187,12 +202,56 @@
                                 <h4 class="subheading">Initial Community Meeting</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">First community meeting held at Ross VFD to discuss the proposed development.</p>
+                                <p class="text-muted">First community meeting held at Ross VFD to discuss the proposed development. Ross DC Action Committee formed.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image bg-primary">
+                            <i class="fas fa-newspaper text-white"></i>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>November 21, 2025</h4>
+                                <h4 class="subheading">Public Reports Emerge</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">First public reports surface about ongoing negotiations for the ~$10 billion data center and power plant project. The Waco Bridge and other outlets begin covering the story as details become public.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image bg-primary">
+                            <i class="fas fa-handshake text-white"></i>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>June 10-24, 2025</h4>
+                                <h4 class="subheading">Land Purchase & Initial MOU</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Infrakey purchases approximately 520 acres of farmland for the project site. City Council meetings on June 10 and June 24 authorize the City Manager to negotiate a non-binding MOU with Infrakey for infrastructure development. The initial MOU is signed this month.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image bg-primary">
+                            <i class="fas fa-building text-white"></i>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>March 2025</h4>
+                                <h4 class="subheading">Company Founded</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Infrakey DC Parks LLC is established to develop the data center project in the Lacy Lakeview area.</p>
                             </div>
                         </div>
                     </li>
                 </ul>
-                <p class="text-center text-muted mt-4"><em>Events are updated regularly. Check back often or sign up for email updates below.</em></p>
+                <div class="text-center mt-3">
+                    <a class="btn btn-primary btn-lg" href="/events/">View Upcoming Meetings</a>
+                </div>
             </div>
         </div>
     </div>
