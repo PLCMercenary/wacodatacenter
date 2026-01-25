@@ -11,7 +11,7 @@
         </div>
         
         <div class="row">
-            {{ range .Pages }}
+            {{ range where .Pages ".Params.unlisted" "!=" true }}
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
                     {{ if .Params.image }}
