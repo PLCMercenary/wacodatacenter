@@ -36,24 +36,29 @@ title = 'Waco Data Center Community Information'
     weight = 4
     
   [[menu.main]]
-    name = "Fast Facts"
-    url = "/#facts"
+    name = "Events"
+    url = "/events/"
     weight = 5
     
   [[menu.main]]
-    name = "Events"
-    url = "/#events"
+    name = "Fast Facts"
+    url = "/#facts"
     weight = 6
+    
+  [[menu.main]]
+    name = "Timeline"
+    url = "/#events"
+    weight = 7
     
   [[menu.main]]
     name = "Take Action"
     url = "/#action"
-    weight = 7
+    weight = 8
     
   [[menu.main]]
     name = "Contact"
     url = "/contact/"
-    weight = 8
+    weight = 9
 
 [outputs]
   home = ["HTML", "RSS"]
