@@ -43,9 +43,7 @@ This is where it gets ugly, because they start talking about the cooling system 
 
 They talk about 400,000 gallons a month of gray water, up to 80% gray water in the system. They say the data center "wants to use the effluent" but won't generate it themselves.
 
-Here's what they don't say directly but the minutes make clear: Lacy Lakeview's own sewer system is maxed out. They've got a $15 million problem and pipes that overflow in rain events. They can't take on massive new load.
-
-So they need Elm Mott's wastewater capacity. 
+Here's what they don't say directly but Chuck and Hodde admit Lacy Lakeview's own sewer system is maxed out. They can't take on massive new load, they **need** Elm Mott's wastewater capacity. 
 
 They talk about package plants and "purple pipe" to capture and push that reclaimed water up toward the site. They make it sound like infrastructure investment, like they're doing Elm Mott a favor.
 
