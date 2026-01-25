@@ -37,25 +37,27 @@ Wilson points at **Katy Parkway**, calls it the old railroad right-of-way, says 
 
 So let's say it plain. They're looking at a corridor that cuts right through this area and thinking "that's our path." That's not partnership, that's route planning.
 
-### 2) They want effluent, and they want it bad
+**2) They need effluent, and they need it from Elm Mott**
 
-This is where it gets ugly, because they start talking about the cooling system.
+This is where it gets ugly, because they start talking about the cooling system and gray water demand.
 
-They talk about chillers and cooling, and they talk about using gray water, and the minutes capture this number: **400,000 gallons a month** of gray water. They also talk about **up to 80% gray water** in the system.
+They talk about 400,000 gallons a month of gray water, up to 80% gray water in the system. They say the data center "wants to use the effluent" but won't generate it themselves.
 
-They say the data center "wants to use the effluent" and that the data center isn't going to generate it, meaning the gray water has to come from somewhere else.
+Here's what they don't say directly but the minutes make clear: Lacy Lakeview's own sewer system is maxed out. They've got a $15 million problem and pipes that overflow in rain events. They can't take on massive new load.
 
-Guess who's sitting right there, the "somewhere else." Elm Mott.
+So they need Elm Mott's wastewater capacity. 
 
-They even talk about a **package plant** and "purple pipe" and pushing that reclaimed water up toward the site, and they're talking about doing it like it's just plumbing, like it's nothing.
+They talk about package plants and "purple pipe" to capture and push that reclaimed water up toward the site. They make it sound like infrastructure investment, like they're doing Elm Mott a favor.
 
-But it's not nothing. It's infrastructure that lasts decades, it's maintenance and risk and oversight and who pays when it breaks, and who gets blamed when something goes wrong.
+But it's extraction. They need what Elm Mott has because their own system is failing, and they found a customer - the data center - that'll pay for the takeover.
 
-### 3) Elm Mott's sewer limits got used like a lever
+**3) Lacy Lakeview's sewer crisis became Elm Mott's leverage point**
 
-The minutes include Elm Mott leadership saying they've got a serious sewer need, around **$15 million**, and the pipes are full.
+The minutes reveal Lacy Lakeview has a serious problem: a $15 million sewer need, and their pipes are full. Wilson admits in a rain event, it overflows.
 
-And instead of that being a reason to protect Elm Mott's independence, it gets treated like a weakness to negotiate around. That's what predators do, they sniff the crack in the door and then call it "a solution."
+And instead of that being Lacy Lakeview's problem to solve, they're looking at Elm Mott's wastewater as the solution. They want 400,000 gallons a month of gray water. They talk about package plants and purple pipe to capture Elm Mott's effluent.
+
+That's not partnership. That's predatory. They've got infrastructure problems they can't afford to fix, so they're trying to absorb Elm Mott's capacity to bail themselves out AND serve the data center.
 
 ### 4) The annexation talk was not subtle
 
