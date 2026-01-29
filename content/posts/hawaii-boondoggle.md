@@ -3,7 +3,7 @@ title: "Misinformation, Hawaii Boondoggles, and a 50-Year Giveaway"
 date: 2026-01-25
 author: "Sean Terrell"
 draft: false
-unlisted: true
+unlisted: false 
 tags: ["lacy-lakeview", "infrakey", "city-council", "investigation"]
 categories: ["analysis"]
 slug: "hawaii-boondoggle-50-year-giveaway"
