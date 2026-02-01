@@ -80,6 +80,7 @@ events:
     location: "Ross VFD"
     category: "Community Meeting"
     highlight: true
+    agenda_url: "/agenda/agenda-2026-2-1.docx"
     notes: "Community outreach"
 
   - date: 2026-02-02
@@ -95,7 +96,8 @@ events:
     title: "Elm Mott Water Supply Corporation Board Meeting"
     location: "314 W. Elm Mott Drive"
     category: "Water Board"
-    highlight: true 
+    highlight: true
+    agenda_url: "/agenda/elm-mott-water-agenda-2026-2-2.jpeg"
     notes: "Monthly water board; public comment possible"
 
   - date: 2026-02-03
@@ -104,6 +106,7 @@ events:
     location: "Waco City Hall"
     category: "City Council"
     highlight: false
+    agenda_url: "https://wacotexas.primegov.com/Public/CompiledDocument?meetingTemplateId=1545&compileOutputType=1"
     notes: "Public comment (includes water/utility discussions)"
 
   - date: 2026-02-03

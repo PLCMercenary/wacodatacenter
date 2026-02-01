@@ -1,6 +1,6 @@
 ---
 title: "Misinformation, Hawaii Boondoggles, and a 50-Year Giveaway"
-date: 2026-01-25
+date: 2026-01-29
 author: "Sean Terrell"
 draft: false
 unlisted: false 

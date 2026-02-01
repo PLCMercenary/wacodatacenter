@@ -29,7 +29,12 @@
     <div class="container">
         <div class="masthead-heading text-uppercase">Protecting Our Rural Community</div>
         <div class="masthead-subheading">Fact-Based Information About the Proposed 520-Acre Data Center</div>
-        <a class="btn btn-primary btn-xl text-uppercase" href="#facts">Learn More</a>
+        <div class="mt-4">
+            <a class="btn btn-warning btn-xl text-uppercase me-3 mb-3" href="https://www.gofundme.com/f/protect-our-water-fund" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-hand-holding-heart me-2"></i>Support Our Legal Fund
+            </a>
+            <a class="btn btn-primary btn-xl text-uppercase mb-3" href="#facts">Learn More</a>
+        </div>
     </div>
 </header>
 
@@ -269,7 +274,11 @@
                 <div class="metric-card">
                     <div class="metric-number display-4 fw-bold">{{ .Site.Data.metrics.petition.signatures }}</div>
                     <div class="metric-label text-uppercase mt-2">Petition Signatures</div>
+                    {{ if .Site.Data.metrics.petition.milestone }}
+                    <div class="metric-detail text-warning small mt-1 fw-bold">{{ .Site.Data.metrics.petition.milestone }}</div>
+                    {{ else }}
                     <div class="metric-detail text-white-50 small mt-1">{{ .Site.Data.metrics.petition.local_supporters }}% from local zip codes</div>
+                    {{ end }}
                 </div>
             </div>
             <div class="col-md-3 mb-4">
