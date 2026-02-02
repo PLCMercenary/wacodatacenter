@@ -89,7 +89,9 @@ events:
     location: "Hewitt City Hall"
     category: "City Council"
     highlight: false
-    notes: "Public comment (includes water/utility items)"
+    agenda_url: "https://www.cityofhewitt.com/842/Agendas-and-Minutes---Boards-City-Counci"
+    canceled: true
+    notes: "CANCELED - Public comment (includes water/utility items)"
 
   - date: 2026-02-02
     time: "6:00 PM"
@@ -123,6 +125,7 @@ events:
     location: "Robinson City Hall"
     category: "City Council"
     highlight: false
+    agenda_url: "https://www.robinsontexas.org/Calendar.aspx?EID=2012"
     notes: "Public (water under city)"
 
   - date: 2026-02-03
