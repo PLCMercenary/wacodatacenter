@@ -8,13 +8,14 @@
             </div>
 
             {{ $now := now }}
+            {{ $today := time (now.Format "2006-01-02") }}
             {{ $highlightedEvents := slice }}
             {{ $upcomingEvents := slice }}
             
-            {{/* Separate highlighted and regular events, filter out past events */}}
+            {{/* Separate highlighted and regular events, filter out past and completed events */}}
             {{ range .Params.events }}
                 {{ $eventDate := time .date }}
-                {{ if ge $eventDate $now }}
+                {{ if and (ge $eventDate $today) (not .completed) }}
                     {{ if .highlight }}
                         {{ $highlightedEvents = $highlightedEvents | append . }}
                     {{ else }}

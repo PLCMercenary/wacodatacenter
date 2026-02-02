@@ -2,11 +2,12 @@
 {{ $eventsPage := .Site.GetPage "/events" }}
 {{ if $eventsPage }}
     {{ $now := now }}
-    {{ $nextEvent := index (where $eventsPage.Params.events "highlight" true) 0 }}
+    {{ $today := time (now.Format "2006-01-02") }}
+    {{ $nextEvent := false }}
     
-    {{/* Find the next highlighted event that hasn't passed */}}
+    {{/* Find the next highlighted event that hasn't passed and isn't completed */}}
     {{ range $eventsPage.Params.events }}
-        {{ if and .highlight (ge (time .date) $now) }}
+        {{ if and .highlight (ge (time .date) $today) (not .completed) }}
             {{ if not $nextEvent }}
                 {{ $nextEvent = . }}
             {{ else if lt (time .date) (time $nextEvent.date) }}
