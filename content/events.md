@@ -82,6 +82,7 @@ events:
     highlight: true
     agenda_url: "/agenda/agenda-2026-2-1.docx"
     notes: "Community outreach"
+    completed: true
 
   - date: 2026-02-02
     time: "7:00 PM"
