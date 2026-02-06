@@ -8,7 +8,7 @@ events:
     title: "Lacy Lakeview City Council Meeting"
     location: "Lacy Lakeview City Hall"
     category: "City Council"
-    highlight: false
+    highlight: true
     agenda_url: ""
     notes: "High relevance for Infrakey DC Parks discussions; public comment (includes water items)"
     completed: true
@@ -19,8 +19,7 @@ events:
     title: "McLennan County Commissioners Court Meeting"
     location: "McLennan County Courthouse"
     category: "County"
-    highlight: false 
-    completed: true
+    highlight: true
     agenda_url: ""
     notes: "Public comment on land/infrastructure (oversees unincorporated areas like Elm Mott/Ross)"
 
@@ -46,7 +45,6 @@ events:
     location: "Waco"
     category: "Water Board"
     highlight: false
-    agenda_url: "https://brazos.org/Portals/0/BOD/Agendas/2026-01-26-BOD-Agenda.pdf"
     notes: "Public water/utility meeting"
 
   - date: 2026-01-27
@@ -70,7 +68,7 @@ events:
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: false
+    highlight: true
     notes: "Internal planning"
 
   # February 2026
@@ -80,7 +78,6 @@ events:
     location: "Ross VFD"
     category: "Community Meeting"
     highlight: true
-    agenda_url: "/agenda/agenda-2026-2-1.docx"
     notes: "Community outreach"
     completed: true
 
@@ -90,17 +87,14 @@ events:
     location: "Hewitt City Hall"
     category: "City Council"
     highlight: false
-    agenda_url: "https://www.cityofhewitt.com/842/Agendas-and-Minutes---Boards-City-Counci"
-    canceled: true
-    notes: "CANCELED - Public comment (includes water/utility items)"
+    notes: "Public comment (includes water/utility items)"
 
   - date: 2026-02-02
     time: "6:00 PM"
     title: "Elm Mott Water Supply Corporation Board Meeting"
     location: "314 W. Elm Mott Drive"
     category: "Water Board"
-    highlight: true
-    agenda_url: "/agenda/elm-mott-water-agenda-2026-2-2.jpeg"
+    highlight: false
     notes: "Monthly water board; public comment possible"
 
   - date: 2026-02-03
@@ -109,7 +103,6 @@ events:
     location: "Waco City Hall"
     category: "City Council"
     highlight: false
-    agenda_url: "https://wacotexas.primegov.com/Public/CompiledDocument?meetingTemplateId=1545&compileOutputType=1"
     notes: "Public comment (includes water/utility discussions)"
 
   - date: 2026-02-03
@@ -126,7 +119,6 @@ events:
     location: "Robinson City Hall"
     category: "City Council"
     highlight: false
-    agenda_url: "https://www.robinsontexas.org/Calendar.aspx?EID=2012"
     notes: "Public (water under city)"
 
   - date: 2026-02-03
@@ -137,13 +129,13 @@ events:
     highlight: false
     notes: "Monthly water board for area utilities"
 
-  - date: 2026-02-08
-    time: "6:00 PM"
-    title: "Community Update Meeting"
+  - date: 2026-02-07
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
-    category: "Community Meeting"
+    category: "Action Committee"
     highlight: true
-    notes: "Community outreach"
+    notes: "Internal planning"
 
   - date: 2026-02-09
     time: "7:00 PM"
@@ -179,12 +171,20 @@ events:
     notes: "Public (water utility under city)"
 
   - date: 2026-02-14
-    time: "10:00 AM"
+    time: "9:30 AM"
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: false
+    highlight: true
     notes: "Internal planning"
+
+  - date: 2026-02-15
+    time: "6:00 PM"
+    title: "Community Update Meeting"
+    location: "Ross VFD"
+    category: "Community Meeting"
+    highlight: true
+    notes: "Community outreach"
 
   - date: 2026-02-16
     time: "7:00 PM"
@@ -200,13 +200,13 @@ events:
     category: "City Council"
     highlight: false
 
-  - date: 2026-02-22
-    time: "6:00 PM"
-    title: "Community Update Meeting"
+  - date: 2026-02-21
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
-    category: "Community Meeting"
+    category: "Action Committee"
     highlight: true
-    notes: "Community outreach"
+    notes: "Internal planning"
 
   - date: 2026-02-24
     time: "7:00 PM"
@@ -223,13 +223,22 @@ events:
     highlight: false
 
   - date: 2026-02-28
-    time: "10:00 AM"
+    time: "9:30 AM"
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: false
+    highlight: true
+    notes: "Internal planning"
 
   # March 2026
+  - date: 2026-03-01
+    time: "6:00 PM"
+    title: "Community Update Meeting"
+    location: "Ross VFD"
+    category: "Community Meeting"
+    highlight: true
+    notes: "Community outreach"
+
   - date: 2026-03-02
     time: "7:00 PM"
     title: "Hewitt City Council Meeting"
@@ -272,12 +281,13 @@ events:
     category: "Water Board"
     highlight: false
 
-  - date: 2026-03-08
-    time: "6:00 PM"
-    title: "Community Update Meeting"
+  - date: 2026-03-07
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
-    category: "Community Meeting"
+    category: "Action Committee"
     highlight: true
+    notes: "Internal planning"
 
   - date: 2026-03-09
     time: "7:00 PM"
@@ -301,11 +311,20 @@ events:
     highlight: false
 
   - date: 2026-03-14
-    time: "10:00 AM"
+    time: "9:30 AM"
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: false
+    highlight: true
+    notes: "Internal planning"
+
+  - date: 2026-03-15
+    time: "6:00 PM"
+    title: "Community Update Meeting"
+    location: "Ross VFD"
+    category: "Community Meeting"
+    highlight: true
+    notes: "Community outreach"
 
   - date: 2026-03-16
     time: "7:00 PM"
@@ -321,12 +340,13 @@ events:
     category: "City Council"
     highlight: false
 
-  - date: 2026-03-22
-    time: "6:00 PM"
-    title: "Community Update Meeting"
+  - date: 2026-03-21
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
-    category: "Community Meeting"
+    category: "Action Committee"
     highlight: true
+    notes: "Internal planning"
 
   - date: 2026-03-24
     time: "7:00 PM"
@@ -343,11 +363,12 @@ events:
     highlight: false
 
   - date: 2026-03-28
-    time: "10:00 AM"
+    time: "9:30 AM"
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: false
+    highlight: true
+    notes: "Internal planning"
 
   - date: 2026-03-30
     time: "10:00 AM"
@@ -357,6 +378,14 @@ events:
     highlight: false
 
   # April 2026
+  - date: 2026-04-04
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
+    location: "Ross VFD"
+    category: "Action Committee"
+    highlight: true
+    notes: "Internal planning"
+
   - date: 2026-04-05
     time: "6:00 PM"
     title: "Community Update Meeting"
@@ -407,11 +436,12 @@ events:
     highlight: false
 
   - date: 2026-04-11
-    time: "10:00 AM"
+    time: "9:30 AM"
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: false
+    highlight: true
+    notes: "Internal planning"
 
   - date: 2026-04-11
     time: "TBD"
@@ -441,6 +471,14 @@ events:
     location: "Bellmead City Hall"
     category: "City Council"
     highlight: false
+
+  - date: 2026-04-18
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
+    location: "Ross VFD"
+    category: "Action Committee"
+    highlight: true
+    notes: "Internal planning"
 
   - date: 2026-04-19
     time: "6:00 PM"
@@ -478,11 +516,12 @@ events:
     highlight: false
 
   - date: 2026-04-25
-    time: "10:00 AM"
+    time: "9:30 AM"
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: false
+    highlight: true
+    notes: "Internal planning"
 ---
 
 Stay informed about upcoming city council meetings, water board meetings, and community events related to the proposed data center development.
