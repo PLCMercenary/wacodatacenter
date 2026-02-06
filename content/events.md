@@ -134,7 +134,7 @@ events:
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: true
+    highlight: false
     notes: "Internal planning"
 
   - date: 2026-02-09
@@ -142,7 +142,7 @@ events:
     title: "Ross Water Supply Board Meeting"
     location: "Ross City Hall"
     category: "Water Board"
-    highlight: false
+    highlight: true
     notes: "Monthly water board; relevant for local supply"
 
   - date: 2026-02-09
@@ -175,7 +175,7 @@ events:
     title: "Data Center Action Committee Meeting"
     location: "Ross VFD"
     category: "Action Committee"
-    highlight: true
+    highlight: false
     notes: "Internal planning"
 
   - date: 2026-02-15
@@ -196,7 +196,7 @@ events:
   - date: 2026-02-17
     time: "3:00 PM / 6:00 PM"
     title: "Waco City Council Meeting"
-    location: "Waco City Hall"
+    location: "Waco Event Center - Bosque Theater"
     category: "City Council"
     highlight: false
 
