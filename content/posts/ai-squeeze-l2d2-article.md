@@ -5,7 +5,7 @@ date: 2026-02-24
 author: "Sean Terrell"
 lastmod: 2026-02-24
 draft: false
-unlisted: true
+unlisted: false 
 layout: single
 categories: ["Opposition Research", "Data Center Impact"]
 tags: ["L2D2", "construction", "disruption", "Baylor", "downtown revitalization", "tourism", "timeline"]
