@@ -2,6 +2,7 @@
 title: "The AI Squeeze: How L2D2 Data Center Construction Will Disrupt Baylor and Downtown Waco"
 description: "When 2,000 Out-of-State Construction Workers Arrive: What the L2D2 Data Center Will Do to Waco"
 date: 2026-02-24
+author: "Sean Terrell"
 lastmod: 2026-02-24
 draft: false
 unlisted: true
@@ -150,6 +151,10 @@ The community deserves to ask whether this project fits that path or knocks it s
 That's not fear talking. That's pattern recognition.
 
 And small towns in Texas have learned the hard way that once a boom starts, you don't control the pace anymore.
+
+---
+
+Sean Terrell is a resident of Elm Mott and organizer of the community opposition to the L2D2 data center project. The petition opposing the project can be found at wacodatacenter.com.
 
 ---
 
