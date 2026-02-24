@@ -1,16 +1,16 @@
 petition:
-  signatures: 3040 
-  comments: 66
+  signatures: 3098 
+  comments: 69
   local_supporters: 72
   media_mentions: 3
-  milestone: "Help us reach 4K signatures!"
+  milestone: "Help us reach 3.5K signatures!"
   
 facebook:
-  members: 2754
-  milestone: "2.5K members reached!"
+  members: 2960
+  milestone: "Chugging toward 3K Members!"
   
 email:
   subscribers: 12
 
 # Single update date for all metrics
-updated: "2026-2-18"
+updated: "2026-2-24"
