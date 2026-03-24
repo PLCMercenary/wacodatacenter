@@ -348,19 +348,13 @@ events:
     highlight: true
     notes: "Internal planning"
 
-  - date: 2026-03-24
-    time: "7:00 PM"
-    title: "City of West Council Meeting"
-    location: "West City Hall"
-    category: "City Council"
-    highlight: false
-
   - date: 2026-03-25
     time: "12:30 PM"
     title: "Southern Trinity Groundwater Conservation District Board Meeting"
     location: "McLennan County Archives Building"
     category: "Water Board"
     highlight: false
+    agenda_url: "https://www.mclennan.gov/AgendaCenter/ViewFile/Agenda/_03252026-1374"
 
   - date: 2026-03-28
     time: "9:30 AM"
@@ -376,6 +370,7 @@ events:
     location: "Waco"
     category: "Water Board"
     highlight: false
+    agenda_url: "https://brazos.org/about-us/about-the-bra/board-of-directors/board-agendas"
 
   # April 2026
   - date: 2026-04-04
@@ -386,19 +381,13 @@ events:
     highlight: true
     notes: "Internal planning"
 
-  - date: 2026-04-05
-    time: "6:00 PM"
-    title: "Community Update Meeting"
-    location: "Ross VFD"
-    category: "Community Meeting"
-    highlight: true
-
   - date: 2026-04-06
     time: "7:00 PM"
     title: "Hewitt City Council Meeting"
     location: "Hewitt City Hall"
     category: "City Council"
     highlight: false
+    agenda_url: "https://www.cityofhewitt.com/AgendaCenter"
 
   - date: 2026-04-06
     time: "6:00 PM"
@@ -406,6 +395,7 @@ events:
     location: "314 W. Elm Mott Drive"
     category: "Water Board"
     highlight: false
+    agenda_url: "https://mcwcid2.myruralwater.com/board-meetings"
 
   - date: 2026-04-07
     time: "3:00 PM / 6:00 PM"
@@ -413,6 +403,7 @@ events:
     location: "Waco City Hall"
     category: "City Council"
     highlight: false
+    agenda_url: "https://www.waco-texas.com/Government/Meeting-Agendas"
 
   - date: 2026-04-07
     time: "6:00 PM"
@@ -420,6 +411,7 @@ events:
     location: "West City Hall"
     category: "City Council"
     highlight: false
+    agenda_url: "https://www.cityofwest.com/city-administration/council-agendas"
 
   - date: 2026-04-07
     time: "6:00 PM"
@@ -427,6 +419,7 @@ events:
     location: "Robinson City Hall"
     category: "City Council"
     highlight: false
+    agenda_url: "https://www.robinsontexas.org/AgendaCenter"
 
   - date: 2026-04-07
     time: "6:00 PM"
@@ -434,6 +427,7 @@ events:
     location: "6511 Gholson Rd, Waco (and Zoom)"
     category: "Water Board"
     highlight: false
+    agenda_url: "https://chalkbluffwatersupply.com/agendas"
 
   - date: 2026-04-11
     time: "9:30 AM"
@@ -507,6 +501,7 @@ events:
     location: "McLennan County Archives Building"
     category: "Water Board"
     highlight: false
+    agenda_url: "https://southerntrinitygcd.org/board-meeting-notices"
 
   - date: 2026-04-24
     time: "7:00 PM"
