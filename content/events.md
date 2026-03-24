@@ -348,6 +348,15 @@ events:
     highlight: true
     notes: "Internal planning"
 
+  - date: 2026-03-24
+    time: "6:00 PM"
+    title: "Lacy Lakeview City Council Meeting"
+    location: "Lacy Lakeview City Hall"
+    category: "City Council"
+    highlight: true
+    agenda_url: "https://www.lacylakeview.org/citycouncil/meeting/city-council-meeting-151"
+    notes: "Data center relevance (water items)"
+
   - date: 2026-03-25
     time: "12:30 PM"
     title: "Southern Trinity Groundwater Conservation District Board Meeting"
