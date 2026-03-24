@@ -7,19 +7,16 @@
                 <p class="lead text-muted">Upcoming meetings, events, and opportunities to engage</p>
             </div>
 
-            {{ $now := now }}
-            {{ $today := time (now.Format "2006-01-02") }}
+            {{ $today := dateFormat "2006-01-02" now }}
             {{ $highlightedEvents := slice }}
-            {{ $upcomingEvents := slice }}
+            {{ $allUpcomingEvents := slice }}
             
-            {{/* Separate highlighted and regular events, filter out past and completed events */}}
+            {{/* Collect all future events; compare date strings (YYYY-MM-DD) to avoid midnight cutoff issue */}}
             {{ range .Params.events }}
-                {{ $eventDate := time .date }}
-                {{ if and (ge $eventDate $today) (not .completed) }}
+                {{ if ge .date $today }}
+                    {{ $allUpcomingEvents = $allUpcomingEvents | append . }}
                     {{ if .highlight }}
                         {{ $highlightedEvents = $highlightedEvents | append . }}
-                    {{ else }}
-                        {{ $upcomingEvents = $upcomingEvents | append . }}
                     {{ end }}
                 {{ end }}
             {{ end }}
@@ -45,20 +42,30 @@
                             </div>
                             <div class="col-md-4 text-md-end mt-3 mt-md-0">
                                 {{ if $nextEvent.agenda_url }}
-                                <a href="{{ $nextEvent.agenda_url }}" class="btn btn-warning btn-lg" target="_blank">
+                                <a href="{{ $nextEvent.agenda_url }}" class="btn btn-warning btn-lg mb-2" target="_blank">
                                     <i class="fas fa-file-alt me-2"></i>View Agenda
                                 </a>
+                                {{ end }}
+                                {{ if $nextEvent.info_url }}
+                                <a href="{{ $nextEvent.info_url }}" class="btn btn-success btn-lg mb-2" target="_blank">
+                                    <i class="fas fa-info-circle me-2"></i>More Info
+                                </a>
+                                {{ end }}
+                                {{ if not (or $nextEvent.agenda_url $nextEvent.info_url) }}
+                                <div class="alert alert-secondary mb-0">
+                                    <small><i class="fas fa-info-circle me-1"></i>No agenda posted yet</small>
+                                </div>
                                 {{ end }}
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {{/* Other Important Meetings - Show only next 3 */}}
+                {{/* Other Important Meetings — next 2 only */}}
                 {{ if gt (len $highlightedEvents) 1 }}
                 <h3 class="mt-5 mb-4"><i class="fas fa-star text-warning me-2"></i>Other Important Meetings</h3>
                 <div class="row">
-                    {{ range first 3 (after 1 $highlightedEvents) }}
+                    {{ range first 2 (after 1 $highlightedEvents) }}
                     <div class="col-md-6 mb-4">
                         <div class="card h-100" style="border-left: 4px solid #fd7e14;">
                             <div class="card-body">
@@ -80,6 +87,11 @@
                                     <i class="fas fa-file-alt me-1"></i>Agenda
                                 </a>
                                 {{ end }}
+                                {{ if .info_url }}
+                                <a href="{{ .info_url }}" class="btn btn-outline-success btn-sm mt-2" target="_blank">
+                                    <i class="fas fa-info-circle me-1"></i>More Info
+                                </a>
+                                {{ end }}
                             </div>
                         </div>
                     </div>
@@ -88,59 +100,162 @@
                 {{ end }}
             {{ end }}
 
-            {{/* All Upcoming Events by Month */}}
-            <h3 class="mt-5 mb-4"><i class="fas fa-calendar-alt me-2"></i>All Upcoming Events</h3>
+            {{/* Next Outreach Events — next 2 */}}
+            {{ $outreachEvents := slice }}
+            {{ range $allUpcomingEvents }}
+                {{ if eq .category "Public Outreach" }}
+                    {{ $outreachEvents = $outreachEvents | append . }}
+                {{ end }}
+            {{ end }}
+            {{ if $outreachEvents }}
+            <h3 class="mt-5 mb-4"><i class="fas fa-bullhorn text-success me-2"></i>Next Outreach Opportunities</h3>
+            <div class="row">
+                {{ range first 2 $outreachEvents }}
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100" style="border-left: 4px solid #28a745; background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">{{ .title }}</h5>
+                                <span class="badge text-white" style="background-color:#28a745;">Outreach</span>
+                            </div>
+                            <p class="text-muted mb-2">
+                                <i class="fas fa-calendar me-2"></i>{{ dateFormat "Mon, Jan 2" (time .date) }} at {{ .time }}
+                            </p>
+                            <p class="text-muted mb-2">
+                                <i class="fas fa-map-marker-alt me-2"></i>{{ .location }}
+                            </p>
+                            {{ if .notes }}
+                            <p class="small text-muted mb-2">{{ .notes }}</p>
+                            {{ end }}
+                            {{ if .info_url }}
+                            <a href="{{ .info_url }}" class="btn btn-outline-success btn-sm mt-1" target="_blank">
+                                <i class="fas fa-info-circle me-1"></i>More Info
+                            </a>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+
+            {{/* Legend */}}
+            <div class="d-flex flex-wrap gap-3 mb-4 mt-2">
+                <span><span style="display:inline-block;width:14px;height:14px;background:#fd7e14;border-radius:2px;margin-right:5px;vertical-align:middle;"></span>City Council / Water Board / Committee</span>
+                <span><span style="display:inline-block;width:14px;height:14px;background:#28a745;border-radius:2px;margin-right:5px;vertical-align:middle;"></span>Public Outreach Opportunity</span>
+                <span><i class="fas fa-star text-warning me-1"></i>Important / Highlighted Meeting</span>
+            </div>
+
+            {{/* All Upcoming Events by Month — includes highlighted events */}}
+            <h3 class="mt-3 mb-4"><i class="fas fa-calendar-alt me-2"></i>All Upcoming Events</h3>
             
             {{ $eventsByMonth := dict }}
-            {{ range $upcomingEvents }}
+            {{ range $allUpcomingEvents }}
                 {{ $monthKey := dateFormat "2006-01" (time .date) }}
                 {{ $monthName := dateFormat "January 2006" (time .date) }}
-                {{ $events := index $eventsByMonth $monthKey | default (dict "month" $monthName "events" slice) }}
-                {{ $newEvents := $events.events | append . }}
+                {{ $existing := index $eventsByMonth $monthKey | default (dict "month" $monthName "events" slice) }}
+                {{ $newEvents := $existing.events | append . }}
                 {{ $eventsByMonth = merge $eventsByMonth (dict $monthKey (dict "month" $monthName "events" $newEvents)) }}
             {{ end }}
 
             {{ range $monthKey, $monthData := $eventsByMonth }}
-            <div class="mb-5">
-                <h4 class="border-bottom pb-2 mb-3">{{ $monthData.month }}</h4>
+            <div class="mb-5" id="month-{{ $monthKey }}">
+                <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
+                    <h4 class="mb-0">{{ $monthData.month }}</h4>
+                    <button class="btn btn-sm btn-outline-secondary" onclick="printMonthCalendar('{{ $monthKey }}', '{{ $monthData.month }}')">
+                        <i class="fas fa-print me-1"></i>Print / PDF
+                    </button>
+                </div>
                 <div class="list-group">
                     {{ range $monthData.events }}
-                    <div class="list-group-item{{ if .canceled }} list-group-item-secondary{{ end }}">
-                        <div class="row align-items-center">
-                            <div class="col-md-8">
-                                <h6 class="mb-1">
-                                    {{ .title }}
-                                    {{ if .canceled }}
-                                    <span class="badge bg-danger ms-2">CANCELED</span>
-                                    {{ end }}
-                                </h6>
-                                <p class="text-muted mb-1 small">
-                                    <i class="fas fa-calendar me-2"></i>{{ dateFormat "Monday, January 2" (time .date) }} at {{ .time }}
-                                    <span class="mx-2">|</span>
-                                    <i class="fas fa-map-marker-alt me-2"></i>{{ .location }}
-                                </p>
-                                {{ if .notes }}
-                                <p class="small text-muted mb-0">{{ .notes }}</p>
-                                {{ end }}
-                            </div>
-                            <div class="col-md-4 text-md-end">
-                                <span class="badge bg-light text-dark">{{ .category }}</span>
-                                {{ if .agenda_url }}
-                                <a href="{{ .agenda_url }}" class="btn btn-sm btn-outline-primary ms-2" target="_blank">
-                                    <i class="fas fa-file-alt"></i> Agenda
-                                </a>
-                                {{ end }}
+                    {{ $isOutreach := eq .category "Public Outreach" }}
+                    {{ $isHighlight := .highlight }}
+                    {{ $commentCategories := slice "City Council" "Water Board" "County" }}
+                    {{ $hasComment := in $commentCategories .category }}
+                    <div class="list-group-item event-row py-2 px-3"
+                        {{ if $isOutreach }}style="border-left: 4px solid #28a745; background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);"
+                        {{ else if $isHighlight }}style="border-left: 4px solid #fd7e14;"
+                        {{ end }}>
+
+                        {{/* ── Top: title + badge ── */}}
+                        <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
+                            <h6 class="mb-0 event-title">
+                                {{ if $isHighlight }}<i class="fas fa-star text-warning me-1" title="Important meeting"></i>{{ end }}
+                                {{ if $isOutreach }}<i class="fas fa-bullhorn text-success me-1"></i>{{ end }}
+                                {{ .title }}
+                            </h6>
+                            {{ if $isOutreach }}
+                            <span class="badge flex-shrink-0 text-white" style="background-color:#28a745;">{{ .category }}</span>
+                            {{ else }}
+                            <span class="badge flex-shrink-0 bg-light text-dark">{{ .category }}</span>
+                            {{ end }}
+                        </div>
+
+                        {{/* ── Meta: date + location ── */}}
+                        <p class="text-muted small mb-1">
+                            <i class="fas fa-calendar me-1"></i>{{ dateFormat "Mon, Jan 2" (time .date) }} &nbsp;·&nbsp; {{ .time }}
+                            <span class="mx-1 text-muted">|</span>
+                            <i class="fas fa-map-marker-alt me-1"></i>{{ .location }}
+                        </p>
+
+                        {{ if .notes }}
+                        <p class="small text-muted mb-1">{{ .notes }}</p>
+                        {{ end }}
+
+                        {{/* ── Action buttons strip — wraps on mobile ── */}}
+                        <div class="d-flex flex-wrap gap-1 mt-2 event-actions">
+                            {{ if .agenda_url }}
+                            <a href="{{ .agenda_url }}" class="btn btn-xs btn-outline-primary" target="_blank">
+                                <i class="fas fa-file-alt me-1"></i>Agenda
+                            </a>
+                            {{ end }}
+                            {{ if .info_url }}
+                            <a href="{{ .info_url }}" class="btn btn-xs btn-outline-success" target="_blank">
+                                <i class="fas fa-info-circle me-1"></i>Info
+                            </a>
+                            {{ end }}
+                            {{ if $hasComment }}
+                            <button class="btn btn-xs btn-outline-danger btn-gen-comment"
+                                title="Generate AI public comment prompt"
+                                data-title="{{ .title }}"
+                                data-date="{{ dateFormat "2006-01-02" .date }}"
+                                data-time="{{ .time }}"
+                                data-location="{{ .location }}"
+                                data-category="{{ .category }}"
+                                data-agenda="{{ .agenda_url | default "" }}">
+                                <i class="fas fa-microphone me-1"></i>AI Comment
+                            </button>
+                            {{ end }}
+                            <div class="dropdown">
+                                <button class="btn btn-xs btn-outline-secondary dropdown-toggle btn-add-cal"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                    title="Add to calendar"
+                                    data-title="{{ .title }}"
+                                    data-date="{{ dateFormat "2006-01-02" .date }}"
+                                    data-time="{{ .time }}"
+                                    data-location="{{ .location }}"
+                                    data-notes="{{ .notes | default "" }}">
+                                    <i class="fas fa-calendar-plus me-1"></i>Add to Cal
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item cal-google" href="#"><i class="fab fa-google me-2"></i>Google Calendar</a></li>
+                                    <li><a class="dropdown-item cal-outlook-personal" href="#"><i class="fab fa-microsoft me-2"></i>Outlook (personal)</a></li>
+                                    <li><a class="dropdown-item cal-outlook-work" href="#"><i class="fab fa-microsoft me-2"></i>Outlook (work / M365)</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item cal-ics" href="#"><i class="fas fa-download me-2"></i>Download .ics</a></li>
+                                </ul>
                             </div>
                         </div>
+
                     </div>
                     {{ end }}
                 </div>
             </div>
             {{ end }}
 
-            {{ if not $upcomingEvents }}
+            {{ if not $allUpcomingEvents }}
             <div class="alert alert-info">
-                <i class="fas fa-info-circle me-2"></i>No additional events scheduled at this time. Check back soon!
+                <i class="fas fa-info-circle me-2"></i>No events scheduled at this time. Check back soon!
             </div>
             {{ end }}
 
@@ -155,5 +270,458 @@
             </div>
         </div>
     </div>
+</div>
+
+<style>
+/* btn-xs — one size smaller than btn-sm */
+.btn-xs {
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  border-radius: 0.2rem;
+}
+/* Event title wraps cleanly, doesn't fight the badge */
+.event-title {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  min-width: 0;   /* allows flex children to shrink */
+}
+/* Tighten up the action strip on desktop */
+.event-actions .btn-xs,
+.event-actions .dropdown .btn-xs {
+  white-space: nowrap;
+}
+/* On mobile: give action buttons a little more breathing room */
+@media (max-width: 575px) {
+  .event-row {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  .event-actions {
+    gap: 0.35rem !important;
+  }
+  .event-actions .btn-xs {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.45rem;
+  }
+  /* Stack the modal footer buttons on mobile */
+  #commentPromptModal .modal-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #commentPromptModal .modal-footer .btn {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+}
+</style>
+
+{{/* Embed all events as JSON for the print calendar JS */}}
+<script>
+// ── Event delegation — read data attributes, no inline onclick escaping issues ──
+document.addEventListener('click', function(e) {
+  // Comment button
+  const commentBtn = e.target.closest('.btn-gen-comment');
+  if (commentBtn) {
+    e.preventDefault();
+    generatePublicComment(
+      commentBtn.dataset.title,
+      commentBtn.dataset.date,
+      commentBtn.dataset.time,
+      commentBtn.dataset.location,
+      commentBtn.dataset.category,
+      commentBtn.dataset.agenda
+    );
+    return;
+  }
+  // Calendar dropdown items — walk up to find the parent toggle button with data attrs
+  const calItem = e.target.closest('.cal-google, .cal-outlook-personal, .cal-outlook-work, .cal-ics');
+  if (calItem) {
+    e.preventDefault();
+    const btn = calItem.closest('.dropdown').querySelector('.btn-add-cal');
+    const d = btn.dataset;
+    if (calItem.classList.contains('cal-google'))           addToGoogle(d.date, d.time, d.title, d.location);
+    if (calItem.classList.contains('cal-outlook-personal')) addToOutlook('personal', d.date, d.time, d.title, d.location);
+    if (calItem.classList.contains('cal-outlook-work'))     addToOutlook('work', d.date, d.time, d.title, d.location);
+    if (calItem.classList.contains('cal-ics'))              downloadICS(d.date, d.time, d.title, d.location, d.notes);
+    return;
+  }
+});
+
+// ── Calendar Add Helpers ──────────────────────────────────────────────────────
+
+// Parse a time string like "6:00 PM", "9:30 AM", "3:00 PM / 6:00 PM" etc.
+// Returns { hours, minutes } in 24h, or null for unparseable strings.
+function parseTime(timeStr) {
+  if (!timeStr) return null;
+  // Take only the first time if there's a slash
+  const t = timeStr.split('/')[0].trim();
+  const m = t.match(/(\d+):(\d+)\s*(AM|PM)/i);
+  if (!m) return null;
+  let h = parseInt(m[1]);
+  const min = parseInt(m[2]);
+  const ampm = m[3].toUpperCase();
+  if (ampm === 'PM' && h !== 12) h += 12;
+  if (ampm === 'AM' && h === 12) h = 0;
+  return { hours: h, minutes: min };
+}
+
+// Build a Google/Outlook-compatible datetime string: YYYYMMDDTHHmmss
+function buildDateTime(dateStr, timeStr, offsetHours) {
+  const t = parseTime(timeStr);
+  const d = new Date(dateStr + 'T00:00:00');
+  if (t) {
+    d.setHours(t.hours + (offsetHours || 0), t.minutes, 0);
+  } else {
+    // All-day fallback: just use date + offset in days
+    d.setDate(d.getDate() + (offsetHours || 0));
+    return dateStr.replace(/-/g, '') + (offsetHours ? '' : '');
+  }
+  const pad = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
+}
+
+function isAllDay(timeStr) {
+  return !parseTime(timeStr);
+}
+
+function addToGoogle(date, time, title, location) {
+  let dates;
+  if (isAllDay(time)) {
+    // All-day: YYYYMMDD/YYYYMMDD (next day)
+    const d = new Date(date + 'T00:00:00');
+    const next = new Date(d); next.setDate(next.getDate() + 1);
+    const fmt = dd => `${dd.getFullYear()}${String(dd.getMonth()+1).padStart(2,'0')}${String(dd.getDate()).padStart(2,'0')}`;
+    dates = `${fmt(d)}/${fmt(next)}`;
+  } else {
+    const start = buildDateTime(date, time, 0);
+    const end   = buildDateTime(date, time, 1); // default 1hr
+    dates = `${start}/${end}`;
+  }
+  const url = new URL('https://calendar.google.com/calendar/render');
+  url.searchParams.set('action', 'TEMPLATE');
+  url.searchParams.set('text', title);
+  url.searchParams.set('dates', dates);
+  url.searchParams.set('location', location || '');
+  url.searchParams.set('details', 'Added from wacodatacenter.com');
+  window.open(url.toString(), '_blank');
+}
+
+function addToOutlook(type, date, time, title, location) {
+  const base = type === 'work'
+    ? 'https://outlook.office.com/calendar/0/deeplink/compose'
+    : 'https://outlook.live.com/calendar/0/deeplink/compose';
+  const url = new URL(base);
+  url.searchParams.set('subject', title);
+  url.searchParams.set('location', location || '');
+  url.searchParams.set('body', 'Added from wacodatacenter.com');
+  if (isAllDay(time)) {
+    url.searchParams.set('allday', 'true');
+    url.searchParams.set('startdt', date);
+    url.searchParams.set('enddt', date);
+  } else {
+    const t = parseTime(time);
+    const pad = n => String(n).padStart(2, '0');
+    const startStr = `${date}T${pad(t.hours)}:${pad(t.minutes)}:00`;
+    const endH = t.hours + 1;
+    const endStr = `${date}T${pad(endH)}:${pad(t.minutes)}:00`;
+    url.searchParams.set('startdt', startStr);
+    url.searchParams.set('enddt', endStr);
+  }
+  window.open(url.toString(), '_blank');
+}
+
+function downloadICS(date, time, title, location, notes) {
+  const now = new Date();
+  const stamp = now.toISOString().replace(/[-:]/g,'').split('.')[0] + 'Z';
+  let dtStart, dtEnd, allDay = isAllDay(time);
+
+  if (allDay) {
+    dtStart = `DTSTART;VALUE=DATE:${date.replace(/-/g,'')}`;
+    const d = new Date(date + 'T00:00:00');
+    d.setDate(d.getDate() + 1);
+    const fmt = dd => `${dd.getFullYear()}${String(dd.getMonth()+1).padStart(2,'0')}${String(dd.getDate()).padStart(2,'0')}`;
+    dtEnd = `DTEND;VALUE=DATE:${fmt(d)}`;
+  } else {
+    dtStart = `DTSTART:${buildDateTime(date, time, 0)}`;
+    dtEnd   = `DTEND:${buildDateTime(date, time, 1)}`;
+  }
+
+  const ics = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Waco Data Center Action Committee//EN',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+    'BEGIN:VEVENT',
+    `UID:${stamp}-${Math.random().toString(36).slice(2)}@wacodatacenter.com`,
+    `DTSTAMP:${stamp}`,
+    dtStart,
+    dtEnd,
+    `SUMMARY:${title}`,
+    `LOCATION:${(location||'').replace(/,/g,'\\,')}`,
+    `DESCRIPTION:${(notes||'Added from wacodatacenter.com').replace(/,/g,'\\,')}`,
+    'END:VEVENT',
+    'END:VCALENDAR'
+  ].join('\r\n');
+
+  const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = title.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '.ics';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+// ── Print Calendar ────────────────────────────────────────────────────────────
+const CALENDAR_EVENTS = [
+{{ range .Params.events }}  {
+    date: "{{ .date }}",
+    title: {{ .title | jsonify }},
+    time: {{ .time | jsonify }},
+    location: {{ .location | jsonify }},
+    category: {{ .category | jsonify }},
+    highlight: {{ if .highlight }}true{{ else }}false{{ end }},
+    notes: {{ if .notes }}{{ .notes | jsonify }}{{ else }}""{{ end }},
+    agenda_url: {{ if .agenda_url }}{{ .agenda_url | jsonify }}{{ else }}""{{ end }},
+    info_url: {{ if .info_url }}{{ .info_url | jsonify }}{{ else }}""{{ end }}
+  },
+{{ end }}
+];
+
+function printMonthCalendar(monthKey, monthName) {
+  const [year, month] = monthKey.split('-').map(Number);
+
+  // Filter events for this month
+  const events = CALENDAR_EVENTS.filter(e => {
+    const d = new Date(e.date + 'T00:00:00');
+    return d.getFullYear() === year && (d.getMonth() + 1) === month;
+  });
+
+  // Group events by day
+  const byDay = {};
+  events.forEach(e => {
+    const day = parseInt(e.date.split('-')[2]);
+    if (!byDay[day]) byDay[day] = [];
+    byDay[day].push(e);
+  });
+
+  // Calendar grid setup
+  const firstDay = new Date(year, month - 1, 1).getDay(); // 0=Sun
+  const daysInMonth = new Date(year, month, 0).getDate();
+  const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+  // Build grid cells
+  let cells = '';
+  let cellCount = 0;
+
+  // Empty cells before first day
+  for (let i = 0; i < firstDay; i++) {
+    cells += '<td class="cal-cell empty"></td>';
+    cellCount++;
+  }
+
+  for (let d = 1; d <= daysInMonth; d++) {
+    if (cellCount % 7 === 0 && cellCount > 0) cells += '</tr><tr>';
+    const dayEvents = byDay[d] || [];
+    let evHtml = dayEvents.map(e => {
+      const isOutreach = e.category === 'Public Outreach';
+      const isCommunity = e.category === 'Community Meeting';
+      const isAction = e.category === 'Action Committee';
+      let cls = 'ev-other';
+      if (isOutreach) cls = 'ev-outreach';
+      else if (e.highlight) cls = 'ev-highlight';
+      else if (isCommunity || isAction) cls = 'ev-committee';
+      return `<div class="${cls}">${e.title}${e.time ? '<br><small>' + e.time + '</small>' : ''}</div>`;
+    }).join('');
+    const hasEvents = dayEvents.length > 0 ? ' has-events' : '';
+    cells += `<td class="cal-cell${hasEvents}"><div class="day-num">${d}</div>${evHtml}</td>`;
+    cellCount++;
+  }
+
+  // Pad last row
+  while (cellCount % 7 !== 0) {
+    cells += '<td class="cal-cell empty"></td>';
+    cellCount++;
+  }
+
+  const html = `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>${monthName} – Waco Data Center Action Calendar</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; font-size: 10px; padding: 12px; color: #222; }
+    h1 { font-size: 16px; margin-bottom: 2px; }
+    .subtitle { font-size: 10px; color: #666; margin-bottom: 10px; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    th { background: #222; color: #fff; padding: 4px; text-align: center; font-size: 10px; }
+    .cal-cell { border: 1px solid #ccc; vertical-align: top; padding: 4px; height: 90px; width: 14.28%; }
+    .cal-cell.empty { background: #f9f9f9; }
+    .cal-cell.has-events { background: #fffef9; }
+    .day-num { font-weight: bold; font-size: 11px; margin-bottom: 3px; color: #333; }
+    .ev-highlight { background: #fff3cd; border-left: 3px solid #fd7e14; padding: 2px 3px; margin-bottom: 2px; border-radius: 2px; font-size: 8px; line-height: 1.3; }
+    .ev-outreach { background: #d4edda; border-left: 3px solid #28a745; padding: 2px 3px; margin-bottom: 2px; border-radius: 2px; font-size: 8px; line-height: 1.3; }
+    .ev-committee { background: #e8f4fd; border-left: 3px solid #0d6efd; padding: 2px 3px; margin-bottom: 2px; border-radius: 2px; font-size: 8px; line-height: 1.3; }
+    .ev-other { background: #f3f3f3; border-left: 3px solid #aaa; padding: 2px 3px; margin-bottom: 2px; border-radius: 2px; font-size: 8px; line-height: 1.3; }
+    .legend { display: flex; gap: 16px; margin-bottom: 8px; font-size: 9px; flex-wrap: wrap; }
+    .leg-item { display: flex; align-items: center; gap: 4px; }
+    .leg-dot { width: 12px; height: 12px; border-radius: 2px; }
+    .footer { margin-top: 8px; font-size: 8px; color: #888; text-align: center; }
+    @media print {
+      body { padding: 6px; }
+      @page { size: landscape; margin: 0.4in; }
+    }
+  </style>
+</head>
+<body>
+  <h1>📅 ${monthName} – Community Action Calendar</h1>
+  <div class="subtitle">Waco Data Center Action Committee &nbsp;|&nbsp; wacodatacenter.com</div>
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:#fff3cd;border-left:3px solid #fd7e14;"></div> Important Meeting</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#d4edda;border-left:3px solid #28a745;"></div> Public Outreach</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#e8f4fd;border-left:3px solid #0d6efd;"></div> Committee / Community</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#f3f3f3;border-left:3px solid #aaa;"></div> Other</div>
+  </div>
+  <table>
+    <thead><tr>${dayNames.map(d => `<th>${d}</th>`).join('')}</tr></thead>
+    <tbody><tr>${cells}</tr></tbody>
+  </table>
+  <div class="footer">Printed from wacodatacenter.com &nbsp;|&nbsp; For the latest information visit the site or join our Facebook group</div>
+  <script>window.onload = function() { window.print(); }<\/script>
+</body>
+</html>`;
+
+  const win = window.open('', '_blank');
+  win.document.write(html);
+  win.document.close();
+}
+
+// ── Public Comment Generator ──────────────────────────────────────────────────
+
+function generatePublicComment(title, date, time, location, category, agendaUrl) {
+  const dateFormatted = new Date(date + 'T12:00:00').toLocaleDateString('en-US', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  });
+
+  const boardLabel = category === 'Water Board'
+    ? 'water board'
+    : category === 'County'
+    ? 'county commissioners court'
+    : 'city council';
+
+  const agendaLine = agendaUrl
+    ? `The meeting agenda is available at: ${agendaUrl}\n\nReview the agenda for any items related to water contracts, utility franchise agreements, special purpose districts, annexation, or infrastructure agreements with Infrakey or Lacy Lakeview Data District.`
+    : `No agenda has been posted yet. Focus the comment on the broader project concerns.`;
+
+  const prompt = `You are helping a concerned resident prepare a 3-minute public comment for a local government meeting opposing the L2D2 / Lacy Lakeview Data District hyperscale data center project proposed by Infrakey in the Waco, Texas area.
+
+## Meeting Details
+- **Body:** ${title}
+- **Date:** ${dateFormatted} at ${time}
+- **Location:** ${location}
+- **Type:** ${category}
+
+## Agenda Information
+${agendaLine}
+
+## Project Background
+The L2D2 project is a proposed $10 billion, 520-acre hyperscale data center facility that would:
+- Consume 1.2 gigawatts of power (equivalent to a mid-sized city)
+- Extract up to 16 million gallons of water per day from Lake Waco
+- Be annexed into Lacy Lakeview (pop. 7,300) — a city far too small to regulate a facility of this scale
+- Involve 50-year utility franchise agreements that lock in infrastructure commitments without community input
+- Use Special Purpose Water Districts as "annexation through the back door" bypassing voter approval
+- Bring 2,000+ construction workers continuously for 3-5+ years (developer projections are consistently understated)
+- Extract wastewater capacity from Elm Mott's system to solve Lacy Lakeview's existing $15 million sewer crisis
+
+## Key Arguments to Draw From
+1. **Scale mismatch**: A 1.2 GW facility requiring Seattle-scale electricity cannot be responsibly regulated by a city of 7,300 people
+2. **Water resources**: 16 million gallons/day from Lake Waco threatens regional water security for all area residents
+3. **Democratic process**: Non-contiguous annexation and Special Purpose Districts circumvent voter approval
+4. **Infrastructure burden**: Ratepayers and residents bear long-term costs of infrastructure built for private profit
+5. **Transparency failures**: Utility franchise agreements and annexation moves were made without adequate public notice or community input
+6. **Precedent**: Comparable hyperscale projects (e.g., Ellendale, ND) show construction disruption, cost overruns, and community impacts far exceeding developer projections
+
+## Your Task
+Write a factual, respectful, and compelling 3-minute public comment (approximately 400–450 words spoken) addressed to this specific ${boardLabel}. The comment should:
+- Open by identifying the speaker as a concerned area resident
+- Reference the specific body being addressed (${title})
+- Be grounded in facts — avoid emotional appeals, focus on data and process
+- Raise 2–3 specific concerns most relevant to this ${boardLabel}'s jurisdiction
+- End with a clear, specific ask — what action should this body take?
+- Use plain, direct language a community member could deliver confidently
+
+If the agenda URL was provided above, tailor the comment to any relevant agenda items you can infer from the URL or meeting context.`;
+
+  // Populate and show modal
+  document.getElementById('commentPromptTitle').textContent = title + ' — ' + dateFormatted;
+  document.getElementById('commentPromptText').value = prompt;
+
+  const modal = new bootstrap.Modal(document.getElementById('commentPromptModal'));
+  modal.show();
+}
+
+function copyPrompt() {
+  const ta = document.getElementById('commentPromptText');
+  ta.select();
+  navigator.clipboard.writeText(ta.value).then(() => {
+    const btn = document.getElementById('copyPromptBtn');
+    btn.innerHTML = '<i class="fas fa-check me-1"></i>Copied!';
+    btn.classList.replace('btn-primary', 'btn-success');
+    setTimeout(() => {
+      btn.innerHTML = '<i class="fas fa-copy me-1"></i>Copy Prompt';
+      btn.classList.replace('btn-success', 'btn-primary');
+    }, 2000);
+  });
+}
+
+function openInChatGPT() {
+  const prompt = document.getElementById('commentPromptText').value;
+  const url = 'https://chatgpt.com/?q=' + encodeURIComponent(prompt);
+  window.open(url, '_blank');
+}
+
+function openInClaude() {
+  const prompt = document.getElementById('commentPromptText').value;
+  const url = 'https://claude.ai/new?q=' + encodeURIComponent(prompt);
+  window.open(url, '_blank');
+}
+</script>
+
+{{/* Public Comment Prompt Modal */}}
+<div class="modal fade" id="commentPromptModal" tabindex="-1" aria-labelledby="commentPromptModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header" style="background:#dc3545; color:#fff;">
+        <div>
+          <h5 class="modal-title mb-0" id="commentPromptModalLabel"><i class="fas fa-microphone me-2"></i>Generate Public Comment</h5>
+          <small id="commentPromptTitle" class="opacity-75"></small>
+        </div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted small mb-2">
+          <i class="fas fa-info-circle me-1"></i>
+          Copy this prompt and paste it into any AI assistant (ChatGPT, Claude, Gemini, etc.), or use the buttons below to open it directly. The AI will generate a tailored 3-minute public comment you can read or adapt.
+        </p>
+        <textarea id="commentPromptText" class="form-control font-monospace" rows="16" style="font-size:0.78rem; resize:vertical;"></textarea>
+      </div>
+      <div class="modal-footer flex-wrap gap-2">
+        <button id="copyPromptBtn" class="btn btn-primary" onclick="copyPrompt()">
+          <i class="fas fa-copy me-1"></i>Copy Prompt
+        </button>
+        <button class="btn btn-dark" onclick="openInChatGPT()">
+          <i class="fas fa-robot me-1"></i>Open in ChatGPT
+        </button>
+        <button class="btn btn-outline-dark" onclick="openInClaude()">
+          <i class="fas fa-robot me-1"></i>Open in Claude
+        </button>
+        <button class="btn btn-secondary ms-auto" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 {{ end }}
