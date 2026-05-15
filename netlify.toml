@@ -23,8 +23,9 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# SHORT CACHE - FOR ACTIVE DEVELOPMENT
-# Change these back to max-age=31536000 once site is stable
+# Intentionally short cache. Mobile and Brave users were not picking up
+# content updates on long caches. Traffic is low enough that we'd rather
+# pay the freshness cost than risk hiding new posts behind a stale cache.
 [[headers]]
   for = "/*.css"
   [headers.values]

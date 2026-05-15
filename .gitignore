@@ -25,3 +25,6 @@ package-lock.json
 # Environment
 .env
 .env.local
+
+# Local archive of old working docs (kept on disk, not in repo)
+.archive/
