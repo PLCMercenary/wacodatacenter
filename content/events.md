@@ -1259,6 +1259,173 @@ events:
 
   # July 2026
   - date: 2026-07-04
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
+    location: "Ross VFD"
+    category: "Action Committee"
+    highlight: true
+    notes: "Internal planning"
+
+  - date: 2026-07-05
+    time: "6:00 PM"
+    title: "Community Update Meeting"
+    location: "Ross VFD"
+    category: "Community Meeting"
+    highlight: true
+    notes: "Community outreach"
+
+  - date: 2026-07-06
+    time: "7:00 PM"
+    title: "Hewitt City Council Meeting"
+    location: "Hewitt City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.cityofhewitt.com/AgendaCenter"
+
+  - date: 2026-07-06
+    time: "6:00 PM"
+    title: "Elm Mott Water Supply Corporation Board Meeting"
+    location: "314 W. Elm Mott Drive"
+    category: "Water Board"
+    highlight: false
+    agenda_url: "https://mcwcid2.myruralwater.com/board-meetings"
+
+  - date: 2026-07-07
+    time: "3:00 PM / 6:00 PM"
+    title: "Waco City Council Meeting"
+    location: "Waco City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.waco-texas.com/Government/Meeting-Agendas"
+
+  - date: 2026-07-07
+    time: "6:00 PM"
+    title: "City of West Council Meeting"
+    location: "West City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.cityofwest.com/city-administration/council-agendas"
+
+  - date: 2026-07-07
+    time: "6:00 PM"
+    title: "Robinson City Council Meeting"
+    location: "Robinson City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.robinsontexas.org/AgendaCenter"
+
+  - date: 2026-07-07
+    time: "6:00 PM"
+    title: "Chalk Bluff Water Supply Corporation Board Meeting"
+    location: "6511 Gholson Rd, Waco (and Zoom)"
+    category: "Water Board"
+    highlight: false
+    agenda_url: "https://chalkbluffwatersupply.com/agendas"
+
+  - date: 2026-07-11
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
+    location: "Ross VFD"
+    category: "Action Committee"
+    highlight: true
+    notes: "Internal planning"
+
+  - date: 2026-07-13
+    time: "7:00 PM"
+    title: "Ross Water Supply Board Meeting"
+    location: "Ross City Hall"
+    category: "Water Board"
+    highlight: false
+
+  - date: 2026-07-14
+    time: "6:00 PM"
+    title: "Lacy Lakeview City Council Meeting"
+    location: "Lacy Lakeview City Hall"
+    category: "City Council"
+    highlight: true
+
+  - date: 2026-07-14
+    time: "6:30 PM"
+    title: "Bellmead City Council Meeting"
+    location: "Bellmead City Hall"
+    category: "City Council"
+    highlight: false
+
+  - date: 2026-07-14
+    time: "9:00 AM"
+    title: "McLennan County Commissioners Court Meeting"
+    location: "McLennan County Courthouse, Waco"
+    category: "County"
+    highlight: false
+    agenda_url: "https://www.mclennan.gov/AgendaCenter"
+    notes: "Oversees unincorporated areas including Elm Mott and Ross; public comment opportunity"
+
+  - date: 2026-07-18
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
+    location: "Ross VFD"
+    category: "Action Committee"
+    highlight: true
+    notes: "Internal planning"
+
+  - date: 2026-07-19
+    time: "6:00 PM"
+    title: "Community Update Meeting"
+    location: "Ross VFD"
+    category: "Community Meeting"
+    highlight: true
+    notes: "Community outreach"
+
+  - date: 2026-07-20
+    time: "7:00 PM"
+    title: "Hewitt City Council Meeting"
+    location: "Hewitt City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.cityofhewitt.com/AgendaCenter"
+
+  - date: 2026-07-21
+    time: "3:00 PM / 6:00 PM"
+    title: "Waco City Council Meeting"
+    location: "Waco City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.waco-texas.com/Government/Meeting-Agendas"
+
+  - date: 2026-07-22
+    time: "12:30 PM"
+    title: "Southern Trinity Groundwater Conservation District Board Meeting"
+    location: "McLennan County Archives Building"
+    category: "Water Board"
+    highlight: false
+    agenda_url: "https://southerntrinitygcd.org/board-meeting-notices"
+
+  - date: 2026-07-25
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
+    location: "Ross VFD"
+    category: "Action Committee"
+    highlight: true
+    notes: "Internal planning"
+
+  - date: 2026-07-28
+    time: "6:00 PM"
+    title: "City of West Council Meeting"
+    location: "West City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.cityofwest.com/city-administration/council-agendas"
+
+  - date: 2026-07-28
+    time: "9:00 AM"
+    title: "McLennan County Commissioners Court Meeting"
+    location: "McLennan County Courthouse, Waco"
+    category: "County"
+    highlight: false
+    agenda_url: "https://www.mclennan.gov/AgendaCenter"
+    notes: "Oversees unincorporated areas including Elm Mott and Ross; public comment opportunity"
+
+  - date: 2026-07-04
     time: "9:00 AM – noon"
     title: "Waco Downtown Farmers Market"
     location: "Bridge Street Plaza, East Waco"
@@ -1354,6 +1521,181 @@ events:
     info_url: "https://www.thewillofwaco.com/outdoor-market"
 
   # August 2026
+  - date: 2026-08-01
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
+    location: "Ross VFD"
+    category: "Action Committee"
+    highlight: true
+    notes: "Internal planning"
+
+  - date: 2026-08-02
+    time: "6:00 PM"
+    title: "Community Update Meeting"
+    location: "Ross VFD"
+    category: "Community Meeting"
+    highlight: true
+    notes: "Community outreach"
+
+  - date: 2026-08-03
+    time: "7:00 PM"
+    title: "Hewitt City Council Meeting"
+    location: "Hewitt City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.cityofhewitt.com/AgendaCenter"
+
+  - date: 2026-08-03
+    time: "6:00 PM"
+    title: "Elm Mott Water Supply Corporation Board Meeting"
+    location: "314 W. Elm Mott Drive"
+    category: "Water Board"
+    highlight: false
+    agenda_url: "https://mcwcid2.myruralwater.com/board-meetings"
+
+  - date: 2026-08-04
+    time: "3:00 PM / 6:00 PM"
+    title: "Waco City Council Meeting"
+    location: "Waco City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.waco-texas.com/Government/Meeting-Agendas"
+
+  - date: 2026-08-04
+    time: "6:00 PM"
+    title: "City of West Council Meeting"
+    location: "West City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.cityofwest.com/city-administration/council-agendas"
+
+  - date: 2026-08-04
+    time: "6:00 PM"
+    title: "Robinson City Council Meeting"
+    location: "Robinson City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.robinsontexas.org/AgendaCenter"
+
+  - date: 2026-08-04
+    time: "6:00 PM"
+    title: "Chalk Bluff Water Supply Corporation Board Meeting"
+    location: "6511 Gholson Rd, Waco (and Zoom)"
+    category: "Water Board"
+    highlight: false
+    agenda_url: "https://chalkbluffwatersupply.com/agendas"
+
+  - date: 2026-08-08
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
+    location: "Ross VFD"
+    category: "Action Committee"
+    highlight: true
+    notes: "Internal planning"
+
+  - date: 2026-08-10
+    time: "7:00 PM"
+    title: "Ross Water Supply Board Meeting"
+    location: "Ross City Hall"
+    category: "Water Board"
+    highlight: false
+
+  - date: 2026-08-11
+    time: "6:00 PM"
+    title: "Lacy Lakeview City Council Meeting"
+    location: "Lacy Lakeview City Hall"
+    category: "City Council"
+    highlight: true
+
+  - date: 2026-08-11
+    time: "6:30 PM"
+    title: "Bellmead City Council Meeting"
+    location: "Bellmead City Hall"
+    category: "City Council"
+    highlight: false
+
+  - date: 2026-08-11
+    time: "9:00 AM"
+    title: "McLennan County Commissioners Court Meeting"
+    location: "McLennan County Courthouse, Waco"
+    category: "County"
+    highlight: false
+    agenda_url: "https://www.mclennan.gov/AgendaCenter"
+    notes: "Oversees unincorporated areas including Elm Mott and Ross; public comment opportunity"
+
+  - date: 2026-08-15
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
+    location: "Ross VFD"
+    category: "Action Committee"
+    highlight: true
+    notes: "Internal planning"
+
+  - date: 2026-08-16
+    time: "6:00 PM"
+    title: "Community Update Meeting"
+    location: "Ross VFD"
+    category: "Community Meeting"
+    highlight: true
+    notes: "Community outreach"
+
+  - date: 2026-08-17
+    time: "7:00 PM"
+    title: "Hewitt City Council Meeting"
+    location: "Hewitt City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.cityofhewitt.com/AgendaCenter"
+
+  - date: 2026-08-18
+    time: "3:00 PM / 6:00 PM"
+    title: "Waco City Council Meeting"
+    location: "Waco City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.waco-texas.com/Government/Meeting-Agendas"
+
+  - date: 2026-08-22
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
+    location: "Ross VFD"
+    category: "Action Committee"
+    highlight: true
+    notes: "Internal planning"
+
+  - date: 2026-08-25
+    time: "6:00 PM"
+    title: "City of West Council Meeting"
+    location: "West City Hall"
+    category: "City Council"
+    highlight: false
+    agenda_url: "https://www.cityofwest.com/city-administration/council-agendas"
+
+  - date: 2026-08-25
+    time: "9:00 AM"
+    title: "McLennan County Commissioners Court Meeting"
+    location: "McLennan County Courthouse, Waco"
+    category: "County"
+    highlight: false
+    agenda_url: "https://www.mclennan.gov/AgendaCenter"
+    notes: "Oversees unincorporated areas including Elm Mott and Ross; public comment opportunity"
+
+  - date: 2026-08-26
+    time: "12:30 PM"
+    title: "Southern Trinity Groundwater Conservation District Board Meeting"
+    location: "McLennan County Archives Building"
+    category: "Water Board"
+    highlight: false
+    agenda_url: "https://southerntrinitygcd.org/board-meeting-notices"
+
+  - date: 2026-08-29
+    time: "9:30 AM"
+    title: "Data Center Action Committee Meeting"
+    location: "Ross VFD"
+    category: "Action Committee"
+    highlight: true
+    notes: "Internal planning"
+
   - date: 2026-08-01
     time: "9:00 AM – noon"
     title: "Waco Downtown Farmers Market"
