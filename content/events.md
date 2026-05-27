@@ -948,6 +948,15 @@ events:
     agenda_url: "https://southerntrinitygcd.org/board-meeting-notices"
 
   - date: 2026-05-30
+    time: "5:30 PM – 11:30 PM"
+    title: "West Street Dance 2026"
+    location: "128 N. Main St., West, TX"
+    category: "Public Outreach"
+    highlight: true
+    info_url: "https://weststreetdance.com/"
+    notes: "Free outdoor street dance in downtown West — Chris Perez (5:30), Czech & Then Some (7:30), Ghosts of Hill Country (9:30). Large regional crowd; strong booth/flyer opportunity."
+
+  - date: 2026-05-30
     time: "9:00 AM – 1:00 PM"
     title: "Waco Downtown Farmers Market"
     location: "Bridge Street Plaza, East Waco"
