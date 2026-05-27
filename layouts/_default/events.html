@@ -21,6 +21,10 @@
                 {{ end }}
             {{ end }}
 
+            {{/* Sort chronologically — YAML file is hand-edited so order there is not reliable */}}
+            {{ $allUpcomingEvents = sort $allUpcomingEvents "date" "asc" }}
+            {{ $highlightedEvents = sort $highlightedEvents "date" "asc" }}
+
             {{/* Next Important Meeting Section */}}
             {{ if $highlightedEvents }}
                 {{ $nextEvent := index $highlightedEvents 0 }}
@@ -167,7 +171,7 @@
                     </button>
                 </div>
                 <div class="list-group">
-                    {{ range $monthData.events }}
+                    {{ range sort $monthData.events "date" "asc" }}
                     {{ $isOutreach := eq .category "Public Outreach" }}
                     {{ $isHighlight := .highlight }}
                     {{ $commentCategories := slice "City Council" "Water Board" "County" }}
