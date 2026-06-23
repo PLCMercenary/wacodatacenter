@@ -1174,13 +1174,13 @@ events:
     highlight: true
     notes: "Internal planning"
 
-  - date: 2026-06-21
+  - date: 2026-06-28
     time: "6:00 PM"
     title: "Community Update Meeting"
     location: "Ross VFD"
     category: "Community Meeting"
     highlight: true
-    notes: "Community outreach"
+    notes: "Rescheduled from 6/21 (Father's Day)"
 
   - date: 2026-06-21
     time: "1:00 PM – 5:00 PM"
