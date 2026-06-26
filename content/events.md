@@ -1275,14 +1275,6 @@ events:
     highlight: true
     notes: "Internal planning"
 
-  - date: 2026-07-05
-    time: "6:00 PM"
-    title: "Community Update Meeting"
-    location: "Ross VFD"
-    category: "Community Meeting"
-    highlight: true
-    notes: "Community outreach"
-
   - date: 2026-07-06
     time: "7:00 PM"
     title: "Hewitt City Council Meeting"
