@@ -1,16 +1,16 @@
 petition:
-  signatures: 3656
+  signatures: 3698
   comments: 77
   local_supporters: 72
   media_mentions: 3
   milestone: "More signatures than half of Lacy Lakeview's population (2020 Census)"
 
 facebook:
-  members: 8248
+  members: 8491
   milestone: "About 1,000 more members than Lacy Lakeview has citizens"
 
 email:
   subscribers: 12
 
 # Single update date for all metrics
-updated: "2026-6-23"
+updated: "2026-7-05"
