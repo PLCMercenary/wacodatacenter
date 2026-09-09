@@ -1816,6 +1816,7 @@ events:
     category: "Public Outreach"
     highlight: false
     info_url: "https://www.thewillofwaco.com/outdoor-market"
+    notes: "Weather permitting. The Will does not publish a set season end, so check their Facebook before heading out."
 
   - date: 2026-09-13
     time: "6:00 PM"
@@ -1863,6 +1864,7 @@ events:
     category: "Public Outreach"
     highlight: false
     info_url: "https://www.thewillofwaco.com/outdoor-market"
+    notes: "Weather permitting. The Will does not publish a set season end, so check their Facebook before heading out."
 
   - date: 2026-09-21
     time: "7:00 PM"
@@ -1927,6 +1929,7 @@ events:
     category: "Public Outreach"
     highlight: false
     info_url: "https://www.thewillofwaco.com/outdoor-market"
+    notes: "Weather permitting. The Will does not publish a set season end, so check their Facebook before heading out."
 
   # October 2026
 
@@ -1953,6 +1956,7 @@ events:
     category: "Public Outreach"
     highlight: false
     info_url: "https://www.thewillofwaco.com/outdoor-market"
+    notes: "Weather permitting. The Will does not publish a set season end, so check their Facebook before heading out."
 
   - date: 2026-10-04
     time: "6:00 PM"
@@ -2033,6 +2037,7 @@ events:
     category: "Public Outreach"
     highlight: false
     info_url: "https://www.thewillofwaco.com/outdoor-market"
+    notes: "Weather permitting. The Will does not publish a set season end, so check their Facebook before heading out."
 
   - date: 2026-10-12
     time: "7:00 PM"
@@ -2087,6 +2092,7 @@ events:
     category: "Public Outreach"
     highlight: false
     info_url: "https://www.thewillofwaco.com/outdoor-market"
+    notes: "Weather permitting. The Will does not publish a set season end, so check their Facebook before heading out."
 
   - date: 2026-10-19
     time: "7:00 PM"
@@ -2127,6 +2133,7 @@ events:
     category: "Public Outreach"
     highlight: false
     info_url: "https://www.thewillofwaco.com/outdoor-market"
+    notes: "Weather permitting. The Will does not publish a set season end, so check their Facebook before heading out."
 
   - date: 2026-10-27
     time: "6:00 PM"

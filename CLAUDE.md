@@ -65,6 +65,7 @@ static/
 hugo.toml       — site config (menu, params, permalinks)
 netlify.toml    — build, headers, cache-control, redirects
 TONE.md         — voice guide for all public-facing writing
+EVENTS.md       — how to update the events calendar (format, fields, verification)
 .archive/       — gitignored local archive of old working docs
 ```
 
@@ -79,7 +80,7 @@ hugo              # one-off production build into public/
 ### Adding content
 - Blog post: new markdown file in `content/posts/`. Required frontmatter: `title`, `date`, `author`, `description`, `slug`. Optional: `image`, `tags`, `categories`, `featured_image`, `lastmod`, `unlisted`.
 - Resource: same, in `content/resources/`.
-- Events timeline lives in `content/events.md` and is hand-edited (no per-event files).
+- Events timeline lives in `content/events.md` and is hand-edited (no per-event files). **Read [EVENTS.md](EVENTS.md) before touching it** — it covers the field rules, the exact `category` strings, what `highlight` does to the homepage banner, and why recurring dates must be verified rather than generated.
 - **Before drafting, read TONE.md.** Match it.
 
 ### Updating live counters
