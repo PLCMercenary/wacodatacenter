@@ -1,5 +1,6 @@
 ---
 title: "Understanding Data Center Water Consumption in Rural Texas"
+categories: ["data-center-impact"]
 date: 2025-12-15
 author: "Research Team"
 description: "An analysis of water usage by large-scale data centers and the impact on rural water infrastructure"

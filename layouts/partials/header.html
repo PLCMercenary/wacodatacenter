@@ -1,0 +1,30 @@
+<header class="site-header">
+<div class="top-strip">
+<span>McLennan County, Texas · Metrics updated {{ time.Format "January 2, 2006" .Site.Data.metrics.updated }}</span>
+<div>
+<a href="/yard-signs/">Yard signs $5</a>
+<a href="{{ .Site.Params.legal_fund }}" target="_blank" rel="noopener noreferrer">Legal fund</a>
+<a href="/contact/">Contact</a>
+</div>
+</div>
+<div class="masthead">{{ partial "logo.html" . }}
+<nav class="desktop-nav" aria-label="Main navigation">{{ range .Site.Menus.main }}{{ $active := or (eq $.Section .Identifier) (and (eq $.Layout "events") (eq .Identifier "events")) }}<a href="{{ .URL }}" {{ if $active }}aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}<button class="btn btn-primary" data-dialog="changeOrgModal">Sign the petition</button>
+</nav>
+<div class="mobile-actions">
+<button class="btn btn-outline" data-dialog="menuDialog" aria-label="Open navigation menu">Menu</button>
+<button class="btn btn-primary" data-dialog="changeOrgModal" aria-label="Sign the petition">Sign</button>
+</div>
+</div>
+<noscript><nav class="no-script-nav" aria-label="Navigation without JavaScript">{{ range .Site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}<a href="/contact/">Contact</a><a href="/yard-signs/">Yard signs</a></nav></noscript>
+</header>
+<dialog id="menuDialog" class="menu-dialog" aria-labelledby="menuTitle">
+<div class="dialog-bar">
+<span id="menuTitle">Navigation</span>
+<button data-close>Close <span aria-hidden="true">✕</span>
+</button>
+</div>
+<nav aria-label="Mobile navigation">{{ range .Site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}<a href="/yard-signs/">Yard signs $5</a>
+<a href="{{ .Site.Params.legal_fund }}" target="_blank" rel="noopener noreferrer">Legal fund</a>
+<a href="/contact/">Contact</a>
+</nav>
+</dialog>

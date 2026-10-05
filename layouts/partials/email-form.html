@@ -1,0 +1,30 @@
+{{ $id := .id }}
+<form name="email-signup" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you/?form=email-signup" class="site-form">
+<input type="hidden" name="form-name" value="email-signup">
+<p hidden>
+<label>Leave this empty: <input name="bot-field">
+</label>
+</p>
+<div class="field-pair">
+<div class="field">
+<label for="{{ $id }}-name">Name <span>*</span>
+</label>
+<input id="{{ $id }}-name" name="name" autocomplete="name" required>
+</div>
+<div class="field">
+<label for="{{ $id }}-email">Email <span>*</span>
+</label>
+<input type="email" id="{{ $id }}-email" name="email" autocomplete="email" required>
+</div>
+</div>
+<div class="field field-zip">
+<label for="{{ $id }}-zip">ZIP code <small>optional</small>
+</label>
+<input id="{{ $id }}-zip" name="zip" autocomplete="postal-code" inputmode="numeric">
+</div>
+<div class="check-field">
+<input type="checkbox" id="{{ $id }}-consent" name="consent" required>
+<label for="{{ $id }}-consent">I agree to receive email updates and understand I can unsubscribe at any time. See our <a href="/privacy/">Privacy Policy</a>.</label>
+</div>
+<button type="submit" class="btn btn-ink full-width">Subscribe</button>
+</form>

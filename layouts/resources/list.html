@@ -1,0 +1,33 @@
+{{ define "main" }}{{ partial "page-header.html" (dict "title" "Documents" "long" true "description" "Primary sources, research, and the templates you need to write to officials or request public records.") }}
+<div class="guide-grid">{{ range .Pages }}<article>
+<p class="kicker">Guide · {{ .Date.Format "Jan 2, 2006" }}</p>
+<h2>
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+</h2>
+<p>{{ .Description }}</p>
+<a class="mono" href="{{ .RelPermalink }}">Open guide</a>
+</article>{{ end }}</div>
+<section class="padded">
+<div class="section-head">
+<h2>Primary sources</h2>
+</div>{{ range .Site.Data.documents }}<div class="document-row">
+<span class="tag">{{ .type }}</span>
+<h3>{{ .title }}</h3>
+<span class="mono muted file-path">{{ .path }}</span>
+<a class="btn btn-ink" href="{{ .path }}" target="_blank" rel="noopener">Download</a>
+</div>{{ end }}</section>
+<section class="padded">
+<div class="section-head">
+<h2>Templates</h2>
+</div>
+<div class="template-grid">{{ range .Site.Data.templates }}<article>
+<h3>{{ .title }}</h3>
+<p>{{ .description }}</p>
+<div class="download-links">
+<a href="{{ .pdf }}" target="_blank" rel="noopener">PDF</a>
+<a href="{{ .docx }}" target="_blank" rel="noopener">DOCX</a>
+</div>
+</article>{{ end }}</div>
+<p class="mono muted">Have a document that belongs here? <a href="/contact/">Submit it to the research coordinator.</a>
+</p>
+</section>{{ end }}
