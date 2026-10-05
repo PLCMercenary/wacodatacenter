@@ -1,5 +1,5 @@
 <header class="site-header">
-<div class="top-strip">
+{{ if eq (.Site.Params.theme | default "1b") "1b" }}<div class="top-strip">
 <span>McLennan County, Texas · Metrics updated {{ time.Format "January 2, 2006" .Site.Data.metrics.updated }}</span>
 <div>
 <a href="/yard-signs/">Yard signs $5</a>
@@ -7,15 +7,16 @@
 <a href="/contact/">Contact</a>
 </div>
 </div>
+{{ else if eq .Site.Params.theme "1a" }}<div class="top-strip homestead-announcement"><span>Yard signs · $5 each, proceeds fund legal and advocacy work.</span><a href="/yard-signs/">Order a sign</a></div>{{ end }}
 <div class="masthead">{{ partial "logo.html" . }}
-<nav class="desktop-nav" aria-label="Main navigation">{{ range .Site.Menus.main }}{{ $active := or (eq $.Section .Identifier) (and (eq $.Layout "events") (eq .Identifier "events")) }}<a href="{{ .URL }}" {{ if $active }}aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}<button class="btn btn-primary" data-dialog="changeOrgModal">Sign the petition</button>
+<nav class="desktop-nav" aria-label="Main navigation">{{ if ne (.Site.Params.theme | default "1b") "1b" }}<a href="/{{ if eq .Site.Params.theme "1a" }}#facts{{ else }}#compare{{ end }}">{{ if eq .Site.Params.theme "1a" }}The Project{{ else }}The Site{{ end }}</a>{{ end }}{{ range .Site.Menus.main }}{{ $active := or (eq $.Section .Identifier) (and (eq $.Layout "events") (eq .Identifier "events")) }}<a href="{{ .URL }}" {{ if $active }}aria-current="page"{{ end }}>{{ partial "nav-label.html" (dict "item" . "site" $.Site) }}</a>{{ end }}<button class="btn btn-primary" data-dialog="changeOrgModal">Sign the petition</button>
 </nav>
 <div class="mobile-actions">
 <button class="btn btn-outline" data-dialog="menuDialog" aria-label="Open navigation menu">Menu</button>
 <button class="btn btn-primary" data-dialog="changeOrgModal" aria-label="Sign the petition">Sign</button>
 </div>
 </div>
-<noscript><nav class="no-script-nav" aria-label="Navigation without JavaScript">{{ range .Site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}<a href="/contact/">Contact</a><a href="/yard-signs/">Yard signs</a></nav></noscript>
+<noscript><nav class="no-script-nav" aria-label="Navigation without JavaScript">{{ range .Site.Menus.main }}<a href="{{ .URL }}">{{ partial "nav-label.html" (dict "item" . "site" $.Site) }}</a>{{ end }}<a href="/contact/">Contact</a><a href="/yard-signs/">Yard signs</a></nav></noscript>
 </header>
 <dialog id="menuDialog" class="menu-dialog" aria-labelledby="menuTitle">
 <div class="dialog-bar">
@@ -23,7 +24,7 @@
 <button data-close>Close <span aria-hidden="true">✕</span>
 </button>
 </div>
-<nav aria-label="Mobile navigation">{{ range .Site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}<a href="/yard-signs/">Yard signs $5</a>
+<nav aria-label="Mobile navigation">{{ if ne (.Site.Params.theme | default "1b") "1b" }}<a href="/{{ if eq .Site.Params.theme "1a" }}#facts{{ else }}#compare{{ end }}">{{ if eq .Site.Params.theme "1a" }}The Project{{ else }}The Site{{ end }}</a>{{ end }}{{ range .Site.Menus.main }}<a href="{{ .URL }}">{{ partial "nav-label.html" (dict "item" . "site" $.Site) }}</a>{{ end }}<a href="/yard-signs/">Yard signs $5</a>
 <a href="{{ .Site.Params.legal_fund }}" target="_blank" rel="noopener noreferrer">Legal fund</a>
 <a href="/contact/">Contact</a>
 </nav>

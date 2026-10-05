@@ -34,7 +34,7 @@ Blog posts have historically generated good response from local leadership. The 
 
 - **Hugo** static site generator (extended). Pinned to `HUGO_VERSION = 0.121.1` in `netlify.toml`.
 - **No theme.** All templates live in `layouts/` — custom from scratch.
-- **Public Record** first-party layouts and plain CSS. Google Fonts: Archivo, Archivo Narrow, Source Serif 4, IBM Plex Mono. Native dialogs and small browser scripts replace Bootstrap and Font Awesome. No npm/build pipeline.
+- **Three visual themes** (1a Homestead, 1b Public Record, 1c Next Door), selected through `params.theme`. Shared first-party layouts and plain CSS; theme-specific Google Fonts. See `CONTRIBUTING.md`. Native dialogs and small browser scripts replace Bootstrap and Font Awesome. No npm/build pipeline.
 - **Netlify** deploys from GitHub on push to `main`. Build = `hugo`, publish = `public/`. Deploy previews and branch deploys use `-F -b $DEPLOY_PRIME_URL`.
 - **Netlify Forms** for email signup (free tier: 100 submissions/month).
 - **GitHub remote:** `https://github.com/PLCMercenary/wacodatacenter.git`.
@@ -57,10 +57,10 @@ layouts/
   _default/_markup/render-link.html  — custom link rendering
   media/list.html                    — media section list template
   partials/next-meeting.html         — homepage "next meeting" widget
-  index.html                         — homepage (large, hand-edited)
+  index.html                         — selects partials/home-1a, home-1b, home-1c
   404.html
 static/
-  css/style.css — all custom styles (theme colors in `:root`)
+  css/base.css, theme-*.css — shared structure and theme tokens/overrides
   js/scripts.js
   img/, images/, agenda/, documents/, templates/ — static assets
 hugo.toml       — site config (menu, params, permalinks)

@@ -1,5 +1,5 @@
 {{ $events := partial "upcoming-events.html" . }}{{ $priority := where (where $events "highlight" true) "completed" "ne" true }}
-{{ with index (first 1 $priority) 0 }}<section class="meeting-band" aria-label="Next important meeting">
+{{ with index (first 1 $priority) 0 }}<section class="meeting-band" data-next-meeting aria-label="Next important meeting">
 <span class="tag tag-band">Next meeting</span>
 <p>{{ .title }} · {{ time.Format "Mon Jan 2" .date }} · {{ .time }} · {{ .location }}</p>
 <a href="{{ .agenda_url | default "/events/" }}" {{ if .agenda_url }}target="_blank" rel="noopener"{{ end }}>{{ if .agenda_url }}Agenda <span aria-hidden="true">↗</span>{{ else }}All meetings{{ end }}</a>

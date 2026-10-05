@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#dedbd4;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<section data-screen-label="Turn 2 content pages" style="display:flex;flex-direction:column;gap:40px;padding:80px">
+<div style="display:flex;flex-direction:column;gap:10px;max-width:1100px;color:#1f2a1f">
+<div style="font-family:'Public Sans',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#5d6b5a;font-weight:700">1a Homestead · Content pages · 1280 desktop</div>
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:35px;letter-spacing:-.02em;line-height:1.04">Articles, press, documents</div>
+<div style="font-family:'Public Sans',sans-serif;font-size:18px;line-height:1.55;color:#566052;max-width:860px;text-wrap:pretty"><a href="#3b" style="text-decoration:underline">3b</a> Updates index. <a href="#3c" style="text-decoration:underline">3c</a> Article. <a href="#3d" style="text-decoration:underline">3d</a> Press. <a href="#3e" style="text-decoration:underline">3e</a> Resources index. <a href="#3f" style="text-decoration:underline">3f</a> Resource page (templates and officials). <a href="#3g" style="text-decoration:underline">3g</a> Privacy and other plain pages. Specs live in design/README.md.</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:80px;align-items:flex-start">
+
+<!-- 2b THE RECORD INDEX -->
+<div id="3b" data-screen-label="3b Updates index" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3b</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Updates · /posts/</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">layouts/posts/list.html</div></div>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);border-radius:20px;overflow:hidden">
+<dc-import name="HSHeader" active="record" hint-size="100%,140px"></dc-import>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:48px;align-items:end;padding:48px 48px 36px">
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:84px;line-height:1.04;letter-spacing:-.02em">Updates</div>
+<div style="display:flex;flex-direction:column;gap:12px"><div style="font-size:19px;line-height:1.5;text-wrap:pretty">Analysis, open letters and research from neighbors of the L2D2 site. Every claim links to the minutes, the MOU, or the resolution number.</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">7 entries · <a href="#" style="text-decoration:underline">RSS</a></div></div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:14px 48px;border-top:1px solid #d8d0bf;border-bottom:1px solid #d8d0bf">
+<div style="display:flex;gap:8px;font-family:'Public Sans',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.14em">
+<a href="#" style="background:#24452f;color:#f6f2ea;padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">All</a>
+<a href="#" style="padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">Analysis</a>
+<a href="#" style="padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">Open letters</a>
+<a href="#" style="padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">Opposition research</a>
+<a href="#" style="padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">Data center impact</a>
+<a href="#" style="padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">Community</a>
+</div>
+<div style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">Sort: Newest first</div>
+</div>
+<a href="#" style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #d8d0bf">
+<div style="min-height:420px;background:#3a2a1f url('assets/land1.jpeg') center/cover;filter:grayscale(.15) contrast(1.05);border-right:1px solid #d8d0bf"></div>
+<div style="padding:44px 48px;display:flex;flex-direction:column;gap:18px;justify-content:center">
+<div style="display:flex;justify-content:space-between;font-family:'Public Sans',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.14em"><span style="color:#b8552e">Opposition research · Data center impact</span><span>Feb 24, 2026</span></div>
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:42px;line-height:1.04;letter-spacing:-.02em;text-wrap:balance">The AI Squeeze: How L2D2 Data Center Construction Will Disrupt Baylor and Downtown Waco</div>
+<div style="font-size:19px;line-height:1.5;color:#566052">When 2,000 Out-of-State Construction Workers Arrive: What the L2D2 Data Center Will Do to Waco</div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px"><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">By Sean Terrell</span><span style="background:#24452f;color:#fff;padding:12px 20px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:14px;border-radius:999px">Read the piece</span></div>
+</div>
+</a>
+<div style="padding:0 48px 24px">
+<div style="display:grid;grid-template-columns:140px 220px 1fr 200px;gap:24px;padding:14px 0;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5d6b5a;font-weight:700"><span>Date</span><span>Filed under</span><span>Title</span><span>By</span></div>
+<sc-for list="{{ posts }}" as="p" hint-placeholder-count="6">
+<a href="#" style="display:grid;grid-template-columns:140px 220px 1fr 200px;gap:24px;padding:22px 0;border-bottom:1px solid #d8d0bf;align-items:baseline">
+<span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums">{{ p.date }}</span>
+<span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;color:#b8552e;text-transform:uppercase;letter-spacing:.14em">{{ p.cat }}</span>
+<span style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Newsreader',serif;font-size:26px;font-weight:500;line-height:1.05">{{ p.title }}</span><span style="font-size:16px;line-height:1.5;color:#566052">{{ p.dek }}</span></span>
+<span style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">{{ p.author }}</span>
+</a>
+</sc-for>
+<div style="display:flex;justify-content:space-between;padding:20px 0 24px;font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums"><span>Page 1 of 1</span><span style="display:flex;gap:20px"><span style="color:#5d6b5a">Newer</span><span style="color:#5d6b5a">Older</span></span></div>
+</div>
+<dc-import name="HSFooter" hint-size="100%,300px"></dc-import>
+</div>
+</div>
+
+<!-- 2c ARTICLE -->
+<div id="3c" data-screen-label="3c Article" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3c</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Article · /posts/twisting-texas-law-to-wreck-our-way-of-life/</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">layouts/_default/single.html</div></div>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);border-radius:20px;overflow:hidden">
+<dc-import name="HSHeader" active="record" hint-size="100%,140px"></dc-import>
+<div style="display:flex;justify-content:space-between;padding:14px 48px;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums"><span><a href="#" style="text-decoration:underline">Updates</a> / Open letters</span><span>Filed January 9, 2026</span></div>
+<div style="display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px;padding:56px 48px 40px">
+<div style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:700;color:#b8552e;text-transform:uppercase;letter-spacing:.14em;padding-top:10px">Open letter<br>Community</div>
+<div style="display:flex;flex-direction:column;gap:24px;max-width:960px">
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:56px;line-height:1.04;letter-spacing:-.02em;text-wrap:balance">Twisting Texas Law to Wreck Our Way of Life</div>
+<div style="font-size:24px;line-height:1.4;color:#566052;max-width:760px;text-wrap:pretty">An open letter to Lacy Lakeview City Council about the Infrakey data center and the misuse of Senate Bill 2038</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:240px minmax(0,1fr) auto;gap:48px;align-items:center;padding:16px 48px;border-top:1px solid #d8d0bf;border-bottom:1px solid #d8d0bf">
+<span style="font-family:'Public Sans',sans-serif;font-size:11px;color:#5d6b5a;text-transform:uppercase;letter-spacing:.14em;font-weight:700">Byline</span>
+<span style="display:flex;gap:20px;align-items:baseline"><span style="font-family:'Newsreader',serif;font-size:21px;font-weight:500">By Sean Terrell</span><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">January 9, 2026 · 7 min read</span></span>
+<span style="display:flex;gap:20px;font-family:'Public Sans',sans-serif;font-size:13px;text-decoration:underline;font-variant-numeric:tabular-nums"><a href="#">Print</a><a href="#">Copy link</a><a href="#">Share</a></span>
+</div>
+<div style="height:560px;background:#3a2a1f url('assets/council-meeting.webp') center/cover;filter:grayscale(.15) contrast(1.05)"></div>
+<div style="padding:12px 48px;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:12px;font-variant-numeric:tabular-nums">Community members protesting the Infrakey data center. Photo Credit: Justin Hamel / The Waco Bridge / CatchLight Local / Report for America</div>
+<div style="display:grid;grid-template-columns:240px minmax(0,700px) 1fr;gap:48px;padding:56px 48px 72px">
+<div style="display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:0">
+<div style="font-family:'Public Sans',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid #d8d0bf;font-weight:700">In this piece</div>
+<a href="#" style="display:grid;grid-template-columns:28px 1fr;padding:10px 0;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;line-height:1.2"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">01</span><span>This Peaceful Countryside</span></a>
+<a href="#" style="display:grid;grid-template-columns:28px 1fr;padding:10px 0;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;line-height:1.2;color:#b8552e"><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-variant-numeric:tabular-nums">02</span><span>How SB 2038 is Being Twisted</span></a>
+<a href="#" style="display:grid;grid-template-columns:28px 1fr;padding:10px 0;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;line-height:1.2"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">03</span><span>What This Project Really Means</span></a>
+<a href="#" style="display:grid;grid-template-columns:28px 1fr;padding:10px 0;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;line-height:1.2"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">04</span><span>The December 9th Meeting</span></a>
+<a href="#" style="display:grid;grid-template-columns:28px 1fr;padding:10px 0;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;line-height:1.2"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">05</span><span>Taxation Without Representation</span></a>
+<a href="#" style="display:grid;grid-template-columns:28px 1fr;padding:10px 0;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;line-height:1.2"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">06</span><span>What I'm Asking the Council</span></a>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="font-family:'Public Sans',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5d6b5a;font-weight:700">Tags</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px;font-family:'Public Sans',sans-serif;font-size:12px;font-variant-numeric:tabular-nums"><a href="#" style="border:1px solid #d8d0bf;padding:4px 8px;border-radius:999px">infrakey</a><a href="#" style="border:1px solid #d8d0bf;padding:4px 8px;border-radius:999px">data-center</a><a href="#" style="border:1px solid #d8d0bf;padding:4px 8px;border-radius:999px">annexation</a><a href="#" style="border:1px solid #d8d0bf;padding:4px 8px;border-radius:999px">sb-2038</a><a href="#" style="border:1px solid #d8d0bf;padding:4px 8px;border-radius:999px">community-advocacy</a></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:24px;font-size:20px;line-height:1.65">
+<div style="font-family:'Newsreader',serif;font-size:20px;font-weight:500">An Open Letter to the Lacy Lakeview City Council</div>
+<p style="margin:0">To the Lacy Lakeview City Council,</p>
+<p style="margin:0;text-wrap:pretty">I'm Sean Terrell, a guys who's called Elm Mott home since August 2015. I live in the Dome house on Tours Rd. My place sits right in McLennan County's unincorporated ETJ, close to that 520 acres of farmland Infrakey bought up for this massive $10 billion data center deal. That includes up to six data centers and a 1.2-gigawatt onsite gas-fired power plant that's bigger than anything we've got around here.</p>
+<div style="font-family:'Newsreader',serif;font-size:32px;font-weight:500;line-height:1.05;padding-top:20px;margin-top:12px;border-top:1px solid #d8d0bf;display:grid;grid-template-columns:44px 1fr"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;color:#b8552e;padding-top:8px;font-variant-numeric:tabular-nums">02</span><span>How SB 2038 is Being Twisted</span></div>
+<p style="margin:0;text-wrap:pretty">This whole thing is happening because Infrakey is twisting Senate Bill 2038, a law that was supposed to protect rural landowners like us from overreaching cities, into a tool to bulldoze right through community wishes.</p>
+<figure style="margin:8px 0;display:flex;flex-direction:column;border:1px solid #d8d0bf">
+<div style="height:380px;background:#3a2a1f url('assets/land2.webp') center/cover"></div>
+<figcaption style="padding:10px 14px;border-top:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:12px;line-height:1.5;font-variant-numeric:tabular-nums">Open countryside near the proposed data center site</figcaption>
+</figure>
+<div style="font-family:'Newsreader',serif;font-size:32px;font-weight:500;line-height:1.05;padding-top:20px;margin-top:12px;border-top:1px solid #d8d0bf;display:grid;grid-template-columns:44px 1fr"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;color:#b8552e;padding-top:8px;font-variant-numeric:tabular-nums">03</span><span>What This Project Really Means</span></div>
+<p style="margin:0">Let's be real about what this project really means. We're not talking some little tech shed here. This is the biggest industrial thing McLennan County's ever seen:</p>
+<div style="display:flex;flex-direction:column;border-top:1px solid #d8d0bf;font-size:18px;line-height:1.5">
+<div style="display:grid;grid-template-columns:44px 1fr;padding:12px 0;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;padding-top:3px;font-variant-numeric:tabular-nums">01</span><span>Up to 6 data centers sprawling across 520 acres</span></div>
+<div style="display:grid;grid-template-columns:44px 1fr;padding:12px 0;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;padding-top:3px;font-variant-numeric:tabular-nums">02</span><span>That huge 1.2-gigawatt gas plant running 24/7</span></div>
+<div style="display:grid;grid-template-columns:44px 1fr;padding:12px 0;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;padding-top:3px;font-variant-numeric:tabular-nums">03</span><span>Up to 16 million gallons of water a day (and nobody's even talked to Waco about how to get it since the land's in their water service area)</span></div>
+<div style="display:grid;grid-template-columns:44px 1fr;padding:12px 0;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;padding-top:3px;font-variant-numeric:tabular-nums">04</span><span>Years of heavy truck traffic tearing up county roads</span></div>
+</div>
+<div style="margin:20px 0;padding:28px 0;border-top:1px solid #d8d0bf;border-bottom:1px solid #d8d0bf;display:flex;flex-direction:column;gap:12px">
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:45px;line-height:1.04;letter-spacing:-.02em">"You sold us out!"</div>
+<div style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">A resident at the December 9, 2025 council meeting</div>
+</div>
+<p style="margin:0;text-wrap:pretty">This is straight-up taxation without representation. Lacy Lakeview gets the windfall, Infrakey gets their mega-project, and us folks in Ross and Elm Mott? We get the noise, the pollution, the traffic, the ruined views, the dropped home values, and zero vote, zero services, zero say.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;padding-top:6px">
+<div style="font-family:'Public Sans',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid #d8d0bf;font-weight:700">On the record</div>
+<a href="#" style="display:flex;flex-direction:column;gap:4px;padding-bottom:14px;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums">Dec 9, 2025</span><span style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600;line-height:1.1">Council approves MOU, 6-1</span><span style="font-size:14px;line-height:1.45;color:#566052">Non-binding MOU on prospective annexation and water/sewer service.</span></a>
+<a href="#" style="display:flex;flex-direction:column;gap:4px;padding-bottom:14px;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums">Jan 13, 2026</span><span style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600;line-height:1.1">Measure 2026-01 passes</span><span style="font-size:14px;line-height:1.45;color:#566052">No planned annexations. City borders and ETJ stay the same.</span></a>
+<a href="#" style="font-family:'Public Sans',sans-serif;font-size:13px;text-decoration:underline;font-variant-numeric:tabular-nums">Full timeline</a>
+</div>
+</div>
+<div style="background:#24452f;color:#f6f2ea;display:grid;grid-template-columns:240px repeat(3,minmax(0,1fr))">
+<div style="padding:40px 48px;border-right:1px solid rgba(246,242,234,.2);font-family:'Newsreader',serif;font-weight:500;font-size:27px;line-height:1.12">Act on this</div>
+<a href="#" style="padding:40px 32px;border-right:1px solid rgba(246,242,234,.2);display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#d7e0cc;font-weight:700">Next meeting</span><span style="font-family:'Newsreader',serif;font-size:24px;font-weight:500;line-height:1.05">Lacy Lakeview City Council · Tue Oct 13 · 6:00 PM</span></a>
+<a href="#" style="padding:40px 32px;border-right:1px solid rgba(246,242,234,.2);display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#d7e0cc;font-weight:700">Speak up</span><span style="font-family:'Newsreader',serif;font-size:24px;font-weight:500;line-height:1.05">Download the 2-minute testimony template</span></a>
+<div style="padding:40px 32px;display:flex;flex-direction:column;gap:12px;justify-content:center"><a href="#" style="background:#b8552e;color:#fff;padding:14px 18px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;text-align:center;border-radius:999px">Sign the petition</a></div>
+</div>
+<div style="padding:48px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:1px solid #d8d0bf"><div style="font-family:'Newsreader',serif;font-weight:500;font-size:29px;letter-spacing:-.02em">More updates</div><a href="#" style="font-family:'Public Sans',sans-serif;font-size:13px;text-decoration:underline;font-variant-numeric:tabular-nums">All entries</a></div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr))">
+<a href="#" style="padding:22px 28px 6px 0;border-right:1px solid #d8d0bf;display:flex;flex-direction:column;gap:6px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;color:#b8552e;font-variant-numeric:tabular-nums">ANALYSIS · JAN 29, 2026</span><span style="font-family:'Newsreader',serif;font-size:26px;font-weight:500;line-height:1.05">Misinformation, Hawaii Boondoggles, and a 50-Year Giveaway</span></a>
+<a href="#" style="padding:22px 28px 6px;border-right:1px solid #d8d0bf;display:flex;flex-direction:column;gap:6px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;color:#b8552e;font-variant-numeric:tabular-nums">ANALYSIS · JAN 25, 2026</span><span style="font-family:'Newsreader',serif;font-size:26px;font-weight:500;line-height:1.05">Not a Partnership, a Takeover Plan</span></a>
+<a href="#" style="padding:22px 0 6px 28px;display:flex;flex-direction:column;gap:6px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;color:#b8552e;font-variant-numeric:tabular-nums">COMMUNITY · DEC 29, 2025</span><span style="font-family:'Newsreader',serif;font-size:26px;font-weight:500;line-height:1.05">December 9th Council Meeting: Why Your Voice Must Be Heard</span></a>
+</div>
+<div style="margin-top:36px;font-family:'Public Sans',sans-serif;font-size:12px;color:#6b6656;font-variant-numeric:tabular-nums">Spotted an error? <a href="#" style="text-decoration:underline">Send a correction</a>. Corrections are noted at the end of the piece with the date.</div>
+</div>
+<dc-import name="HSFooter" hint-size="100%,300px"></dc-import>
+</div>
+</div>
+
+<!-- 2d PRESS -->
+<div id="3d" data-screen-label="3d Press" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3d</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Press · /media/</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">layouts/media/list.html</div></div>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);border-radius:20px;overflow:hidden">
+<dc-import name="HSHeader" active="press" hint-size="100%,140px"></dc-import>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:48px;align-items:end;padding:48px 48px 36px">
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:84px;line-height:1.04;letter-spacing:-.02em">In the press</div>
+<div style="display:flex;flex-direction:column;gap:12px"><div style="font-size:19px;line-height:1.5;text-wrap:pretty">Our community's concerns have received widespread media attention from local TV stations, newspapers, and statewide outlets.</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">24 articles · Updated October 5, 2026</div></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #d8d0bf;border-bottom:1px solid #d8d0bf">
+<div style="background:#24452f;color:#f6f2ea;padding:44px 48px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;gap:10px;align-items:center"><span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid #f6f2ea;padding:5px 9px;border-radius:999px">Original investigation</span><span style="font-family:'Public Sans',sans-serif;font-size:13px;color:#d7e0cc;font-variant-numeric:tabular-nums">The Waco Bridge · November 21, 2025</span></div>
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:37px;line-height:1.04;letter-spacing:-.02em;text-wrap:balance">Talks underway for $10 billion data center and power plant north of Waco</div>
+<div style="font-size:16px;line-height:1.55;color:#d7e0cc;text-wrap:pretty"><span style="color:#f6f2ea;font-weight:600">Editor's note.</span> This groundbreaking investigative piece by The Waco Bridge was the first to publicly report on the proposed data center project. All subsequent coverage originated from their excellent journalism.</div>
+<a href="#" style="align-self:flex-start;background:#b8552e;color:#fff;padding:14px 20px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;margin-top:4px;border-radius:999px">Read at wacobridge.org ↗</a>
+</div>
+<div style="background:repeating-linear-gradient(135deg,#e9e2d3 0 10px,#f1ebe0 10px 20px);display:flex;align-items:center;justify-content:center;font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;min-height:380px;font-variant-numeric:tabular-nums">article screenshot · media .Params.image</div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:14px 48px;border-bottom:1px solid #d8d0bf">
+<div style="display:flex;gap:8px;font-family:'Public Sans',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.14em">
+<a href="#" style="background:#24452f;color:#f6f2ea;padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">All 24</a>
+<a href="#" style="padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">Print 8</a>
+<a href="#" style="padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">Online 8</a>
+<a href="#" style="padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">TV 7</a>
+<a href="#" style="padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">Statewide 1</a>
+</div>
+<div style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">Newest first</div>
+</div>
+<div style="padding:12px 48px 40px">
+<sc-for list="{{ press }}" as="m" hint-placeholder-count="8">
+<sc-if value="{{ m.month }}" hint-placeholder-val="{{ false }}"><div style="font-family:'Newsreader',serif;font-weight:500;font-size:25px;letter-spacing:-.02em;padding:28px 0 10px;border-bottom:1px solid #d8d0bf">{{ m.month }}</div></sc-if>
+<a href="#" style="display:grid;grid-template-columns:110px 230px 90px 1fr 24px;gap:24px;padding:16px 0;border-bottom:1px solid #d8d0bf;align-items:baseline">
+<span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums">{{ m.date }}</span>
+<span style="font-family:'Public Sans',sans-serif;font-size:15px;font-weight:600">{{ m.outlet }}</span>
+<span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;border:1px solid #d8d0bf;padding:3px 6px;justify-self:start;border-radius:999px">{{ m.type }}</span>
+<span style="font-size:19px;line-height:1.4;font-weight:600">{{ m.title }}</span>
+<span style="font-family:'Public Sans',sans-serif;font-size:15px;font-variant-numeric:tabular-nums">↗</span>
+</a>
+</sc-for>
+<div style="padding-top:28px;font-family:'Public Sans',sans-serif;font-size:12px;color:#6b6656;font-variant-numeric:tabular-nums">Reporters: for interviews or documents, <a href="#" style="text-decoration:underline">contact leadership</a>. Every link opens the original outlet in a new tab.</div>
+</div>
+<dc-import name="HSFooter" hint-size="100%,300px"></dc-import>
+</div>
+</div>
+
+<!-- 2e DOCUMENTS -->
+<div id="3e" data-screen-label="3e Documents" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3e</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Resources · /resources/</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">layouts/resources/list.html (new)</div></div>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);border-radius:20px;overflow:hidden">
+<dc-import name="HSHeader" active="documents" hint-size="100%,140px"></dc-import>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:48px;align-items:end;padding:48px 48px 36px;border-bottom:1px solid #d8d0bf">
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:73px;line-height:1.04;letter-spacing:-.02em">Resources</div>
+<div style="font-size:19px;line-height:1.5;text-wrap:pretty">Primary sources, research, and the templates you need to write to officials or request public records.</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #d8d0bf">
+<a href="#" style="padding:40px 48px;border-right:1px solid #d8d0bf;display:flex;flex-direction:column;gap:14px"><span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;color:#b8552e;text-transform:uppercase;letter-spacing:.14em">Guide · Dec 24, 2025</span><span style="font-family:'Newsreader',serif;font-weight:500;font-size:35px;line-height:1.04;letter-spacing:-.02em">Templates &amp; Contact Information</span><span style="font-size:17px;line-height:1.5;color:#566052">Downloadable templates for public comment and contact information for elected officials</span><span style="font-family:'Public Sans',sans-serif;font-size:13px;text-decoration:underline;font-variant-numeric:tabular-nums">Open guide</span></a>
+<a href="#" style="padding:40px 48px;display:flex;flex-direction:column;gap:14px"><span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;color:#b8552e;text-transform:uppercase;letter-spacing:.14em">Research · Dec 20, 2025</span><span style="font-family:'Newsreader',serif;font-weight:500;font-size:35px;line-height:1.04;letter-spacing:-.02em">Environmental Impact Studies</span><span style="font-size:17px;line-height:1.5;color:#566052">Collection of peer-reviewed research and reports on data center environmental impacts</span><span style="font-family:'Public Sans',sans-serif;font-size:13px;text-decoration:underline;font-variant-numeric:tabular-nums">Open research</span></a>
+</div>
+<div style="padding:48px 48px 8px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:1px solid #d8d0bf"><div style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;letter-spacing:-.02em">Primary sources</div><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">Files hosted on this site</span></div>
+<div style="display:grid;grid-template-columns:80px 1fr 260px 140px;gap:24px;padding:12px 0;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5d6b5a;font-weight:700"><span>Type</span><span>Document</span><span>File</span><span></span></div>
+<sc-for list="{{ files }}" as="f" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:80px 1fr 260px 140px;gap:24px;padding:18px 0;border-bottom:1px solid #d8d0bf;align-items:center">
+<span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;border:1px solid #d8d0bf;padding:3px 6px;justify-self:start;font-variant-numeric:tabular-nums;border-radius:999px">{{ f.type }}</span>
+<span style="font-family:'Newsreader',serif;font-size:22px;font-weight:500;line-height:1.1">{{ f.title }}</span>
+<span style="font-family:'Public Sans',sans-serif;font-size:12px;word-break:break-all;color:#6b6656;font-variant-numeric:tabular-nums">{{ f.body }}</span>
+<a href="#" style="background:#24452f;color:#fff;padding:10px 14px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:13px;text-align:center;border-radius:999px">Download</a>
+</div>
+</sc-for>
+</div>
+<div style="padding:48px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:1px solid #d8d0bf"><div style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;letter-spacing:-.02em">Templates</div><a href="#" style="font-family:'Public Sans',sans-serif;font-size:13px;text-decoration:underline;font-variant-numeric:tabular-nums">How to use them</a></div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr))">
+<sc-for list="{{ templates }}" as="t" hint-placeholder-count="8">
+<div style="padding:22px 20px 22px 0;border-bottom:1px solid #d8d0bf;display:flex;flex-direction:column;gap:10px;min-height:150px">
+<span style="font-family:'Newsreader',serif;font-size:21px;font-weight:500;line-height:1.1">{{ t.name }}</span>
+<span style="font-size:15px;line-height:1.45;color:#566052;flex:1">{{ t.desc }}</span>
+<span style="display:flex;gap:14px;font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600;text-decoration:underline;font-variant-numeric:tabular-nums"><a href="#">PDF</a><a href="#">DOCX</a></span>
+</div>
+</sc-for>
+</div>
+<div style="margin-top:32px;font-family:'Public Sans',sans-serif;font-size:12px;color:#6b6656;font-variant-numeric:tabular-nums">Have a document that belongs here? <a href="#" style="text-decoration:underline">Submit it to the research coordinator</a>.</div>
+</div>
+<dc-import name="HSFooter" hint-size="100%,300px"></dc-import>
+</div>
+</div>
+
+<!-- 2f RESOURCE PAGE -->
+<div id="3f" data-screen-label="3f Resource page" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3f</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Resource page · /resources/templates-contact-info/</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">layouts/resources/single.html (new)</div></div>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);border-radius:20px;overflow:hidden">
+<dc-import name="HSHeader" active="documents" hint-size="100%,140px"></dc-import>
+<div style="display:flex;justify-content:space-between;padding:14px 48px;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums"><span><a href="#" style="text-decoration:underline">Resources</a> / Guide</span><span>Last updated December 24, 2025</span></div>
+<div style="display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px;padding:48px 48px 40px;border-bottom:1px solid #d8d0bf">
+<div style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:700;color:#b8552e;text-transform:uppercase;letter-spacing:.14em;padding-top:10px">Guide</div>
+<div style="display:flex;flex-direction:column;gap:18px"><div style="font-family:'Newsreader',serif;font-weight:500;font-size:50px;line-height:1.04;letter-spacing:-.02em;text-wrap:balance">Templates &amp; Contact Information</div><div style="font-size:22px;line-height:1.4;color:#566052">Downloadable templates for public comment and contact information for elected officials</div></div>
+</div>
+<div style="display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px;padding:48px">
+<div style="display:flex;flex-direction:column">
+<div style="font-family:'Public Sans',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid #d8d0bf;font-weight:700">On this page</div>
+<a href="#" style="padding:10px 0;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;color:#b8552e">Letter &amp; testimony templates</a>
+<a href="#" style="padding:10px 0;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Open records requests</a>
+<a href="#" style="padding:10px 0;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Elected officials</a>
+<a href="#" style="padding:10px 0;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">State agencies</a>
+<a href="#" style="padding:10px 0;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Tips</a>
+</div>
+<div style="display:flex;flex-direction:column;gap:56px">
+<div>
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;letter-spacing:-.02em;padding-bottom:14px;border-bottom:1px solid #d8d0bf">Letter &amp; testimony templates</div>
+<sc-for list="{{ templates }}" as="t" hint-placeholder-count="8">
+<div style="display:grid;grid-template-columns:1fr 110px 110px;gap:16px;padding:16px 0;border-bottom:1px solid #d8d0bf;align-items:center">
+<span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Newsreader',serif;font-size:22px;font-weight:500;line-height:1.1">{{ t.name }}</span><span style="font-size:16px;font-style:italic;color:#566052">{{ t.desc }}</span></span>
+<a href="#" style="border:2px solid #24452f;padding:9px 0;text-align:center;font-family:'Public Sans',sans-serif;font-weight:600;font-size:13px;border-radius:999px">PDF</a>
+<a href="#" style="background:#24452f;color:#fff;padding:11px 0;text-align:center;font-family:'Public Sans',sans-serif;font-weight:600;font-size:13px;border-radius:999px">DOCX</a>
+</div>
+</sc-for>
+<div style="padding-top:12px;font-family:'Public Sans',sans-serif;font-size:12px;color:#6b6656;font-variant-numeric:tabular-nums">PDF to view and print. DOCX to edit and customize.</div>
+</div>
+<div>
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;letter-spacing:-.02em;padding-bottom:14px;border-bottom:1px solid #d8d0bf">How to file an open records request</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr))">
+<div style="padding:20px 20px 20px 0;border-right:1px solid #d8d0bf;display:flex;flex-direction:column;gap:8px"><span style="font-family:'Newsreader',serif;font-weight:500;font-size:35px;line-height:1.04">01</span><span style="font-size:16px;line-height:1.45">Download the PIA Request Template (above)</span></div>
+<div style="padding:20px;border-right:1px solid #d8d0bf;display:flex;flex-direction:column;gap:8px"><span style="font-family:'Newsreader',serif;font-weight:500;font-size:35px;line-height:1.04">02</span><span style="font-size:16px;line-height:1.45">Fill in specific information you're requesting</span></div>
+<div style="padding:20px;border-right:1px solid #d8d0bf;display:flex;flex-direction:column;gap:8px"><span style="font-family:'Newsreader',serif;font-weight:500;font-size:35px;line-height:1.04">03</span><span style="font-size:16px;line-height:1.45">Email or mail to the City Secretary's office</span></div>
+<div style="padding:20px 0 20px 20px;display:flex;flex-direction:column;gap:8px"><span style="font-family:'Newsreader',serif;font-weight:500;font-size:35px;line-height:1.04;color:#b8552e">10</span><span style="font-size:16px;line-height:1.45">Response required within 10 business days under Texas law</span></div>
+</div>
+</div>
+<div>
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;letter-spacing:-.02em;padding-bottom:14px;border-bottom:1px solid #d8d0bf">Elected officials</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid #d8d0bf">
+<div style="padding:24px 28px 24px 0;border-right:1px solid #d8d0bf;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'Newsreader',serif;font-size:24px;font-weight:500">Lacy Lakeview</span><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">2nd &amp; 4th Tue · 6:00 PM</span></div>
+<div style="display:grid;grid-template-columns:1fr auto;row-gap:6px;font-size:16px"><span>Mayor Charles Wilson</span><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">(254) 799-2458</span><span>Mayor Pro-Tem Jonathan Olvera</span><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">(254) 799-2458</span><span>City Secretary (records)</span><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">(254) 799-2458</span></div>
+<div style="font-family:'Public Sans',sans-serif;font-size:12px;color:#6b6656;font-variant-numeric:tabular-nums">501 E. Craven Ave., Lacy Lakeview, TX 76705</div>
+</div>
+<div style="padding:24px 0 24px 28px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'Newsreader',serif;font-size:24px;font-weight:500">McLennan County</span><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">See Agenda Center</span></div>
+<div style="display:grid;grid-template-columns:1fr auto;row-gap:6px;font-size:16px"><span>County Judge Scott M. Felton</span><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">(254) 757-5049</span><span>Precinct 1</span><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">(254) 757-5061</span><span>Precinct 2</span><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">(254) 757-5062</span></div>
+<div style="font-family:'Public Sans',sans-serif;font-size:12px;color:#6b6656;font-variant-numeric:tabular-nums">501 Washington Ave., Waco, TX 76701</div>
+</div>
+</div>
+<div style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid #d8d0bf;font-family:'Newsreader',serif;font-size:20px;font-weight:500"><span>Waco City Government</span><span style="font-family:'Public Sans',sans-serif;font-size:16px;font-variant-numeric:tabular-nums">+</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid #d8d0bf;font-family:'Newsreader',serif;font-size:20px;font-weight:500"><span>Texas State Legislature</span><span style="font-family:'Public Sans',sans-serif;font-size:16px;font-variant-numeric:tabular-nums">+</span></div>
+<div style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid #d8d0bf;font-family:'Newsreader',serif;font-size:20px;font-weight:500"><span>U.S. Congress</span><span style="font-family:'Public Sans',sans-serif;font-size:16px;font-variant-numeric:tabular-nums">+</span></div>
+<div style="padding-top:14px;font-family:'Public Sans',sans-serif;font-size:12px;color:#6b6656;font-variant-numeric:tabular-nums">All contact information verified as of December 2025. If you find outdated information, please <a href="#" style="text-decoration:underline">let us know</a>.</div>
+</div>
+</div>
+</div>
+<dc-import name="HSFooter" hint-size="100%,300px"></dc-import>
+</div>
+</div>
+
+<!-- 2g PRIVACY -->
+<div id="3g" data-screen-label="3g Privacy" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3g</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Plain page · /privacy/</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">layouts/_default/single.html, no image, no byline</div></div>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);border-radius:20px;overflow:hidden">
+<dc-import name="HSHeader" active="none" hint-size="100%,140px"></dc-import>
+<div style="display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px;padding:48px 48px 36px;border-bottom:1px solid #d8d0bf">
+<div style="font-family:'Public Sans',sans-serif;font-size:13px;padding-top:10px;font-variant-numeric:tabular-nums">Last updated<br>December 20, 2024</div>
+<div style="display:flex;flex-direction:column;gap:16px"><div style="font-family:'Newsreader',serif;font-weight:500;font-size:56px;line-height:1.04;letter-spacing:-.02em">Privacy Policy</div><div style="font-size:22px;line-height:1.4;color:#566052">How we collect and use your information</div></div>
+</div>
+<div style="display:grid;grid-template-columns:240px minmax(0,700px) 1fr;gap:48px;padding:48px 48px 72px">
+<div></div>
+<div style="display:flex;flex-direction:column;gap:22px;font-size:19px;line-height:1.65">
+<div style="font-family:'Newsreader',serif;font-size:28px;font-weight:500;padding-top:0">Overview</div>
+<p style="margin:0">Waco Data Center Community Action ("we," "our," or "us") respects your privacy. This policy explains how we collect, use, and protect your information.</p>
+<div style="background:#24452f;color:#f6f2ea;padding:20px 24px;font-family:'Newsreader',serif;font-size:24px;font-weight:500">We do NOT use cookies or tracking pixels.</div>
+<div style="font-family:'Newsreader',serif;font-size:28px;font-weight:500;padding-top:20px;border-top:1px solid #d8d0bf">Information We Collect</div>
+<div style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.14em">Email newsletter signup</div>
+<p style="margin:0">When you subscribe to our email list, we collect:</p>
+<div style="display:flex;flex-direction:column;border-top:1px solid #d8d0bf;font-size:18px">
+<div style="display:grid;grid-template-columns:44px 1fr;padding:10px 0;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;padding-top:3px;font-variant-numeric:tabular-nums">01</span><span>Your name (optional)</span></div>
+<div style="display:grid;grid-template-columns:44px 1fr;padding:10px 0;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;padding-top:3px;font-variant-numeric:tabular-nums">02</span><span>Your email address</span></div>
+<div style="display:grid;grid-template-columns:44px 1fr;padding:10px 0;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;padding-top:3px;font-variant-numeric:tabular-nums">03</span><span>Your ZIP code (optional)</span></div>
+</div>
+</div>
+<div></div>
+</div>
+<dc-import name="HSFooter" hint-size="100%,300px"></dc-import>
+</div>
+</div>
+
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const posts = [
+      { date: 'Jan 29, 2026', cat: 'Analysis', title: 'Misinformation, Hawaii Boondoggles, and a 50-Year Giveaway', dek: '', author: 'Sean Terrell' },
+      { date: 'Jan 25, 2026', cat: 'Analysis · Community', title: 'Not a Partnership, a Takeover Plan', dek: "Lacy Lakeview didn't show up to chat with Elm Mott's water board. They showed up to move the chess pieces.", author: 'Sean Terrell' },
+      { date: 'Jan 9, 2026', cat: 'Open letters · Community', title: 'Twisting Texas Law to Wreck Our Way of Life', dek: 'An open letter to Lacy Lakeview City Council about the Infrakey data center and the misuse of Senate Bill 2038', author: 'Sean Terrell' },
+      { date: 'Dec 29, 2025', cat: 'Community', title: 'December 9th Council Meeting: Why Your Voice Must Be Heard', dek: '', author: 'Sean Terrell' },
+      { date: 'Dec 15, 2025', cat: 'Data center impact', title: 'Understanding Data Center Water Consumption in Rural Texas', dek: 'An analysis of water usage by large-scale data centers and the impact on rural water infrastructure', author: 'Research Team' },
+      { date: 'Dec 10, 2025', cat: 'Data center impact', title: 'The Real Economic Impact: Jobs and Tax Revenue from Data Centers', dek: 'Examining the job creation promises versus reality of data center development in rural areas', author: 'Economic Analysis Team' }
+    ];
+    const raw = [
+      ['May 2026','May 13','The Waco Bridge','Online',"Lacy Lakeview needs Waco's help to realize its data center dreams. It's not going well."],
+      [null,'May 12','Waco Tribune-Herald','Print','Lacy Lakeview data center opponent to take council seat Tuesday'],
+      ['April 2026','Apr 24','Waco Tribune-Herald','Print','Lacy Lakeview City Council challenger questions wisdom of data center'],
+      [null,'Apr 24','The Waco Bridge','Online',"Early voting ends Tuesday in the May 2 local elections. Here's what you need to know."],
+      ['March 2026','Mar 30','The Waco Bridge','Online',"City and school elections are May 2. Here's who's running"],
+      [null,'Mar 25','Waco Tribune-Herald','Print','Lacy Lakeview sees potential in wastewater for data center'],
+      ['February 2026','Feb 24','Waco Tribune-Herald','Print','Waco Rotary Club hears positives and negatives of proposed $10 billion data center'],
+      [null,'Feb 23','Waco Tribune-Herald','Print',"Waco-area news briefs: Data center debate lands at Monday's Rotary meeting"],
+      [null,'Feb 20','Waco Tribune-Herald','Print','Rotary Club to host panel discussion about Lacy Lakeview data center'],
+      ['January 2026','Jan 28','The Waco Bridge','Online','Lacy Lakeview offers special district as olive branch to rural neighbors of data center site'],
+      [null,'Jan 14','KCEN-TV','TV','Lacy Lakeview approves resolution tied to proposed data center; Ross weighs limited options'],
+      [null,'Jan 14','KWTX','TV','Ross residents oppose AI data center, city explores annexation options'],
+      [null,'Jan 14','Waco Tribune-Herald','Print','Data center opponents continue to press Lacy Lakeview']
+    ];
+    const press = raw.map(r => ({ month: r[0], date: r[1], outlet: r[2], type: r[3], title: r[4] }));
+    const files = [
+      { type: 'PDF', title: 'Elm Mott Water Board minutes, July 2025 to January 2026', body: '/documents/elm-mott-water-board-minutes-july-2025-jan-2026.pdf' },
+      { type: 'JPEG', title: 'Elm Mott Water agenda, February 2, 2026', body: '/agenda/elm-mott-water-agenda-2026-2-2.jpeg' },
+      { type: 'DOCX', title: 'Agenda, February 1, 2026', body: '/agenda/agenda-2026-2-1.docx' },
+      { type: 'PDF', title: 'Agenda, January 11, 2026', body: '/agenda/agenda-2026-1-11.pdf' }
+    ];
+    const templates = [
+      { name: 'Public Testimony', desc: '2-minute template for city council and commissioners court meetings. Includes tips for effective testimony.' },
+      { name: 'Written Comment', desc: "For submitting written comments when you can't attend in person" },
+      { name: 'City Council Letter', desc: 'Template for writing to Waco City Council members' },
+      { name: 'County Commissioners Letter', desc: 'Template for McLennan County Commissioners Court' },
+      { name: 'State Representative Letter', desc: 'Template for Texas State Representatives' },
+      { name: 'State Senator Letter', desc: 'Template for Texas State Senators' },
+      { name: 'Public Information Act Request', desc: 'Standard template for requesting public records' },
+      { name: 'Meeting Minutes Request', desc: 'Pre-filled example for requesting city council meeting minutes' }
+    ];
+    return { posts, press, files, templates };
+  }
+}
+</script>
+</body>
+</html>
