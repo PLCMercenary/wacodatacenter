@@ -2,6 +2,8 @@
 
 Implemented on `redesign/public-record`, using the site-wide handoff in `design/` and Direction 1b from `design_handoff_homepage_redesign/`.
 
+[Netlify deploy preview](https://deploy-preview-1--wacodatacenter.netlify.app) · [Draft PR #1](https://github.com/PLCMercenary/wacodatacenter/pull/1)
+
 ## Preview artifacts
 
 - [Homepage, desktop](homepage-desktop.png)
@@ -34,7 +36,7 @@ Run the checked-in validation scripts using the commands in README.md. Browser s
 
 ## Hosted checks and setup remaining
 
-Netlify must detect `email-signup`, `contact`, and `yard-signs` in the deploy preview. Hosted form submissions have not been sent; local tests do not prove Netlify processing.
+Netlify deployed the redesign successfully. A read-only Chrome check of the hosted home, contact, yard signs, meetings, and documents pages passed for page rendering, mobile width, and the petition dialog. Netlify processed the form markup for `email-signup`, `contact`, and `yard-signs`. Hosted form submissions have not been sent, so submission delivery remains unverified.
 
 The daily-refresh GitHub workflow is included, but the repository currently has no `NETLIFY_BUILD_HOOK` secret. Create a Netlify build hook targeting `main` and save its URL as that Actions secret. The schedule takes effect from the default branch after merge. Secrets and Netlify credentials are not included in the repository.
 
