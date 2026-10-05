@@ -1,5 +1,6 @@
 ---
 title: "December 9th Council Meeting: Why Your Voice Must Be Heard"
+categories: ["community"]
 date: 2025-12-29
 author: "Sean Terrell (PLC Mercenary)"
 draft: false

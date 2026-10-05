@@ -1,0 +1,34 @@
+<div class="thank-you-grid">
+<section>
+<p class="kicker" data-thank-kicker>Received · {{ if eq .Layout "contact-thank-you" }}Contact{{ else }}Submission{{ end }}</p>
+<h1>Thank you.</h1>
+<p class="lede" data-thank-lead>{{ if eq .Layout "contact-thank-you" }}We've received your message!{{ else }}Your submission has been received!{{ end }}</p>
+<p data-thank-detail>{{ if eq .Layout "contact-thank-you" }}We'll get back to you within 24-48 hours.{{ else }}We'll be in touch soon.{{ end }}</p>
+<a class="btn btn-ink" href="/">Return to homepage</a>
+</section>
+<section>
+<div class="section-head">
+<h2>What's next?</h2>
+</div>
+<ol class="numbered-list">
+<li>
+<h3>
+<a href="/posts/">Read our research</a>
+</h3>
+<p>Catch up on the record behind the project.</p>
+</li>
+<li>
+<h3>
+<button class="text-button" data-dialog="changeOrgModal">Sign the petition</button>
+</h3>
+<p>Add your name to the community petition.</p>
+</li>
+<li>
+<h3>
+<a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener noreferrer">Follow us</a>
+</h3>
+<p>Join neighbors in the Facebook group.</p>
+</li>
+</ol>
+</section>
+</div>

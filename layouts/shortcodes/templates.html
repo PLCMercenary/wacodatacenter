@@ -1,0 +1,9 @@
+<div class="template-table">{{ range .Site.Data.templates }}<div class="template-row">
+<div>
+<h3>{{ .title }}</h3>
+<p>{{ .description }}</p>
+</div>
+<a class="btn btn-outline" href="{{ .pdf }}" target="_blank" rel="noopener">PDF</a>
+<a class="btn btn-ink" href="{{ .docx }}" target="_blank" rel="noopener">DOCX</a>
+</div>{{ end }}</div>
+<p class="mono">PDF to view and print. DOCX to edit and customize.</p>

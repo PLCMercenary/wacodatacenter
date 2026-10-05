@@ -1,0 +1,39 @@
+- title: "Public testimony"
+  description: "2-minute template for city council and commissioners court meetings."
+  pdf: "/templates/public-testimony-template.pdf"
+  docx: "/templates/public-testimony-template.docx"
+
+- title: "Written comment"
+  description: "For submitting written comments when you cannot attend in person."
+  pdf: "/templates/public-comment-template.pdf"
+  docx: "/templates/public-comment-template.docx"
+
+- title: "City council letter"
+  description: "Template for writing to Waco City Council members."
+  pdf: "/templates/city-council-letter-template.pdf"
+  docx: "/templates/city-council-letter-template.docx"
+
+- title: "County commissioners letter"
+  description: "Template for McLennan County Commissioners Court."
+  pdf: "/templates/county-commissioners-letter-template.pdf"
+  docx: "/templates/county-commissioners-letter-template.docx"
+
+- title: "State representative letter"
+  description: "Template for Texas State Representatives."
+  pdf: "/templates/state-rep-letter-template.pdf"
+  docx: "/templates/state-rep-letter-template.docx"
+
+- title: "State senator letter"
+  description: "Template for Texas State Senators."
+  pdf: "/templates/state-senator-letter-template.pdf"
+  docx: "/templates/state-senator-letter-template.docx"
+
+- title: "Public information request"
+  description: "Standard template for requesting public records."
+  pdf: "/templates/pia-request-template.pdf"
+  docx: "/templates/pia-request-template.docx"
+
+- title: "Meeting minutes request"
+  description: "Example for requesting city council meeting minutes."
+  pdf: "/templates/meeting-minutes-request-template.pdf"
+  docx: "/templates/meeting-minutes-request-template.docx"

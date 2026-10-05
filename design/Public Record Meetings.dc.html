@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#dedbd4;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<section data-screen-label="Turn 2 meetings" style="display:flex;flex-direction:column;gap:40px;padding:80px">
+<div style="display:flex;flex-direction:column;gap:10px;max-width:1100px;color:#141414">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#6b665c">1b Public Record · Meetings · 1280 desktop</div>
+<div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:44px;letter-spacing:-.02em;text-transform:uppercase;line-height:.95">Events calendar</div>
+<div style="font-family:'Source Serif 4',serif;font-size:18px;line-height:1.55;color:#3c3a35;max-width:860px;text-wrap:pretty"><a href="#2h" style="text-decoration:underline">2h</a> /events/, built from content/events.md. Category chips filter the list (click them). Shown as of Monday, October 5, 2026.</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:80px;align-items:flex-start">
+
+<div id="2h" data-screen-label="2h Meetings" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#141414;color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;padding:6px 12px">2h</div><div style="font-family:'Archivo Narrow',sans-serif;font-size:19px;font-weight:700;text-transform:uppercase">Meetings · /events/</div><div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#6b665c">layouts/_default/events.html</div></div>
+<div style="background:#f3f1ec;color:#141414;font-family:'Source Serif 4',serif;box-shadow:0 2px 30px rgba(0,0,0,.12)">
+<dc-import name="PRHeader" active="meetings" hint-size="100%,140px"></dc-import>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:48px;align-items:end;padding:48px 48px 36px">
+<div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:120px;line-height:.85;letter-spacing:-.04em;text-transform:uppercase">Meetings</div>
+<div style="display:flex;flex-direction:column;gap:12px"><div style="font-size:19px;line-height:1.5;text-wrap:pretty">Upcoming meetings, events, and opportunities to engage. Public comment is where officials hear from us on the record.</div><div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#6b665c">Updated from content/events.md on every build</div></div>
+</div>
+<div style="background:#c8361c;color:#fff;display:grid;grid-template-columns:200px 1fr 260px;gap:40px;align-items:center;padding:36px 48px">
+<div style="border:2px solid #fff;display:flex;flex-direction:column;align-items:center;padding:14px 0 12px"><span style="font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:600;letter-spacing:.1em">OCT · TUE</span><span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:104px;line-height:.9;letter-spacing:-.04em">13</span></div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid #fff;padding:6px 10px;align-self:flex-start">Next important meeting</span>
+<span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:54px;line-height:.92;letter-spacing:-.03em;text-transform:uppercase">Lacy Lakeview City Council Meeting</span>
+<span style="font-family:'Archivo Narrow',sans-serif;font-size:24px;font-weight:700;text-transform:uppercase">Tuesday, October 13, 2026 · 6:00 PM · Lacy Lakeview City Hall</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<a href="#" style="background:#fff;color:#141414;padding:14px 18px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;text-align:center">Add to calendar</a>
+<a href="#" style="border:2px solid #fff;padding:12px 18px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;text-align:center">Testimony template</a>
+<span style="font-family:'IBM Plex Mono',monospace;font-size:12px;text-align:center">No agenda posted yet</span>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid #141414">
+<div style="padding:32px 32px 32px 48px;border-right:1px solid #141414;display:flex;flex-direction:column;gap:8px">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#c8361c;font-weight:600">Also important</span>
+<span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600">Tue Oct 27 · 6:00 PM</span>
+<span style="font-family:'Archivo Narrow',sans-serif;font-size:26px;font-weight:700;line-height:1.05;text-transform:uppercase">Lacy Lakeview City Council Meeting</span>
+<span style="font-size:15px;color:#3c3a35">Lacy Lakeview City Hall</span>
+</div>
+<div style="padding:32px;border-right:1px solid #141414;display:flex;flex-direction:column;gap:8px">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#c8361c;font-weight:600">Also important</span>
+<span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600">Sun Nov 1 · 6:00 PM</span>
+<span style="font-family:'Archivo Narrow',sans-serif;font-size:26px;font-weight:700;line-height:1.05;text-transform:uppercase">Community Update Meeting</span>
+<span style="font-size:15px;color:#3c3a35">Ross VFD. Open to the public. Monthly community update on the L2D2 data center project.</span>
+</div>
+<div style="padding:32px 48px 32px 32px;background:#141414;color:#f3f1ec;display:flex;flex-direction:column;gap:10px">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#b9b5ab">Speaking at public comment</span>
+<span style="display:grid;grid-template-columns:28px 1fr;font-size:15px;line-height:1.45"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;padding-top:2px">01</span><span>Arrive early. Sign up to speak as soon as possible.</span></span>
+<span style="display:grid;grid-template-columns:28px 1fr;font-size:15px;line-height:1.45"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;padding-top:2px">02</span><span>Usually 2-3 minutes. Practice your statement.</span></span>
+<span style="display:grid;grid-template-columns:28px 1fr;font-size:15px;line-height:1.45"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;padding-top:2px">03</span><span>State your name and address, then a specific ask.</span></span>
+</div>
+</div>
+<div style="padding:40px 48px 0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:4px solid #141414"><div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:36px;text-transform:uppercase;letter-spacing:-.01em">Next outreach</div><span style="font-family:'IBM Plex Mono',monospace;font-size:13px">Tables, flyers and yard signs. <a href="#" style="text-decoration:underline">Volunteer</a></span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr">
+<div style="padding:20px 28px 20px 0;border-right:1px solid #141414;display:grid;grid-template-columns:120px 1fr;gap:20px"><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600">Sat Oct 10<br>9:00 AM – 1:00 PM</span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase">Waco Downtown Farmers Market</span><span style="font-size:15px;color:#3c3a35">Bridge Street Plaza, East Waco</span></span></div>
+<div style="padding:20px 0 20px 28px;display:grid;grid-template-columns:120px 1fr;gap:20px"><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600">Sun Oct 11<br>1:00 PM – 5:00 PM</span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase">HomeGrown Sundays – The Will of Waco Outdoor Market</span><span style="font-size:15px;color:#3c3a35">Weather permitting. The Will does not publish a set season end, so check their Facebook before heading out.</span></span></div>
+</div>
+</div>
+<div style="padding:48px 48px 0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:4px solid #141414"><div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:36px;text-transform:uppercase;letter-spacing:-.01em">Full calendar</div><span style="font-family:'IBM Plex Mono',monospace;font-size:13px">{{ countLabel }}</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;padding:16px 0;border-bottom:1px solid #141414;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.04em">
+<sc-for list="{{ chips }}" as="c" hint-placeholder-count="8">
+<sc-if value="{{ c.on }}" hint-placeholder-val="{{ false }}"><button onClick="{{ c.pick }}" style="font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;background:#141414;color:#f3f1ec;padding:7px 12px;border:1px solid #141414;border-radius:0">{{ c.label }}</button></sc-if>
+<sc-if value="{{ c.off }}" hint-placeholder-val="{{ true }}"><button onClick="{{ c.pick }}" style="font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;background:transparent;color:#141414;padding:7px 12px;border:1px solid #141414;border-radius:0">{{ c.label }}</button></sc-if>
+</sc-for>
+</div>
+<sc-for list="{{ months }}" as="mo" hint-placeholder-count="1">
+<div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:28px;text-transform:uppercase;padding:28px 0 10px;border-bottom:4px solid #141414">{{ mo.label }}</div>
+<sc-for list="{{ mo.rows }}" as="e" hint-placeholder-count="8">
+<div style="display:grid;grid-template-columns:80px 150px 1fr 170px 110px;gap:24px;padding:18px 0;border-bottom:1px solid #141414;align-items:start">
+<div style="display:flex;flex-direction:column;align-items:flex-start"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.06em">{{ e.dow }}</span><span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:36px;line-height:1;letter-spacing:-.02em">{{ e.day }}</span></div>
+<span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;padding-top:4px">{{ e.time }}</span>
+<div style="display:flex;flex-direction:column;gap:4px;padding-top:2px">
+<span style="font-family:'Archivo Narrow',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase;line-height:1.1">{{ e.title }}</span>
+<span style="font-size:16px;color:#3c3a35">{{ e.loc }}</span>
+<sc-if value="{{ e.notes }}" hint-placeholder-val="{{ false }}"><span style="font-size:14px;line-height:1.45;color:#6b665c;font-style:italic">{{ e.notes }}</span></sc-if>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start;padding-top:4px">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;border:1px solid #141414;padding:3px 6px">{{ e.cat }}</span>
+<sc-if value="{{ e.pri }}" hint-placeholder-val="{{ false }}"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;background:#c8361c;color:#fff;padding:4px 7px">Priority</span></sc-if>
+</div>
+<div style="padding-top:6px;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600">
+<sc-if value="{{ e.link }}" hint-placeholder-val="{{ false }}"><a href="#" style="text-decoration:underline">{{ e.link }} ↗</a></sc-if>
+</div>
+</div>
+</sc-for>
+</sc-for>
+<sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}"><div style="padding:40px 0;font-family:'IBM Plex Mono',monospace;font-size:14px;color:#6b665c;border-bottom:1px solid #141414">Nothing scheduled in this category this month.</div></sc-if>
+</div>
+<div style="padding:56px 48px 0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:4px solid #141414"><div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:36px;text-transform:uppercase;letter-spacing:-.01em">Outcomes on the record</div><a href="#" style="font-family:'IBM Plex Mono',monospace;font-size:13px;text-decoration:underline">Full timeline</a></div>
+<div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid #141414"><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600">Jan 13, 2026</span><span style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:24px;font-weight:700;text-transform:uppercase">Lacy Lakeview City Council Meeting</span><span style="font-size:17px;line-height:1.5;color:#3c3a35">City Council approved Measure 2026-01. No planned annexations, city borders and ETJ remain the same. Landowner annexations can be approved if requested.</span></span></div>
+</div>
+<div style="margin:56px 48px 48px;border:1px solid #141414;display:grid;grid-template-columns:1fr 1.3fr">
+<div style="padding:32px;border-right:1px solid #141414;display:flex;flex-direction:column;gap:8px"><span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:32px;text-transform:uppercase;line-height:.95">Get meeting alerts</span><span style="font-size:16px;line-height:1.5;color:#3c3a35">Updates on new research, upcoming meetings, and action items. Unsubscribe at any time.</span></div>
+<div style="padding:32px;display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end">
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase">Name</span><span style="height:52px;border:1px solid #141414;background:#fbfaf7"></span></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase">Email</span><span style="height:52px;border:1px solid #141414;background:#fbfaf7"></span></label>
+<a href="#" style="height:52px;display:flex;align-items:center;background:#141414;color:#fff;padding:0 22px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase">Subscribe</a>
+</div>
+</div>
+<dc-import name="PRFooter" hint-size="100%,300px"></dc-import>
+</div>
+</div>
+
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { cat: 'All' };
+  renderVals() {
+    const E = (dow, day, time, title, loc, cat, o = {}) => ({ dow, day, time, title, loc, cat, notes: o.n || '', link: o.l || '', pri: !!o.p });
+    const OCC = 'Oversees unincorporated areas including Elm Mott and Ross; public comment opportunity';
+    const oct = [
+      E('MON','05','6:00 PM','Elm Mott Water Supply Corporation Board Meeting','314 W. Elm Mott Drive','Water Board',{l:'Agenda'}),
+      E('MON','05','7:00 PM','Hewitt City Council Meeting','Hewitt City Hall','City Council',{l:'Agenda'}),
+      E('TUE','06','3:00 PM / 6:00 PM','Waco City Council Meeting','Waco City Hall','City Council',{l:'Agenda'}),
+      E('TUE','06','6:00 PM','Chalk Bluff Water Supply Corporation Board Meeting','6511 Gholson Rd, Waco (and Zoom)','Water Board',{l:'Agenda'}),
+      E('SAT','10','9:30 AM','Data Center Action Committee Meeting','Ross VFD','Action Committee',{n:'Internal planning'}),
+      E('SAT','10','9:00 AM – 1:00 PM','Waco Downtown Farmers Market','Bridge Street Plaza, East Waco','Public Outreach',{l:'Info'}),
+      E('MON','12','7:00 PM','Ross Water Supply Board Meeting','Ross City Hall','Water Board'),
+      E('TUE','13','9:00 AM','McLennan County Commissioners Court Meeting','McLennan County Courthouse, Waco','County',{n:OCC,l:'Agenda'}),
+      E('TUE','13','6:00 PM','Lacy Lakeview City Council Meeting','Lacy Lakeview City Hall','City Council',{p:1}),
+      E('TUE','13','6:30 PM','Bellmead City Council Meeting','Bellmead City Hall','City Council'),
+      E('TUE','20','3:00 PM / 6:00 PM','Waco City Council Meeting','Waco City Hall','City Council',{l:'Agenda'}),
+      E('TUE','27','9:00 AM','McLennan County Commissioners Court Meeting','McLennan County Courthouse, Waco','County',{n:OCC,l:'Agenda'}),
+      E('TUE','27','6:00 PM','Lacy Lakeview City Council Meeting','Lacy Lakeview City Hall','City Council',{p:1}),
+      E('WED','28','12:30 PM','Southern Trinity Groundwater Conservation District Board Meeting','McLennan County Archives Building','Water Board',{l:'Agenda'})
+    ];
+    const nov = [
+      E('SUN','01','6:00 PM','Community Update Meeting','Ross VFD','Community Meeting',{p:1,n:'Open to the public. Monthly community update on the L2D2 data center project.'}),
+      E('MON','02','6:00 PM','Elm Mott Water Supply Corporation Board Meeting','314 W. Elm Mott Drive','Water Board',{l:'Agenda'}),
+      E('TUE','10','6:00 PM','Lacy Lakeview City Council Meeting','Lacy Lakeview City Hall','City Council',{p:1})
+    ];
+    const cat = this.state.cat;
+    const f = r => cat === 'All' || (cat === 'Priority' ? r.pri : r.cat === cat);
+    const months = [{ label: 'October 2026', rows: oct.filter(f) }, { label: 'November 2026 (first 10 days)', rows: nov.filter(f) }].filter(m => m.rows.length);
+    const n = months.reduce((a, m) => a + m.rows.length, 0);
+    const labels = ['All','Priority','City Council','County','Water Board','Community Meeting','Public Outreach','Action Committee'];
+    const chips = labels.map(l => ({ label: l, on: l === cat, off: l !== cat, pick: () => this.setState({ cat: l }) }));
+    return { months, chips, empty: n === 0, countLabel: n + ' upcoming shown' };
+  }
+}
+</script>
+</body>
+</html>

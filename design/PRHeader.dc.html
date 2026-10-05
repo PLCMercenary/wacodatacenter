@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div style="background:#f3f1ec;color:#141414">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:12px 48px;border-bottom:1px solid #141414;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.04em">
+<span>McLennan County, Texas · Updated July 5, 2026</span>
+<span style="display:flex;gap:24px"><a href="#">Yard signs $5</a><a href="#">Legal fund</a><a href="#">Contact</a></span>
+</div>
+<div style="padding:22px 48px 16px;display:flex;justify-content:space-between;align-items:end;border-bottom:4px solid #141414">
+<a href="#" style="font-family:'Archivo',sans-serif;font-weight:900;font-size:34px;letter-spacing:-.02em;line-height:.9;text-transform:uppercase">Waco Data Center<br><span style="color:#c8361c">Community Action</span></a>
+<div style="display:flex;gap:28px;font-family:'Archivo Narrow',sans-serif;font-size:19px;font-weight:600;text-transform:uppercase;letter-spacing:.02em;align-items:center">
+<sc-if value="{{ aRecord }}" hint-placeholder-val="{{ false }}"><a href="#" style="color:#c8361c;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:8px">The Record</a></sc-if>
+<sc-if value="{{ nRecord }}" hint-placeholder-val="{{ true }}"><a href="#">The Record</a></sc-if>
+<sc-if value="{{ aPress }}" hint-placeholder-val="{{ false }}"><a href="#" style="color:#c8361c;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:8px">Press</a></sc-if>
+<sc-if value="{{ nPress }}" hint-placeholder-val="{{ true }}"><a href="#">Press</a></sc-if>
+<sc-if value="{{ aMeetings }}" hint-placeholder-val="{{ false }}"><a href="#" style="color:#c8361c;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:8px">Meetings</a></sc-if>
+<sc-if value="{{ nMeetings }}" hint-placeholder-val="{{ true }}"><a href="#">Meetings</a></sc-if>
+<sc-if value="{{ aDocuments }}" hint-placeholder-val="{{ false }}"><a href="#" style="color:#c8361c;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:8px">Documents</a></sc-if>
+<sc-if value="{{ nDocuments }}" hint-placeholder-val="{{ true }}"><a href="#">Documents</a></sc-if>
+<a href="#" style="background:#c8361c;color:#fff;padding:12px 18px">Sign the petition</a>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:140},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;none&quot;,&quot;record&quot;,&quot;press&quot;,&quot;meetings&quot;,&quot;documents&quot;],&quot;default&quot;:&quot;none&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const a = this.props.active ?? 'none';
+    const o = {};
+    ['Record','Press','Meetings','Documents'].forEach(k => { const on = a === k.toLowerCase(); o['a'+k] = on; o['n'+k] = !on; });
+    return o;
+  }
+}
+</script>
+</body>
+</html>

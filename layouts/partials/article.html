@@ -1,0 +1,63 @@
+{{ $post := eq .Section "posts" }}{{ $resource := eq .Section "resources" }}{{ $image := .Params.featured_image | default .Params.image }}
+{{ if or $post $resource }}<div class="breadcrumb">
+<a href="{{ if $post }}/posts/{{ else }}/resources/{{ end }}">{{ if $post }}The Record{{ else }}Documents{{ end }}</a>
+<span class="mono">{{ if $post }}Filed{{ else }}Last updated{{ end }} {{ .Lastmod.Format "Jan 2, 2006" }}</span>
+</div>{{ end }}
+<article class="article-page {{ if $resource }}resource-page{{ end }}">
+<header class="article-head">
+<div class="kicker">{{ if $post }}{{ delimit (.Params.categories | default (slice "Community")) " · " }}{{ else if $resource }}Guide{{ else }}Last updated {{ .Lastmod.Format "Jan 2, 2006" }}{{ end }}</div>
+<div>
+<h1>{{ .Title }}</h1>{{ with .Description }}<p class="article-dek">{{ . }}</p>{{ end }}</div>
+</header>
+{{ if $post }}<div class="byline-bar">
+<span class="mono">Byline</span>
+<div>
+<strong>By {{ .Params.author | default "Community Action Team" }}</strong>
+<span class="mono">{{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read</span>
+</div>
+<div class="share-actions">
+<button data-print>Print</button>
+<button data-copy-link>Copy link</button>
+<button data-share>Share</button>
+</div>
+</div>{{ end }}
+{{ with $image }}<figure class="article-image">
+<img src="{{ . }}" width="2000" height="1334" alt="{{ $.Params.image_alt | default $.Title }}">{{ with $.Params.image_caption }}<figcaption>{{ . }}</figcaption>{{ end }}</figure>{{ end }}
+<div class="article-grid">
+<aside class="article-rail">
+<details class="toc" open>
+<summary>{{ if $resource }}On this page{{ else }}In this piece{{ end }}</summary>{{ .TableOfContents }}</details>{{ with .Params.tags }}<div class="article-tags">
+<h2 class="mono">Tags</h2>{{ range . }}<a class="tag" href="{{ printf "/tags/%s/" (. | urlize) }}">{{ . }}</a>{{ end }}</div>{{ end }}</aside>
+<div class="prose">{{ .Content }}</div>{{ with .Params.timeline }}<aside class="article-margin">
+<h2 class="section-head">On the record</h2>{{ range . }}{{ $key := . }}{{ range $.Site.Data.timeline }}{{ if eq .key $key }}<div class="latest-item">
+<time class="mono">{{ .label | default (time.Format "Jan 2, 2006" .date) }}</time>
+<h3>{{ .title }}</h3>
+<p>{{ .body }}</p>
+</div>{{ end }}{{ end }}{{ end }}<a class="mono" href="/#timeline">Full timeline</a>
+</aside>{{ end }}</div>
+{{ if $post }}<section class="act-band">
+<h2>Act on this</h2>
+<div>
+<h3>Next meeting</h3>{{ $events := where (where (partial "upcoming-events.html" .) "highlight" true) "completed" "ne" true }}{{ with index (first 1 $events) 0 }}<p>{{ .title }}</p>
+<p class="mono">{{ time.Format "Mon Jan 2" .date }} · {{ .time }}</p>{{ else }}<p>Check the calendar for upcoming meetings.</p>{{ end }}<a href="/events/">View meetings</a>
+</div>
+<div>
+<h3>Prepare to speak</h3>
+<a href="/templates/public-testimony-template.pdf">Download the 2-minute testimony template</a>
+</div>
+<div>
+<button class="btn btn-primary" data-dialog="changeOrgModal">Sign the petition</button>
+</div>
+</section>
+<section class="padded">
+<div class="section-head">
+<h2>More from the record</h2>
+</div>
+<div class="related-grid">{{ range first 3 (where (partial "listed-posts.html" .) "RelPermalink" "ne" .RelPermalink) }}<article>
+<p class="kicker">{{ delimit (.Params.categories | default (slice "Community")) " · " }} · {{ .Date.Format "Jan 2, 2006" }}</p>
+<h3>
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+</h3>
+</article>{{ end }}</div>
+<p class="mono muted">Spotted an error? <a href="/contact/">Send a correction.</a> Corrections are noted at the end of the piece with the date.</p>
+</section>{{ end }}</article>

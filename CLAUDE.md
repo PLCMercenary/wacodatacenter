@@ -34,7 +34,7 @@ Blog posts have historically generated good response from local leadership. The 
 
 - **Hugo** static site generator (extended). Pinned to `HUGO_VERSION = 0.121.1` in `netlify.toml`.
 - **No theme.** All templates live in `layouts/` — custom from scratch.
-- **Bootstrap 5.3** + **Font Awesome 6.4** + Google Fonts (Montserrat, Roboto Slab) loaded from CDN in `layouts/_default/baseof.html`. No npm/build pipeline.
+- **Public Record** first-party layouts and plain CSS. Google Fonts: Archivo, Archivo Narrow, Source Serif 4, IBM Plex Mono. Native dialogs and small browser scripts replace Bootstrap and Font Awesome. No npm/build pipeline.
 - **Netlify** deploys from GitHub on push to `main`. Build = `hugo`, publish = `public/`. Deploy previews and branch deploys use `-F -b $DEPLOY_PRIME_URL`.
 - **Netlify Forms** for email signup (free tier: 100 submissions/month).
 - **GitHub remote:** `https://github.com/PLCMercenary/wacodatacenter.git`.
@@ -49,7 +49,8 @@ content/
   events.md     — events page (large file, hand-edited timeline)
   contact.md, privacy.md, yard-signs.md, thank-you.md, contact-thank-you.md
 data/
-  metrics.yaml  — live petition/FB/email counters surfaced on the homepage
+  metrics.yaml  — petition/FB/email counters with their actual verification date
+  timeline.yaml, documents.yaml, templates.yaml, officials.yaml — shared content data
 layouts/
   _default/     — baseof, list, single, plus page-specific templates
                   (events.html, contact.html, yard-signs.html, thank-you.html)
@@ -92,7 +93,7 @@ Push to `main` and Netlify auto-deploys in ~30 seconds. Sean has authorized Clau
 ## Things to know
 
 - **Cache-control is intentionally short.** Mobile users and Brave-browser users were not picking up content updates on long caches, so CSS/JS are capped at 1 hour and images at 24 hours. Traffic is low enough that page-load cost doesn't matter. Don't "fix" this by extending the max-age.
-- **The `agency` theme is commented out** in `hugo.toml`. Layouts are Bootstrap-Agency-inspired but first-party.
+- **The `agency` theme is commented out** in `hugo.toml`. Layouts use the Public Record handoff and are first-party.
 - **`hugo.toml` `instagram` param is a placeholder** (`"your-instagram"`). Footer/social blocks may need to guard for that.
 - **Contact email of record is `plcmercenary@tuta.io`** (per `hugo.toml`). The README mentions `contact@wacodatacenter.com` but the toml is the source of truth.
 - **`.DS_Store` files have been committed** in a few places. `.gitignore` covers them for new commits but existing ones remain.
