@@ -1,0 +1,1 @@
+{{ $name := .item.Name }}{{ if ne (.site.Params.theme | default "1b") "1b" }}{{ if eq .item.Identifier "posts" }}{{ $name = "Updates" }}{{ else if eq .item.Identifier "resources" }}{{ $name = "Resources" }}{{ end }}{{ end }}{{ return $name }}

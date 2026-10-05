@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#dedbd4;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<section data-screen-label="Turn 2 system" style="display:flex;flex-direction:column;gap:40px;padding:80px">
+<div style="display:flex;flex-direction:column;gap:10px;max-width:1100px;color:#141414">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#6b665c">1b Public Record · System</div>
+<div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:44px;letter-spacing:-.02em;text-transform:uppercase;line-height:.95">Tokens, components, mobile</div>
+<div style="font-family:'Source Serif 4',serif;font-size:18px;line-height:1.55;color:#3c3a35;max-width:860px;text-wrap:pretty"><a href="#2p" style="text-decoration:underline">2p</a> Tokens and type. <a href="#2q" style="text-decoration:underline">2q</a> Components and states. <a href="#2r" style="text-decoration:underline">2r</a> Mobile at 390px: home, article, meetings, contact form.</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:80px;align-items:flex-start">
+
+<!-- 2p TOKENS -->
+<div id="2p" data-screen-label="2p Tokens and type" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#141414;color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;padding:6px 12px">2p</div><div style="font-family:'Archivo Narrow',sans-serif;font-size:19px;font-weight:700;text-transform:uppercase">Tokens and type</div><div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#6b665c">static/css/style.css :root</div></div>
+<div style="background:#f3f1ec;color:#141414;font-family:'Source Serif 4',serif;box-shadow:0 2px 30px rgba(0,0,0,.12);padding:48px">
+<div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:36px;text-transform:uppercase;padding-bottom:14px;border-bottom:4px solid #141414">Color</div>
+<div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-left:1px solid #141414">
+<sc-for list="{{ colors }}" as="c" hint-placeholder-count="12">
+<div style="border-right:1px solid #141414;border-bottom:1px solid #141414;display:flex;flex-direction:column">
+<div style="height:96px;background:{{ c.hex }};border-bottom:1px solid #141414"></div>
+<div style="padding:12px 14px;display:flex;flex-direction:column;gap:3px"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600">{{ c.name }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px">{{ c.hex }}</span><span style="font-size:13px;line-height:1.4;color:#3c3a35">{{ c.use }}</span></div>
+</div>
+</sc-for>
+</div>
+<div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:36px;text-transform:uppercase;padding:48px 0 14px;border-bottom:4px solid #141414">Type scale</div>
+<sc-for list="{{ type }}" as="t" hint-placeholder-count="10">
+<div style="display:grid;grid-template-columns:260px 1fr;gap:32px;padding:20px 0;border-bottom:1px solid #141414;align-items:center">
+<div style="display:flex;flex-direction:column;gap:3px"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600">{{ t.token }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4b4840">{{ t.spec }}</span></div>
+<div style="{{ t.css }}">{{ t.sample }}</div>
+</div>
+</sc-for>
+<div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:36px;text-transform:uppercase;padding:48px 0 14px;border-bottom:4px solid #141414">Structure</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr))">
+<div style="padding:22px 22px 22px 0;border-right:1px solid #141414;display:flex;flex-direction:column;gap:10px"><div style="height:4px;background:#141414"></div><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600">--rule-heavy: 4px</span><span style="font-size:14px;line-height:1.45;color:#3c3a35">Under the masthead and every section head.</span></div>
+<div style="padding:22px;border-right:1px solid #141414;display:flex;flex-direction:column;gap:10px"><div style="height:1px;background:#141414;margin:1.5px 0"></div><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600">--rule: 1px</span><span style="font-size:14px;line-height:1.45;color:#3c3a35">Between rows, columns and bands. The only divider.</span></div>
+<div style="padding:22px;border-right:1px solid #141414;display:flex;flex-direction:column;gap:10px"><div style="height:4px;border:1px solid #141414"></div><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600">--radius: 0</span><span style="font-size:14px;line-height:1.45;color:#3c3a35">Every box, button and input. No shadows.</span></div>
+<div style="padding:22px 0 22px 22px;display:flex;flex-direction:column;gap:10px"><div style="height:4px;background:repeating-linear-gradient(90deg,#141414 0 48px,transparent 48px 96px)"></div><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600">--gutter: 48px</span><span style="font-size:14px;line-height:1.45;color:#3c3a35">Page side padding at desktop. 20px under 768px. Content max 1280.</span></div>
+</div>
+</div>
+</div>
+
+<!-- 2q COMPONENTS -->
+<div id="2q" data-screen-label="2q Components" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#141414;color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;padding:6px 12px">2q</div><div style="font-family:'Archivo Narrow',sans-serif;font-size:19px;font-weight:700;text-transform:uppercase">Components and states</div></div>
+<div style="background:#f3f1ec;color:#141414;font-family:'Source Serif 4',serif;box-shadow:0 2px 30px rgba(0,0,0,.12);padding:48px;display:flex;flex-direction:column;gap:48px">
+<div>
+<div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:36px;text-transform:uppercase;padding-bottom:14px;border-bottom:4px solid #141414">Buttons</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0">
+<div style="padding:24px 24px 24px 0;border-right:1px solid #141414;display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6b665c">.btn-primary</span><a href="#" style="background:#c8361c;color:#fff;padding:16px 24px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase">Sign the petition</a><a href="#" style="background:#b02f18;color:#fff;padding:16px 24px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;text-decoration:underline">Hover</a><a href="#" style="background:#c8361c;color:#fff;padding:16px 24px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;outline:2px solid #141414;outline-offset:3px">Focus</a></div>
+<div style="padding:24px;border-right:1px solid #141414;display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6b665c">.btn-ink</span><a href="#" style="background:#141414;color:#fff;padding:16px 24px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase">Read the record</a><a href="#" style="background:#000;color:#fff;padding:16px 24px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;text-decoration:underline">Hover</a><a href="#" style="background:#141414;color:#fff;padding:16px 24px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;outline:2px solid #c8361c;outline-offset:3px">Focus</a></div>
+<div style="padding:24px;border-right:1px solid #141414;display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6b665c">.btn-outline</span><a href="#" style="border:2px solid #141414;padding:14px 24px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase">Testimony template</a><a href="#" style="border:2px solid #141414;background:#e9e6df;padding:14px 24px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;text-decoration:underline">Hover</a><span style="border:2px solid #b8b3a8;color:#8a857b;padding:14px 24px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase">Disabled</span></div>
+<div style="padding:24px 0 24px 24px;display:flex;flex-direction:column;gap:12px;align-items:stretch;background:#141414;margin:0 0 0 0"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b9b5ab">On ink · .btn-outline-paper</span><a href="#" style="margin-right:24px;border:2px solid #f3f1ec;color:#f3f1ec;padding:14px 24px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;text-align:center">Order a yard sign · $5</a><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b9b5ab;margin-top:8px">On red · .btn-paper</span><a href="#" style="margin-right:24px;background:#fff;color:#141414;padding:14px 24px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;text-align:center">Add to calendar</a></div>
+</div>
+<div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4b4840;padding-top:14px;border-top:1px solid #141414">Buttons sit flush when paired (gap 0, shared border). Minimum height 44px. Transitions 150ms on background only.</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px">
+<div>
+<div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:36px;text-transform:uppercase;padding-bottom:14px;border-bottom:4px solid #141414">Form fields</div>
+<div style="display:flex;flex-direction:column;gap:20px;padding-top:24px">
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Default <span style="color:#c8361c">*</span></span><span style="height:52px;border:1px solid #141414;background:#fbfaf7;display:flex;align-items:center;padding:0 14px;font-size:18px;color:#8a857b">Placeholder</span></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Focus</span><span style="height:52px;border:1px solid #c8361c;box-shadow:0 0 0 1px #c8361c;background:#fbfaf7;display:flex;align-items:center;padding:0 14px;font-size:18px">Jane Neighbor</span></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;color:#c8361c">Error *</span><span style="height:52px;border:2px solid #c8361c;background:#fbeee9;display:flex;align-items:center;padding:0 13px;font-size:18px">jane@</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:#c8361c">Enter a full email address, like name@example.com</span></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Select</span><span style="height:52px;border:1px solid #141414;background:#fbfaf7;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:18px"><span>General Inquiry</span><span style="font-family:'IBM Plex Mono',monospace;font-size:14px">▾</span></span></label>
+<div style="display:flex;gap:28px;font-size:15px"><span style="display:flex;gap:10px;align-items:center"><span style="width:22px;height:22px;border:1.5px solid #141414;background:#fbfaf7"></span>Unchecked</span><span style="display:flex;gap:10px;align-items:center"><span style="width:22px;height:22px;background:#141414;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px">✓</span>Checked</span></div>
+</div>
+</div>
+<div>
+<div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:36px;text-transform:uppercase;padding-bottom:14px;border-bottom:4px solid #141414">Labels and filters</div>
+<div style="display:flex;flex-direction:column;gap:24px;padding-top:24px">
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6b665c">Filter chips (active, default)</span><div style="display:flex;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;text-transform:uppercase"><span style="background:#141414;color:#f3f1ec;padding:7px 12px;border:1px solid #141414">All</span><span style="padding:7px 12px;border:1px solid #141414">Analysis</span><span style="padding:7px 12px;border:1px solid #141414">Open letters</span></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6b665c">Category kicker</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:#c8361c;text-transform:uppercase;letter-spacing:.04em">Open letter · Community</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6b665c">Tags: type, priority, band tag, tag link</span><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;border:1px solid #141414;padding:3px 6px">City Council</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;background:#c8361c;color:#fff;padding:4px 7px">Priority</span><span style="background:#c8361c;padding:6px"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid #fff;color:#fff;padding:6px 10px;display:inline-block">Next meeting</span></span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;border:1px solid #141414;padding:4px 8px">sb-2038</span></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6b665c">Section head</span><div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:4px solid #141414"><span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:32px;text-transform:uppercase">The Timeline</span><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;text-decoration:underline">Full record</span></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6b665c">Record row (timeline, outcomes, posts)</span><div style="display:grid;grid-template-columns:140px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid #141414"><span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600">Dec 9, 2025</span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase">Council approves MOU, 6-1</span><span style="font-size:15px;color:#3c3a35">Non-binding MOU on prospective annexation and water/sewer service.</span></span></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6b665c">Image placeholder</span><div style="height:90px;background:repeating-linear-gradient(135deg,#e4e0d7 0 10px,#ece9e2 10px 20px);border:1px solid #141414;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6b665c">photo · description of what goes here</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 2r MOBILE -->
+<div id="2r" data-screen-label="2r Mobile" style="flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#141414;color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;padding:6px 12px">2r</div><div style="font-family:'Archivo Narrow',sans-serif;font-size:19px;font-weight:700;text-transform:uppercase">Mobile · 390px</div><div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#6b665c">Below 768px: 20px gutters, one column, nav behind MENU</div></div>
+<div style="display:flex;gap:48px;align-items:flex-start">
+
+<div style="width:390px;flex:none;display:flex;flex-direction:column;gap:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4b4840">Home</span>
+<div style="background:#f3f1ec;color:#141414;font-family:'Source Serif 4',serif;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden">
+<div style="padding:14px 20px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:4px solid #141414"><span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:21px;line-height:.9;text-transform:uppercase;letter-spacing:-.02em">Waco Data Center<br><span style="color:#c8361c">Community Action</span></span><span style="display:flex"><span style="height:44px;display:flex;align-items:center;padding:0 12px;border:2px solid #141414;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase">Menu</span><span style="height:44px;display:flex;align-items:center;padding:0 12px;background:#c8361c;color:#fff;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase">Sign</span></span></div>
+<div style="padding:28px 20px;display:flex;flex-direction:column;gap:16px;border-bottom:1px solid #141414">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#c8361c">Re: L2D2 · Infrakey DC Parks LLC</span>
+<span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:52px;line-height:.88;letter-spacing:-.035em;text-transform:uppercase">Wrong project. Wrong place.</span>
+<span style="font-size:17px;line-height:1.5">A 1.2 GW hyperscale campus on 520 acres of Elm Mott farmland, reached by two county roads and surrounded by homes.</span>
+<span style="display:flex;flex-direction:column"><a href="#" style="background:#141414;color:#fff;padding:15px;text-align:center;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:17px;text-transform:uppercase">Read the record</a><a href="#" style="border:2px solid #141414;border-top:0;padding:13px;text-align:center;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:17px;text-transform:uppercase">Sign the petition</a></span>
+</div>
+<div style="height:220px;background:#3a2a1f url('assets/council-meeting.webp') center/cover;filter:grayscale(.15)"></div>
+<div style="background:#c8361c;color:#fff;padding:16px 20px;display:flex;flex-direction:column;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid #fff;padding:4px 8px;align-self:flex-start">Next meeting</span><span style="font-family:'Archivo Narrow',sans-serif;font-size:21px;font-weight:700;text-transform:uppercase;line-height:1.1">Lacy Lakeview City Council · Tue Oct 13 · 6:00 PM · City Hall</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr">
+<div style="padding:20px;border-right:1px solid #141414;border-bottom:1px solid #141414"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6b665c">01 / Scale</span><div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:34px;line-height:1">1.2 GW</div></div>
+<div style="padding:20px;border-bottom:1px solid #141414"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6b665c">02 / Siting</span><div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:34px;line-height:1">520 ac</div></div>
+<div style="padding:20px;border-right:1px solid #141414;border-bottom:1px solid #141414"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6b665c">03 / Access</span><div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:34px;line-height:1">2 roads</div></div>
+<div style="padding:20px;border-bottom:1px solid #141414"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6b665c">04 / Grid</span><div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:34px;line-height:1">ERCOT</div></div>
+</div>
+</div></div>
+
+<div style="width:390px;flex:none;display:flex;flex-direction:column;gap:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4b4840">Article</span>
+<div style="background:#f3f1ec;color:#141414;font-family:'Source Serif 4',serif;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden">
+<div style="padding:14px 20px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:4px solid #141414"><span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:21px;line-height:.9;text-transform:uppercase;letter-spacing:-.02em">Waco Data Center<br><span style="color:#c8361c">Community Action</span></span><span style="display:flex"><span style="height:44px;display:flex;align-items:center;padding:0 12px;border:2px solid #141414;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase">Menu</span><span style="height:44px;display:flex;align-items:center;padding:0 12px;background:#c8361c;color:#fff;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase">Sign</span></span></div>
+<div style="padding:10px 20px;border-bottom:1px solid #141414;font-family:'IBM Plex Mono',monospace;font-size:12px">The Record / Open letters</div>
+<div style="padding:24px 20px;display:flex;flex-direction:column;gap:14px">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:#c8361c;text-transform:uppercase">Open letter · Community</span>
+<span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:40px;line-height:.92;letter-spacing:-.03em;text-transform:uppercase">Twisting Texas Law to Wreck Our Way of Life</span>
+<span style="font-size:18px;line-height:1.4;color:#3c3a35">An open letter to Lacy Lakeview City Council about the Infrakey data center and the misuse of Senate Bill 2038</span>
+</div>
+<div style="padding:12px 20px;border-top:1px solid #141414;border-bottom:1px solid #141414;display:flex;flex-direction:column;gap:2px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:17px;font-weight:700;text-transform:uppercase">By Sean Terrell</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px">January 9, 2026 · 7 min read</span></div>
+<div style="height:220px;background:#3a2a1f url('assets/council-meeting.webp') center/cover"></div>
+<div style="padding:10px 20px;border-bottom:1px solid #141414;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.5">Photo Credit: Justin Hamel / The Waco Bridge</div>
+<div style="padding:12px 20px;border-bottom:1px solid #141414;display:flex;justify-content:space-between;font-family:'Archivo Narrow',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase"><span>In this piece</span><span style="font-family:'IBM Plex Mono',monospace">+</span></div>
+<div style="padding:22px 20px 28px;display:flex;flex-direction:column;gap:16px;font-size:18px;line-height:1.6">
+<p style="margin:0">To the Lacy Lakeview City Council,</p>
+<p style="margin:0">I'm Sean Terrell, a guys who's called Elm Mott home since August 2015. I live in the Dome house on Tours Rd.</p>
+<div style="font-family:'Archivo Narrow',sans-serif;font-size:24px;font-weight:700;line-height:1.05;text-transform:uppercase;padding-top:14px;border-top:1px solid #141414">How SB 2038 is Being Twisted</div>
+</div>
+</div></div>
+
+<div style="width:390px;flex:none;display:flex;flex-direction:column;gap:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4b4840">Meetings</span>
+<div style="background:#f3f1ec;color:#141414;font-family:'Source Serif 4',serif;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden">
+<div style="padding:14px 20px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:4px solid #141414"><span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:21px;line-height:.9;text-transform:uppercase;letter-spacing:-.02em">Waco Data Center<br><span style="color:#c8361c">Community Action</span></span><span style="display:flex"><span style="height:44px;display:flex;align-items:center;padding:0 12px;border:2px solid #141414;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase">Menu</span><span style="height:44px;display:flex;align-items:center;padding:0 12px;background:#c8361c;color:#fff;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase">Sign</span></span></div>
+<div style="padding:24px 20px;font-family:'Archivo',sans-serif;font-weight:900;font-size:56px;line-height:.85;letter-spacing:-.04em;text-transform:uppercase">Meetings</div>
+<div style="background:#c8361c;color:#fff;padding:22px 20px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:14px;align-items:center"><span style="border:2px solid #fff;display:flex;flex-direction:column;align-items:center;padding:6px 12px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600">OCT · TUE</span><span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:48px;line-height:.9">13</span></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid #fff;padding:4px 8px">Next important meeting</span></div>
+<span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:32px;line-height:.92;text-transform:uppercase">Lacy Lakeview City Council Meeting</span>
+<span style="font-family:'Archivo Narrow',sans-serif;font-size:18px;font-weight:700;text-transform:uppercase">6:00 PM · Lacy Lakeview City Hall</span>
+<a href="#" style="background:#fff;color:#141414;padding:14px;text-align:center;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:17px;text-transform:uppercase">Add to calendar</a>
+</div>
+<div style="display:flex;gap:6px;padding:14px 20px;border-bottom:1px solid #141414;overflow:hidden;font-family:'IBM Plex Mono',monospace;font-size:12px;text-transform:uppercase;white-space:nowrap"><span style="background:#141414;color:#f3f1ec;padding:6px 10px">All</span><span style="border:1px solid #141414;padding:6px 10px">Priority</span><span style="border:1px solid #141414;padding:6px 10px">City Council</span><span style="border:1px solid #141414;padding:6px 10px">County</span></div>
+<div style="padding:0 20px 20px">
+<div style="font-family:'Archivo',sans-serif;font-weight:900;font-size:22px;text-transform:uppercase;padding:20px 0 8px;border-bottom:4px solid #141414">October 2026</div>
+<div style="display:grid;grid-template-columns:56px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid #141414"><span style="display:flex;flex-direction:column"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600">TUE</span><span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:30px;line-height:1">13</span></span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600">6:00 PM</span><span style="font-family:'Archivo Narrow',sans-serif;font-size:19px;font-weight:700;text-transform:uppercase;line-height:1.1">Lacy Lakeview City Council Meeting</span><span style="font-size:14px;color:#3c3a35">Lacy Lakeview City Hall</span><span style="display:flex;gap:6px;margin-top:2px"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;text-transform:uppercase;border:1px solid #141414;padding:2px 5px">City Council</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;text-transform:uppercase;background:#c8361c;color:#fff;padding:3px 6px">Priority</span></span></span></div>
+<div style="display:grid;grid-template-columns:56px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid #141414"><span style="display:flex;flex-direction:column"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600">TUE</span><span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:30px;line-height:1">20</span></span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600">3:00 PM / 6:00 PM</span><span style="font-family:'Archivo Narrow',sans-serif;font-size:19px;font-weight:700;text-transform:uppercase;line-height:1.1">Waco City Council Meeting</span><span style="font-size:14px;color:#3c3a35">Waco City Hall · <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;text-decoration:underline">Agenda ↗</span></span></span></div>
+</div>
+</div></div>
+
+<div style="width:390px;flex:none;display:flex;flex-direction:column;gap:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4b4840">Contact form</span>
+<div style="background:#f3f1ec;color:#141414;font-family:'Source Serif 4',serif;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden">
+<div style="padding:14px 20px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:4px solid #141414"><span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:21px;line-height:.9;text-transform:uppercase;letter-spacing:-.02em">Waco Data Center<br><span style="color:#c8361c">Community Action</span></span><span style="display:flex"><span style="height:44px;display:flex;align-items:center;padding:0 12px;border:2px solid #141414;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase">Menu</span><span style="height:44px;display:flex;align-items:center;padding:0 12px;background:#c8361c;color:#fff;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase">Sign</span></span></div>
+<div style="padding:24px 20px 8px;font-family:'Archivo',sans-serif;font-weight:900;font-size:56px;line-height:.85;letter-spacing:-.04em;text-transform:uppercase">Contact</div>
+<div style="padding:0 20px 24px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:16px;line-height:1.5">Have questions? Want to get involved? We're here to help.</span>
+<span style="font-family:'Archivo',sans-serif;font-weight:900;font-size:24px;text-transform:uppercase;padding-bottom:10px;border-bottom:4px solid #141414">Send us a message</span>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase">Name <span style="color:#c8361c">*</span></span><span style="height:52px;border:1px solid #141414;background:#fbfaf7"></span></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase">Email <span style="color:#c8361c">*</span></span><span style="height:52px;border:1px solid #c8361c;box-shadow:0 0 0 1px #c8361c;background:#fbfaf7"></span></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase">Subject <span style="color:#c8361c">*</span></span><span style="height:52px;border:1px solid #141414;background:#fbfaf7;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:17px;color:#8a857b"><span>Select a topic</span><span style="font-family:'IBM Plex Mono',monospace;color:#141414">▾</span></span></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Archivo Narrow',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase">Message <span style="color:#c8361c">*</span></span><span style="height:120px;border:1px solid #141414;background:#fbfaf7"></span></label>
+<a href="#" style="height:56px;display:flex;align-items:center;justify-content:center;background:#c8361c;color:#fff;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase">Send message</a>
+</div>
+</div></div>
+
+</div>
+</div>
+
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const colors = [
+      { name: '--paper', hex: '#f3f1ec', use: 'Page background' },
+      { name: '--ink', hex: '#141414', use: 'Text, all rules, ink bands, ink buttons' },
+      { name: '--red', hex: '#c8361c', use: 'Primary CTA, meeting band, kickers, focus' },
+      { name: '--red-hover', hex: '#b02f18', use: 'Primary button hover (about 8% darker)' },
+      { name: '--red-on-ink', hex: '#e2573c', use: 'Red type on the ink footer only' },
+      { name: '--body-2', hex: '#3c3a35', use: 'Deks, secondary body text' },
+      { name: '--muted', hex: '#6b665c', use: 'Mono indexes, column heads (12px+)' },
+      { name: '--meta', hex: '#4b4840', use: 'Footer line, fine print' },
+      { name: '--on-ink-2', hex: '#b9b5ab', use: 'Secondary text on ink' },
+      { name: '--rule-on-ink', hex: '#3a3a3a', use: 'Dividers inside ink bands' },
+      { name: '--field', hex: '#fbfaf7', use: 'Input background' },
+      { name: '--error-tint', hex: '#fbeee9', use: 'Input background in error state' }
+    ];
+    const type = [
+      { token: 'display-xl', spec: 'Archivo 900 · 120/0.85 · -0.04em · upper', css: "font-family:'Archivo',sans-serif;font-weight:900;font-size:120px;line-height:.85;letter-spacing:-.04em;text-transform:uppercase", sample: 'The Record' },
+      { token: 'h1-home', spec: 'Archivo 900 · 92/0.88 · -0.035em · upper', css: "font-family:'Archivo',sans-serif;font-weight:900;font-size:92px;line-height:.88;letter-spacing:-.035em;text-transform:uppercase", sample: 'Wrong place.' },
+      { token: 'h1-article', spec: 'Archivo 900 · 80/0.9 · -0.035em · upper · balance', css: "font-family:'Archivo',sans-serif;font-weight:900;font-size:80px;line-height:.9;letter-spacing:-.035em;text-transform:uppercase", sample: 'Twisting Texas Law' },
+      { token: 'numeral', spec: 'Archivo 900 · 52-64/1 · -0.03em', css: "font-family:'Archivo',sans-serif;font-weight:900;font-size:64px;line-height:1;letter-spacing:-.03em", sample: '3,698' },
+      { token: 'section-head', spec: 'Archivo 900 · 36 · upper · 4px rule below', css: "font-family:'Archivo',sans-serif;font-weight:900;font-size:36px;text-transform:uppercase", sample: 'Full calendar' },
+      { token: 'h2-article', spec: 'Archivo Narrow 700 · 32/1.05 · upper · 1px rule above', css: "font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:32px;line-height:1.05;text-transform:uppercase", sample: 'How SB 2038 is Being Twisted' },
+      { token: 'item-title', spec: 'Archivo Narrow 700 · 22-27/1.05', css: "font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:26px;line-height:1.05", sample: 'Not a Partnership, a Takeover Plan' },
+      { token: 'nav / button', spec: 'Archivo Narrow 600-700 · 17-19 · upper', css: "font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:19px;text-transform:uppercase", sample: 'Meetings · Sign the petition' },
+      { token: 'body-article', spec: 'Source Serif 4 400 · 20/1.65 · max 700px', css: "font-family:'Source Serif 4',serif;font-size:20px;line-height:1.65;max-width:700px", sample: 'People moved out here for the peace, the open sky, the chance to raise kids and grandkids in a real rural Texas setting.' },
+      { token: 'body-ui', spec: 'Source Serif 4 400 · 15-17/1.5', css: "font-family:'Source Serif 4',serif;font-size:16px;line-height:1.5", sample: 'Homes and generational homesteads on every side.' },
+      { token: 'mono-label', spec: 'IBM Plex Mono 600 · 12-13 · 0.06em · upper', css: "font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#c8361c", sample: 'Open letter · Community' },
+      { token: 'mono-meta', spec: 'IBM Plex Mono 400-600 · 12-14', css: "font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600", sample: 'Jan 13, 2026 · 6:00 PM' }
+    ];
+    return { colors, type };
+  }
+}
+</script>
+</body>
+</html>

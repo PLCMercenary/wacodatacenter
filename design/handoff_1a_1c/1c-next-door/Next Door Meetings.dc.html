@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#2a2d2b;color:#ece6d8;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<section data-screen-label="Turn 2 meetings" style="display:flex;flex-direction:column;gap:40px;padding:80px">
+<div style="display:flex;flex-direction:column;gap:10px;max-width:1100px;color:#ece6d8">
+<div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:#8f897c;font-weight:600">1c Next Door · Meetings · 1280 desktop</div>
+<div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:48px;letter-spacing:-.005em;text-transform:uppercase;line-height:.95">Events calendar</div>
+<div style="font-family:'Barlow',sans-serif;font-size:18px;line-height:1.55;color:#cfc8b8;max-width:860px;text-wrap:pretty"><a href="#4h" style="text-decoration:underline">4h</a> /events/, built from content/events.md. Category chips filter the list (click them). Shown as of Monday, October 5, 2026.</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:80px;align-items:flex-start">
+
+<div id="4h" data-screen-label="4h Meetings" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#171c19;color:#ece6d8;font-family:'Barlow',sans-serif;font-weight:500;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">4h</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Meetings · /events/</div><div style="font-family:'Barlow',sans-serif;font-size:13px;color:#8f897c;font-variant-numeric:tabular-nums">layouts/_default/events.html</div></div>
+<div style="background:#0f1311;color:#ece6d8;font-family:'Barlow',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12)">
+<dc-import name="NDHeader" active="meetings" hint-size="100%,140px"></dc-import>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:48px;align-items:end;padding:48px 48px 36px">
+<div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:132px;line-height:.85;letter-spacing:-.005em;text-transform:uppercase">Meetings</div>
+<div style="display:flex;flex-direction:column;gap:12px"><div style="font-size:19px;line-height:1.5;text-wrap:pretty">Upcoming meetings, events, and opportunities to engage. Public comment is where officials hear from us on the record.</div><div style="font-family:'Barlow',sans-serif;font-size:13px;color:#8f897c;font-variant-numeric:tabular-nums">Updated from content/events.md on every build</div></div>
+</div>
+<div style="background:#e89a2c;color:#111;display:grid;grid-template-columns:200px 1fr 260px;gap:40px;align-items:center;padding:36px 48px">
+<div style="border:2px solid #111;display:flex;flex-direction:column;align-items:center;padding:14px 0 12px;border-radius:6px;overflow:hidden"><span style="font-family:'Barlow',sans-serif;font-size:15px;font-weight:500;letter-spacing:.1em;font-variant-numeric:tabular-nums">OCT · TUE</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:114px;line-height:.9;letter-spacing:-.005em">13</span></div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<span style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid #111;padding:6px 10px;align-self:flex-start;border-radius:2px">Next important meeting</span>
+<span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:59px;line-height:.92;letter-spacing:-.005em;text-transform:uppercase">Lacy Lakeview City Council Meeting</span>
+<span style="font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Tuesday, October 13, 2026 · 6:00 PM · Lacy Lakeview City Hall</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<a href="#" style="background:#111;color:#ece6d8;padding:14px 18px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;text-align:center;letter-spacing:.01em;border-radius:3px">Add to calendar</a>
+<a href="#" style="border:2px solid #111;padding:12px 18px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;text-align:center;letter-spacing:.01em;border-radius:3px">Testimony template</a>
+<span style="font-family:'Barlow',sans-serif;font-size:12px;text-align:center;font-variant-numeric:tabular-nums">No agenda posted yet</span>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid rgba(236,230,216,.18)">
+<div style="padding:32px 32px 32px 48px;border-right:1px solid rgba(236,230,216,.18);display:flex;flex-direction:column;gap:8px">
+<span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#e89a2c;font-weight:600">Also important</span>
+<span style="font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums">Tue Oct 27 · 6:00 PM</span>
+<span style="font-family:'Barlow Condensed',sans-serif;font-size:29px;font-weight:700;line-height:1.05;text-transform:uppercase;letter-spacing:.02em">Lacy Lakeview City Council Meeting</span>
+<span style="font-size:15px;color:#cfc8b8">Lacy Lakeview City Hall</span>
+</div>
+<div style="padding:32px;border-right:1px solid rgba(236,230,216,.18);display:flex;flex-direction:column;gap:8px">
+<span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#e89a2c;font-weight:600">Also important</span>
+<span style="font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums">Sun Nov 1 · 6:00 PM</span>
+<span style="font-family:'Barlow Condensed',sans-serif;font-size:29px;font-weight:700;line-height:1.05;text-transform:uppercase;letter-spacing:.02em">Community Update Meeting</span>
+<span style="font-size:15px;color:#cfc8b8">Ross VFD. Open to the public. Monthly community update on the L2D2 data center project.</span>
+</div>
+<div style="padding:32px 48px 32px 32px;background:#171c19;color:#ece6d8;display:flex;flex-direction:column;gap:10px">
+<span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#bfb8a9;font-weight:600">Speaking at public comment</span>
+<span style="display:grid;grid-template-columns:28px 1fr;font-size:15px;line-height:1.45"><span style="font-family:'Barlow',sans-serif;font-size:12px;padding-top:2px;font-variant-numeric:tabular-nums">01</span><span>Arrive early. Sign up to speak as soon as possible.</span></span>
+<span style="display:grid;grid-template-columns:28px 1fr;font-size:15px;line-height:1.45"><span style="font-family:'Barlow',sans-serif;font-size:12px;padding-top:2px;font-variant-numeric:tabular-nums">02</span><span>Usually 2-3 minutes. Practice your statement.</span></span>
+<span style="display:grid;grid-template-columns:28px 1fr;font-size:15px;line-height:1.45"><span style="font-family:'Barlow',sans-serif;font-size:12px;padding-top:2px;font-variant-numeric:tabular-nums">03</span><span>State your name and address, then a specific ask.</span></span>
+</div>
+</div>
+<div style="padding:40px 48px 0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:1px solid rgba(236,230,216,.32)"><div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;text-transform:uppercase;letter-spacing:-.005em">Next outreach</div><span style="font-family:'Barlow',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">Tables, flyers and yard signs. <a href="#" style="text-decoration:underline">Volunteer</a></span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr">
+<div style="padding:20px 28px 20px 0;border-right:1px solid rgba(236,230,216,.18);display:grid;grid-template-columns:120px 1fr;gap:20px"><span style="font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums">Sat Oct 10<br>9:00 AM – 1:00 PM</span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Waco Downtown Farmers Market</span><span style="font-size:15px;color:#cfc8b8">Bridge Street Plaza, East Waco</span></span></div>
+<div style="padding:20px 0 20px 28px;display:grid;grid-template-columns:120px 1fr;gap:20px"><span style="font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums">Sun Oct 11<br>1:00 PM – 5:00 PM</span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">HomeGrown Sundays – The Will of Waco Outdoor Market</span><span style="font-size:15px;color:#cfc8b8">Weather permitting. The Will does not publish a set season end, so check their Facebook before heading out.</span></span></div>
+</div>
+</div>
+<div style="padding:48px 48px 0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:1px solid rgba(236,230,216,.32)"><div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;text-transform:uppercase;letter-spacing:-.005em">Full calendar</div><span style="font-family:'Barlow',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">{{ countLabel }}</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px;padding:16px 0;border-bottom:1px solid rgba(236,230,216,.18);font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.14em">
+<sc-for list="{{ chips }}" as="c" hint-placeholder-count="8">
+<sc-if value="{{ c.on }}" hint-placeholder-val="{{ false }}"><button onClick="{{ c.pick }}" style="font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;background:#ece6d8;color:#111;padding:7px 12px;border:1px solid rgba(236,230,216,.18);border-radius:3px">{{ c.label }}</button></sc-if>
+<sc-if value="{{ c.off }}" hint-placeholder-val="{{ true }}"><button onClick="{{ c.pick }}" style="font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;background:transparent;color:#ece6d8;padding:7px 12px;border:1px solid rgba(236,230,216,.18);border-radius:0">{{ c.label }}</button></sc-if>
+</sc-for>
+</div>
+<sc-for list="{{ months }}" as="mo" hint-placeholder-count="1">
+<div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:31px;text-transform:uppercase;padding:28px 0 10px;border-bottom:1px solid rgba(236,230,216,.32)">{{ mo.label }}</div>
+<sc-for list="{{ mo.rows }}" as="e" hint-placeholder-count="8">
+<div style="display:grid;grid-template-columns:80px 150px 1fr 170px 110px;gap:24px;padding:18px 0;border-bottom:1px solid rgba(236,230,216,.18);align-items:start">
+<div style="display:flex;flex-direction:column;align-items:flex-start"><span style="font-family:'Barlow',sans-serif;font-size:12px;font-weight:500;letter-spacing:.06em;font-variant-numeric:tabular-nums">{{ e.dow }}</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;line-height:1;letter-spacing:-.005em">{{ e.day }}</span></div>
+<span style="font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;padding-top:4px;font-variant-numeric:tabular-nums">{{ e.time }}</span>
+<div style="display:flex;flex-direction:column;gap:4px;padding-top:2px">
+<span style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;text-transform:uppercase;line-height:1.1;letter-spacing:.02em">{{ e.title }}</span>
+<span style="font-size:16px;color:#cfc8b8">{{ e.loc }}</span>
+<sc-if value="{{ e.notes }}" hint-placeholder-val="{{ false }}"><span style="font-size:14px;line-height:1.45;color:#8f897c;font-style:italic">{{ e.notes }}</span></sc-if>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start;padding-top:4px">
+<span style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.14em;border:1px solid rgba(236,230,216,.18);padding:3px 6px;border-radius:2px">{{ e.cat }}</span>
+<sc-if value="{{ e.pri }}" hint-placeholder-val="{{ false }}"><span style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.14em;background:#e89a2c;color:#111;padding:4px 7px;border-radius:3px">Priority</span></sc-if>
+</div>
+<div style="padding-top:6px;text-align:right;font-family:'Barlow',sans-serif;font-size:13px;font-weight:500;font-variant-numeric:tabular-nums">
+<sc-if value="{{ e.link }}" hint-placeholder-val="{{ false }}"><a href="#" style="text-decoration:underline">{{ e.link }} ↗</a></sc-if>
+</div>
+</div>
+</sc-for>
+</sc-for>
+<sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}"><div style="padding:40px 0;font-family:'Barlow',sans-serif;font-size:14px;color:#8f897c;border-bottom:1px solid rgba(236,230,216,.18);font-variant-numeric:tabular-nums">Nothing scheduled in this category this month.</div></sc-if>
+</div>
+<div style="padding:56px 48px 0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:1px solid rgba(236,230,216,.32)"><div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;text-transform:uppercase;letter-spacing:-.005em">Outcomes on the record</div><a href="#" style="font-family:'Barlow',sans-serif;font-size:13px;text-decoration:underline;font-variant-numeric:tabular-nums">Full timeline</a></div>
+<div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(236,230,216,.18)"><span style="font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums">Jan 13, 2026</span><span style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Lacy Lakeview City Council Meeting</span><span style="font-size:17px;line-height:1.5;color:#cfc8b8">City Council approved Measure 2026-01. No planned annexations, city borders and ETJ remain the same. Landowner annexations can be approved if requested.</span></span></div>
+</div>
+<div style="margin:56px 48px 48px;border:1px solid rgba(236,230,216,.18);display:grid;grid-template-columns:1fr 1.3fr;border-radius:6px;overflow:hidden">
+<div style="padding:32px;border-right:1px solid rgba(236,230,216,.18);display:flex;flex-direction:column;gap:8px"><span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:35px;text-transform:uppercase;line-height:.95">Get meeting alerts</span><span style="font-size:16px;line-height:1.5;color:#cfc8b8">Updates on new research, upcoming meetings, and action items. Unsubscribe at any time.</span></div>
+<div style="padding:32px;display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end">
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Name</span><span style="height:52px;border:1px solid rgba(236,230,216,.3);background:#151a17;border-radius:3px"></span></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Email</span><span style="height:52px;border:1px solid rgba(236,230,216,.3);background:#151a17;border-radius:3px"></span></label>
+<a href="#" style="height:52px;display:flex;align-items:center;background:#ece6d8;color:#111;padding:0 22px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;letter-spacing:.01em;border-radius:3px">Subscribe</a>
+</div>
+</div>
+<dc-import name="NDFooter" hint-size="100%,300px"></dc-import>
+</div>
+</div>
+
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { cat: 'All' };
+  renderVals() {
+    const E = (dow, day, time, title, loc, cat, o = {}) => ({ dow, day, time, title, loc, cat, notes: o.n || '', link: o.l || '', pri: !!o.p });
+    const OCC = 'Oversees unincorporated areas including Elm Mott and Ross; public comment opportunity';
+    const oct = [
+      E('MON','05','6:00 PM','Elm Mott Water Supply Corporation Board Meeting','314 W. Elm Mott Drive','Water Board',{l:'Agenda'}),
+      E('MON','05','7:00 PM','Hewitt City Council Meeting','Hewitt City Hall','City Council',{l:'Agenda'}),
+      E('TUE','06','3:00 PM / 6:00 PM','Waco City Council Meeting','Waco City Hall','City Council',{l:'Agenda'}),
+      E('TUE','06','6:00 PM','Chalk Bluff Water Supply Corporation Board Meeting','6511 Gholson Rd, Waco (and Zoom)','Water Board',{l:'Agenda'}),
+      E('SAT','10','9:30 AM','Data Center Action Committee Meeting','Ross VFD','Action Committee',{n:'Internal planning'}),
+      E('SAT','10','9:00 AM – 1:00 PM','Waco Downtown Farmers Market','Bridge Street Plaza, East Waco','Public Outreach',{l:'Info'}),
+      E('MON','12','7:00 PM','Ross Water Supply Board Meeting','Ross City Hall','Water Board'),
+      E('TUE','13','9:00 AM','McLennan County Commissioners Court Meeting','McLennan County Courthouse, Waco','County',{n:OCC,l:'Agenda'}),
+      E('TUE','13','6:00 PM','Lacy Lakeview City Council Meeting','Lacy Lakeview City Hall','City Council',{p:1}),
+      E('TUE','13','6:30 PM','Bellmead City Council Meeting','Bellmead City Hall','City Council'),
+      E('TUE','20','3:00 PM / 6:00 PM','Waco City Council Meeting','Waco City Hall','City Council',{l:'Agenda'}),
+      E('TUE','27','9:00 AM','McLennan County Commissioners Court Meeting','McLennan County Courthouse, Waco','County',{n:OCC,l:'Agenda'}),
+      E('TUE','27','6:00 PM','Lacy Lakeview City Council Meeting','Lacy Lakeview City Hall','City Council',{p:1}),
+      E('WED','28','12:30 PM','Southern Trinity Groundwater Conservation District Board Meeting','McLennan County Archives Building','Water Board',{l:'Agenda'})
+    ];
+    const nov = [
+      E('SUN','01','6:00 PM','Community Update Meeting','Ross VFD','Community Meeting',{p:1,n:'Open to the public. Monthly community update on the L2D2 data center project.'}),
+      E('MON','02','6:00 PM','Elm Mott Water Supply Corporation Board Meeting','314 W. Elm Mott Drive','Water Board',{l:'Agenda'}),
+      E('TUE','10','6:00 PM','Lacy Lakeview City Council Meeting','Lacy Lakeview City Hall','City Council',{p:1})
+    ];
+    const cat = this.state.cat;
+    const f = r => cat === 'All' || (cat === 'Priority' ? r.pri : r.cat === cat);
+    const months = [{ label: 'October 2026', rows: oct.filter(f) }, { label: 'November 2026 (first 10 days)', rows: nov.filter(f) }].filter(m => m.rows.length);
+    const n = months.reduce((a, m) => a + m.rows.length, 0);
+    const labels = ['All','Priority','City Council','County','Water Board','Community Meeting','Public Outreach','Action Committee'];
+    const chips = labels.map(l => ({ label: l, on: l === cat, off: l !== cat, pick: () => this.setState({ cat: l }) }));
+    return { months, chips, empty: n === 0, countLabel: n + ' upcoming shown' };
+  }
+}
+</script>
+</body>
+</html>

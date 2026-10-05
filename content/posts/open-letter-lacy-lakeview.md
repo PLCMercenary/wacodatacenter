@@ -1,11 +1,14 @@
 ---
 title: "Twisting Texas Law to Wreck Our Way of Life"
+timeline: ["mou-vote"]
 date: 2026-01-09
 draft: false 
 author: "Sean Terrell"
 description: "An open letter to Lacy Lakeview City Council about the Infrakey data center and the misuse of Senate Bill 2038"
 tags: ["infrakey", "data-center", "annexation", "sb-2038", "community-advocacy"]
 categories: ["open-letters", "community"]
+image_alt: "Residents gathered outside Lacy Lakeview City Hall on December 9, 2025"
+image_caption: "Residents outside a packed Lacy Lakeview City Hall, December 9, 2025."
 featured_image: "/images/251209-JH-Lacy-Data-Center-06.webp"
 ---
 

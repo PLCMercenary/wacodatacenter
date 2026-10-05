@@ -1,11 +1,14 @@
 ---
 title: "Not a Partnership, a Takeover Plan"
+timeline: ["resolution-2026-01"]
 date: 2026-01-25
 draft: false
 author: "Sean Terrell"
 description: "Lacy Lakeview didn't show up to chat with Elm Mott's water board. They showed up to move the chess pieces."
 tags: ["infrakey", "data-center", "elm-mott", "water", "annexation", "lacy-lakeview"]
 categories: ["analysis", "community"]
+image_alt: "Residents gathered outside Lacy Lakeview City Hall on December 9, 2025"
+image_caption: "Residents outside a packed Lacy Lakeview City Hall, December 9, 2025."
 featured_image: "/images/251209-JH-Lacy-Data-Center-06.webp"
 ---
 

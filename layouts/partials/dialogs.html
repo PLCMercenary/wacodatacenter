@@ -1,0 +1,36 @@
+<dialog id="emailModal" class="email-dialog" aria-labelledby="emailTitle">
+<div class="dialog-bar">
+<span>Stay informed</span>
+<button data-close>Close <span aria-hidden="true">✕</span>
+</button>
+</div>
+<div class="dialog-body">
+<h2 id="emailTitle">Get meeting alerts</h2>
+<p>Meeting reminders, new research, and ways to help.</p>{{ partial "email-form.html" (dict "id" "modal-signup") }}</div>
+</dialog>
+<dialog id="changeOrgModal" class="petition-dialog" aria-labelledby="petitionTitle">
+<div class="dialog-bar red">
+<span>Important information</span>
+<button data-close>Close <span aria-hidden="true">✕</span>
+</button>
+</div>
+<div class="dialog-body">
+<h2 id="petitionTitle">You are leaving wacodatacenter.com</h2>
+<p>Please read before signing:</p>
+<ol class="numbered-list">
+<li>
+<strong>You are being redirected to Change.org,</strong> a third-party petition platform not affiliated with our community group.</li>
+<li>
+<strong>Change.org will ask for donations.</strong> These donations go to Change.org, NOT to our cause. We do not receive any of these funds.</li>
+<li>
+<strong>You can skip the donation.</strong> After signing, scroll to the bottom of the page and look for “Skip” or “No thanks” to proceed without donating.</li>
+</ol>
+<p>
+<strong>Your signature matters!</strong> Don't let the donation request discourage you from signing. It's completely optional.</p>
+</div>
+<div class="button-pair dialog-footer">
+<button class="btn btn-outline" data-close>Cancel</button>
+<a class="btn btn-primary" href="{{ .Site.Params.petition }}" target="_blank" rel="noopener noreferrer">Continue to Change.org <span aria-hidden="true">↗</span>
+</a>
+</div>
+</dialog>

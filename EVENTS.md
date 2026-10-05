@@ -49,21 +49,21 @@ Action Committee   Community Meeting
 Public Outreach    Community Event  Business Conference   ERCOT
 ```
 
-`Public Outreach` is special. It turns the entry green, gives it a bullhorn icon, and makes it eligible for the "Next Outreach Opportunities" cards. Use it for markets, festivals, and anywhere we can set up a booth. A typo here means the event renders as a plain gray row.
+`Public Outreach` is special. It makes the entry eligible for the "Next Outreach Opportunities" cards. Use it for markets, festivals, and anywhere we can set up a booth. A typo here means the event renders as a plain gray row.
 
-**`highlight: true`** does more than you would guess. It puts the event in the "Other Important Meetings" row, and the *soonest* highlighted event becomes the big orange **NEXT IMPORTANT MEETING** banner on both the events page and the homepage.
+**`highlight: true`** does more than you would guess. It puts the event in the "Other Important Meetings" row, and the *soonest* highlighted event becomes the big red **NEXT IMPORTANT MEETING** banner on both the events page and the homepage.
 
 That banner is the most prominent call to action on the site, so highlight sparingly. Community meetings and Lacy Lakeview council: yes. Routine board meetings and internal planning: no. We learned this the hard way when the weekly internal Action Committee meeting kept winning the banner and the homepage told residents to attend a planning session labeled "Internal planning."
 
 **`agenda_url`** puts an "Agenda" button on the row. Link the agenda center page, not a PDF, since PDF links rot.
 
-**`info_url`** puts a green "Info" button on the row. Use for outreach events.
+**`info_url`** puts an "Info" link on the row. Use for outreach events.
 
 **`notes`** shows as small gray text under the event. Good for "public comment opportunity" or "weather permitting."
 
 **`completed: true`** hides an event from the homepage banner only. Use it when a highlighted meeting has happened but you want the record kept.
 
-**`outcome`** is written in one old entry but no template renders it. It does nothing today. Do not rely on it.
+**`outcome`** appears in “Outcomes on the record” when the event also has `completed: true`. Past events remain in the source file.
 
 ## Verify dates before you enter them
 
@@ -119,9 +119,9 @@ If you do not have Hugo, push to a branch instead of `main` and Netlify will bui
 
 Worth eyeballing every time:
 
-- The orange NEXT IMPORTANT MEETING banner names the meeting you expect, on the homepage and on `/events/`.
+- The red NEXT IMPORTANT MEETING banner names the meeting you expect, on the homepage and on `/events/`.
 - Your new month has a section under "All Upcoming Events."
-- Outreach events show up green.
+- Outreach events appear under “Next outreach” and have a Public Outreach tag.
 
 ## Publishing
 
@@ -139,7 +139,7 @@ Pushing to `main` publishes it. Netlify rebuilds in about 30 seconds. There is n
 
 **Build fails after your edit.** Almost always indentation. Check for a tab character, a missing quote, or `- date:` that is not indented exactly two spaces.
 
-**Wrong meeting in the orange banner.** Something closer in the future has `highlight: true`. Either unhighlight it or add `completed: true` if it already happened.
+**Wrong meeting in the red banner.** Something closer in the future has `highlight: true`. Either unhighlight it or add `completed: true` if it already happened.
 
 **Event is on the page but styled wrong.** The `category` string does not exactly match the list above. Check capitalization and spelling.
 
@@ -160,3 +160,9 @@ Paste something like this, filling in the specifics:
 > Run `hugo` to confirm it builds, confirm the NEXT IMPORTANT MEETING banner resolves to the meeting it should, then show me the diff before committing.
 
 The two failure modes worth guarding against: an agent will happily generate a tidy set of fourth-Tuesday dates that the council actually cancelled for Thanksgiving, and it will assume a farmers market runs every single Saturday when the published schedule says otherwise. Both look completely plausible in the diff. Ask for sources on any date it could not verify.
+
+## Public Record calendar tools
+
+Category and Priority buttons filter the calendar without changing event data. With JavaScript disabled, all upcoming rows remain visible. Each month can be printed. Calendar exports offer Google, Outlook, and ICS; meetings with multiple sessions let the visitor choose a session. Times are interpreted in America/Chicago, including daylight saving. Missing end times are explicitly estimated at one hour, and TBD times become clearly labeled all-day reminders.
+
+The daily rebuild workflow is documented in README.md. It needs the repository's NETLIFY_BUILD_HOOK Actions secret before it can refresh production automatically. A scheduled rebuild expires past entries but does not verify or add meeting dates.

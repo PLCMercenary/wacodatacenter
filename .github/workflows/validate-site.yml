@@ -1,0 +1,33 @@
+name: Validate website
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        theme: ['1a', '1b', '1c']
+    env:
+      TZ: America/Chicago
+      HUGO_PARAMS_THEME: ${{ matrix.theme }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned Hugo Extended
+        run: |
+          curl --fail --location --retry 3 https://github.com/gohugoio/hugo/releases/download/v0.121.1/hugo_extended_0.121.1_linux-amd64.tar.gz --output /tmp/hugo.tar.gz
+          mkdir /tmp/hugo-bin
+          tar -xzf /tmp/hugo.tar.gz -C /tmp/hugo-bin hugo
+          echo /tmp/hugo-bin >> "$GITHUB_PATH"
+      - name: Build and check routes, forms, content selection, and calendar
+        run: |
+          hugo
+          python3 scripts/check-site.py public
+          python3 scripts/test-hugo.py hugo
+          node scripts/test-calendar.cjs

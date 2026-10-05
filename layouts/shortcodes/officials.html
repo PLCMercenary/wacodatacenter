@@ -1,0 +1,4 @@
+<div class="officials-directory">{{ range .Site.Data.officials }}<details {{ if .primary }}class="primary-directory" open{{ end }}>
+<summary>{{ .title }}</summary>
+<div class="directory-body">{{ .body | markdownify }}</div>
+</details>{{ end }}</div>

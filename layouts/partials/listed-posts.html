@@ -1,0 +1,1 @@
+{{ return ((where (where .Site.RegularPages "Section" "posts") "Params.unlisted" "ne" true).ByDate.Reverse) }}

@@ -1,5 +1,5 @@
 ---
-title: "Resources & Research"
+title: "Documents"
 description: "Fact sheets, research studies, and official documents about data centers in rural communities"
 ---
 

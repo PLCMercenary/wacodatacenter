@@ -1,5 +1,6 @@
 ---
 title: "The Real Economic Impact: Jobs and Tax Revenue from Data Centers"
+categories: ["data-center-impact"]
 date: 2025-12-10
 author: "Economic Analysis Team"
 description: "Examining the job creation promises versus reality of data center development in rural areas"

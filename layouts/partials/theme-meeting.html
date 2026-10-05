@@ -1,0 +1,6 @@
+{{ $events := partial "upcoming-events.html" . }}{{ $priority := where (where $events "highlight" true) "completed" "ne" true }}
+{{ with index (first 1 $priority) 0 }}<section class="theme-meeting" data-next-meeting aria-label="Next important meeting">
+{{ if eq $.Site.Params.theme "1a" }}<time class="meeting-date" datetime="{{ .date }}"><span>{{ time.Format "Jan" .date }}</span><strong>{{ time.Format "2" .date }}</strong></time>{{ end }}
+<div><p class="kicker">{{ if eq $.Site.Params.theme "1a" }}Next meeting that matters{{ else }}Next meeting{{ end }}</p><h2>{{ .title }}</h2><p>{{ time.Format "Monday, January 2" .date }} · {{ .time }}<br>{{ .location }}</p></div>
+<div class="meeting-actions">{{ if eq $.Site.Params.theme "1a" }}{{ with .agenda_url }}<a class="btn btn-outline" href="{{ . }}" target="_blank" rel="noopener">Agenda</a>{{ end }}<a class="btn btn-ink" href="/events/">All meetings</a>{{ else }}<a class="btn btn-paper" href="/events/">Plan to attend</a>{{ end }}</div>
+</section>{{ end }}
