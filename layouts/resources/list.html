@@ -1,4 +1,4 @@
-{{ define "main" }}{{ partial "page-header.html" (dict "title" "Documents" "long" true "description" "Primary sources, research, and the templates you need to write to officials or request public records.") }}
+{{ define "main" }}{{ partial "page-header.html" (dict "title" (cond (eq (.Site.Params.theme | default "1b") "1b") "Documents" "Resources") "long" true "description" "Primary sources, research, and the templates you need to write to officials or request public records.") }}
 <div class="guide-grid">{{ range .Pages }}<article>
 <p class="kicker">Guide · {{ .Date.Format "Jan 2, 2006" }}</p>
 <h2>

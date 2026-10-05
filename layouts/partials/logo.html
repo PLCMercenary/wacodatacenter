@@ -1,3 +1,1 @@
-<a class="wordmark" href="/" aria-label="Waco Data Center Community Action, home">Waco Data Center<br>
-<span>Community Action</span>
-</a>
+<a class="wordmark" href="/" aria-label="Waco Data Center Community Action, home">{{ if eq .Site.Params.theme "1a" }}<i class="homestead-mark" aria-hidden="true"></i><span class="brand-copy">Waco Data Center<small>Community Action</small></span>{{ else if eq .Site.Params.theme "1c" }}Waco DC <span>Community Action</span>{{ else }}Waco Data Center<br><span>Community Action</span>{{ end }}</a>

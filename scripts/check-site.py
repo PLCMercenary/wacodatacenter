@@ -66,7 +66,7 @@ for path in root.rglob('*.html'):
 if len(sys.argv) > 2:
     baseline = Path(sys.argv[2]).resolve()
     for path in baseline.rglob('*'):
-        if path.is_file() and not (root / path.relative_to(baseline)).exists():
+        if path.is_file() and path.name != '.DS_Store' and not (root / path.relative_to(baseline)).exists():
             errors.append(f'Lost route/file: {path.relative_to(baseline)}')
     for route, name in (('index.html', 'email-signup'), ('contact/index.html', 'contact'), ('yard-signs/index.html', 'yard-signs')):
         before = next(f for f in parse(baseline / route).forms if f['attrs']['name'] == name)

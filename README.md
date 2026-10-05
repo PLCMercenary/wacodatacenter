@@ -2,13 +2,13 @@
 
 A Hugo-based static website for community information and action regarding the proposed data center development in rural Texas.
 
-## Public Record redesign
+## Design comparison
 
-The site uses the Public Record design supplied in `design/`. The earlier homepage explorations remain in `design_handoff_homepage_redesign/`. Production uses first-party Hugo templates, plain CSS, and browser JavaScript. There is no Bootstrap, icon font, npm dependency, or separate frontend build.
+The site supports 1a Homestead, 1b Public Record, and 1c Next Door through `params.theme` in `hugo.toml`. The new site-wide handoffs are extracted in `design/handoff_1a_1c/`; Public Record is supplied in `design/`. See [CONTRIBUTING.md](CONTRIBUTING.md) for local theme previews and the contribution workflow. The earlier homepage explorations remain in `design_handoff_homepage_redesign/`. Production uses first-party Hugo templates, plain CSS, and browser JavaScript. There is no Bootstrap, icon font, npm dependency, or separate frontend build.
 
 Use **Hugo Extended 0.121.1**, matching `netlify.toml`. Run `TZ=America/Chicago hugo server -D` for local development. Using a newer system Hugo is not equivalent to checking the deployed version.
 
-Shared header, footer, wordmark, dialogs, forms, and article structure live in `layouts/partials/`. Visual tokens and responsive/print rules live in `static/css/style.css`. All form names, field values, consent, and existing success paths are preserved.
+Shared header, footer, wordmark, dialogs, forms, and article structure live in `layouts/partials/`. Shared structure and responsive rules live in `static/css/base.css`, with each visual system in `static/css/theme-*.css`. All form names, field values, consent, and existing success paths are preserved.
 
 Content maintenance:
 
@@ -58,7 +58,7 @@ wacodatacenter/
 ## Getting Started
 
 ### Prerequisites
-- Hugo Extended (v0.112.0 or later)
+- Hugo Extended 0.121.1 (matching Netlify)
 - Git
 - A GitHub account
 - A Netlify account (free tier works great)

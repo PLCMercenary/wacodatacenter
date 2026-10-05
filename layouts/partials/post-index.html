@@ -1,5 +1,5 @@
 {{ $pages := where .Pages "Params.unlisted" "ne" true }}{{ $pages = $pages.ByDate.Reverse }}
-{{ partial "page-header.html" (dict "title" (cond (eq .Kind "section") "The Record" .Title) "description" "Analysis, open letters and research from neighbors of the L2D2 site. Follow the sources, read the record, and decide for yourself." "meta" (printf "%d entries" (len $pages))) }}
+{{ partial "page-header.html" (dict "title" (cond (eq .Kind "section") (cond (eq (.Site.Params.theme | default "1b") "1b") "The Record" "Updates") .Title) "description" "Analysis, open letters and research from neighbors of the L2D2 site. Follow the sources, read the record, and decide for yourself." "meta" (printf "%d entries" (len $pages))) }}
 <nav class="filter-bar" aria-label="Post categories">
 <a class="chip {{ if eq .Kind "section" }}is-active{{ end }}" href="/posts/">All</a>{{ range slice "analysis" "open-letters" "opposition-research" "data-center-impact" "community" }}<a class="chip {{ if eq $.Data.Term . }}is-active{{ end }}" href="{{ printf "/categories/%s/" . }}">{{ humanize . }}</a>{{ end }}<a class="mono filter-end" href="/posts/index.xml">RSS</a>
 </nav>

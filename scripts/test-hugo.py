@@ -39,7 +39,7 @@ with tempfile.TemporaryDirectory(prefix='waco-hugo-test-') as directory:
     public = root / 'public'
     home = (public / 'index.html').read_text()
     meetings = (public / 'events/index.html').read_text()
-    band = home.split('class="meeting-band"', 1)[1].split('</section>', 1)[0]
+    band = home.split('data-next-meeting', 1)[1].split('</section>', 1)[0]
     assert 'Today public priority fixture' in band
     assert 'Today completed fixture' not in band
     calendar = meetings.split('id="calendar"', 1)[1].split('id="calendar-events"', 1)[0]

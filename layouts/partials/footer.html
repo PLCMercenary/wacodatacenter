@@ -5,10 +5,10 @@
 </div>
 <div>
 <h2>Read</h2>
-<a href="/posts/">The Record</a>
+<a href="/posts/">{{ if eq (.Site.Params.theme | default "1b") "1b" }}The Record{{ else }}Updates{{ end }}</a>
 <a href="/#timeline">Timeline</a>
 <a href="/media/">Press</a>
-<a href="/resources/">Documents</a>
+<a href="/resources/">{{ if eq (.Site.Params.theme | default "1b") "1b" }}Documents{{ else }}Resources{{ end }}</a>
 </div>
 <div>
 <h2>Show up</h2>

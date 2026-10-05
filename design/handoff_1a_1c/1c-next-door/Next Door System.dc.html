@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#2a2d2b;color:#ece6d8;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<section data-screen-label="Turn 2 system" style="display:flex;flex-direction:column;gap:40px;padding:80px">
+<div style="display:flex;flex-direction:column;gap:10px;max-width:1100px;color:#ece6d8">
+<div style="font-family:'Barlow Condensed',sans-serif;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:#8f897c;font-weight:600">1c Next Door · System</div>
+<div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:48px;letter-spacing:-.005em;text-transform:uppercase;line-height:.95">Tokens, components, mobile</div>
+<div style="font-family:'Barlow',sans-serif;font-size:18px;line-height:1.55;color:#cfc8b8;max-width:860px;text-wrap:pretty"><a href="#4p" style="text-decoration:underline">4p</a> Tokens and type. <a href="#4q" style="text-decoration:underline">4q</a> Components and states. <a href="#4r" style="text-decoration:underline">4r</a> Mobile at 390px: home, article, meetings, contact form.</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:80px;align-items:flex-start">
+
+<!-- 2p TOKENS -->
+<div id="4p" data-screen-label="4p Tokens and type" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#171c19;color:#ece6d8;font-family:'Barlow',sans-serif;font-weight:500;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">4p</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Tokens and type</div><div style="font-family:'Barlow',sans-serif;font-size:13px;color:#8f897c;font-variant-numeric:tabular-nums">static/css/style.css :root</div></div>
+<div style="background:#0f1311;color:#ece6d8;font-family:'Barlow',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);padding:48px">
+<div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;text-transform:uppercase;padding-bottom:14px;border-bottom:1px solid rgba(236,230,216,.32)">Color</div>
+<div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-left:1px solid rgba(236,230,216,.18)">
+<sc-for list="{{ colors }}" as="c" hint-placeholder-count="12">
+<div style="border-right:1px solid rgba(236,230,216,.18);border-bottom:1px solid rgba(236,230,216,.18);display:flex;flex-direction:column">
+<div style="height:96px;background:{{ c.hex }};border-bottom:1px solid rgba(236,230,216,.18)"></div>
+<div style="padding:12px 14px;display:flex;flex-direction:column;gap:3px"><span style="font-family:'Barlow',sans-serif;font-size:13px;font-weight:500;font-variant-numeric:tabular-nums">{{ c.name }}</span><span style="font-family:'Barlow',sans-serif;font-size:12px;font-variant-numeric:tabular-nums">{{ c.hex }}</span><span style="font-size:13px;line-height:1.4;color:#cfc8b8">{{ c.use }}</span></div>
+</div>
+</sc-for>
+</div>
+<div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;text-transform:uppercase;padding:48px 0 14px;border-bottom:1px solid rgba(236,230,216,.32)">Type scale</div>
+<sc-for list="{{ type }}" as="t" hint-placeholder-count="10">
+<div style="display:grid;grid-template-columns:260px 1fr;gap:32px;padding:20px 0;border-bottom:1px solid rgba(236,230,216,.18);align-items:center">
+<div style="display:flex;flex-direction:column;gap:3px"><span style="font-family:'Barlow',sans-serif;font-size:13px;font-weight:500;font-variant-numeric:tabular-nums">{{ t.token }}</span><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">{{ t.spec }}</span></div>
+<div style="{{ t.css }:{{ t.css }}">{{ t.sample }}</div>
+</div>
+</sc-for>
+<div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;text-transform:uppercase;padding:48px 0 14px;border-bottom:1px solid rgba(236,230,216,.32)">Structure</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;padding-top:22px"><div style="display:flex;flex-direction:column;gap:8px;font-family:'Barlow',sans-serif;color:#ece6d8"><span style="font-weight:700;font-size:15px">Radius</span><span style="font-size:14px;line-height:1.5;color:#cfc8b8">Buttons, inputs 3px. Chips and tags 2px. Cards and boxed areas 6px.</span></div><div style="display:flex;flex-direction:column;gap:8px;font-family:'Barlow',sans-serif;color:#ece6d8"><span style="font-weight:700;font-size:15px">Hairline</span><span style="font-size:14px;line-height:1.5;color:#cfc8b8">rgba(236,230,216,.18) for rows and cards; .32 under section heads; .5 on outline buttons.</span></div><div style="display:flex;flex-direction:column;gap:8px;font-family:'Barlow',sans-serif;color:#ece6d8"><span style="font-weight:700;font-size:15px">Shadow</span><span style="font-size:14px;line-height:1.5;color:#cfc8b8">None. Depth comes from the #171c19 panel tone and hairlines.</span></div><div style="display:flex;flex-direction:column;gap:8px;font-family:'Barlow',sans-serif;color:#ece6d8"><span style="font-weight:700;font-size:15px">Gutter</span><span style="font-size:14px;line-height:1.5;color:#cfc8b8">56px header and home, 48px subpage content. 20px under 768px.</span></div></div>
+</div>
+</div>
+
+<!-- 2q COMPONENTS -->
+<div id="4q" data-screen-label="4q Components" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#171c19;color:#ece6d8;font-family:'Barlow',sans-serif;font-weight:500;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">4q</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Components and states</div></div>
+<div style="background:#0f1311;color:#ece6d8;font-family:'Barlow',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);padding:48px;display:flex;flex-direction:column;gap:48px">
+<div>
+<div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;text-transform:uppercase;padding-bottom:14px;border-bottom:1px solid rgba(236,230,216,.32)">Buttons</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0">
+<div style="padding:24px 24px 24px 0;border-right:1px solid rgba(236,230,216,.18);display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">.btn-primary</span><a href="#" style="background:#e89a2c;color:#111;padding:16px 24px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;letter-spacing:.01em;border-radius:3px">Sign the petition</a><a href="#" style="background:#d4881f;color:#111;padding:16px 24px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;text-decoration:underline;letter-spacing:.01em;border-radius:3px">Hover</a><a href="#" style="background:#e89a2c;color:#111;padding:16px 24px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;outline:2px solid rgba(236,230,216,.5);outline-offset:3px;letter-spacing:.01em;border-radius:3px">Focus</a></div>
+<div style="padding:24px;border-right:1px solid rgba(236,230,216,.18);display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">.btn-ink</span><a href="#" style="background:#ece6d8;color:#111;padding:16px 24px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;letter-spacing:.01em;border-radius:3px">Read the record</a><a href="#" style="background:#fff8ea;color:#111;padding:16px 24px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;text-decoration:underline;letter-spacing:.01em;border-radius:3px">Hover</a><a href="#" style="background:#ece6d8;color:#111;padding:16px 24px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;outline:2px solid #e89a2c;outline-offset:3px;letter-spacing:.01em;border-radius:3px">Focus</a></div>
+<div style="padding:24px;border-right:1px solid rgba(236,230,216,.18);display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">.btn-outline</span><a href="#" style="border:2px solid rgba(236,230,216,.5);padding:14px 24px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;letter-spacing:.01em;border-radius:3px">Testimony template</a><a href="#" style="border:2px solid rgba(236,230,216,.5);background:#1c221f;padding:14px 24px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;text-decoration:underline;letter-spacing:.01em;border-radius:3px">Hover</a><span style="border:2px solid rgba(236,230,216,.25);color:#6f6a5f;padding:14px 24px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;letter-spacing:.01em;border-radius:3px">Disabled</span></div>
+<div style="padding:24px 0 24px 24px;display:flex;flex-direction:column;gap:12px;align-items:stretch;background:#171c19;margin:0 0 0 0"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#bfb8a9;font-variant-numeric:tabular-nums">On ink · .btn-outline-paper</span><a href="#" style="margin-right:24px;border:2px solid #ece6d8;color:#ece6d8;padding:14px 24px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;text-align:center;letter-spacing:.01em;border-radius:3px">Order a yard sign · $5</a><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#bfb8a9;margin-top:8px;font-variant-numeric:tabular-nums">On red · .btn-paper</span><a href="#" style="margin-right:24px;background:#111;color:#ece6d8;padding:14px 24px;font-family:'Barlow',sans-serif;font-weight:600;font-size:16px;text-align:center;letter-spacing:.01em;border-radius:3px">Add to calendar</a></div>
+</div>
+<div style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;padding-top:14px;border-top:1px solid rgba(236,230,216,.18);font-variant-numeric:tabular-nums">Buttons use a 3px radius and a 12px gap when paired. Minimum height 44px. Transitions 150ms on background only.</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px">
+<div>
+<div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;text-transform:uppercase;padding-bottom:14px;border-bottom:1px solid rgba(236,230,216,.32)">Form fields</div>
+<div style="display:flex;flex-direction:column;gap:20px;padding-top:24px">
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Default <span style="color:#e89a2c">*</span></span><span style="height:52px;border:1px solid rgba(236,230,216,.3);background:#151a17;display:flex;align-items:center;padding:0 14px;font-size:18px;color:#6f6a5f;border-radius:3px">Placeholder</span></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Focus</span><span style="height:52px;border:1px solid #e89a2c;box-shadow:0 0 0 1px #e89a2c;background:#151a17;display:flex;align-items:center;padding:0 14px;font-size:18px;border-radius:3px">Jane Neighbor</span></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;color:#e89a2c">Error *</span><span style="height:52px;border:2px solid #e89a2c;background:#2a1f10;display:flex;align-items:center;padding:0 13px;font-size:18px;border-radius:3px">jane@</span><span style="font-family:'Barlow',sans-serif;font-size:12px;font-weight:500;color:#e89a2c;font-variant-numeric:tabular-nums">Enter a full email address, like name@example.com</span></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Select</span><span style="height:52px;border:1px solid rgba(236,230,216,.3);background:#151a17;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:18px;border-radius:3px"><span>General Inquiry</span><span style="font-family:'Barlow',sans-serif;font-size:14px;font-variant-numeric:tabular-nums">▾</span></span></label>
+<div style="display:flex;gap:28px;font-size:15px"><span style="display:flex;gap:10px;align-items:center"><span style="width:22px;height:22px;border:1.5px solid rgba(236,230,216,.5);background:#151a17;border-radius:3px"></span>Unchecked</span><span style="display:flex;gap:10px;align-items:center"><span style="width:22px;height:22px;background:#ece6d8;color:#111;display:flex;align-items:center;justify-content:center;font-size:14px;border-radius:3px">✓</span>Checked</span></div>
+</div>
+</div>
+<div>
+<div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;text-transform:uppercase;padding-bottom:14px;border-bottom:1px solid rgba(236,230,216,.32)">Labels and filters</div>
+<div style="display:flex;flex-direction:column;gap:24px;padding-top:24px">
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">Filter chips (active, default)</span><div style="display:flex;gap:8px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.14em"><span style="background:#ece6d8;color:#111;padding:7px 12px;border:1px solid rgba(236,230,216,.18);border-radius:3px">All</span><span style="padding:7px 12px;border:1px solid rgba(236,230,216,.18);border-radius:2px">Analysis</span><span style="padding:7px 12px;border:1px solid rgba(236,230,216,.18);border-radius:2px">Open letters</span></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">Category kicker</span><span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;color:#e89a2c;text-transform:uppercase;letter-spacing:.14em">Open letter · Community</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">Tags: type, priority, band tag, tag link</span><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.14em;border:1px solid rgba(236,230,216,.18);padding:3px 6px;border-radius:2px">City Council</span><span style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.14em;background:#e89a2c;color:#111;padding:4px 7px;border-radius:3px">Priority</span><span style="background:#e89a2c;padding:6px;border-radius:3px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid #111;color:#111;padding:6px 10px;display:inline-block;border-radius:2px">Next meeting</span></span><span style="font-family:'Barlow',sans-serif;font-size:12px;border:1px solid rgba(236,230,216,.18);padding:4px 8px;font-variant-numeric:tabular-nums;border-radius:2px">sb-2038</span></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">Section head</span><div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:1px solid rgba(236,230,216,.32)"><span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:35px;text-transform:uppercase">The Timeline</span><span style="font-family:'Barlow',sans-serif;font-size:13px;text-decoration:underline;font-variant-numeric:tabular-nums">Full record</span></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">Record row (timeline, outcomes, posts)</span><div style="display:grid;grid-template-columns:140px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid rgba(236,230,216,.18)"><span style="font-family:'Barlow',sans-serif;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums">Dec 9, 2025</span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Council approves MOU, 6-1</span><span style="font-size:15px;color:#cfc8b8">Non-binding MOU on prospective annexation and water/sewer service.</span></span></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">Image placeholder</span><div style="height:90px;background:repeating-linear-gradient(135deg,#1a1f1c 0 10px,#141916 10px 20px);border:1px solid rgba(236,230,216,.18);display:flex;align-items:center;justify-content:center;font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums;border-radius:6px;overflow:hidden">photo · description of what goes here</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 2r MOBILE -->
+<div id="4r" data-screen-label="4r Mobile" style="flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#171c19;color:#ece6d8;font-family:'Barlow',sans-serif;font-weight:500;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">4r</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Mobile · 390px</div><div style="font-family:'Barlow',sans-serif;font-size:13px;color:#8f897c;font-variant-numeric:tabular-nums">Below 768px: 20px gutters, one column, nav behind MENU</div></div>
+<div style="display:flex;gap:48px;align-items:flex-start">
+
+<div style="width:390px;flex:none;display:flex;flex-direction:column;gap:10px"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">Home</span>
+<div style="background:#0f1311;color:#ece6d8;font-family:'Barlow',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden">
+<div style="padding:14px 20px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(236,230,216,.32)"><span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:23px;line-height:.9;text-transform:uppercase;letter-spacing:-.005em">Waco Data Center<br><span style="color:#e89a2c">Community Action</span></span><span style="display:flex"><span style="height:44px;display:flex;align-items:center;padding:0 12px;border:2px solid rgba(236,230,216,.5);font-family:'Barlow',sans-serif;font-weight:600;font-size:14px;letter-spacing:.01em;border-radius:3px">Menu</span><span style="height:44px;display:flex;align-items:center;padding:0 12px;background:#e89a2c;color:#111;font-family:'Barlow',sans-serif;font-weight:600;font-size:14px;letter-spacing:.01em;border-radius:3px">Sign</span></span></div>
+<div style="padding:28px 20px;display:flex;flex-direction:column;gap:16px;border-bottom:1px solid rgba(236,230,216,.18)">
+<span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#e89a2c">Re: L2D2 · Infrakey DC Parks LLC</span>
+<span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:57px;line-height:.88;letter-spacing:-.005em;text-transform:uppercase">Wrong project. Wrong place.</span>
+<span style="font-size:17px;line-height:1.5">A 1.2 GW hyperscale campus on 520 acres of Elm Mott farmland, reached by two county roads and surrounded by homes.</span>
+<span style="display:flex;flex-direction:column"><a href="#" style="background:#ece6d8;color:#111;padding:15px;text-align:center;font-family:'Barlow',sans-serif;font-weight:600;font-size:15px;letter-spacing:.01em;border-radius:3px">Read the record</a><a href="#" style="border:2px solid rgba(236,230,216,.5);border-top:0;padding:13px;text-align:center;font-family:'Barlow',sans-serif;font-weight:600;font-size:15px;letter-spacing:.01em;border-radius:3px">Sign the petition</a></span>
+</div>
+<div style="height:220px;background:#3a2a1f url('assets/council-meeting.webp') center/cover;filter:grayscale(.15)"></div>
+<div style="background:#e89a2c;color:#111;padding:16px 20px;display:flex;flex-direction:column;gap:8px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid #111;padding:4px 8px;align-self:flex-start;border-radius:2px">Next meeting</span><span style="font-family:'Barlow Condensed',sans-serif;font-size:23px;font-weight:700;text-transform:uppercase;line-height:1.1;letter-spacing:.02em">Lacy Lakeview City Council · Tue Oct 13 · 6:00 PM · City Hall</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr">
+<div style="padding:20px;border-right:1px solid rgba(236,230,216,.18);border-bottom:1px solid rgba(236,230,216,.18)"><span style="font-family:'Barlow',sans-serif;font-size:11px;color:#8f897c;font-variant-numeric:tabular-nums">01 / Scale</span><div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:37px;line-height:1">1.2 GW</div></div>
+<div style="padding:20px;border-bottom:1px solid rgba(236,230,216,.18)"><span style="font-family:'Barlow',sans-serif;font-size:11px;color:#8f897c;font-variant-numeric:tabular-nums">02 / Siting</span><div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:37px;line-height:1">520 ac</div></div>
+<div style="padding:20px;border-right:1px solid rgba(236,230,216,.18);border-bottom:1px solid rgba(236,230,216,.18)"><span style="font-family:'Barlow',sans-serif;font-size:11px;color:#8f897c;font-variant-numeric:tabular-nums">03 / Access</span><div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:37px;line-height:1">2 roads</div></div>
+<div style="padding:20px;border-bottom:1px solid rgba(236,230,216,.18)"><span style="font-family:'Barlow',sans-serif;font-size:11px;color:#8f897c;font-variant-numeric:tabular-nums">04 / Grid</span><div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:37px;line-height:1">ERCOT</div></div>
+</div>
+</div></div>
+
+<div style="width:390px;flex:none;display:flex;flex-direction:column;gap:10px"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">Article</span>
+<div style="background:#0f1311;color:#ece6d8;font-family:'Barlow',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden">
+<div style="padding:14px 20px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(236,230,216,.32)"><span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:23px;line-height:.9;text-transform:uppercase;letter-spacing:-.005em">Waco Data Center<br><span style="color:#e89a2c">Community Action</span></span><span style="display:flex"><span style="height:44px;display:flex;align-items:center;padding:0 12px;border:2px solid rgba(236,230,216,.5);font-family:'Barlow',sans-serif;font-weight:600;font-size:14px;letter-spacing:.01em;border-radius:3px">Menu</span><span style="height:44px;display:flex;align-items:center;padding:0 12px;background:#e89a2c;color:#111;font-family:'Barlow',sans-serif;font-weight:600;font-size:14px;letter-spacing:.01em;border-radius:3px">Sign</span></span></div>
+<div style="padding:10px 20px;border-bottom:1px solid rgba(236,230,216,.18);font-family:'Barlow',sans-serif;font-size:12px;font-variant-numeric:tabular-nums">The Record / Open letters</div>
+<div style="padding:24px 20px;display:flex;flex-direction:column;gap:14px">
+<span style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;color:#e89a2c;text-transform:uppercase;letter-spacing:.14em">Open letter · Community</span>
+<span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:44px;line-height:.92;letter-spacing:-.005em;text-transform:uppercase">Twisting Texas Law to Wreck Our Way of Life</span>
+<span style="font-size:18px;line-height:1.4;color:#cfc8b8">An open letter to Lacy Lakeview City Council about the Infrakey data center and the misuse of Senate Bill 2038</span>
+</div>
+<div style="padding:12px 20px;border-top:1px solid rgba(236,230,216,.18);border-bottom:1px solid rgba(236,230,216,.18);display:flex;flex-direction:column;gap:2px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">By Sean Terrell</span><span style="font-family:'Barlow',sans-serif;font-size:12px;font-variant-numeric:tabular-nums">January 9, 2026 · 7 min read</span></div>
+<div style="height:220px;background:#3a2a1f url('assets/council-meeting.webp') center/cover"></div>
+<div style="padding:10px 20px;border-bottom:1px solid rgba(236,230,216,.18);font-family:'Barlow',sans-serif;font-size:11px;line-height:1.5;font-variant-numeric:tabular-nums">Photo Credit: Justin Hamel / The Waco Bridge</div>
+<div style="padding:12px 20px;border-bottom:1px solid rgba(236,230,216,.18);display:flex;justify-content:space-between;font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;text-transform:uppercase;letter-spacing:.02em"><span>In this piece</span><span style="font-family:'Barlow',sans-serif;font-variant-numeric:tabular-nums">+</span></div>
+<div style="padding:22px 20px 28px;display:flex;flex-direction:column;gap:16px;font-size:18px;line-height:1.6">
+<p style="margin:0">To the Lacy Lakeview City Council,</p>
+<p style="margin:0">I'm Sean Terrell, a guys who's called Elm Mott home since August 2015. I live in the Dome house on Tours Rd.</p>
+<div style="font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;line-height:1.05;text-transform:uppercase;padding-top:14px;border-top:1px solid rgba(236,230,216,.18);letter-spacing:.02em">How SB 2038 is Being Twisted</div>
+</div>
+</div></div>
+
+<div style="width:390px;flex:none;display:flex;flex-direction:column;gap:10px"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">Meetings</span>
+<div style="background:#0f1311;color:#ece6d8;font-family:'Barlow',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden">
+<div style="padding:14px 20px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(236,230,216,.32)"><span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:23px;line-height:.9;text-transform:uppercase;letter-spacing:-.005em">Waco Data Center<br><span style="color:#e89a2c">Community Action</span></span><span style="display:flex"><span style="height:44px;display:flex;align-items:center;padding:0 12px;border:2px solid rgba(236,230,216,.5);font-family:'Barlow',sans-serif;font-weight:600;font-size:14px;letter-spacing:.01em;border-radius:3px">Menu</span><span style="height:44px;display:flex;align-items:center;padding:0 12px;background:#e89a2c;color:#111;font-family:'Barlow',sans-serif;font-weight:600;font-size:14px;letter-spacing:.01em;border-radius:3px">Sign</span></span></div>
+<div style="padding:24px 20px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:62px;line-height:.85;letter-spacing:-.005em;text-transform:uppercase">Meetings</div>
+<div style="background:#e89a2c;color:#111;padding:22px 20px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:14px;align-items:center"><span style="border:2px solid #111;display:flex;flex-direction:column;align-items:center;padding:6px 12px;border-radius:3px"><span style="font-family:'Barlow',sans-serif;font-size:11px;font-weight:500;font-variant-numeric:tabular-nums">OCT · TUE</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:53px;line-height:.9">13</span></span><span style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid #111;padding:4px 8px;border-radius:2px">Next important meeting</span></div>
+<span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:35px;line-height:.92;text-transform:uppercase">Lacy Lakeview City Council Meeting</span>
+<span style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">6:00 PM · Lacy Lakeview City Hall</span>
+<a href="#" style="background:#111;color:#ece6d8;padding:14px;text-align:center;font-family:'Barlow',sans-serif;font-weight:600;font-size:15px;letter-spacing:.01em;border-radius:3px">Add to calendar</a>
+</div>
+<div style="display:flex;gap:6px;padding:14px 20px;border-bottom:1px solid rgba(236,230,216,.18);overflow:hidden;font-family:'Barlow Condensed',sans-serif;font-size:14px;text-transform:uppercase;white-space:nowrap;font-weight:600;letter-spacing:.14em"><span style="background:#ece6d8;color:#111;padding:6px 10px;border-radius:3px">All</span><span style="border:1px solid rgba(236,230,216,.18);padding:6px 10px;border-radius:2px">Priority</span><span style="border:1px solid rgba(236,230,216,.18);padding:6px 10px;border-radius:2px">City Council</span><span style="border:1px solid rgba(236,230,216,.18);padding:6px 10px;border-radius:2px">County</span></div>
+<div style="padding:0 20px 20px">
+<div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:24px;text-transform:uppercase;padding:20px 0 8px;border-bottom:1px solid rgba(236,230,216,.32)">October 2026</div>
+<div style="display:grid;grid-template-columns:56px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid rgba(236,230,216,.18)"><span style="display:flex;flex-direction:column"><span style="font-family:'Barlow',sans-serif;font-size:11px;font-weight:500;font-variant-numeric:tabular-nums">TUE</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:33px;line-height:1">13</span></span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Barlow',sans-serif;font-size:12px;font-weight:500;font-variant-numeric:tabular-nums">6:00 PM</span><span style="font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:700;text-transform:uppercase;line-height:1.1;letter-spacing:.02em">Lacy Lakeview City Council Meeting</span><span style="font-size:14px;color:#cfc8b8">Lacy Lakeview City Hall</span><span style="display:flex;gap:6px;margin-top:2px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;text-transform:uppercase;border:1px solid rgba(236,230,216,.18);padding:2px 5px;letter-spacing:.14em;border-radius:2px">City Council</span><span style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;text-transform:uppercase;background:#e89a2c;color:#111;padding:3px 6px;letter-spacing:.14em;border-radius:3px">Priority</span></span></span></div>
+<div style="display:grid;grid-template-columns:56px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid rgba(236,230,216,.18)"><span style="display:flex;flex-direction:column"><span style="font-family:'Barlow',sans-serif;font-size:11px;font-weight:500;font-variant-numeric:tabular-nums">TUE</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:33px;line-height:1">20</span></span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Barlow',sans-serif;font-size:12px;font-weight:500;font-variant-numeric:tabular-nums">3:00 PM / 6:00 PM</span><span style="font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:700;text-transform:uppercase;line-height:1.1;letter-spacing:.02em">Waco City Council Meeting</span><span style="font-size:14px;color:#cfc8b8">Waco City Hall · <span style="font-family:'Barlow',sans-serif;font-size:12px;text-decoration:underline;font-variant-numeric:tabular-nums">Agenda ↗</span></span></span></div>
+</div>
+</div></div>
+
+<div style="width:390px;flex:none;display:flex;flex-direction:column;gap:10px"><span style="font-family:'Barlow',sans-serif;font-size:12px;color:#8f897c;font-variant-numeric:tabular-nums">Contact form</span>
+<div style="background:#0f1311;color:#ece6d8;font-family:'Barlow',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden">
+<div style="padding:14px 20px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(236,230,216,.32)"><span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:23px;line-height:.9;text-transform:uppercase;letter-spacing:-.005em">Waco Data Center<br><span style="color:#e89a2c">Community Action</span></span><span style="display:flex"><span style="height:44px;display:flex;align-items:center;padding:0 12px;border:2px solid rgba(236,230,216,.5);font-family:'Barlow',sans-serif;font-weight:600;font-size:14px;letter-spacing:.01em;border-radius:3px">Menu</span><span style="height:44px;display:flex;align-items:center;padding:0 12px;background:#e89a2c;color:#111;font-family:'Barlow',sans-serif;font-weight:600;font-size:14px;letter-spacing:.01em;border-radius:3px">Sign</span></span></div>
+<div style="padding:24px 20px 8px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:62px;line-height:.85;letter-spacing:-.005em;text-transform:uppercase">Contact</div>
+<div style="padding:0 20px 24px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:16px;line-height:1.5">Have questions? Want to get involved? We're here to help.</span>
+<span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:26px;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid rgba(236,230,216,.32)">Send us a message</span>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Name <span style="color:#e89a2c">*</span></span><span style="height:52px;border:1px solid rgba(236,230,216,.3);background:#151a17;border-radius:3px"></span></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Email <span style="color:#e89a2c">*</span></span><span style="height:52px;border:1px solid #e89a2c;box-shadow:0 0 0 1px #e89a2c;background:#151a17;border-radius:3px"></span></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Subject <span style="color:#e89a2c">*</span></span><span style="height:52px;border:1px solid rgba(236,230,216,.3);background:#151a17;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:17px;color:#6f6a5f;border-radius:3px"><span>Select a topic</span><span style="font-family:'Barlow',sans-serif;color:#ece6d8;font-variant-numeric:tabular-nums">▾</span></span></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;text-transform:uppercase;letter-spacing:.02em">Message <span style="color:#e89a2c">*</span></span><span style="height:120px;border:1px solid rgba(236,230,216,.3);background:#151a17;border-radius:3px"></span></label>
+<a href="#" style="height:56px;display:flex;align-items:center;justify-content:center;background:#e89a2c;color:#111;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;letter-spacing:.02em">Send message</a>
+</div>
+</div></div>
+
+</div>
+</div>
+
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const colors = [
+      { name: '--night', hex: '#0f1311', use: 'Page background' },
+      { name: '--panel', hex: '#171c19', use: 'Raised bands and panels' },
+      { name: '--bone', hex: '#ece6d8', use: 'Primary text, light buttons' },
+      { name: '--amber', hex: '#e89a2c', use: 'Primary CTA, eyebrows, numerals, meeting band' },
+      { name: '--amber-hover', hex: '#d4881f', use: 'Primary button hover' },
+      { name: '--bone-2', hex: '#cfc8b8', use: 'Deks, secondary body' },
+      { name: '--compare-muted', hex: '#bfb8a9', use: 'Secondary text in panels' },
+      { name: '--muted', hex: '#8f897c', use: 'Labels, footer' },
+      { name: '--hairline', hex: 'rgba(236,230,216,.18)', use: 'Rows, cards, tables' },
+      { name: '--hairline-strong', hex: 'rgba(236,230,216,.5)', use: 'Outline buttons' },
+      { name: '--field', hex: '#151a17', use: 'Input background' },
+      { name: '--hover', hex: '#1c221f', use: 'Row and outline hover' }
+    ];
+    const type = [
+      { token: 'display-xl', spec: 'Barlow Condensed 800 · 132/0.85 · upper', css: "font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:132px;line-height:.85;text-transform:uppercase", sample: 'Updates' },
+      { token: 'h1-home', spec: 'Barlow Condensed 800 · 150/0.85 · upper', css: "font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:110px;line-height:.85;text-transform:uppercase", sample: '1.2 gigawatts.' },
+      { token: 'h1-article', spec: 'Barlow Condensed 800 · 88/0.9 · upper', css: "font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:88px;line-height:.9;text-transform:uppercase", sample: 'Twisting Texas Law' },
+      { token: 'numeral', spec: 'Barlow Condensed 800 · 56-84/1 · amber', css: "font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:72px;line-height:1;color:#e89a2c", sample: '3,698' },
+      { token: 'section-head', spec: 'Barlow Condensed 800 · 40 · upper', css: "font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;text-transform:uppercase", sample: 'Latest from the fight' },
+      { token: 'item-title', spec: 'Barlow Condensed 700 · 24-32/1.02 · upper', css: "font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:29px;line-height:1.02;text-transform:uppercase", sample: 'Not a Partnership, a Takeover Plan' },
+      { token: 'nav / button', spec: 'Barlow 500-600 · 15-17', css: "font-family:'Barlow',sans-serif;font-weight:600;font-size:16px", sample: 'Meetings · Sign the petition' },
+      { token: 'body-article', spec: 'Barlow 400 · 20/1.65 · max 700px', css: "font-family:'Barlow',sans-serif;font-size:20px;line-height:1.65;max-width:700px", sample: 'People moved out here for the peace, the open sky, the chance to raise kids and grandkids in a real rural Texas setting.' },
+      { token: 'body-ui', spec: 'Barlow 400 · 15-18/1.5', css: "font-family:'Barlow',sans-serif;font-size:16px;line-height:1.5;color:#cfc8b8", sample: 'Homes and generational homesteads on every side.' },
+      { token: 'eyebrow', spec: 'Barlow Condensed 600-700 · 14-18 · 0.14-0.2em · upper', css: "font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:#e89a2c", sample: 'Open letter · Community' },
+      { token: 'meta', spec: 'Barlow 500 · 13-14 · tabular', css: "font-family:'Barlow',sans-serif;font-weight:500;font-size:14px;font-variant-numeric:tabular-nums", sample: 'Jan 13, 2026 · 6:00 PM' }
+    ];
+    return { colors, type };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 {{ $post := eq .Section "posts" }}{{ $resource := eq .Section "resources" }}{{ $image := .Params.featured_image | default .Params.image }}
 {{ if or $post $resource }}<div class="breadcrumb">
-<a href="{{ if $post }}/posts/{{ else }}/resources/{{ end }}">{{ if $post }}The Record{{ else }}Documents{{ end }}</a>
+<a href="{{ if $post }}/posts/{{ else }}/resources/{{ end }}">{{ if eq (.Site.Params.theme | default "1b") "1b" }}{{ if $post }}The Record{{ else }}Documents{{ end }}{{ else }}{{ if $post }}Updates{{ else }}Resources{{ end }}{{ end }}</a>
 <span class="mono">{{ if $post }}Filed{{ else }}Last updated{{ end }} {{ .Lastmod.Format "Jan 2, 2006" }}</span>
 </div>{{ end }}
 <article class="article-page {{ if $resource }}resource-page{{ end }}">
