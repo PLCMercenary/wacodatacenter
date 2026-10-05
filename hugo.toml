@@ -5,7 +5,7 @@ title = 'Waco Data Center Community Information'
 # theme = 'agency'
 
 [params]
-  theme = "1b"
+  theme = "1a"
   legal_fund = "https://www.gofundme.com/f/protect-our-water-fund"
   petition = "https://www.change.org/p/stop-infrakey-data-center-from-building-in-lacy-lakeview"
   description = "Community resources and information about the proposed data center development in rural Texas"
