@@ -1,9 +1,13 @@
+timeZone = 'America/Chicago'
 baseURL = 'https://wacodatacenter.com/'
 languageCode = 'en-us'
 title = 'Waco Data Center Community Information'
 # theme = 'agency'
 
 [params]
+  theme = "1a"
+  legal_fund = "https://www.gofundme.com/f/protect-our-water-fund"
+  petition = "https://www.change.org/p/stop-infrakey-data-center-from-building-in-lacy-lakeview"
   description = "Community resources and information about the proposed data center development in rural Texas"
   author = "Waco Data Center Community Action Group"
   
@@ -16,39 +20,25 @@ title = 'Waco Data Center Community Information'
 
 [menu]
   [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-  
-  [[menu.main]]
-    name = "Blog"
+    identifier = "posts"
+    name = "The Record"
     url = "/posts/"
-    weight = 2
-  
+    weight = 1
   [[menu.main]]
-    name = "Media"
+    identifier = "media"
+    name = "Press"
     url = "/media/"
-    weight = 3
-    
+    weight = 2
   [[menu.main]]
-    name = "Resources"
+    identifier = "events"
+    name = "Meetings"
+    url = "/events/"
+    weight = 3
+  [[menu.main]]
+    identifier = "resources"
+    name = "Documents"
     url = "/resources/"
     weight = 4
-    
-  [[menu.main]]
-    name = "Events"
-    url = "/events/"
-    weight = 5
-    
-  [[menu.main]]
-    name = "Take Action"
-    url = "/#action"
-    weight = 6
-    
-  [[menu.main]]
-    name = "Contact"
-    url = "/contact/"
-    weight = 7
 
 [outputs]
   home = ["HTML", "RSS"]

@@ -1,5 +1,5 @@
 ---
-title: "Media Coverage"
+title: "In the Press"
 description: "News coverage and media mentions of the proposed data center project"
 ---
 

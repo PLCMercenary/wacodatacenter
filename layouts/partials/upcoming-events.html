@@ -1,0 +1,1 @@
+{{ $events := slice }}{{ $today := now.Format "2006-01-02" }}{{ with .Site.GetPage "/events" }}{{ range .Params.events }}{{ if ge (printf "%v" .date) $today }}{{ $events = $events | append . }}{{ end }}{{ end }}{{ end }}{{ return (sort $events "date" "asc") }}

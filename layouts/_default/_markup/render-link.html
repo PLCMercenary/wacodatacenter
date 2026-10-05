@@ -1,6 +1,1 @@
-<a href="{{ .Destination | safeURL }}"
-   {{- with .Title }} title="{{ . }}"{{ end -}}
-   {{- $dest := .Destination -}}
-   {{- if or (strings.HasPrefix $dest "http") (strings.HasSuffix $dest ".pdf") (strings.HasSuffix $dest ".docx") }} target="_blank" rel="noopener"{{ end -}}>
-   {{- .Text | safeHTML -}}
-</a>
+{{ $dest := .Destination }}{{ if strings.Contains $dest "change.org/p/" }}<button class="text-button" data-dialog="changeOrgModal">{{ .Text | safeHTML }}</button>{{ else if eq $dest "#" }}<button class="text-button" data-dialog="emailModal">{{ .Text | safeHTML }}</button>{{ else }}<a href="{{ $dest | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if or (strings.HasPrefix $dest "http") (strings.HasSuffix $dest ".pdf") (strings.HasSuffix $dest ".docx") }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}{{ if strings.HasPrefix $dest "http" }} <span aria-hidden="true">↗</span>{{ end }}</a>{{ end }}

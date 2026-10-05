@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#dedbd4;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<section data-screen-label="Turn 2 forms" style="display:flex;flex-direction:column;gap:40px;padding:80px">
+<div style="display:flex;flex-direction:column;gap:10px;max-width:1100px;color:#1f2a1f">
+<div style="font-family:'Public Sans',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#5d6b5a;font-weight:700">1a Homestead · Forms, modals, system pages · 1280 desktop</div>
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:35px;letter-spacing:-.02em;line-height:1.04">Forms and system pages</div>
+<div style="font-family:'Public Sans',sans-serif;font-size:18px;line-height:1.55;color:#566052;max-width:860px;text-wrap:pretty"><a href="#3i" style="text-decoration:underline">3i</a> Contact. <a href="#3j" style="text-decoration:underline">3j</a> Yard signs order. <a href="#3k" style="text-decoration:underline">3k</a> Thank you (all forms). <a href="#3l" style="text-decoration:underline">3l</a> Email signup modal. <a href="#3m" style="text-decoration:underline">3m</a> Change.org warning modal. <a href="#3n" style="text-decoration:underline">3n</a> 404. All Netlify field names, honeypots and actions stay as they are today.</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:80px;align-items:flex-start">
+
+<!-- 2i CONTACT -->
+<div id="3i" data-screen-label="3i Contact" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3i</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Contact · /contact/</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">layouts/_default/contact.html · form name="contact" → /contact-thank-you/</div></div>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);border-radius:20px;overflow:hidden">
+<dc-import name="HSHeader" active="none" hint-size="100%,140px"></dc-import>
+<div style="background:#24452f;color:#f6f2ea;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;padding:18px 48px">
+<span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid #f6f2ea;padding:6px 10px;border-radius:999px">Yard signs</span>
+<span style="font-family:'Newsreader',serif;font-size:22px;font-weight:500">Looking for yard signs ($5) or informational flyers?</span>
+<a href="#" style="font-family:'Public Sans',sans-serif;font-size:15px;font-weight:600;text-decoration:underline">Order yard signs &amp; flyers</a>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:48px;align-items:end;padding:48px 48px 36px;border-bottom:1px solid #d8d0bf">
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:84px;line-height:1.04;letter-spacing:-.02em">Contact</div>
+<div style="font-size:19px;line-height:1.5;text-wrap:pretty">Have questions? Want to get involved? We're here to help.</div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 640px">
+<div style="padding:40px 48px;border-right:1px solid #d8d0bf;display:flex;flex-direction:column">
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:29px;padding-bottom:14px;border-bottom:1px solid #d8d0bf">Our team</div>
+<div style="padding:22px 0;border-bottom:1px solid #d8d0bf;display:flex;flex-direction:column;gap:6px"><span style="font-family:'Newsreader',serif;font-size:22px;font-weight:500">Leadership / Administration</span><span style="font-size:16px;color:#566052">General inquiries, media requests, partnership opportunities</span><span style="display:flex;gap:20px;font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600;text-decoration:underline;margin-top:4px;font-variant-numeric:tabular-nums"><a href="#">Email leadership</a><a href="#">Email administration</a></span></div>
+<div style="padding:22px 0;border-bottom:1px solid #d8d0bf;display:flex;flex-direction:column;gap:6px"><span style="font-family:'Newsreader',serif;font-size:22px;font-weight:500">Social Media</span><span style="font-size:16px;color:#566052">Content sharing, event promotion, community engagement</span><span style="display:flex;gap:20px;font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600;text-decoration:underline;margin-top:4px;font-variant-numeric:tabular-nums"><a href="#">Email social media coordinator</a><a href="#">Facebook group</a></span></div>
+<div style="padding:22px 0;border-bottom:1px solid #d8d0bf;display:flex;flex-direction:column;gap:6px"><span style="font-family:'Newsreader',serif;font-size:22px;font-weight:500">Submit Information</span><span style="font-size:16px;color:#566052">Research articles, leads, documentation, story tips</span><span style="display:flex;gap:20px;font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600;text-decoration:underline;margin-top:4px;font-variant-numeric:tabular-nums"><a href="#">Email research coordinator</a></span></div>
+<div style="padding:22px 0;border-bottom:1px solid #d8d0bf;display:flex;flex-direction:column;gap:6px"><span style="font-family:'Newsreader',serif;font-size:22px;font-weight:500">Website / Technical</span><span style="font-size:16px;color:#566052">Website issues, technical problems, code contributions</span><span style="display:flex;gap:20px;font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600;text-decoration:underline;margin-top:4px;font-variant-numeric:tabular-nums"><a href="#">GitHub repository</a><a href="#">Email webmaster</a></span></div>
+<div style="margin-top:28px;font-family:'Public Sans',sans-serif;font-size:13px;line-height:1.6;color:#566052;font-variant-numeric:tabular-nums">Response time. We're a volunteer-run organization. We typically respond within 24-48 hours. For urgent matters, please email our leadership team directly.</div>
+</div>
+<form style="padding:40px 48px 48px;display:flex;flex-direction:column;gap:22px;margin:0">
+<div style="display:flex;flex-direction:column;gap:8px;padding-bottom:14px;border-bottom:1px solid #d8d0bf"><span style="font-family:'Newsreader',serif;font-weight:500;font-size:29px">Send us a message</span></div>
+<div style="font-size:17px;line-height:1.5;color:#566052">Have a question or want to get involved? Fill out the form below and we'll get back to you as soon as possible.</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Name <span style="color:#b8552e">*</span></span><input type="text" style="height:52px;border:1px solid #cfc5b0;background:#fffdf8;border-radius:10px;padding:0 14px;font-family:'Public Sans',sans-serif;font-size:18px;color:#1f2a1f;outline:none" style-focus="border-color:#b8552e;box-shadow:0 0 0 1px #b8552e"></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Email <span style="color:#b8552e">*</span></span><input type="email" style="height:52px;border:1px solid #cfc5b0;background:#fffdf8;border-radius:10px;padding:0 14px;font-family:'Public Sans',sans-serif;font-size:18px;color:#1f2a1f;outline:none" style-focus="border-color:#b8552e;box-shadow:0 0 0 1px #b8552e"></label>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Phone <span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;text-transform:none;color:#5d6b5a;font-variant-numeric:tabular-nums">optional</span></span><input type="tel" style="height:52px;border:1px solid #cfc5b0;background:#fffdf8;border-radius:10px;padding:0 14px;font-family:'Public Sans',sans-serif;font-size:18px;color:#1f2a1f;outline:none" style-focus="border-color:#b8552e;box-shadow:0 0 0 1px #b8552e"></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Subject <span style="color:#b8552e">*</span></span>
+<span style="position:relative;display:block"><select style="width:100%;height:52px;border:1px solid #cfc5b0;background:#fffdf8;border-radius:10px;padding:0 40px 0 14px;font-family:'Public Sans',sans-serif;font-size:18px;color:#1f2a1f;outline:none;appearance:none;-webkit-appearance:none" style-focus="border-color:#b8552e;box-shadow:0 0 0 1px #b8552e"><option>Select a topic</option><option>General Inquiry</option><option>Media Request</option><option>Research Question</option><option>I Want to Get Involved</option><option>Website/Technical Issue</option><option>Other</option></select><span style="position:absolute;right:14px;top:15px;font-family:'Public Sans',sans-serif;font-size:14px;pointer-events:none;font-variant-numeric:tabular-nums">▾</span></span></label>
+</div>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Message <span style="color:#b8552e">*</span></span><textarea rows="6" style="border:1px solid #cfc5b0;background:#fffdf8;border-radius:10px;padding:12px 14px;font-family:'Public Sans',sans-serif;font-size:18px;line-height:1.5;color:#1f2a1f;outline:none;resize:vertical" style-focus="border-color:#b8552e;box-shadow:0 0 0 1px #b8552e"></textarea></label>
+<label style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;font-size:15px;line-height:1.5"><input type="checkbox" style="width:22px;height:22px;margin:1px 0 0;accent-color:#24452f;border-radius:10px"><span>I agree to be contacted regarding my inquiry. See our <a href="#" style="text-decoration:underline">Privacy Policy</a>.</span></label>
+<button type="button" style="height:60px;border:0;border-radius:0;background:#b8552e;color:#fff;font-family:'Newsreader',serif;font-weight:500;font-size:20px;cursor:pointer" style-hover="background:#9f4626">Send message</button>
+</form>
+</div>
+<dc-import name="HSFooter" hint-size="100%,300px"></dc-import>
+</div>
+</div>
+
+<!-- 2j YARD SIGNS -->
+<div id="3j" data-screen-label="3j Yard signs" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3j</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Yard signs · /yard-signs/</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">layouts/_default/yard-signs.html · form name="yard-signs" → /thank-you/</div></div>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);border-radius:20px;overflow:hidden">
+<dc-import name="HSHeader" active="none" hint-size="100%,140px"></dc-import>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:48px;align-items:end;padding:48px 48px 36px;border-bottom:1px solid #d8d0bf">
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:73px;line-height:1.04;letter-spacing:-.02em">Yard signs &amp; flyers</div>
+<div style="font-size:19px;line-height:1.5;text-wrap:pretty">Support the movement with yard signs and informational flyers</div>
+</div>
+<div style="display:grid;grid-template-columns:440px minmax(0,1fr)">
+<div style="border-right:1px solid #d8d0bf;display:flex;flex-direction:column">
+<div style="padding:40px 48px;display:flex;flex-direction:column;gap:6px;border-bottom:1px solid #d8d0bf">
+<span style="font-family:'Newsreader',serif;font-weight:500;font-size:92px;line-height:1.04;letter-spacing:-.02em;color:#b8552e">$5</span>
+<span style="font-family:'Public Sans',sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:700">Per yard sign</span>
+</div>
+<div style="padding:8px 48px 32px;display:flex;flex-direction:column">
+<div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid #d8d0bf;font-size:16px;line-height:1.45"><span style="font-family:'Public Sans',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.14em;padding-top:2px;font-weight:700">Yard signs</span><span>$5.00 per sign</span></div>
+<div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid #d8d0bf;font-size:16px;line-height:1.45"><span style="font-family:'Public Sans',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.14em;padding-top:2px;font-weight:700">Flyers</span><span>Pricing varies based on quantity</span></div>
+<div style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;font-size:16px;line-height:1.45"><span style="font-family:'Public Sans',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.14em;padding-top:2px;font-weight:700">Proceeds</span><span>All proceeds go directly to committee funding for legal counsel and advocacy efforts to stop the data center.</span></div>
+</div>
+<div style="height:340px;margin:0 48px 48px;background:repeating-linear-gradient(135deg,#e9e2d3 0 10px,#f1ebe0 10px 20px);border:1px solid #d8d0bf;display:flex;align-items:center;justify-content:center;font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums;border-radius:16px;overflow:hidden">photo · yard sign in a front yard</div>
+</div>
+<form style="padding:40px 48px 48px;display:flex;flex-direction:column;gap:30px;margin:0">
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="display:grid;grid-template-columns:44px 1fr;padding-bottom:12px;border-bottom:1px solid #d8d0bf;align-items:baseline"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;color:#b8552e;font-variant-numeric:tabular-nums">01</span><span style="font-family:'Newsreader',serif;font-weight:500;font-size:25px">Your order</span></div>
+<span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">What would you like to order? <span style="color:#b8552e">*</span></span>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid #d8d0bf;border-radius:16px;overflow:hidden">
+<sc-for list="{{ typeTiles }}" as="t" hint-placeholder-count="3">
+<sc-if value="{{ t.on }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ t.pick }}" style="height:60px;border:0;border-right:1px solid #d8d0bf;border-radius:0;background:#24452f;color:#f6f2ea;font-family:'Public Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer">{{ t.label }}</button></sc-if>
+<sc-if value="{{ t.off }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ t.pick }}" style="height:60px;border:0;border-right:1px solid #cfc5b0;border-radius:10px;background:#fffdf8;color:#1f2a1f;font-family:'Public Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer">{{ t.label }}</button></sc-if>
+</sc-for>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:6px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Number of yard signs</span>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid #d8d0bf;border-radius:16px;overflow:hidden">
+<sc-for list="{{ signTiles }}" as="t" hint-placeholder-count="4">
+<sc-if value="{{ t.on }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ t.pick }}" style="height:52px;border:0;border-right:1px solid #d8d0bf;border-radius:0;background:#24452f;color:#f6f2ea;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;font-variant-numeric:tabular-nums">{{ t.label }}</button></sc-if>
+<sc-if value="{{ t.off }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ t.pick }}" style="height:52px;border:0;border-right:1px solid #cfc5b0;border-radius:10px;background:#fffdf8;color:#1f2a1f;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;font-variant-numeric:tabular-nums">{{ t.label }}</button></sc-if>
+</sc-for>
+</div>
+<span style="font-size:14px;line-height:1.45;color:#566052">Signs are $5.00 each. Consider donating extra to support legal and advocacy costs!</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Number of flyers</span>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid #d8d0bf;border-radius:16px;overflow:hidden">
+<sc-for list="{{ flyerTiles }}" as="t" hint-placeholder-count="4">
+<sc-if value="{{ t.on }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ t.pick }}" style="height:52px;border:0;border-right:1px solid #d8d0bf;border-radius:0;background:#24452f;color:#f6f2ea;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;font-variant-numeric:tabular-nums">{{ t.label }}</button></sc-if>
+<sc-if value="{{ t.off }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ t.pick }}" style="height:52px;border:0;border-right:1px solid #cfc5b0;border-radius:10px;background:#fffdf8;color:#1f2a1f;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;font-variant-numeric:tabular-nums">{{ t.label }}</button></sc-if>
+</sc-for>
+</div>
+<span style="font-size:14px;line-height:1.45;color:#566052">Pricing depends on quantity and will be confirmed via email/phone</span>
+</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:grid;grid-template-columns:44px 1fr;padding-bottom:12px;border-bottom:1px solid #d8d0bf;align-items:baseline"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;color:#b8552e;font-variant-numeric:tabular-nums">02</span><span style="font-family:'Newsreader',serif;font-weight:500;font-size:25px">Your information</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Name <span style="color:#b8552e">*</span></span><input type="text" style="height:52px;border:1px solid #cfc5b0;background:#fffdf8;border-radius:10px;padding:0 14px;font-family:'Public Sans',sans-serif;font-size:18px;color:#1f2a1f;outline:none" style-focus="border-color:#b8552e;box-shadow:0 0 0 1px #b8552e"></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;color:#b8552e">Email *</span><input type="email" value="jane@" style="height:52px;border:2px solid #b8552e;background:#f8e7dc;border-radius:10px;padding:0 13px;font-family:'Public Sans',sans-serif;font-size:18px;color:#1f2a1f;outline:none"><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;color:#b8552e;font-variant-numeric:tabular-nums">Enter a full email address, like name@example.com</span></label>
+</div>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Phone number <span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;text-transform:none;color:#5d6b5a;font-variant-numeric:tabular-nums">optional</span></span><input type="tel" style="height:52px;border:1px solid #cfc5b0;background:#fffdf8;border-radius:10px;padding:0 14px;font-family:'Public Sans',sans-serif;font-size:18px;color:#1f2a1f;outline:none" style-focus="border-color:#b8552e;box-shadow:0 0 0 1px #b8552e"><span style="font-size:14px;color:#566052">Helpful for coordinating delivery or pickup</span></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Delivery address <span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;text-transform:none;color:#5d6b5a;font-variant-numeric:tabular-nums">optional</span></span><textarea rows="3" placeholder="Street address, city, state, zip" style="border:1px solid #cfc5b0;background:#fffdf8;border-radius:10px;padding:12px 14px;font-family:'Public Sans',sans-serif;font-size:18px;line-height:1.5;color:#1f2a1f;outline:none;resize:vertical" style-focus="border-color:#b8552e;box-shadow:0 0 0 1px #b8552e"></textarea><span style="font-size:14px;color:#566052">Leave blank if you prefer pickup</span></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Additional notes <span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;text-transform:none;color:#5d6b5a;font-variant-numeric:tabular-nums">optional</span></span><textarea rows="3" placeholder="Delivery preferences, questions, etc." style="border:1px solid #cfc5b0;background:#fffdf8;border-radius:10px;padding:12px 14px;font-family:'Public Sans',sans-serif;font-size:18px;line-height:1.5;color:#1f2a1f;outline:none;resize:vertical" style-focus="border-color:#b8552e;box-shadow:0 0 0 1px #b8552e"></textarea></label>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="display:grid;grid-template-columns:44px 1fr;padding-bottom:12px;border-bottom:1px solid #d8d0bf;align-items:baseline"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;color:#b8552e;font-variant-numeric:tabular-nums">03</span><span style="font-family:'Newsreader',serif;font-weight:500;font-size:25px">Consent</span></div>
+<label style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;font-size:15px;line-height:1.5"><input type="checkbox" checked style="width:22px;height:22px;margin:1px 0 0;accent-color:#24452f;border-radius:10px"><span>I agree to be contacted by phone or text to coordinate delivery or pickup <span style="color:#b8552e">*</span></span></label>
+<label style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;font-size:15px;line-height:1.5"><input type="checkbox" style="width:22px;height:22px;margin:1px 0 0;accent-color:#24452f;border-radius:10px"><span>I have read and agree to the <a href="#" style="text-decoration:underline">Privacy Policy</a> <span style="color:#b8552e">*</span></span></label>
+</div>
+<div style="border-top:1px solid #d8d0bf;border-bottom:1px solid #d8d0bf;padding:16px 0;font-size:16px;line-height:1.5"><span style="font-weight:600">Thank you for supporting our efforts!</span> Someone will contact you within 24-48 hours to confirm your order and coordinate delivery or pickup.</div>
+<button type="button" style="height:60px;border:0;border-radius:0;background:#b8552e;color:#fff;font-family:'Newsreader',serif;font-weight:500;font-size:20px;cursor:pointer" style-hover="background:#9f4626">Submit order request</button>
+</form>
+</div>
+<dc-import name="HSFooter" hint-size="100%,300px"></dc-import>
+</div>
+</div>
+
+<!-- 2k THANK YOU -->
+<div id="3k" data-screen-label="3k Thank you" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3k</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Thank you · /thank-you/ and /contact-thank-you/</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">Switch variant below. Message is chosen by form name.</div></div>
+<div style="display:flex;gap:8px;font-family:'Public Sans',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.14em">
+<sc-for list="{{ tyTabs }}" as="t" hint-placeholder-count="4">
+<sc-if value="{{ t.on }}" hint-placeholder-val="{{ false }}"><button onClick="{{ t.pick }}" style="font:inherit;text-transform:inherit;cursor:pointer;background:#24452f;color:#f6f2ea;padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">{{ t.label }}</button></sc-if>
+<sc-if value="{{ t.off }}" hint-placeholder-val="{{ true }}"><button onClick="{{ t.pick }}" style="font:inherit;text-transform:inherit;cursor:pointer;background:#f6f2ea;color:#1f2a1f;padding:7px 12px;border:1px solid #d8d0bf;border-radius:0">{{ t.label }}</button></sc-if>
+</sc-for>
+</div>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);border-radius:20px;overflow:hidden">
+<dc-import name="HSHeader" active="none" hint-size="100%,140px"></dc-import>
+<div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #d8d0bf">
+<div style="padding:64px 48px;border-right:1px solid #d8d0bf;display:flex;flex-direction:column;gap:22px">
+<span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b8552e">Received · {{ ty.kicker }}</span>
+<span style="font-family:'Newsreader',serif;font-weight:500;font-size:84px;line-height:1.04;letter-spacing:-.02em">Thank you.</span>
+<span style="font-size:24px;line-height:1.4;max-width:520px">{{ ty.lead }}</span>
+<span style="font-size:17px;line-height:1.5;color:#566052;max-width:520px">{{ ty.sub }}</span>
+<a href="#" style="align-self:flex-start;background:#24452f;color:#fff;padding:16px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;margin-top:8px;border-radius:999px">Return to homepage</a>
+</div>
+<div style="display:flex;flex-direction:column">
+<div style="padding:28px 48px 14px;font-family:'Newsreader',serif;font-weight:500;font-size:29px;border-bottom:1px solid #d8d0bf;margin:0 48px;padding-left:0;padding-right:0">What's next?</div>
+<a href="#" style="margin:0 48px;padding:26px 0;border-bottom:1px solid #d8d0bf;display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:baseline"><span style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">01</span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Newsreader',serif;font-size:26px;font-weight:500">Read our research</span><span style="font-size:16px;color:#566052">Explore our latest articles and analysis</span></span><span style="font-family:'Public Sans',sans-serif;font-size:13px;text-decoration:underline;font-variant-numeric:tabular-nums">Updates</span></a>
+<a href="#" style="margin:0 48px;padding:26px 0;border-bottom:1px solid #d8d0bf;display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:baseline"><span style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">02</span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Newsreader',serif;font-size:26px;font-weight:500">Sign the petition</span><span style="font-size:16px;color:#566052">Add your voice to the movement</span></span><span style="font-family:'Public Sans',sans-serif;font-size:13px;text-decoration:underline;font-variant-numeric:tabular-nums">Sign now</span></a>
+<a href="#" style="margin:0 48px;padding:26px 0;display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:baseline"><span style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">03</span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Newsreader',serif;font-size:26px;font-weight:500">Follow us</span><span style="font-size:16px;color:#566052">Stay updated on social media</span></span><span style="font-family:'Public Sans',sans-serif;font-size:13px;text-decoration:underline;font-variant-numeric:tabular-nums">Facebook</span></a>
+</div>
+</div>
+<dc-import name="HSFooter" hint-size="100%,300px"></dc-import>
+</div>
+</div>
+
+<!-- 2l EMAIL MODAL -->
+<div id="3l" data-screen-label="3l Email signup modal" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3l</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Email signup modal · #emailModal</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">form name="email-signup" → /thank-you/</div></div>
+<div style="position:relative;height:780px;background:#f6f2ea;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden;border-radius:20px">
+<div style="position:absolute;inset:0;background:#3a2a1f url('assets/council-meeting.webp') center/cover;filter:grayscale(1)"></div>
+<div style="position:absolute;inset:0;background:rgba(20,20,20,.72)"></div>
+<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:560px;background:#f6f2ea;color:#1f2a1f;border:2px solid #24452f;font-family:'Public Sans',sans-serif;border-radius:16px;overflow:hidden">
+<div style="background:#24452f;color:#f6f2ea;display:flex;justify-content:space-between;align-items:center;padding:14px 22px"><span style="font-family:'Newsreader',serif;font-size:20px;font-weight:500">Stay informed</span><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">Close ✕</span></div>
+<div style="padding:28px 28px 30px;display:flex;flex-direction:column;gap:18px">
+<span style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;line-height:1.12">Get meeting alerts</span>
+<span style="font-size:16px;line-height:1.5;color:#566052">New research, upcoming meetings and action items.</span>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Name</span><input type="text" style="height:52px;border:1px solid #cfc5b0;background:#fffdf8;border-radius:10px;padding:0 14px;font-family:'Public Sans',sans-serif;font-size:18px;outline:none" style-focus="border-color:#b8552e;box-shadow:0 0 0 1px #b8552e"></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Email</span><input type="email" style="height:52px;border:2px solid #b8552e;box-shadow:0 0 0 0 #b8552e;background:#fffdf8;border-radius:10px;padding:0 13px;font-family:'Public Sans',sans-serif;font-size:18px;outline:none"><span style="font-family:'Public Sans',sans-serif;font-size:11px;color:#5d6b5a;font-variant-numeric:tabular-nums">Focus state shown</span></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">ZIP code <span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;text-transform:none;color:#5d6b5a;font-variant-numeric:tabular-nums">optional</span></span><input type="text" style="height:52px;width:180px;border:1px solid #cfc5b0;background:#fffdf8;border-radius:10px;padding:0 14px;font-family:'Public Sans',sans-serif;font-size:17px;outline:none;font-variant-numeric:tabular-nums"></label>
+<label style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;font-size:14px;line-height:1.5"><input type="checkbox" style="width:22px;height:22px;margin:1px 0 0;accent-color:#24452f;border-radius:10px"><span>I agree to receive email updates and understand I can unsubscribe at any time. See our <a href="#" style="text-decoration:underline">Privacy Policy</a>.</span></label>
+<button type="button" style="height:56px;border:0;border-radius:0;background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:16px;cursor:pointer">Subscribe</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 2m PETITION MODAL -->
+<div id="3m" data-screen-label="3m Change.org modal" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3m</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Petition warning modal · #changeOrgModal</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">In front of every "Sign the petition" button, site-wide</div></div>
+<div style="position:relative;height:820px;background:#f6f2ea;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden;border-radius:20px">
+<div style="position:absolute;inset:0;background:#3a2a1f url('assets/council-meeting.webp') center/cover;filter:grayscale(1)"></div>
+<div style="position:absolute;inset:0;background:rgba(20,20,20,.72)"></div>
+<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:620px;background:#f6f2ea;color:#1f2a1f;border:2px solid #24452f;font-family:'Public Sans',sans-serif;border-radius:16px;overflow:hidden">
+<div style="background:#b8552e;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 22px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Important information</span><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-variant-numeric:tabular-nums">Close ✕</span></div>
+<div style="padding:28px 28px 8px;display:flex;flex-direction:column;gap:16px">
+<span style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;line-height:1.12;letter-spacing:-.02em">You are leaving wacodatacenter.com</span>
+<span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Please read before signing:</span>
+<div style="display:flex;flex-direction:column;border-top:1px solid #d8d0bf">
+<div style="display:grid;grid-template-columns:44px 1fr;padding:14px 0;border-bottom:1px solid #d8d0bf;font-size:16px;line-height:1.5"><span style="font-family:'Newsreader',serif;font-weight:500;font-size:20px;line-height:1.1">01</span><span><b>You are being redirected to Change.org,</b> a third-party petition platform not affiliated with our community group.</span></div>
+<div style="display:grid;grid-template-columns:44px 1fr;padding:14px 0;border-bottom:1px solid #d8d0bf;font-size:16px;line-height:1.5"><span style="font-family:'Newsreader',serif;font-weight:500;font-size:20px;line-height:1.1;color:#b8552e">02</span><span><b>Change.org will ask for donations.</b> These donations go to Change.org, NOT to our cause. We do not receive any of these funds.</span></div>
+<div style="display:grid;grid-template-columns:44px 1fr;padding:14px 0;border-bottom:1px solid #d8d0bf;font-size:16px;line-height:1.5"><span style="font-family:'Newsreader',serif;font-weight:500;font-size:20px;line-height:1.1">03</span><span><b>You can skip the donation.</b> After signing, scroll to the bottom of the page and look for "Skip" or "No thanks" to proceed without donating.</span></div>
+</div>
+<span style="font-size:15px;line-height:1.5;color:#566052"><b style="color:#1f2a1f">Your signature matters!</b> Don't let the donation request discourage you from signing. It's completely optional.</span>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1.6fr;gap:0;margin-top:20px;border-top:1px solid #d8d0bf">
+<button type="button" style="height:60px;border:0;border-right:1px solid #d8d0bf;border-radius:0;background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;cursor:pointer">Cancel</button>
+<button type="button" style="height:60px;border:0;border-radius:0;background:#b8552e;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;cursor:pointer">Continue to Change.org ↗</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 2n 404 -->
+<div id="3n" data-screen-label="3n 404" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3n</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Not found · 404</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">layouts/404.html</div></div>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);border-radius:20px;overflow:hidden">
+<dc-import name="HSHeader" active="none" hint-size="100%,140px"></dc-import>
+<div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #d8d0bf">
+<div style="padding:56px 48px;border-right:1px solid #d8d0bf;font-family:'Newsreader',serif;font-weight:500;font-size:210px;line-height:1;letter-spacing:-.02em;color:#b8552e">404</div>
+<div style="padding:56px 48px;display:flex;flex-direction:column;gap:20px;justify-content:flex-end">
+<span style="font-family:'Newsreader',serif;font-weight:500;font-size:45px;line-height:1.04">Page not found</span>
+<span style="font-size:20px;line-height:1.5">Sorry, we couldn't find the page you're looking for.</span>
+<div style="display:flex;margin-top:8px"><a href="#" style="background:#24452f;color:#fff;padding:16px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;border-radius:999px">Return home</a><a href="#" style="border:2px solid #24452f;padding:14px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;border-radius:999px">Updates</a><a href="#" style="border:2px solid #24452f;border-left:0;padding:14px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;border-radius:999px">Meetings</a></div>
+</div>
+</div>
+<dc-import name="HSFooter" hint-size="100%,300px"></dc-import>
+</div>
+</div>
+
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { type: 'Yard Signs Only', signs: '1-5', flyers: 'None', ty: 'yard' };
+  tiles(opts, key) {
+    return opts.map(([label, val]) => ({ label, on: this.state[key] === val, off: this.state[key] !== val, pick: () => this.setState({ [key]: val }) }));
+  }
+  renderVals() {
+    const msgs = {
+      yard: { kicker: 'Yard sign request', lead: 'Your yard sign and/or flyer request has been received!', sub: 'Someone will contact you within 24-48 hours to confirm your order and coordinate delivery or pickup.' },
+      email: { kicker: 'Email signup', lead: "You've been added to our email list!", sub: "You'll receive updates on new research, upcoming meetings, and action items. You can unsubscribe at any time." },
+      contact: { kicker: 'Message', lead: "We've received your message!", sub: "We'll get back to you within 24-48 hours." },
+      other: { kicker: 'Submission', lead: 'Your submission has been received!', sub: "We'll be in touch soon." }
+    };
+    return {
+      typeTiles: this.tiles([['Yard signs','Yard Signs Only'],['Flyers','Flyers Only'],['Both','Both']], 'type'),
+      signTiles: this.tiles([['None',''],['1-5','1-5'],['5-10','5-10'],['10+','10+']], 'signs'),
+      flyerTiles: this.tiles([['None','None'],['20','20'],['50','50'],['100','100']], 'flyers'),
+      tyTabs: this.tiles([['Yard signs','yard'],['Email signup','email'],['Contact','contact'],['Default','other']], 'ty'),
+      ty: msgs[this.state.ty]
+    };
+  }
+}
+</script>
+</body>
+</html>

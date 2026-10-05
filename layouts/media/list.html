@@ -1,177 +1,22 @@
-{{ define "main" }}
-
-<section class="page-section" style="padding-top: 120px;">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h1 class="display-4">Media Coverage</h1>
-            <p class="lead text-muted">Our community's concerns have received widespread media attention from local TV stations, newspapers, and statewide outlets.</p>
-            <p class="text-muted"><strong>{{ len (where .Site.RegularPages "Section" "media") }} Articles</strong> | Last Updated: {{ now.Format "January 2, 2006" }}</p>
-        </div>
-
-        <!-- Featured Article (Waco Bridge Original) -->
-        {{ range first 1 (where (where .Site.RegularPages "Section" "media") "Params.featured" true) }}
-        <div class="row mb-5">
-            <div class="col-lg-10 mx-auto">
-                <div class="card border-warning shadow-lg" style="overflow: hidden;">
-                    <!-- Featured Badge -->
-                    <div class="position-absolute top-0 start-0 m-3" style="z-index: 10;">
-                        <span class="badge bg-warning text-dark fs-6">⭐ ORIGINAL INVESTIGATION</span>
-                    </div>
-                    
-                    <!-- Hero Image -->
-                    {{ if .Params.image }}
-                    <img src="{{ .Params.image }}" class="card-img-top" alt="{{ .Title }}" style="max-height: 400px; object-fit: cover;">
-                    {{ end }}
-                    
-                    <div class="card-body p-4">
-                        <!-- Outlet & Date -->
-                        <div class="d-flex align-items-center mb-3">
-                            <strong class="text-primary">{{ .Params.outlet }}</strong>
-                            <span class="text-muted ms-2">• {{ .Date.Format "January 2, 2006" }}</span>
-                        </div>
-                        
-                        <!-- Title -->
-                        <h2 class="card-title h3 mb-3">{{ .Title }}</h2>
-                        
-                        <!-- Description -->
-                        <p class="card-text lead mb-4">{{ .Params.description }}</p>
-                        
-                        <!-- Link -->
-                        <a href="{{ .Params.external_url }}" target="_blank" class="btn btn-primary btn-lg">
-                            Read Original Article at wacobridge.org <i class="fas fa-external-link-alt ms-2"></i>
-                        </a>
-                        
-                        <!-- Editor Note -->
-                        <div class="alert alert-info mt-4 mb-0">
-                            <strong>Editor's Note:</strong> This groundbreaking investigative piece by The Waco Bridge was the first to publicly report on the proposed data center project. All subsequent coverage originated from their excellent journalism.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{ end }}
-
-        <h2 class="text-center mb-4">Recent Coverage</h2>
-
-        <!-- Media Coverage Cards (Link Preview Style) -->
-        <div class="row">
-            {{ range where (where .Site.RegularPages "Section" "media") "Params.featured" "!=" true }}
-            <div class="col-md-6 col-lg-4 mb-4">
-                <a href="{{ .Params.external_url }}" target="_blank" class="text-decoration-none">
-                    <div class="card h-100 shadow-sm link-preview-card">
-                        <!-- Hero Image -->
-                        {{ if .Params.image }}
-                        <div class="card-img-top" style="height: 200px; overflow: hidden; background-color: #f8f9fa;">
-                            <img src="{{ .Params.image }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        {{ else }}
-                        <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                            <i class="fas fa-newspaper fa-4x text-muted"></i>
-                        </div>
-                        {{ end }}
-                        
-                        <div class="card-body">
-                            <!-- Header: Outlet + Badge -->
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <small class="text-muted fw-bold">{{ .Params.outlet }}</small>
-                                {{ if in .Params.tags "tv" }}
-                                    <span class="badge bg-info">TV</span>
-                                {{ else if in .Params.tags "print" }}
-                                    <span class="badge bg-secondary">Print</span>
-                                {{ else if in .Params.tags "statewide" }}
-                                    <span class="badge bg-success">Statewide</span>
-                                {{ else }}
-                                    <span class="badge bg-primary">Online</span>
-                                {{ end }}
-                            </div>
-                            
-                            <!-- Date -->
-                            <div class="text-muted small mb-2">
-                                <i class="fas fa-calendar-alt me-1"></i>{{ .Date.Format "January 2, 2006" }}
-                            </div>
-                            
-                            <!-- Title -->
-                            <h5 class="card-title text-dark mb-2">{{ .Title }}</h5>
-                            
-                            <!-- Description -->
-                            <p class="card-text text-muted small">{{ .Params.description }}</p>
-                            
-                            <!-- Link indicator -->
-                            <div class="text-primary small mt-3">
-                                Read article <i class="fas fa-external-link-alt ms-1"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            {{ end }}
-        </div>
-
-        <!-- Coverage Stats -->
-        <div class="row mt-5">
-            <div class="col-lg-8 mx-auto">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <h4 class="mb-3">Coverage Summary</h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="h2 text-primary">{{ len (where .Site.RegularPages "Section" "media") }}</div>
-                                <div class="small text-muted">Total Articles</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="h2 text-primary">{{ len (where (where .Site.RegularPages "Section" "media") "Params.tags" "intersect" (slice "tv")) }}</div>
-                                <div class="small text-muted">TV Coverage</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="h2 text-primary">{{ len (where (where .Site.RegularPages "Section" "media") "Params.tags" "intersect" (slice "statewide")) }}</div>
-                                <div class="small text-muted">Statewide Outlets</div>
-                            </div>
-                        </div>
-                        <p class="text-muted mt-3 mb-0 small">
-                            Our community's concerns have reached audiences across Central Texas and statewide.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Call to Action -->
-        <div class="text-center mt-5">
-            <h4>Join the Conversation</h4>
-            <p class="text-muted mb-4">Add your voice to the thousands already speaking up</p>
-            <a href="https://www.change.org/p/stop-infrakey-data-center-from-building-in-lacy-lakeview" class="btn btn-primary btn-lg me-2 mb-2">Sign the Petition</a>
-            <a href="/contact/" class="btn btn-outline-primary btn-lg mb-2">Contact Us</a>
-        </div>
-    </div>
-</section>
-
-<style>
-/* Link Preview Card Styles */
-.link-preview-card {
-    transition: all 0.3s ease;
-    border: 1px solid #e0e0e0;
-}
-
-.link-preview-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1) !important;
-    border-color: #007bff;
-}
-
-.link-preview-card .card-body {
-    padding: 1rem;
-}
-
-.link-preview-card .card-title {
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.4;
-}
-
-/* Make entire card clickable */
-a:hover .link-preview-card .card-title {
-    color: #007bff !important;
-}
-</style>
-
-{{ end }}
+{{ define "main" }}{{ $pages := .Pages.ByDate.Reverse }}{{ $featured := first 1 ((where $pages "Params.featured" true).ByDate) }}
+{{ partial "page-header.html" (dict "title" "In the press" "description" "Our community's concerns have received widespread media attention from local TV stations, newspapers, and statewide outlets." "meta" (printf "%d articles" (len $pages))) }}
+{{ range $featured }}<article class="lead-story press-lead">
+<div class="ink-panel">
+<span class="tag tag-band">Original investigation</span>
+<p class="mono">{{ .Params.outlet }} · {{ .Date.Format "Jan 2, 2006" }}</p>
+<h2>{{ .Title }}</h2>
+<div>{{ .Content }}</div>
+<a class="btn btn-primary" href="{{ .Params.external_url }}" target="_blank" rel="noopener noreferrer">Read at {{ (urls.Parse .Params.external_url).Host }} <span aria-hidden="true">↗</span>
+</a>
+</div>{{ if .Params.image }}<img src="{{ .Params.image }}" width="1280" height="853" alt="{{ .Title }}">{{ else }}<div class="placeholder">Original reporting</div>{{ end }}</article>{{ end }}
+<div class="padded press-list">{{ range $pages.GroupByDate "January 2006" }}<section class="month-group">
+<div class="section-head">
+<h2>{{ .Key }}</h2>
+</div>{{ range .Pages }}{{ if not (in $featured .) }}<a class="press-row" href="{{ .Params.external_url }}" target="_blank" rel="noopener noreferrer">
+<time class="mono">{{ .Date.Format "Jan 2" }}</time>
+<strong>{{ .Params.outlet }}</strong>
+<span class="tag">{{ if in .Params.tags "tv" }}TV{{ else if in .Params.tags "print" }}Print{{ else if in .Params.tags "statewide" }}Statewide{{ else }}Online{{ end }}</span>
+<h3>{{ .Title }}</h3>
+<span aria-hidden="true">↗</span>
+</a>{{ end }}{{ end }}</section>{{ end }}<p class="mono muted">Reporters: for interviews or documents, <a href="/contact/">contact leadership</a>. Every link opens the original outlet in a new tab.</p>
+</div>{{ end }}

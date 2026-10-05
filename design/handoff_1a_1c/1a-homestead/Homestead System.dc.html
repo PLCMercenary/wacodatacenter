@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#dedbd4;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<section data-screen-label="Turn 2 system" style="display:flex;flex-direction:column;gap:40px;padding:80px">
+<div style="display:flex;flex-direction:column;gap:10px;max-width:1100px;color:#1f2a1f">
+<div style="font-family:'Public Sans',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#5d6b5a;font-weight:700">1a Homestead · System</div>
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:35px;letter-spacing:-.02em;line-height:1.04">Tokens, components, mobile</div>
+<div style="font-family:'Public Sans',sans-serif;font-size:18px;line-height:1.55;color:#566052;max-width:860px;text-wrap:pretty"><a href="#3p" style="text-decoration:underline">3p</a> Tokens and type. <a href="#3q" style="text-decoration:underline">3q</a> Components and states. <a href="#3r" style="text-decoration:underline">3r</a> Mobile at 390px: home, article, meetings, contact form.</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:80px;align-items:flex-start">
+
+<!-- 2p TOKENS -->
+<div id="3p" data-screen-label="3p Tokens and type" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3p</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Tokens and type</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">static/css/style.css :root</div></div>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);padding:48px;border-radius:20px;overflow:hidden">
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;padding-bottom:14px;border-bottom:1px solid #d8d0bf">Color</div>
+<div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-left:1px solid #d8d0bf">
+<sc-for list="{{ colors }}" as="c" hint-placeholder-count="12">
+<div style="border-right:1px solid #d8d0bf;border-bottom:1px solid #d8d0bf;display:flex;flex-direction:column">
+<div style="height:96px;background:{{ c.hex }};border-bottom:1px solid #d8d0bf"></div>
+<div style="padding:12px 14px;display:flex;flex-direction:column;gap:3px"><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums">{{ c.name }}</span><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-variant-numeric:tabular-nums">{{ c.hex }}</span><span style="font-size:13px;line-height:1.4;color:#566052">{{ c.use }}</span></div>
+</div>
+</sc-for>
+</div>
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;padding:48px 0 14px;border-bottom:1px solid #d8d0bf">Type scale</div>
+<sc-for list="{{ type }}" as="t" hint-placeholder-count="10">
+<div style="display:grid;grid-template-columns:260px 1fr;gap:32px;padding:20px 0;border-bottom:1px solid #d8d0bf;align-items:center">
+<div style="display:flex;flex-direction:column;gap:3px"><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums">{{ t.token }}</span><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#6b6656;font-variant-numeric:tabular-nums">{{ t.spec }}</span></div>
+<div style="{{ t.css }:{{ t.css }}">{{ t.sample }}</div>
+</div>
+</sc-for>
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;padding:48px 0 14px;border-bottom:1px solid #d8d0bf">Structure</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;padding-top:22px"><div style="display:flex;flex-direction:column;gap:8px;font-family:'Public Sans',sans-serif;color:#1f2a1f"><span style="font-weight:700;font-size:15px">Radius</span><span style="font-size:14px;line-height:1.5;color:#566052">Frames and panels 20px, cards and boxed areas 16px, inputs 10px, buttons, chips and tags are pills (999px).</span></div><div style="display:flex;flex-direction:column;gap:8px;font-family:'Public Sans',sans-serif;color:#1f2a1f"><span style="font-weight:700;font-size:15px">Rule</span><span style="font-size:14px;line-height:1.5;color:#566052">1px #d8d0bf. Used for rows, cards and section heads. Nothing heavier.</span></div><div style="display:flex;flex-direction:column;gap:8px;font-family:'Public Sans',sans-serif;color:#1f2a1f"><span style="font-weight:700;font-size:15px">Shadow</span><span style="font-size:14px;line-height:1.5;color:#566052">Only the floating meeting card on home: 0 10px 30px rgba(31,42,31,.12).</span></div><div style="display:flex;flex-direction:column;gap:8px;font-family:'Public Sans',sans-serif;color:#1f2a1f"><span style="font-weight:700;font-size:15px">Gutter</span><span style="font-size:14px;line-height:1.5;color:#566052">56px header, 48px subpage content, 24px inset for panels. 20px under 768px.</span></div></div>
+</div>
+</div>
+
+<!-- 2q COMPONENTS -->
+<div id="3q" data-screen-label="3q Components" style="width:1280px;flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3q</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Components and states</div></div>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);padding:48px;display:flex;flex-direction:column;gap:48px;border-radius:20px;overflow:hidden">
+<div>
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;padding-bottom:14px;border-bottom:1px solid #d8d0bf">Buttons</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0">
+<div style="padding:24px 24px 24px 0;border-right:1px solid #d8d0bf;display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">.btn-primary</span><a href="#" style="background:#b8552e;color:#fff;padding:16px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;border-radius:999px">Sign the petition</a><a href="#" style="background:#9f4626;color:#fff;padding:16px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;text-decoration:underline;border-radius:999px">Hover</a><a href="#" style="background:#b8552e;color:#fff;padding:16px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;outline:2px solid #24452f;outline-offset:3px;border-radius:999px">Focus</a></div>
+<div style="padding:24px;border-right:1px solid #d8d0bf;display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">.btn-ink</span><a href="#" style="background:#24452f;color:#fff;padding:16px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;border-radius:999px">Read the record</a><a href="#" style="background:#1b3424;color:#fff;padding:16px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;text-decoration:underline;border-radius:999px">Hover</a><a href="#" style="background:#24452f;color:#fff;padding:16px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;outline:2px solid #b8552e;outline-offset:3px;border-radius:999px">Focus</a></div>
+<div style="padding:24px;border-right:1px solid #d8d0bf;display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">.btn-outline</span><a href="#" style="border:2px solid #24452f;padding:14px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;border-radius:999px">Testimony template</a><a href="#" style="border:2px solid #24452f;background:#ece5d6;padding:14px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;text-decoration:underline;border-radius:999px">Hover</a><span style="border:2px solid #cfc5b0;color:#9a9384;padding:14px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;border-radius:999px">Disabled</span></div>
+<div style="padding:24px 0 24px 24px;display:flex;flex-direction:column;gap:12px;align-items:stretch;background:#24452f;margin:0 0 0 0"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#d7e0cc;font-variant-numeric:tabular-nums">On ink · .btn-outline-paper</span><a href="#" style="margin-right:24px;border:2px solid #f6f2ea;color:#f6f2ea;padding:14px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;text-align:center;border-radius:999px">Order a yard sign · $5</a><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#d7e0cc;margin-top:8px;font-variant-numeric:tabular-nums">On red · .btn-paper</span><a href="#" style="margin-right:24px;background:#fff;color:#1f2a1f;padding:14px 24px;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;text-align:center;border-radius:999px">Add to calendar</a></div>
+</div>
+<div style="font-family:'Public Sans',sans-serif;font-size:12px;color:#6b6656;padding-top:14px;border-top:1px solid #d8d0bf;font-variant-numeric:tabular-nums">Buttons are pills with a 10px gap when paired. Minimum height 44px. Transitions 150ms on background only.</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px">
+<div>
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;padding-bottom:14px;border-bottom:1px solid #d8d0bf">Form fields</div>
+<div style="display:flex;flex-direction:column;gap:20px;padding-top:24px">
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Default <span style="color:#b8552e">*</span></span><span style="height:52px;border:1px solid #cfc5b0;background:#fffdf8;display:flex;align-items:center;padding:0 14px;font-size:18px;color:#9a9384;border-radius:10px">Placeholder</span></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Focus</span><span style="height:52px;border:1px solid #b8552e;box-shadow:0 0 0 1px #b8552e;background:#fffdf8;display:flex;align-items:center;padding:0 14px;font-size:18px;border-radius:10px">Jane Neighbor</span></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;color:#b8552e">Error *</span><span style="height:52px;border:2px solid #b8552e;background:#f8e7dc;display:flex;align-items:center;padding:0 13px;font-size:18px;border-radius:10px">jane@</span><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;color:#b8552e;font-variant-numeric:tabular-nums">Enter a full email address, like name@example.com</span></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">Select</span><span style="height:52px;border:1px solid #cfc5b0;background:#fffdf8;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:18px;border-radius:10px"><span>General Inquiry</span><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-variant-numeric:tabular-nums">▾</span></span></label>
+<div style="display:flex;gap:28px;font-size:15px"><span style="display:flex;gap:10px;align-items:center"><span style="width:22px;height:22px;border:1.5px solid #24452f;background:#fffdf8;border-radius:10px"></span>Unchecked</span><span style="display:flex;gap:10px;align-items:center"><span style="width:22px;height:22px;background:#24452f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;border-radius:6px">✓</span>Checked</span></div>
+</div>
+</div>
+<div>
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;padding-bottom:14px;border-bottom:1px solid #d8d0bf">Labels and filters</div>
+<div style="display:flex;flex-direction:column;gap:24px;padding-top:24px">
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">Filter chips (active, default)</span><div style="display:flex;gap:8px;font-family:'Public Sans',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.14em"><span style="background:#24452f;color:#f6f2ea;padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">All</span><span style="padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">Analysis</span><span style="padding:7px 12px;border:1px solid #d8d0bf;border-radius:999px">Open letters</span></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">Category kicker</span><span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;color:#b8552e;text-transform:uppercase;letter-spacing:.14em">Open letter · Community</span></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">Tags: type, priority, band tag, tag link</span><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;border:1px solid #d8d0bf;padding:3px 6px;border-radius:999px">City Council</span><span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;background:#b8552e;color:#fff;padding:4px 7px;border-radius:999px">Priority</span><span style="background:#b8552e;padding:6px;border-radius:999px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid #fff;color:#fff;padding:6px 10px;display:inline-block;border-radius:999px">Next meeting</span></span><span style="font-family:'Public Sans',sans-serif;font-size:12px;border:1px solid #d8d0bf;padding:4px 8px;font-variant-numeric:tabular-nums;border-radius:999px">sb-2038</span></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">Section head</span><div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:1px solid #d8d0bf"><span style="font-family:'Newsreader',serif;font-weight:500;font-size:29px">The Timeline</span><span style="font-family:'Public Sans',sans-serif;font-size:13px;text-decoration:underline;font-variant-numeric:tabular-nums">Full record</span></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">Record row (timeline, outcomes, posts)</span><div style="display:grid;grid-template-columns:140px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums">Dec 9, 2025</span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Newsreader',serif;font-size:22px;font-weight:500">Council approves MOU, 6-1</span><span style="font-size:15px;color:#566052">Non-binding MOU on prospective annexation and water/sewer service.</span></span></div></div>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums">Image placeholder</span><div style="height:90px;background:repeating-linear-gradient(135deg,#e9e2d3 0 10px,#f1ebe0 10px 20px);border:1px solid #d8d0bf;display:flex;align-items:center;justify-content:center;font-family:'Public Sans',sans-serif;font-size:12px;color:#5d6b5a;font-variant-numeric:tabular-nums;border-radius:16px;overflow:hidden">photo · description of what goes here</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 2r MOBILE -->
+<div id="3r" data-screen-label="3r Mobile" style="flex:none;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="background:#24452f;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px;padding:6px 12px;font-variant-numeric:tabular-nums">3r</div><div style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600">Mobile · 390px</div><div style="font-family:'Public Sans',sans-serif;font-size:13px;color:#5d6b5a;font-variant-numeric:tabular-nums">Below 768px: 20px gutters, one column, nav behind MENU</div></div>
+<div style="display:flex;gap:48px;align-items:flex-start">
+
+<div style="width:390px;flex:none;display:flex;flex-direction:column;gap:10px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#6b6656;font-variant-numeric:tabular-nums">Home</span>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden;border-radius:20px">
+<div style="padding:14px 20px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d8d0bf"><span style="font-family:'Newsreader',serif;font-weight:500;font-size:19px;line-height:1.12;letter-spacing:-.02em">Waco Data Center<br><span style="color:#b8552e">Community Action</span></span><span style="display:flex"><span style="height:44px;display:flex;align-items:center;padding:0 12px;border:2px solid #24452f;font-family:'Public Sans',sans-serif;font-weight:600;font-size:13px;border-radius:999px">Menu</span><span style="height:44px;display:flex;align-items:center;padding:0 12px;background:#b8552e;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:13px;border-radius:999px">Sign</span></span></div>
+<div style="padding:28px 20px;display:flex;flex-direction:column;gap:16px;border-bottom:1px solid #d8d0bf">
+<span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b8552e">Re: L2D2 · Infrakey DC Parks LLC</span>
+<span style="font-family:'Newsreader',serif;font-weight:500;font-size:42px;line-height:1.04;letter-spacing:-.02em">Wrong project. Wrong place.</span>
+<span style="font-size:17px;line-height:1.5">A 1.2 GW hyperscale campus on 520 acres of Elm Mott farmland, reached by two county roads and surrounded by homes.</span>
+<span style="display:flex;flex-direction:column"><a href="#" style="background:#24452f;color:#fff;padding:15px;text-align:center;font-family:'Public Sans',sans-serif;font-weight:600;font-size:14px;border-radius:999px">Read the record</a><a href="#" style="border:2px solid #24452f;border-top:0;padding:13px;text-align:center;font-family:'Public Sans',sans-serif;font-weight:600;font-size:14px;border-radius:999px">Sign the petition</a></span>
+</div>
+<div style="height:220px;background:#3a2a1f url('assets/council-meeting.webp') center/cover;filter:grayscale(.15)"></div>
+<div style="background:#b8552e;color:#fff;padding:16px 20px;display:flex;flex-direction:column;gap:8px"><span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid #fff;padding:4px 8px;align-self:flex-start;border-radius:999px">Next meeting</span><span style="font-family:'Newsreader',serif;font-size:21px;font-weight:500;line-height:1.1">Lacy Lakeview City Council · Tue Oct 13 · 6:00 PM · City Hall</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr">
+<div style="padding:20px;border-right:1px solid #d8d0bf;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:11px;color:#5d6b5a;font-variant-numeric:tabular-nums">01 / Scale</span><div style="font-family:'Newsreader',serif;font-weight:500;font-size:31px;line-height:1.12">1.2 GW</div></div>
+<div style="padding:20px;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:11px;color:#5d6b5a;font-variant-numeric:tabular-nums">02 / Siting</span><div style="font-family:'Newsreader',serif;font-weight:500;font-size:31px;line-height:1.12">520 ac</div></div>
+<div style="padding:20px;border-right:1px solid #d8d0bf;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:11px;color:#5d6b5a;font-variant-numeric:tabular-nums">03 / Access</span><div style="font-family:'Newsreader',serif;font-weight:500;font-size:31px;line-height:1.12">2 roads</div></div>
+<div style="padding:20px;border-bottom:1px solid #d8d0bf"><span style="font-family:'Public Sans',sans-serif;font-size:11px;color:#5d6b5a;font-variant-numeric:tabular-nums">04 / Grid</span><div style="font-family:'Newsreader',serif;font-weight:500;font-size:31px;line-height:1.12">ERCOT</div></div>
+</div>
+</div></div>
+
+<div style="width:390px;flex:none;display:flex;flex-direction:column;gap:10px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#6b6656;font-variant-numeric:tabular-nums">Article</span>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden;border-radius:20px">
+<div style="padding:14px 20px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d8d0bf"><span style="font-family:'Newsreader',serif;font-weight:500;font-size:19px;line-height:1.12;letter-spacing:-.02em">Waco Data Center<br><span style="color:#b8552e">Community Action</span></span><span style="display:flex"><span style="height:44px;display:flex;align-items:center;padding:0 12px;border:2px solid #24452f;font-family:'Public Sans',sans-serif;font-weight:600;font-size:13px;border-radius:999px">Menu</span><span style="height:44px;display:flex;align-items:center;padding:0 12px;background:#b8552e;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:13px;border-radius:999px">Sign</span></span></div>
+<div style="padding:10px 20px;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:12px;font-variant-numeric:tabular-nums">The Record / Open letters</div>
+<div style="padding:24px 20px;display:flex;flex-direction:column;gap:14px">
+<span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;color:#b8552e;text-transform:uppercase;letter-spacing:.14em">Open letter · Community</span>
+<span style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;line-height:1.12;letter-spacing:-.02em">Twisting Texas Law to Wreck Our Way of Life</span>
+<span style="font-size:18px;line-height:1.4;color:#566052">An open letter to Lacy Lakeview City Council about the Infrakey data center and the misuse of Senate Bill 2038</span>
+</div>
+<div style="padding:12px 20px;border-top:1px solid #d8d0bf;border-bottom:1px solid #d8d0bf;display:flex;flex-direction:column;gap:2px"><span style="font-family:'Public Sans',sans-serif;font-size:14px;font-weight:600">By Sean Terrell</span><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-variant-numeric:tabular-nums">January 9, 2026 · 7 min read</span></div>
+<div style="height:220px;background:#3a2a1f url('assets/council-meeting.webp') center/cover"></div>
+<div style="padding:10px 20px;border-bottom:1px solid #d8d0bf;font-family:'Public Sans',sans-serif;font-size:11px;line-height:1.5;font-variant-numeric:tabular-nums">Photo Credit: Justin Hamel / The Waco Bridge</div>
+<div style="padding:12px 20px;border-bottom:1px solid #d8d0bf;display:flex;justify-content:space-between;font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600"><span>In this piece</span><span style="font-family:'Public Sans',sans-serif;font-variant-numeric:tabular-nums">+</span></div>
+<div style="padding:22px 20px 28px;display:flex;flex-direction:column;gap:16px;font-size:18px;line-height:1.6">
+<p style="margin:0">To the Lacy Lakeview City Council,</p>
+<p style="margin:0">I'm Sean Terrell, a guys who's called Elm Mott home since August 2015. I live in the Dome house on Tours Rd.</p>
+<div style="font-family:'Newsreader',serif;font-size:24px;font-weight:500;line-height:1.05;padding-top:14px;border-top:1px solid #d8d0bf">How SB 2038 is Being Twisted</div>
+</div>
+</div></div>
+
+<div style="width:390px;flex:none;display:flex;flex-direction:column;gap:10px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#6b6656;font-variant-numeric:tabular-nums">Meetings</span>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden;border-radius:20px">
+<div style="padding:14px 20px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d8d0bf"><span style="font-family:'Newsreader',serif;font-weight:500;font-size:19px;line-height:1.12;letter-spacing:-.02em">Waco Data Center<br><span style="color:#b8552e">Community Action</span></span><span style="display:flex"><span style="height:44px;display:flex;align-items:center;padding:0 12px;border:2px solid #24452f;font-family:'Public Sans',sans-serif;font-weight:600;font-size:13px;border-radius:999px">Menu</span><span style="height:44px;display:flex;align-items:center;padding:0 12px;background:#b8552e;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:13px;border-radius:999px">Sign</span></span></div>
+<div style="padding:24px 20px;font-family:'Newsreader',serif;font-weight:500;font-size:45px;line-height:1.04;letter-spacing:-.02em">Meetings</div>
+<div style="background:#b8552e;color:#fff;padding:22px 20px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:14px;align-items:center"><span style="border:2px solid #fff;display:flex;flex-direction:column;align-items:center;padding:6px 12px;border-radius:999px"><span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:600;font-variant-numeric:tabular-nums">OCT · TUE</span><span style="font-family:'Newsreader',serif;font-weight:500;font-size:38px;line-height:1.04">13</span></span><span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid #fff;padding:4px 8px;border-radius:999px">Next important meeting</span></div>
+<span style="font-family:'Newsreader',serif;font-weight:500;font-size:29px;line-height:1.12">Lacy Lakeview City Council Meeting</span>
+<span style="font-family:'Public Sans',sans-serif;font-size:15px;font-weight:600">6:00 PM · Lacy Lakeview City Hall</span>
+<a href="#" style="background:#fff;color:#1f2a1f;padding:14px;text-align:center;font-family:'Public Sans',sans-serif;font-weight:600;font-size:14px;border-radius:999px">Add to calendar</a>
+</div>
+<div style="display:flex;gap:6px;padding:14px 20px;border-bottom:1px solid #d8d0bf;overflow:hidden;font-family:'Public Sans',sans-serif;font-size:11px;text-transform:uppercase;white-space:nowrap;font-weight:700;letter-spacing:.14em"><span style="background:#24452f;color:#f6f2ea;padding:6px 10px;border-radius:999px">All</span><span style="border:1px solid #d8d0bf;padding:6px 10px;border-radius:999px">Priority</span><span style="border:1px solid #d8d0bf;padding:6px 10px;border-radius:999px">City Council</span><span style="border:1px solid #d8d0bf;padding:6px 10px;border-radius:999px">County</span></div>
+<div style="padding:0 20px 20px">
+<div style="font-family:'Newsreader',serif;font-weight:500;font-size:20px;padding:20px 0 8px;border-bottom:1px solid #d8d0bf">October 2026</div>
+<div style="display:grid;grid-template-columns:56px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid #d8d0bf"><span style="display:flex;flex-direction:column"><span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:600;font-variant-numeric:tabular-nums">TUE</span><span style="font-family:'Newsreader',serif;font-weight:500;font-size:27px;line-height:1.12">13</span></span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums">6:00 PM</span><span style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600;line-height:1.1">Lacy Lakeview City Council Meeting</span><span style="font-size:14px;color:#566052">Lacy Lakeview City Hall</span><span style="display:flex;gap:6px;margin-top:2px"><span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;border:1px solid #d8d0bf;padding:2px 5px;letter-spacing:.14em;border-radius:999px">City Council</span><span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;background:#b8552e;color:#fff;padding:3px 6px;letter-spacing:.14em;border-radius:999px">Priority</span></span></span></div>
+<div style="display:grid;grid-template-columns:56px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid #d8d0bf"><span style="display:flex;flex-direction:column"><span style="font-family:'Public Sans',sans-serif;font-size:11px;font-weight:600;font-variant-numeric:tabular-nums">TUE</span><span style="font-family:'Newsreader',serif;font-weight:500;font-size:27px;line-height:1.12">20</span></span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums">3:00 PM / 6:00 PM</span><span style="font-family:'Public Sans',sans-serif;font-size:16px;font-weight:600;line-height:1.1">Waco City Council Meeting</span><span style="font-size:14px;color:#566052">Waco City Hall · <span style="font-family:'Public Sans',sans-serif;font-size:12px;text-decoration:underline;font-variant-numeric:tabular-nums">Agenda ↗</span></span></span></div>
+</div>
+</div></div>
+
+<div style="width:390px;flex:none;display:flex;flex-direction:column;gap:10px"><span style="font-family:'Public Sans',sans-serif;font-size:12px;color:#6b6656;font-variant-numeric:tabular-nums">Contact form</span>
+<div style="background:#f6f2ea;color:#1f2a1f;font-family:'Public Sans',sans-serif;box-shadow:0 2px 30px rgba(0,0,0,.12);overflow:hidden;border-radius:20px">
+<div style="padding:14px 20px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d8d0bf"><span style="font-family:'Newsreader',serif;font-weight:500;font-size:19px;line-height:1.12;letter-spacing:-.02em">Waco Data Center<br><span style="color:#b8552e">Community Action</span></span><span style="display:flex"><span style="height:44px;display:flex;align-items:center;padding:0 12px;border:2px solid #24452f;font-family:'Public Sans',sans-serif;font-weight:600;font-size:13px;border-radius:999px">Menu</span><span style="height:44px;display:flex;align-items:center;padding:0 12px;background:#b8552e;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:13px;border-radius:999px">Sign</span></span></div>
+<div style="padding:24px 20px 8px;font-family:'Newsreader',serif;font-weight:500;font-size:45px;line-height:1.04;letter-spacing:-.02em">Contact</div>
+<div style="padding:0 20px 24px;display:flex;flex-direction:column;gap:16px">
+<span style="font-size:16px;line-height:1.5">Have questions? Want to get involved? We're here to help.</span>
+<span style="font-family:'Newsreader',serif;font-weight:500;font-size:22px;padding-bottom:10px;border-bottom:1px solid #d8d0bf">Send us a message</span>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600">Name <span style="color:#b8552e">*</span></span><span style="height:52px;border:1px solid #cfc5b0;background:#fffdf8;border-radius:10px"></span></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600">Email <span style="color:#b8552e">*</span></span><span style="height:52px;border:1px solid #b8552e;box-shadow:0 0 0 1px #b8552e;background:#fffdf8;border-radius:10px"></span></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600">Subject <span style="color:#b8552e">*</span></span><span style="height:52px;border:1px solid #cfc5b0;background:#fffdf8;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:17px;color:#9a9384;border-radius:10px"><span>Select a topic</span><span style="font-family:'Public Sans',sans-serif;color:#1f2a1f;font-variant-numeric:tabular-nums">▾</span></span></label>
+<label style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Public Sans',sans-serif;font-size:13px;font-weight:600">Message <span style="color:#b8552e">*</span></span><span style="height:120px;border:1px solid #cfc5b0;background:#fffdf8;border-radius:10px"></span></label>
+<a href="#" style="height:56px;display:flex;align-items:center;justify-content:center;background:#b8552e;color:#fff;font-family:'Public Sans',sans-serif;font-weight:600;font-size:15px">Send message</a>
+</div>
+</div></div>
+
+</div>
+</div>
+
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const colors = [
+      { name: '--paper', hex: '#f6f2ea', use: 'Page background' },
+      { name: '--ink', hex: '#1f2a1f', use: 'Body text' },
+      { name: '--forest', hex: '#24452f', use: 'Panels, bands, secondary buttons, numerals' },
+      { name: '--forest-hover', hex: '#1b3424', use: 'Forest button hover' },
+      { name: '--terracotta', hex: '#b8552e', use: 'Primary CTA, eyebrows on cards, links in action areas' },
+      { name: '--terracotta-hover', hex: '#9f4626', use: 'Primary button hover' },
+      { name: '--muted', hex: '#566052', use: 'Secondary body text' },
+      { name: '--sage-label', hex: '#5d6b5a', use: 'Eyebrow labels' },
+      { name: '--rule', hex: '#d8d0bf', use: 'Dividers, card borders' },
+      { name: '--sand', hex: '#ece5d6', use: 'Action strip, hover rows' },
+      { name: '--field', hex: '#fffdf8', use: 'Input background' },
+      { name: '--on-forest-2', hex: '#d7e0cc', use: 'Secondary text on forest' }
+    ];
+    const type = [
+      { token: 'display-xl', spec: 'Newsreader 500 · 84/1.04 · -0.02em', css: "font-family:'Newsreader',serif;font-weight:500;font-size:84px;line-height:1.04;letter-spacing:-.02em", sample: 'Updates' },
+      { token: 'h1-home', spec: 'Newsreader 500 · 76/0.98 · -0.02em', css: "font-family:'Newsreader',serif;font-weight:500;font-size:76px;line-height:.98;letter-spacing:-.02em", sample: 'Good data centers exist.' },
+      { token: 'h1-article', spec: 'Newsreader 500 · 56/1.04 · balance', css: "font-family:'Newsreader',serif;font-weight:500;font-size:56px;line-height:1.04;letter-spacing:-.02em", sample: 'Twisting Texas Law' },
+      { token: 'numeral', spec: 'Newsreader 500 · 56-92/1 · forest', css: "font-family:'Newsreader',serif;font-weight:500;font-size:64px;line-height:1;color:#24452f", sample: '3,698' },
+      { token: 'section-head', spec: 'Newsreader 500 · 32-46', css: "font-family:'Newsreader',serif;font-weight:500;font-size:40px", sample: 'From the porch' },
+      { token: 'item-title', spec: 'Newsreader 500 · 22-27/1.15', css: "font-family:'Newsreader',serif;font-weight:500;font-size:27px;line-height:1.15", sample: 'Not a Partnership, a Takeover Plan' },
+      { token: 'nav / button', spec: 'Public Sans 500-600 · 15-17', css: "font-family:'Public Sans',sans-serif;font-weight:600;font-size:16px", sample: 'Meetings · Sign the petition' },
+      { token: 'body-article', spec: 'Public Sans 400 · 19/1.65 · max 700px', css: "font-family:'Public Sans',sans-serif;font-size:19px;line-height:1.65;max-width:700px", sample: 'People moved out here for the peace, the open sky, the chance to raise kids and grandkids in a real rural Texas setting.' },
+      { token: 'body-ui', spec: 'Public Sans 400 · 15-17/1.55', css: "font-family:'Public Sans',sans-serif;font-size:16px;line-height:1.55;color:#566052", sample: 'Homes and generational homesteads on every side.' },
+      { token: 'eyebrow', spec: 'Public Sans 700 · 11-13 · 0.14-0.18em · upper', css: "font-family:'Public Sans',sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#b8552e", sample: 'Open letter · Community' },
+      { token: 'meta', spec: 'Public Sans 600 · 13-14 · tabular', css: "font-family:'Public Sans',sans-serif;font-weight:600;font-size:14px;font-variant-numeric:tabular-nums", sample: 'Jan 13, 2026 · 6:00 PM' }
+    ];
+    return { colors, type };
+  }
+}
+</script>
+</body>
+</html>

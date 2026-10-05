@@ -1,0 +1,34 @@
+{{ $pages := where .Pages "Params.unlisted" "ne" true }}{{ $pages = $pages.ByDate.Reverse }}
+{{ partial "page-header.html" (dict "title" (cond (eq .Kind "section") (cond (eq (.Site.Params.theme | default "1b") "1b") "The Record" "Updates") .Title) "description" "Analysis, open letters and research from neighbors of the L2D2 site. Follow the sources, read the record, and decide for yourself." "meta" (printf "%d entries" (len $pages))) }}
+<nav class="filter-bar" aria-label="Post categories">
+<a class="chip {{ if eq .Kind "section" }}is-active{{ end }}" href="/posts/">All</a>{{ range slice "analysis" "open-letters" "opposition-research" "data-center-impact" "community" }}<a class="chip {{ if eq $.Data.Term . }}is-active{{ end }}" href="{{ printf "/categories/%s/" . }}">{{ humanize . }}</a>{{ end }}<a class="mono filter-end" href="/posts/index.xml">RSS</a>
+</nav>
+{{ $pager := .Paginate $pages 20 }}{{ range first 1 $pager.Pages }}<article class="lead-story">
+<img src="{{ .Params.featured_image | default .Params.image | default "/images/land1.jpeg" }}" width="1280" height="853" alt="{{ .Params.image_alt | default .Title }}">
+<div>
+<p class="kicker">{{ delimit (.Params.categories | default (slice "Community")) " · " }} · {{ .Date.Format "Jan 2, 2006" }}</p>
+<h2>
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+</h2>
+<p>{{ .Description }}</p>
+<p class="mono">By {{ .Params.author | default "Community Action Team" }}</p>
+<a class="btn btn-ink" href="{{ .RelPermalink }}">Read the piece</a>
+</div>
+</article>{{ end }}
+<div class="post-table padded">
+<div class="post-row table-head mono muted">
+<span>Date</span>
+<span>Filed under</span>
+<span>Title</span>
+<span>By</span>
+</div>{{ range after 1 $pager.Pages }}<a class="post-row" href="{{ .RelPermalink }}">
+<time class="mono" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+<span class="kicker">{{ delimit (.Params.categories | default (slice "Community")) " · " }}</span>
+<div>
+<h2>{{ .Title }}</h2>{{ with .Description }}<p>{{ . }}</p>{{ end }}</div>
+<span class="mono">{{ .Params.author | default "Community Action Team" }}</span>
+</a>{{ end }}{{ if not $pages }}<p>No entries in this section yet.</p>{{ end }}<nav class="pagination mono" aria-label="Pagination">
+<span>Page {{ $pager.PageNumber }} of {{ $pager.TotalPages }}</span>
+<div>{{ with $pager.Prev }}<a href="{{ .URL }}">Newer</a>{{ end }}{{ with $pager.Next }}<a href="{{ .URL }}">Older</a>{{ end }}</div>
+</nav>
+</div>

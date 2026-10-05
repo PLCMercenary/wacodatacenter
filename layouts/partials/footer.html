@@ -1,0 +1,32 @@
+<footer class="site-footer">
+<div class="footer-grid">
+<div>{{ partial "logo.html" . }}<p>Neighbors of the L2D2 site in Elm Mott, Ross and Lacy Lakeview. We oppose this siting, not data centers.</p>
+<button class="btn btn-primary" data-dialog="changeOrgModal">Sign the petition</button>
+</div>
+<div>
+<h2>Read</h2>
+<a href="/posts/">{{ if eq (.Site.Params.theme | default "1b") "1b" }}The Record{{ else }}Updates{{ end }}</a>
+<a href="/#timeline">Timeline</a>
+<a href="/media/">Press</a>
+<a href="/resources/">{{ if eq (.Site.Params.theme | default "1b") "1b" }}Documents{{ else }}Resources{{ end }}</a>
+</div>
+<div>
+<h2>Show up</h2>
+<a href="/events/">Meetings</a>
+<a href="/yard-signs/">Yard signs</a>
+<a href="{{ .Site.Params.legal_fund }}" target="_blank" rel="noopener noreferrer">Legal fund</a>
+<button class="text-button" data-dialog="emailModal">Email alerts</button>
+</div>
+<div>
+<h2>Reach us</h2>
+<a href="/contact/">Contact</a>
+<a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener noreferrer">Facebook group</a>
+<a href="https://github.com/PLCMercenary/wacodatacenter" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="/privacy/">Privacy</a>
+</div>
+</div>
+<div class="footer-line">
+<span>Waco Data Center Community Action · Elm Mott, TX</span>
+<span>Code MIT licensed. Fork it for your county.</span>
+</div>
+</footer>

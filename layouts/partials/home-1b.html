@@ -1,0 +1,83 @@
+<section class="home-hero">
+<div class="hero-copy">
+<p class="kicker">Re: L2D2 · Infrakey DC Parks LLC</p>
+<h1>Wrong project.<br>Wrong place.</h1>
+<p class="lede">A 1.2 GW hyperscale campus on 520 acres of Elm Mott farmland, reached by two county roads and surrounded by homes. Read the research and the public record behind our concerns.</p>
+<div class="button-pair">
+<a class="btn btn-ink" href="/posts/">Read the record</a>
+<button class="btn btn-outline" data-dialog="changeOrgModal">Sign the petition</button>
+</div>
+</div>
+<figure class="hero-photo">
+<img src="/images/251209-JH-Lacy-Data-Center-06.webp" width="2000" height="1334" alt="Residents gathered outside Lacy Lakeview City Hall on December 9, 2025" fetchpriority="high">
+<figcaption>Residents outside a packed Lacy Lakeview City Hall, December 9, 2025. Council approved the MOU 6-1.</figcaption>
+</figure>
+</section>
+{{ partial "next-meeting.html" . }}
+<section class="fact-grid" aria-label="The proposed site">
+<div>
+<p class="mono muted">01 / Scale</p>
+<h2>1.2 GW</h2>
+<p>Hyperscale. Phase I alone is 300 MW.</p>
+</div>
+<div>
+<p class="mono muted">02 / Siting</p>
+<h2>520 ac</h2>
+<p>Homes and generational homesteads on every side.</p>
+</div>
+<div>
+<p class="mono muted">03 / Access</p>
+<h2>2 roads</h2>
+<p>Both two-lane, both through our neighborhoods.</p>
+</div>
+<div>
+<p class="mono muted">04 / Grid</p>
+<h2>ERCOT</h2>
+<p>A project of this scale needs a grid that can support it. <a href="/posts/l2d2-construction-disruption/">Read the analysis.</a>
+</p>
+</div>
+</section>
+<div class="timeline-latest">
+<section id="timeline" class="timeline-section">
+<div class="section-head">
+<h2>The timeline</h2>
+<a href="/resources/">Documents</a>
+</div>{{ range .Site.Data.timeline }}<article class="record-row">
+<time class="mono" datetime="{{ .date }}">{{ .label | default (time.Format "Jan 2, 2006" .date) }}</time>
+<div>
+<h3>{{ .title }}</h3>
+<p>{{ .body }}</p>{{ with .source }}<a class="mono" href="{{ . }}"{{ if strings.HasPrefix . "http" }} target="_blank" rel="noopener"{{ end }}>Read the source</a>{{ end }}</div>
+</article>{{ end }}</section>
+<section class="latest-section">
+<div class="section-head">
+<h2>Latest</h2>
+</div>{{ range first 3 (partial "listed-posts.html" .) }}<article class="latest-item">
+<p class="kicker">{{ delimit (.Params.categories | default (slice "Community")) " · " }}</p>
+<h3>
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+</h3>
+<time class="mono muted" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+</article>{{ end }}<a class="mono" href="/posts/">All updates</a>
+</section>
+</div>
+<section id="action" class="metrics-band">
+<div>
+<strong class="metric-number">{{ lang.FormatNumber 0 .Site.Data.metrics.petition.signatures }}</strong>
+<h2>Petition signatures</h2>
+<p>{{ .Site.Data.metrics.petition.milestone }}</p>
+<p>{{ .Site.Data.metrics.petition.local_supporters }}% from local ZIP codes</p>
+</div>
+<div>
+<strong class="metric-number">{{ lang.FormatNumber 0 .Site.Data.metrics.facebook.members }}</strong>
+<h2>Facebook members</h2>
+<p>{{ .Site.Data.metrics.facebook.milestone }}</p>
+<a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener noreferrer">Join the Facebook group <span aria-hidden="true">↗</span>
+</a>
+</div>
+<div class="metric-actions">
+<button class="btn btn-primary" data-dialog="changeOrgModal">Sign the petition</button>
+<a class="btn btn-outline-paper" href="/yard-signs/">Order a yard sign · $5</a>
+<button class="text-button" data-dialog="emailModal">Get meeting alerts</button>
+<p class="mono">Metrics updated {{ time.Format "January 2, 2006" .Site.Data.metrics.updated }}</p>
+</div>
+</section>

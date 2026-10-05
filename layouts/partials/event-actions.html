@@ -1,0 +1,3 @@
+<div class="event-actions" data-event="{{ . | jsonify }}">{{ with .agenda_url }}<a href="{{ . }}" target="_blank" rel="noopener">Agenda <span aria-hidden="true">↗</span>
+</a>{{ end }}{{ with .info_url }}<a href="{{ . }}" target="_blank" rel="noopener">More info <span aria-hidden="true">↗</span>
+</a>{{ end }}<button type="button" data-calendar-open>Add to calendar</button>{{ if in (slice "City Council" "Water Board" "County" "ERCOT") .category }}<button type="button" data-comment>Prepare public comment</button>{{ end }}</div>

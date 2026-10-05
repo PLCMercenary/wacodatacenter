@@ -1,0 +1,21 @@
+name: Refresh calendar
+on:
+  schedule:
+    # Run just after midnight in Chicago during both daylight and standard time.
+    - cron: '10 5,6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify production build
+        env:
+          BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          if [ -z "$BUILD_HOOK" ]; then
+            echo '::error::Set NETLIFY_BUILD_HOOK to a Netlify build hook targeting main.'
+            exit 1
+          fi
+          curl --fail --silent --show-error --request POST "$BUILD_HOOK" --output /dev/null

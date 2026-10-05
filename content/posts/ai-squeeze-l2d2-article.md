@@ -7,7 +7,7 @@ lastmod: 2026-02-24
 draft: false
 unlisted: false 
 layout: single
-categories: ["Opposition Research", "Data Center Impact"]
+categories: ["opposition-research", "data-center-impact"]
 tags: ["L2D2", "construction", "disruption", "Baylor", "downtown revitalization", "tourism", "timeline"]
 slug: "l2d2-construction-disruption"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Community Calendar"
+title: "Meetings"
 layout: "events"
 events:
   # January 2026
